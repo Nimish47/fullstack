@@ -1,0 +1,6 @@
+// Grid-columns -> grid-template-columns
+
+
+grid-template-columns: 100px 200px auto;
+grid-template-columns: 100px 100px 100px 100px 100px 100px;
+grid-template-columns: repeat(6, 100px);

@@ -1,0 +1,10 @@
+// scenario
+    Below are time taking functions which return a promise and resolve after a minimum of 1 sec
+        see,eat,listen
+
+//  Requirement:
+    Execute each of them at once or paralelly:  
+
+approach:
+    Promise.all
+        excellent          

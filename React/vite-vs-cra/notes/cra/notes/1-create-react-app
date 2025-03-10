@@ -1,0 +1,11 @@
+TITLE #create-react-app
+
+Command: npx create-react-app my-app
+- Runs the "create-react-app" package (without installing it globally).
+- Creates a basic react project for us.
+- Running above command will create a directory called "my-app" inside the current folder. 
+- Inside that directory, it will generate the initial project structure and install the transitive dependencies.
+- Takes roughly 30s to initiate a react project (on Tata Fiber WiFi, Noida)
+
+create-react-app:
+    - is a global command-line utility that you use to create new projects.

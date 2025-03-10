@@ -1,0 +1,31 @@
+TITLE # all info about files created during intial create-react-app setup
+
+Importtant files and folders created during react App initialization using creat-react-app:
+
+Files and Folder rules for build to be successful:
+    1. These files must exist with exact filenames:
+            public/index.html is the page template
+            src/index.js is the JavaScript entry point.
+            You can delete or rename the other files (but not above two)
+
+    2. For faster rebuilds, only files inside src are processed by webpack.
+       You need to put any JS and CSS files inside src, otherwise webpack won’t see them. 
+
+    3. Only files inside public can be used from public/index.html.
+
+    4. If you have Git installed and your project is not part of a larger repository,
+       then a new repository will be initialized resulting in an additional top-level .git directory.             
+
+Write about index.html
+
+Write about index.js
+
+Write about index.css
+
+Write about package.json
+
+Write about package-lock.json
+
+Write about manifest.json
+
+

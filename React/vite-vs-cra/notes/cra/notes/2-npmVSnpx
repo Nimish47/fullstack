@@ -1,0 +1,24 @@
+TITLE # npm and/vs npx in detail
+
+npm (Node Package Manager):
+    "Install" packages globally or locally
+    Manage package dependencies in a package.json file
+    Run scripts defined in package.json
+    Commands:
+        npm install <package>    → Installs a package locally
+        npm install -g <package> → Installs a package globally
+        npm uninstall <package>  → Removes a package
+        npm update               → Updates installed packages
+        npm run <script>         → Runs a script from package.json
+
+npx (Node Package eXecute):
+    npx is a tool that comes with npm (v5.2+)
+    "Run" Node.js packages without installing them globally
+    Commands:
+        npx eslint myfile.js        → Runs ESLint without a global install
+        npx create-react-app my-app → Runs the create-react-app package without installing it globally
+
+
+Key difference b/w npm and npx:
+    Use npm if you need to install and manage packages permanently (in your project).
+    Use npx if you want to execute a package just once (without installing it globally).

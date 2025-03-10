@@ -1,0 +1,5 @@
+Production build
+    Command: npm run build
+        - Builds the app for production to the build folder.
+        - It correctly bundles React in production mode
+        - Build is minified and optimized for best performance.

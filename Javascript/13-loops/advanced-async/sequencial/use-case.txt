@@ -1,0 +1,16 @@
+// scenario
+    Below are time taking functions which return a promise and resolve after a minimum of 1 sec
+        wake,brush,eat,school,sleep
+
+ Requirement:
+    Execute them in the order sequencially:
+        wake -> brush -> eat -> school -> sleep      
+
+
+// there are three approaches in this file:
+    simple async await
+        use when limited tasks to be performed
+    for loop
+        very good but needs explicit await inside loop
+    for Await of
+        very good but we need to create generators first        

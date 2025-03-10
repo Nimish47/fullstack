@@ -1,0 +1,83 @@
+What is 'this'?
+	this is a keyword whose value is "always" an object.
+	object can be - global or custom
+
+From where we can call this?
+	Anywhere 
+	
+How 'this' derives its value?
+	Depends:
+		1. If present in a global object context
+			- simply refers to global/window object
+		2. If present inside a function:
+			- value calculated at call-time when the function fires
+
+Function and this:
+	Each function in javascript has a 'this' property but whose value is determined at run-time when
+	the function gets fired.
+	
+	Value of 'this' in a function?
+	Depends:
+		If no object is attached to a normal function, this refers to global/window.
+		If object is attached to a normal function (like obj.func()), this refers to object calling function.
+
+What is the value of 'this'?
+	It depends where 'this' is called.
+	Lets break this down (for now we'll only talk of normal functions)
+	
+	CASE 1. Outside of everything (also called global context) not inside any function
+	CASE 2. Outside of everything but inside a function
+	CASE 3. Inside an object's method
+	CASE 4. Inside event listeners
+    CASE 5. explicit calls (via this method's call apply bind)
+	
+	
+	CASE 1. Outside of everything (also called global context) not inside any function
+			In Node.js: refers module.exports (*)
+			In Browser: refers window
+	
+	CASE 2. Outside of everything but inside a function
+			In Node.js: refers to global
+			In Browser: refers window
+	
+	Case 3: Inside an object's method
+			refers to the object (of whom method is a part)
+			Note: 'this' should be directly inside the object's method and shouldn't be nested any further.
+	
+	Case 4: Inside event listeners	
+			DOM node on which the event occured
+			
+Why the need for 'this'?
+	Many reasons. Few of them below:
+	1. Access object properties from an object's method.
+	2. Reuse a function many times by changing object ar call time (using call or bind or apply)
+
+Arrow functions and 'this':
+	Arrow function like - normal functions have their own this.
+	However, the value differs:
+		In arrow functions, JavaScript sets the this lexically, which means
+		The arrow function inherits the this from the outer function
+			- Note: all this inheritance happens at the time of call-time
+			- if no outer function, refers window/global object
+
+	
+'this' methods:
+	there are three methods - bind,call, apply
+	they let us EXPLICITLY define the value of 'this' when calling a function.
+    basically they callow us to dictate the value of 'this'
+    this feature is powerful and makes the functions reusable.
+
+	bind,call,apply similarities:
+		- The bind() method creates a new function that, when called, has its 'this' keyword set to the
+		  provided value.
+		- Said in a simpler way, we can call a method indicating to which object the keyword 'this' will refer to.
+	
+	bind vs call/apply:
+		- The call() method does not make a copy of the function it is being called on.
+		  One more difference with bind is that it will return a new function,
+		  without executing it. While with call and apply the function executed right away,
+		  using bind we must execute it separately.
+	
+	call vs apply:
+		call accepts parameters as a list separated by colons (as the last example we saw),
+		and apply accepts them as an array.

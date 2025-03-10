@@ -1,0 +1,16 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-image: url('./images/pexels-tvoyasasha.jpg');
+    background-size: auto;
+    background-repeat: no-repeat;
+    color: azure;
+}
+
+#textbox {
+    padding: 10px;
+    width: 350px;
+    position: absolute;
+    top: 150px;
+    left: 550px;
+}

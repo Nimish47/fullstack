@@ -1,0 +1,44 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: rgb(22, 8, 45);
+    color: azure;
+}
+
+div {
+    width: 100px;
+    height: 100px;
+    display: inline-block;
+}
+
+#lorem {
+    display: block;
+}
+
+#box1 {
+    background-color: rgb(250, 228, 228);
+    color: rgb(97, 43, 184);
+}
+
+#box2 {
+    height: 50px;
+    background-color: rgb(43, 140, 30);
+    color: black;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+
+#box3 {
+    height: 50px;
+    background-color: rgb(198, 99, 45);
+    color: black;
+    position: absolute;
+    top: 0;
+    width: 100%;
+}
+
+#box4 {
+    background-color: maroon;
+    color: black;
+}

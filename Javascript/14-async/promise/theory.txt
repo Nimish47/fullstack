@@ -1,0 +1,81 @@
+// PROMISES
+
+Definition
+    A promise is an object that will return a value in future. 
+    Non-blocking nature (not blocks further code)
+    Any kind of asynchronous task, just put it INSIDE a promise
+
+Purpose of a PROMISE
+    Any kind of ASYNCHRONOUS TASK can be performed INSIDE a promise object
+        ex- Network calls, setTimeouts etc
+    Asynchronous task can be done without promises too but what makes promises powerful is:
+        - ability to perform some task once async operation is finished
+    Synchronous task can also be done inside promises but it doesn't make any sense    
+
+3 states of a PROMISE
+    1. Pending
+    2. Fulfilled
+    3. Rejected
+
+3 values of a PROMISE
+    1. undefined: Initially when the state value is pending.
+    2. value: When resolve(value) is called.
+    3. error: When reject(error) is called.    
+
+    - A promise object takes 2 callback functions: RESOLVE and REJECT
+    - Initially a promise remains in a PENDING state                                          {PENDING STATE}
+    - If the task we intened to do is successful, we -> resolve(SOME_VALUE)                   {Fulfilled STATE}
+    - If the task we intened to do gets failed or is unsuccessful, we -> reject(SOME_VALUE)   {REJECTED STATE}
+      or some error gets thrown automatically.
+    - Throwing an error is also considered as rejecting a promise  
+
+.then and .catch
+    can be applied only on a promise object
+    what to do once the promise Fulfills or gets rejected
+    these methods are what makes a promise so powerful
+    both take a parameter and trigger a callback
+    .then : 
+        callback: used to perform some operation in the aftermath of promise resolution 
+        parameter: value with which promise Fulfills
+    .catch : 
+        callback: used to perform some operation in the aftermath of promise rejection OR error handling
+        parameter: value with which promise rejected  OR some wrror got thrown  
+
+Executor and Consumer Function in promises (deep dive)
+
+    Executor function:
+        - function passed into Promise constructor
+        - it takse two callback functions - resolve and reject
+        - A Promise uses an executor function to complete a task (mostly asynchronously).
+
+    Consumer function:
+        - .then and .catch handler    
+        - A consumer function (that uses an outcome of the promise) should get notified when
+          the executor function is done with either resolving (success) or rejecting (error).
+
+Promise Hell v/s Promise Chaining
+    There is no hell in promises
+    If you ever get into promise hell, rephrase your code (you are not doing it correctly)
+    check 6A and 6B to understand the difference
+    
+An alternative to Promise chaining is to use Async/Await       
+
+
+
+The .then analogy:
+    - A promise has 2 entities: STATE and VALUE
+    - A pending promise has PENDING state and UNDEFINED value
+
+    - promiseObj.then()
+        - always returns a promise
+        - STATE = PENDING and VALUE = undefined
+
+    - PROMISE CHAINING:
+        - return of .then
+            - it is a promise that got resolved with the returned value
+            - and the resolved promise will call the next .then handler
+        - When the first .then method returns a value,
+          the next .then method can receive that.
+          The second one can now pass to the third .then() and so on.
+          
+        - This formationof a chain of .then methods to pass the promises down is called PROMISE CHAINING 

@@ -1,0 +1,45 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: rgb(52, 55, 58);
+    color: antiquewhite;
+}
+
+
+#container {
+    display: grid;
+    grid-template: 10vh 50vh 30vh 10vh / repeat(12, 1fr) ;
+}
+
+
+#title {
+    background-color: blue;
+    grid-column: 1/10;
+}
+
+#profile {
+    background-color: rgb(178, 78, 11);
+    grid-column: 10/-1;
+}
+
+#body {
+    background-color: rgb(4, 87, 74);
+    grid-column: 1/11;
+}
+
+#summary {
+    background-color: rgb(161, 130, 228);
+    grid-column: 1/11;
+}
+
+#article {
+    background-color: rgb(162, 182, 33);
+    grid-column: 11/-1;
+    grid-row: 2/-1;
+}
+
+#footer {
+    background-color: rgb(193, 70, 174);
+    grid-column: 1/11;
+}
+

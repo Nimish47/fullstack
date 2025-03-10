@@ -1,0 +1,41 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: rgb(22, 8, 45);
+    color: azure;
+}
+
+div {
+    width: 100px;
+    height: 100px;
+    display: inline-block;
+}
+
+#box1 {
+    background-color: whitesmoke;
+    color: black;
+    position: relative;
+    left: 10px;
+    top: 20px;
+
+}
+
+#box2 {
+    height: 50px;
+    background-color: yellowgreen;
+    color: black;
+    position: sticky;
+    top: 0;
+    width: 100%;
+    z-index: 1;
+}
+
+#box3 {
+    background-color: pink;
+    color: black;
+}
+
+#box4 {
+    background-color: maroon;
+    color: black;
+}

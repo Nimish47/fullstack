@@ -1,0 +1,49 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: rgb(52, 55, 58);
+    color: antiquewhite;
+}
+
+
+#container {
+    display: grid;
+    grid-template: 10vh 50vh 30vh 10vh / repeat(12, 1fr) ;
+    grid-template-areas: 
+    ". t t t t t t t t t p p"
+    "b b b b b b b b b b a a"
+    "s s s s s s s s s s a a"
+    "f f f f f f f f f . a a";
+}
+
+
+#title {
+    background-color: blue;
+    grid-area: t;
+}
+
+#profile {
+    background-color: rgb(178, 78, 11);
+    grid-area: p;
+}
+
+#body {
+    background-color: rgb(4, 87, 74);
+    grid-area: b;
+}
+
+#summary {
+    background-color: rgb(161, 130, 228);
+    grid-area: s;
+}
+
+#article {
+    background-color: rgb(162, 182, 33);
+    grid-area: a;
+}
+
+#footer {
+    background-color: rgb(193, 70, 174);
+    grid-area: f;
+}
+

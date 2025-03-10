@@ -1,0 +1,11 @@
+So we wanted a layout like this:
+
+        TLT             RLT
+
+                CEN
+
+        BLT             BRT           
+
+However, as you can see we were not able to do it.
+That's why flexbox used for 2-D layouts.
+To replicate the above example, position property would be more handy!        

@@ -1,0 +1,60 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: rgb(52, 55, 58);
+    color: antiquewhite;
+}
+
+/* #container {
+    display: grid;
+    grid-template-columns: 200px auto 200px;
+    grid-template-rows: 100px 100px;
+    grid-gap: 5px;
+} */
+
+/* #container {
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    grid-template-rows: 100px 100px;
+    grid-gap: 5px;
+} */
+
+/* #container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 200px);
+    grid-gap: 5px;
+} */
+
+/* rows/columns */
+
+#container {
+    display: grid;
+    grid-template: repeat(2, 100px) / repeat(3, 1fr) ;
+    grid-gap: 5px;
+}
+
+
+#one {
+    background-color: blue;
+}
+
+#two {
+    background-color: rgb(178, 78, 11);
+}
+
+#three {
+    background-color: rgb(4, 87, 74);
+}
+
+#four {
+    background-color: rgb(62, 7, 7);
+}
+
+#five {
+    background-color: rgb(81, 6, 70);
+}
+
+#six {
+    background-color: rgb(116, 228, 110);
+}

@@ -1,0 +1,123 @@
+EVENT LOOP:
+
+IMPORTANT TERMS:
+1. v8 engine
+2. Javascript runtime
+3. Heap
+4. Stack (or call stack)
+5. Web API
+6. Event Queue
+7. Event Loop
+
+
+1. v8 engine
+    chrome's runtime
+    it has heap and call stack (that javascript code utilize)
+
+2. What do you mean by javascript runtime?
+    It has 2 things:
+        Heap
+        Call Stack    
+
+3. Heap:
+    handles memory allocation of primitive and non-primitive data types
+
+4. Stack(or call stack):
+    also called call stack
+    a data structure that records where in the program we are
+    If we step into a function , we PUSH it into the stack.
+    If we exit the function, we POP it from the stack
+
+    In simpler words,
+    PUSHES function and its code onto the stack when it is called    
+        As soon as a function is called (and we step just inside function logic to execute it),
+        it is placed or PUSHED inside call stack.
+    POPS function and its code when it has finished execution
+        Once function code is executed, it is removed or POPPED out from call stack.
+
+5. APIs
+- It is because of these APIs that we can perform certain tasks without blocking code 
+- We run javascript either on browser or Nodejs server
+    A. WEB APIs
+        When running javascript on a browser
+        Extra things that the browser provides
+        ex- DOM, AJAX, setTimeout
+    B. Node APIs
+        When running javascript on a node server
+        same as browser web APIs
+        here we have c++ APIs and they do a similar task
+
+setTimeout API:
+    An API provided by browser or C++
+    whenever we use setTimeout, browser handles the timer for us
+    it makes sure once timer ends, push the callback fn to event queue and so on until pushed to call stack 
+Concept of timer in setTimeout:
+    timer is the minimum time after which callback fn will fire
+    it is not the exact time after which callback fn will fire (no guarantee)
+    it can be verified by using timer = 0ms and have other code below it
+
+
+XHR Web API:
+    An API provided by browser
+    handles network requests and once done (either success/failure), pushes callback fn to event queue
+
+6. Event Queue
+    A. Callback/Task Queue
+    B. Render Queue
+
+7. Event Loop
+    - A kind of watcher
+    - Its main job is to see if call stack is empty, put the first callback to the stack
+    - In more detail, put callback fn from render queue to call stack provided it is empty
+
+
+DEFAULT NATURE OF JAVASCRIPT:
+    single threaded
+    performs one task at a time
+    code blocking nature
+
+
+How concurrency possible when running a javascript code on:
+    1. Browser
+        web apis allow for concurrency
+        we have different web apis for:
+            timer api: for handling setTimeouts and setIntervals callbacks concurrently
+            XHR api: for handling HTTP calls and their callback concurrently
+     2. Nodejs
+        this scenario is when we run node code on terminal
+        above web API mirror types are provided by C++
+        concurreny possible because of C++               
+
+How call stacks are loaded and unloaded? Scenarios below:
+    1. Synchronous code
+        A. with no callbacks
+        B. with callbacks
+    2. Asynchronous code
+        A. with http calls
+        B. with timeouts setTimeout
+        C. with setTimeout and 0 second delay 
+
+Callbacks:
+    A function passed into another function(parent) that is meant to be run later
+    Now callbacks can also be used synchronously or asynchronously
+    Synchronously:
+        check example 2 and 3 for synchronously
+        .filter, .map, .reduce - all higher order functions use callbacks and which are synchronous
+        Note: code after parent function is blocked in this scenario
+        here callback isn't pushed to queue are something rather executed on the stack itself
+    Asynchronously
+        code below asynchronous is not blocked
+        code flow is: [stack -> web api handler -> event queue -> stack]
+        Only async callbacks are handled by web api and pushed to event queue
+
+
+What happends if user clicks a button multiple times (and we have click event attached)  
+    DOM web api comes into picture
+    for every click it takes the callback and places it into event queue
+    all callbacks assemple in queue in order and wait for call stack to be empty
+    once empty, the execute and exit stack sequencially
+
+
+Very IMPORTANT THING ABOUT UI EXPERIENCE: (Verify this)
+    If there is code on the stack, user cannot select something on the screen leading to bad UI
+    experience

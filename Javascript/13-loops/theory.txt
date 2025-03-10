@@ -1,0 +1,158 @@
+LOOPS BASICS:
+    There are different ways we can loop over certain data types viz:
+        Arrays (most common)
+        Objects
+        Iterables (like sets and maps)
+    Data inside above data-types can be:
+        Synchronous data
+            Immediately available
+            ex- primitive and non-primitive values
+        Asynchronous data
+            Not immediately available
+            returns a promise
+                Asynchronous data can be handled in two ways
+                    sequencially:
+                        loop to second item only if first item promise value got resolved
+                         ex- for (with await) , for-await-of
+                    paralelly:
+                        fire all promises at once (like paralelly)  
+                        ex- Promise.all     
+
+
+Iterables:
+    data types whom we can loop through in order
+    they are stored in an ordered way
+    ex- array, map, set etc
+
+Non Iterables:
+    data types whom we can loop through in order
+    they are not stored in an ordered way
+    ex- object
+
+>>> FOR LOOP >>>
+    traditional loop
+    gives direct access to key of array/string
+    to access value: we need to use arrayname[key]/strname[key]    
+    can be used to loop
+        1. array
+        2. strings
+    cannot be used to loop
+        objects
+        iterables: map,set,etc
+            
+>>> FOR IN >>>
+    mainly used to loop over object properties
+    gives direct access to key of object/array/string
+    to access value: we need to use objectname[key]/arrayname[key]/strname[key]
+    can be used to loop
+        1.objects
+            if object contains thousand of properties:
+                we can simply use for in loop but its slower
+                faster way would be to use combo of - Object.keys(obj) or Object.values(obj) or Object.entries(obj)
+                followed by a for-of loop            
+        2.array (not recommended)
+            can loop through array too (but slower compared to for of loop)
+        3.strings
+    cannot be used to loop
+        iterables: map,set,etc
+
+>>> FOR OF >>>    
+    mainly used to loop over iterables like array,map,set,string etc
+    gives direct access to value of array/map/set/string
+    Can be used to loop
+        1. array
+        2. set
+        3. map
+            with map, for-of gives us access to [key,value] pairs in each iteration
+            if however we need to access key and value seperately, use:
+                mapObj.keys(): access map keys followed by a for-of loop 
+                mapObj.values(): access map values followed by a for-of loop               
+        4. string
+    Cannot be used to loop
+        object
+            well, it can't iterate over an object directly as it isn't an iterable
+            so, we need to use something like:
+                Object.keys(obj): access object keys followed by a for-of loop 
+                Object.values(obj): access object values followed by a for-of loop  
+                Object.entries(obj): access object [key,values] followed by a for-of loop   
+>>> FOR EACH >>>
+    can be used with iterables
+    provides direct access to key AND value both of array/set/map in each iteration
+    can be used to loop
+        1. array
+        2. set
+        3. map
+    cannot be used to loop
+        object
+        string
+
+>> MAP FILTER REDUCE >>>
+    array specidfic functions
+
+>> for await of loop >>
+    mainly used to loop over an array of asynchronous iterator or generator.
+        more details in file
+    This loop waits for each Promise to resolve before moving to the next iteration,
+    making it useful for handling asynchronous operations in a sequence.    
+
+>> for vs for await >>
+    The main difference between for and for-await loops is how they handle synchronous vs asynchronous operations.
+    for: 
+        - designed to handle synchronous operations, iterating over items immediately,
+          without waiting for asynchronous tasks to complete.
+        - by default, wont wait for promises to resolve  (need to explicitly use await)
+    for await...of:
+        - designed to iterate over asynchronous iterables and promises and generators,
+          allowing you to await the resolution of each promise in sequence
+        - It pauses automatically at each iteration and waits for the promise to resolve before proceeding to
+          the next iteration.
+        - Note: you cannot loop directly over an array of prmises, rather you need to use something called as
+          generators.     
+      
+
+
+
+
+>>>>> Perform async operation in a Loop >>>>>  
+
+    Many times we need to perform some asynchronous activity inside a loop.
+    Not all loops support or are aware of asynchronous task inside of them.
+        Note: We need to enclose loop in an async function and use await inside loop.
+
+    Async/Await operation works perfectly for below loops:
+        for
+        while
+        do while
+        for in
+        for of
+
+    Async/Await operation doesn't works perfectly for below loops:
+        forEach   
+        map,filter,reduce
+        basically all those functions that take callback
+
+        Q. Why async/await don't work for above loops?
+        A. Because above loops are not promise-aware and hence don't support async/await
+
+    Q.Works perfectly, what does that even mean?
+    A. Check below code structure:
+            async fn definition start   
+                loop start
+                    await
+                    code line B
+                loop end
+            async fn definition end
+
+            code line A
+            call async fn ()
+            code line C
+
+            In above code if output prints in order A -> B -> C
+            Note that before executing B it has to wait for some task to continue
+
+
+
+                
+
+
+

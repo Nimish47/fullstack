@@ -1,0 +1,52 @@
+// flex-basis
+
+- flex-basis: 200px (for example)
+- has a similar behavious as of widths
+- similar to flex-grow and flex-shrink, this property can be applied on flex items or flex-container
+
+Lets understand behaviour of width first:
+    - we have flex container and 3 flex items namely - A,B,C
+    - width of flex-container is not specified which means it will be sum of widths of A,B,C
+    - each flex-item has a width of 250px 
+    SCREEN-SIZE: 900PX
+        - since no flex-grow, so they maintain actual width of 250px and remaining space(150px) remain vacant
+    SCREEN-SIZE: 750PX
+        - same as above
+    SCREEN-SIZE: 600PX
+        - since we have width and not min-width, no scrollbar will appear
+        - also since flex-shrink not specified, all flex items will have default flex-shrink: 1
+        - Hence, flex items will shrink and have width 200px each
+    SCREEN-SIZE: LOWER THAN 600PX  
+        - flex items will continue to shrink until minimum bax space thay need to take
+
+Now lets understand flex-basis:
+        - In above scenario, we can use flex-basis in place of width
+        - everything would remain same
+
+What does flex-basis basically mean?
+        - base width of a flex item
+        - if screen-size > [sum of flex basises] AND no flex-grow
+            - flex items remain at flex-basis width, extra space remains vacant
+        - if screen-size < [sum of flex basises] AND no flex-grow   
+            - flex items shrink as per flex-shrink value (if not specify, default)        
+
+How is flex-basis different from width?
+        - Try flex-basis: 0px AND try width: 0px seperately, you'll notice the difference   
+        - if flex-basis and width both present for a flex-item, flex-basis overrides width 
+
+What happends if we give flex-items belwo property:
+    - flex-basis: 0px, and no flex-grow (and default flex-shrink!)
+        - they will always remain at fix width and that width would be minimum required as per box model
+        - extra space will remain vacant
+    - Now what happens if we apply flex-grow: 1 to flex-items
+        - they will start at minimum width required as per box model
+        - as soon as they see extra space available, they will distribute among themselves ( due to flex-grow )
+    - Hence it is perfectlt alright to have flex-basis if we have some flex-grow proprty too!!
+
+NOTE: All these scenarios are valid if flex-wrap: nowrap. If it is changed to wrap, then as soon as:
+          screen-size < [sum of flex basises or widths]
+            - flex items will start to move to new row ( usual flex-wrap way)
+            - no shrinking will occur, flex-wrap overrides it.
+
+Can flex-basis be applied differently to flex-items?
+        - Yes, flex-basis can be applied individually to each flex-item       

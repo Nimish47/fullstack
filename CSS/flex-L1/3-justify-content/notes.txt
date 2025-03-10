@@ -1,0 +1,21 @@
+justify-content
+    - values: flex-start | center | flex-end | space-around | space-between | space-evenly
+    - aligns flex items w.r.t main axis
+    - only decides how flex items are stacked, don't change order of flex-item like flex-direction property
+    - main axis:
+        - decided by flex-direction property if specified
+        - if not specified, default is x-axis
+    - if main axis  = x
+        flex-start: all flex items stacked on left side of axis 
+        center: all flex items stacked at center of axis
+        flex-end: all flex items stacked right side of axis 
+        space-around: explain with diagram
+        space-between: expalin with diagram
+        space-evenly: expalin with diagram
+    - if main axis  = y
+        flex-start: all flex items stacked on top side of axis 
+        center: all flex items stacked at center of axis
+        flex-end: all flex items stacked bottom side of axis 
+        space-around: explain with diagram
+        space-between: expalin with diagram
+        space-evenly: expalin with diagram        

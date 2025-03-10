@@ -1,0 +1,4 @@
+align-self: 
+    - same as align-items only difference is:
+        - align-self applied on individual flex item AND
+        - align-items applied on flex-container

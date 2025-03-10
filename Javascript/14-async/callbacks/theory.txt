@@ -1,0 +1,33 @@
+// Callbacks
+
+Definition:
+    A callback is a function that is passed into another function as an argument to be executed later.
+
+Types of callbacks:
+    Custom:
+        We create one from scratch
+    Library:
+        addEventListener, setTimeout, filter, map etc
+
+Why callbacks in synchronous way?
+    used when you want a part of the code to be easily swapped with something else.
+
+Why callbacks in asynchronous way?
+    used when we need to wait for something to complete, but don't want to block further code
+    it will execute the rest of the tasks given to it while waiting.
+
+Imp. about asynchronous callbacks
+    With asynchronous callbacks, we can give JavaScript instructions in advance without stopping the
+    entire operation.
+    Example - we can assign an onClick handler to a button, which triggers a callback as soon as someone clicks
+    on it. Other things are not affected by it as above feature is non-blocking
+
+Callback Hell
+    It is a phenomenon where multiple callbacks are nested after each other.
+    It also forms a code pyramid which is not only confusing but also error-prone.
+    It can happen when you do an asynchronous activity that’s dependent on a previous asynchronous activity.
+    These nested callbacks make code much harder to read.          
+
+Downside of callbacks compared to others
+    While callbacks are helpful, there is a huge downside to them as well.
+    At times, we may have one callback inside another callback that's in yet another callback and so on.     

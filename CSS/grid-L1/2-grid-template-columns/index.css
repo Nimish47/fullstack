@@ -1,0 +1,76 @@
+body,
+html {
+    padding: 0;
+    margin: 0;
+    background-color: black;
+}
+
+.container1 {
+    display: grid;
+    grid-template-columns: 100px 200px auto;
+    margin-bottom: 100px;
+}
+
+.container2 {
+    display: grid;
+    /* grid-template-columns: 50px 50px 50px 50px 50px 50px; */
+    grid-template-columns: repeat(6, 100px);
+}
+
+.container1 div {
+    padding: 50px;
+    border: 5px solid whitesmoke;
+}
+
+.container2 div {
+    padding: 30px;
+    border: 5px solid whitesmoke;
+}
+
+.child1 {
+    background-color: rgb(109, 109, 8);
+}
+
+.child2 {
+    background-color: rgb(19, 76, 8);
+}
+
+.child3 {
+    background-color: rgb(40, 104, 78);
+}
+
+.child4 {
+    background-color: rgb(113, 63, 12);
+}
+
+.child5 {
+    background-color: rgb(126, 11, 11);
+}
+
+.child6 {
+    background-color: rgb(232, 135, 135);
+}
+
+.child7 {
+    background-color: rgb(109, 109, 8);
+}
+
+.child8 {
+    background-color: rgb(19, 76, 8);
+}
+
+.child9 {
+    background-color: rgb(40, 104, 78);
+}
+
+.child10 {
+    background-color: rgb(113, 63, 12);
+}
+
+.child11 {
+    background-color: rgb(126, 11, 11);
+}
+
+.child12 {
+    background-color: rgb(232, 135, 135);
+}

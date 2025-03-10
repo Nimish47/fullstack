@@ -1,0 +1,10 @@
+display: flex
+    - applied on a [container]
+    - direct child of container come in one horizontal line
+    - by default they are stacked left to right
+container   
+    - also called as a flex container here
+    - child items inside it are called as [flex items]  
+    - holds flex items
+To have a layout as in example:
+    body,html -> height: 100% AND container -> height: 100%      

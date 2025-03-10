@@ -1,0 +1,53 @@
+Async/Await
+    Best way to perform an asynchronous operation
+        A function is declared as 'Async'
+        and the async job that we need to perform is prefixed with 'await'
+    error handling (simalar to catch) is done via try catch block
+
+Async
+    Asynchronous functions contains the async keyword.
+
+Await
+    The await keyword lets you wait for the promise to resolve.
+    Await says 
+        "wait for the asynchronuous operation to complete"
+        "i will block futher code execution"
+        "the asynchronous operation must return a promise either resolved or rejected"
+        "if promise resolved you can store the value in a variable"
+        "if promise rejected handle it in catch block"    
+
+AN ASYNC FUNCTION ALWAYS RETURNS A PROMISE OBJECT
+IF WE return SOMETHING INSIDE ASYNC FN IT BECOMES RESOLVED VALUE OF PROMISE
+
+// GENERAL STRUCTURE - START
+
+const asyncFn = async () => {
+    const res = await ASYNC_FUNCTION
+    return res
+}
+
+asyncFn
+.then((data)=> {console.log(data)})
+.catch((err)=> {console.log(err)})
+
+// GENERAL STRUCTURE - END
+
+In above structure,
+    ASYNC_FUNCTION: returns a promise
+    await: using it, if promise resolved, we pull resolved value and store it in "res"
+           using it, if promise rejected, control moves to nearest catch block
+    we can use try catch block too
+
+// USE CASE
+- if we have multiple promises to handle (whether dependednt or independent)
+- code clarity
+- behind the scenes both are same
+
+
+// Diff - Promise vs Async/Await
+- Async/Await: removes callback/promise hell
+- Promise: you have to handle only one promise
+
+// Same - Promise vs Async/Await
+- both return promise
+- both make use of .then and .catch

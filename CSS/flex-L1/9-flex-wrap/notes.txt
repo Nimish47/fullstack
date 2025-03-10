@@ -1,0 +1,47 @@
+// flex-wrap
+    NOTE: we have ignored other box-model properties
+    - always to applied to flex container and not flex items
+    - values: nowrap | wrap | wrap-reverse
+    - wraps flex-items to a new line if sceen-size < summation of widths (and other box-model props)
+    - to understand flex-wrap move from high to low screen-sizes
+    - flex-wrap: wrap => wraps last flex item in flex container first and so on...
+    - flex-wrap: wrap-reverse => wraps first flex item in flex container first and so on...
+
+To understand flex-wrap, take this example:
+    - we have flex container and 3 flex items namely - A,B,C
+    - width of flex-container is not specified which means it will be sum of widths of A,B,C
+    - each flex-item has a width OR min-width of 150px 
+    - here it doesn't matter if we have width or min-width (compared to flex-grow scenario)
+    - compromising nature of [width] is overriden by flex-wrap property
+    - we apply [flex-grow: 1 AND flex-wrap: wrap] properties to flex-container (and not individual flex items)
+    - now observe the scenarios below:
+        - screen-size 900px
+            - A,B,C first start from their width: 150px each
+            - then they see extra space available, so allocate equally (remaining 450px among themselves)
+            - hence currently A,B,C have [width: 300px each]   
+            - flex-wrap property has no effect here
+        - screen-size 450px     
+            - similar scenario as above since screen-size = sum of widths
+            - A,B,C first start from their width: 150px each
+            - no extra space
+            - hence currently A,B,C have [width: 150px each]   
+            - flex-wrap property has no effect here    
+        - screen-size 420px   
+                - now we see full power of flex-wrap 
+                - now screen-size < sum of widths
+                - A,B,C first start from their width: 150px each but summation > screen-width
+                - hence a scrollbar should appear had flex-wrap property wasn't there
+                - but since we have it so, now last flex-item will move to next row
+                - on first row we will now have 2 flex-items with 210px width each (occupying full available width, 
+                  remember we have flex-grow)
+                - on second row we will now have 1 flex-item with 420px width (occupying full available width, 
+                  remember we have flex-grow)    
+        - screen-size 299px and below   
+                - now not even two flex-items can come on same line as sum of width of 2 flex-items > screen-size
+                - hence now second flex item will move to new row, third already there (and hence all three
+                  flex-items are on seperate rows)
+                - since we have flex-grow on each flex-item, they occupy full width i.e 299px each     
+
+Note:
+- if flex-grow not specified, flex-items will not utilise extra width but remain at their natural widths.
+  Wrapping will occur as usual,however.                                              

@@ -1,0 +1,16 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-image: url('./images/thiva-night.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: azure;
+}
+
+#textbox {
+    padding: 10px;
+    width: 350px;
+    position: absolute;
+    top: 150px;
+    left: 550px;
+}

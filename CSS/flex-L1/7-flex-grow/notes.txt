@@ -1,0 +1,70 @@
+flex-grow:
+    NOTE: we have ignored other box-model properties
+    - default value is -> flex-grow: 0
+    - can be applied on flex container or individual flex items
+        - if applied on flex-container, all flex items grow equally
+        - if applied on flex-items, all flex items grow relative to each other
+        - see example to understand in detail
+    - to understand flex-grow, move from lower screen-size (sum of width of flex-items) to higher screen-sizes  
+    - flowchart:
+        - start from width OR min-width assigned to each flex item
+        - if summation of flex item widths > screen-size
+            - if min-width used, scrollbars appear
+            - if width used, they contract automatically, no scrollbars (irrespective of flex-grow value. It is default behaviour of flex)
+        - if summation of flex item widths < screen-size 
+            - flex items grow width among themselves relative to value of flex-grow property   
+
+
+
+To understand flex-grow, take this example:
+    - we have flex container and 3 flex items namely - A,B,C
+    - width of flex-container is not specified which means it will be sum of widths of A,B,C
+    - each flex-item has a min-width of 150px 
+    - we apply flex-grow: 1 to flex-container (and not individual flex items)
+    - now observe the scenarios below:
+        - screen-size 900px
+            - A,B,C first start from their min-width: 150px each
+            - then they see extra space available, so allocate equally (remaining 450px among themselves)
+            - hence currently A,B,C have [width: 300px each]   
+        - screen-size 450px     
+            - similar scenario as above since screen-size = sum of min-widths
+            - A,B,C first start from their min-width: 150px each
+            - no extra space
+            - hence currently A,B,C have [width: 150px each]       
+        - screen-size 420px    
+            SCENARIO A: (flex items have min-width)   
+                - now screen-size < sum of min-widths
+                - A,B,C first start from their min-width: 150px each but summation > screen-width
+                - hence a scrollbar will appear
+                - flex has an implicit property: flex-wrap: nowrap that prevents it from moving flex items to newline
+                - hence currently A,B,C have [width: 150px each]  with a scrollbar  
+            SCENARIO B: (flex items have width)
+                - now flex-items have width and not min-width
+                - width: 150px for A,B,C
+                - no scrollbar will appear
+                - min-width forces flex items to have a minimum width irrespective of screen
+                - width is compromisable
+                - hence for screen-size: 420px, A,B,C will have width 140px each
+                - if screen-size is 300px, A,B,C will have width 100px each (just beware of minimum content size 
+                  of each flex item!)
+
+Summary from above example:
+    - to understand flex-grow, always move from a lower screen size to upper screen-size
+        - by lower, I mean from summmation of [width or min-width of all flex-items] to higher screen sizes
+        - for example: 
+            - summmation of [width or min-width of all flex-items A,B,C] = 450px
+            - so to understand flex-grow, move from screen-size: [450px to higher screen-size]
+            - because at screen-size: 450px they are their min-sidth or width
+            - as we increase the screen-size now, flex-item's width start to grow
+            - the growth depends on:
+                - if defined on flex-container, they grow equally, and share extra space equally among themselves
+                - if defined on individual flex-item, they grow relative to each other, example:
+                    - A has flex-grow: 1, B doesn't have a flex-grow property, C has flex-grow: 5
+                    - Increasing from screen size upwards from 450px
+                        - C will grow 5 times faster than A
+                        - B will remain at width of 150px as it has no grow property      
+
+                    
+
+
+

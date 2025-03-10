@@ -1,0 +1,20 @@
+1. absolute/fixed VS sticky -> sticky should be used for navbars and footers
+2. disadvantage of abvsolute - see 8position.html
+3. sticky - the position of lement with position: sticky is really important in html code,
+            preferrably put navbaars at start of html code and footers at bottom of html code
+4. when not to use sticky and use fixed => 11sticky.html & id=article            
+3. disadvantage of fixed - scorlls but overlaps some content - see 9fixed.html
+4. dont use vw and vh
+5. dont use rem
+6. very important => 
+    body {
+        margin: 0;
+        padding: 0;
+    }
+7. width: 100% very important
+8. sticky and z-index => 8position.html
+9. background-repeat: no-repeat; => use this for no repitition on x and y axes
+10. for background-image: cover to properly work, use high quality images.
+11. when designing css grids - prepare sketch + add grid props to individual divs one by one and refresh UI after
+    every change. Not every div needs grid-row AND grid-colun both.
+12. Grid area constraint - individual areas should form a rectangle

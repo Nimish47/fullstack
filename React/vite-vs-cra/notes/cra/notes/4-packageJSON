@@ -1,0 +1,36 @@
+TITLE # package.json in a React App
+TOPIC # browserlist
+TOPIC # scripts
+
+browserlist:
+    - browserslist is a configuration section in package.json that defines which browsers your project
+      should support.
+    - It helps tools like Babel, Autoprefixer, and ESLint optimize JavaScript and CSS based on the
+      specified browser targets.     
+
+                "browserslist": {
+                    "production": [
+                        ">0.2%",
+                        "not dead",
+                        "not op_mini all"
+                    ],
+                    "development": [
+                        "last 1 chrome version",
+                        "last 1 firefox version",
+                        "last 1 safari version"
+                    ]
+                }     
+    - ">0.2%":                  Supports browsers with >0.2% market share
+    - not dead:                 Excludes browsers that haven't had updates for >24 months
+    - last 1 chrome version:    support only the latest version of Chrome
+    - IE 11:                    Specifically supports Internet Explorer 11
+    - not op_mini all:          excludes Opera Mini from the supported browser list 
+                                    ✅ Opera Mini runs in "Extreme" mode, which means it doesn't support
+                                        many modern web features.
+                                    ✅ Most JavaScript is disabled, and pages are heavily compressed on Opera's
+                                        servers.
+                                    ✅ Very low usage globally (~0.1% market share). 
+
+Scripts in package.json:
+- We can run built-in commands OR
+- Specify and run our custom commands.                                                      

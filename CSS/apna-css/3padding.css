@@ -1,0 +1,19 @@
+    body {
+        background-color: black;
+        color: beige;
+        margin: 0;
+        padding: 0;
+    }
+    
+
+    div {
+        background-color: grey;
+        height: 200px;
+        width: 200px;
+        padding-left: 20px;
+        padding-right: 20px;
+        padding-top: 20px;
+        /* padding-bottom: 20px; */
+        border: 5px solid whitesmoke;
+    }
+

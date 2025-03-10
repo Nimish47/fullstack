@@ -1,0 +1,33 @@
+WHEN MAKING NOTES DRAW A DIAGRAM EXPLAINING THE AXIS CONCEPT
+    - explain w.r.t document window
+    - explain start center end of main and cross axis
+
+concept of axes
+    main axis
+        - defualt axis based on which flex items are arranged
+        - x-axis is default main axis
+    cross axis
+        - y axis is default cross axis
+
+flex-direction
+    values: row, column, row-reverse, column-reverse
+    specifies the main axis
+        - default main axis is x-axis
+    specifies
+        - stack side: on which side of main-axis, flex-items are stacked
+        - order of flex-items: order in which flex items are arranged     
+
+flex-direction: row
+    - flex items stacked on left side
+    - order of items: Left to Right (1st item in flex-container appears on left and last on right)
+flex-direction: row-reverse
+    - flex items stacked on right side
+    - order of items: Right to Left  (1st item in flex-container appears on right and last on left)
+flex-direction: column
+    - flex items stacked on top side
+    - order of items: Top to Bottom (1st item in flex-container appears on Top and last on bottom side)
+flex-direction: column-reverse
+    - flex items stacked on bottom side
+    - order of items: Bottom to Top (1st item in flex-container appears on bottom and last on top)
+
+NOTE: Left, Right, Top Aand Bottom are relative to flex container    

@@ -1,0 +1,49 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: rgb(22, 8, 45);
+    color: azure;
+}
+
+#parent1 {
+    position: relative;
+    width: 950px;
+    height: 500px;
+    margin: 70px auto 0px auto;
+    background-color: rgb(11, 90, 53);
+}
+
+#parent10 {
+    width: 550px;
+    height: 250px;
+    margin: 20px auto 0px auto;
+    background-color: rgb(225, 155, 16);
+}
+
+#parent11 {
+    /* position: relative; */
+    width: 500px;
+    height: 150px;
+    margin: 50px auto 0px auto;
+    background-color: rgb(215, 70, 106);
+}
+
+#parent110 {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 50px;
+    height: 50px;
+    margin: 10px auto 0px auto;
+    background-color: rgb(157, 222, 28);
+}
+
+#parent111 {
+    /* position: absolute; */
+    /* right: 0;
+    bottom: 0; */
+    width: 50px;
+    height: 50px;
+    margin: 10px auto 0px auto;
+    background-color: rgb(170, 157, 240);
+}

@@ -1,0 +1,65 @@
+body,
+html {
+    padding: 0;
+    margin: 0;
+    background-color: black;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: repeat(6,200px);
+    grid-gap: 10px;
+}
+
+.container div {
+    padding: 50px;
+    border: 5px solid whitesmoke;
+}
+
+.child1 {
+    background-color: rgb(109, 109, 8);
+}
+
+.child2 {
+    background-color: rgb(19, 76, 8);
+}
+
+.child3 {
+    background-color: rgb(40, 104, 78);
+}
+
+.child4 {
+    background-color: rgb(113, 63, 12);
+}
+
+.child5 {
+    background-color: rgb(126, 11, 11);
+}
+
+.child6 {
+    background-color: rgb(232, 135, 135);
+}
+
+.child7 {
+    background-color: rgb(109, 109, 8);
+}
+
+.child8 {
+    background-color: rgb(19, 76, 8);
+}
+
+.child9 {
+    background-color: rgb(40, 104, 78);
+}
+
+.child10 {
+    background-color: rgb(113, 63, 12);
+}
+
+.child11 {
+    background-color: rgb(126, 11, 11);
+}
+
+.child12 {
+    background-color: rgb(232, 135, 135);
+}

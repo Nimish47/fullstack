@@ -1,0 +1,28 @@
+body {
+    background-color: black;
+    color: black;
+    margin: 0;
+    padding: 0;
+}
+
+div {
+    display: inline;
+    width: 200px;
+    height: 200px;
+    padding: 25px;
+    margin: 30px;
+    border: 5px solid red;
+}
+
+#one {
+    display: inline-block;
+    background-color: antiquewhite;
+}
+
+#two {
+    background-color: aquamarine;
+}
+
+#three {
+    background-color: burlywood;
+}

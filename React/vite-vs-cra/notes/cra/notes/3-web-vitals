@@ -1,0 +1,39 @@
+TOPIC # web-vitals very high level overview
+
+FUTURE # Go deep into this topic to improve website performance
+
+// Definition:
+Web Vitals is an initiative by Google to measure and improve the user experience on the web.
+These metrics help developers understand how fast, stable, and responsive their websites are.
+
+📊 Core Web Vitals (Key Metrics)
+Google focuses on three main Core Web Vitals, which impact SEO rankings and user experience:
+
+1. Largest Contentful Paint (LCP) – Loading Performance ⏳
+    ✅ Measures how long it takes for the largest visible content (e.g., an image or text block) to load.
+    ✅ Ideal LCP: ≤ 2.5 seconds
+    ✅ Issues: Slow server response, render-blocking resources, large images
+
+2. First Input Delay (FID) – Interactivity 🖱️
+    ✅ Measures how quickly a page responds to the first user interaction (e.g., clicking a button or link).
+    ✅ Ideal FID: ≤ 100ms
+    ✅ Issues: Heavy JavaScript execution, long tasks blocking the main thread
+
+3. Cumulative Layout Shift (CLS) – Visual Stability 🎯
+    ✅ Measures how much the page layout shifts unexpectedly while loading.
+    ✅ Ideal CLS: ≤ 0.1
+    ✅ Issues: Images or ads without dimensions, dynamically injected content
+
+🚀 How to Measure Web Vitals?
+You can check Web Vitals using:
+    🔹 Google PageSpeed Insights → https://pagespeed.web.dev/
+    🔹 Lighthouse (Chrome DevTools) → F12 → "Lighthouse" tab
+    🔹 Google Search Console → "Core Web Vitals" report
+    🔹 Web Vitals JavaScript Library → npm install web-vitals
+
+🔧 How to Improve Web Vitals?
+    ✅ Optimize images → Use WebP, lazy loading, and compression
+    ✅ Reduce JavaScript execution time → Minimize and defer JavaScript
+    ✅ Use a Content Delivery Network (CDN) → Serve static assets faster
+    ✅ Eliminate render-blocking resources → Minify CSS & JavaScript
+    ✅ Specify image & ad dimensions → Prevent layout shifts    

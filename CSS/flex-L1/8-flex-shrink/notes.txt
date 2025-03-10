@@ -1,0 +1,65 @@
+flex-shrink:
+    NOTE: we have ignored other box-model propertiesNOTE: we have ignored other box-model properties
+    - default value is -> flex-shrink: 1
+    - can be applied on flex container or individual flex items
+        - if applied on flex-container, all flex items shrink equally
+        - if applied on flex-items, all flex items shrink relative to each other
+        - see example to understand in detail
+    - to understand flex-shrink, move from higher screen-size (sum of width of flex-items) to lower screen-sizes 
+    - flowchart:
+        - start from width assigned to each flex item
+        - if summation of flex item widths < screen-size
+            - nothing happens
+            - they maintain their actual width, remaining space vacant
+        - if summation of flex item widths > screen-size 
+            - flex items shrink width among themselves relative to value of flex-shrink property            
+
+
+To understand flex-shrink, take this example:
+    - we have flex container and 3 flex items namely - A,B,C
+    - width of flex-container is not specified which means it will be sum of widths of A,B,C
+    - each flex-item has a width of 250px 
+    - we apply flex-shrink: 1 to flex-container (and not individual flex items)
+    - now observe the scenarios below:
+        - screen-size 900px
+            - A,B,C first start from their width: 250px each
+            - screen-size > sum of widths, nothing happens.
+              They maintain their actual widths
+            - hence currently A,B,C have [width: 250px each]   
+        - screen-size 750px     
+            - similar scenario as above since screen-size = sum of widths
+            - A,B,C first start from their width: 250px each
+            - no extra space
+            - hence currently A,B,C have [width: 250px each]       
+        - screen-size 600px        
+                - screen-size < sum of widths
+                - since width is compromisable, they will start shrinking
+                - they will shrink equally
+                - hence currently A,B,C have [width: 200px each]
+                - if screen size: 450px, A,B, C will shrink further to 150px
+                - reduce screen size further, they'll continue to shrink until they reach minimum content size of 
+                  each flex item
+
+Summary from above example:
+    - to understand flex-shrink, always move from a higher screen size to lower screen-size
+        - by higher, I mean from summmation of [width of all flex-items] to lower screen sizes
+        - for example: 
+            - summmation of [width of all flex-items A,B,C] = 750px
+            - so to understand flex-shrink, move from screen-size: [750px to lower screen-size]
+            - because at screen-size: 750px they are at their actual width
+            - as we decrease the screen-size now, flex-item's width start to shrink
+            - the shrink depends on:
+                - if defined on flex-container, they shrink equally.
+                - if defined on individual flex-item, they shrink relative to each other, example:
+                    - A has flex-shrink: 1, B doesn't have a flex-shrink property, C has flex-shrink:5
+                    - Decreasing from screen size: 750px
+                        - C will shrink 5 times faster than A
+                        - B will remain at width of 250px as its has no shrink property      
+
+    - in the example, we have used width only.
+    - if you want to use min-width, make sure to have flex-grow property as well otherwise,
+      won't be able to see the shrinking.
+    - we can combine flex-grow as well as flex-shrink and use them as well.                      
+
+
+

@@ -1,0 +1,48 @@
+body,
+html {
+    padding: 0;
+    margin: 0;
+    background-color: black;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: 50px 200px 200px 100px;
+}
+
+.container div {
+    padding: 15px;
+}
+
+.header {
+    background-color: rgb(109, 109, 8);
+    grid-column: 1/-1;
+}
+
+.menu {
+    background-color: rgb(94, 109, 224);
+    grid-row: 2/4;
+    grid-column: 1/3;
+}
+
+.content {
+    background-color: rgb(40, 104, 78);
+    grid-row: 2/4;
+    grid-column: 3/11;
+}
+
+.notice1 {
+    background-color: rgb(113, 63, 12);
+    grid-column: 11/-1;
+}
+
+.notice2 {
+    background-color: rgb(211, 64, 88);
+    grid-column: 11/-1;
+}
+
+.footer {
+    background-color: rgb(140, 216, 25);
+    grid-column: 1/-1;
+}

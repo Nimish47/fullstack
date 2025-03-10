@@ -1,0 +1,25 @@
+// Objects in Javascript //
+    
+    Objects in JavaScript are core data structures that comprise properties and methods.
+
+    Methods are functions/actions an object can perform (such as driving and cooling rooms with real
+    life objects like cars and fans)
+
+    Properties are characteristics of an object such as its name and value
+
+    Contains key-value pairs. Value can be number, string, objects, functions etc etc
+
+// Built-in objects in Javascript //
+    1. Object
+    2. JSON
+    3. console
+    4. String
+    5. Math
+    6. Date
+    7. window
+    8. global
+
+    - These are some of the most important parts of Javascript
+    - Together, they are essential elements of the programming environment in both the browser and
+      server-side platforms like Node.   
+

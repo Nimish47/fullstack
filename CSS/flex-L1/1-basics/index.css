@@ -1,0 +1,29 @@
+body,
+html {
+    padding: 0;
+    margin: 0;
+    height: 100%;
+}
+
+.container {
+    display: flex;
+    height: 100%;
+}
+
+.container div {
+    width: 40px;
+    /* height: 40px; */
+    padding: 10px;
+}
+
+.child1 {
+    background-color: rgb(240, 137, 73)
+}
+
+.child2 {
+    background-color: #ffffff
+}
+
+.child3 {
+    background-color: rgb(115, 235, 85);
+}
