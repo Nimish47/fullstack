@@ -1,0 +1,30 @@
+.parent {
+    padding: 0;
+    margin: 0;
+    padding: 50px;
+}
+
+.top {
+    width: 100%;
+    top: 0px;
+    background-color: rgb(237, 43, 43);
+    color: black;
+    text-align: center;
+    height: 50px;
+}
+
+.out {
+    width: 100%;
+    text-align: center;
+    background-color: rgb(53, 53, 2);
+    background-color: rgb(43, 75, 237);
+    height: 300px;
+}
+
+.bottom {
+    width: 100%;
+    background-color: rgb(237, 43, 43);
+    color: black;
+    text-align: center;
+    height: 50px;
+}

@@ -1,0 +1,36 @@
+.parent {
+    padding: 0;
+    margin: 0;
+    height: 100vh;
+    position: relative;
+
+}
+
+.top {
+    height: 10vh;
+    width: 100%;
+    position: absolute;
+    top: 0px;
+    background-color: whitesmoke;
+    color: black;
+    text-align: center;
+}
+
+.out {
+    min-height: 80vh;
+    width: 100%;
+    position: absolute;
+    top: 10vh;
+    text-align: center;
+    background-color: rgb(53, 53, 2);
+}
+
+.bottom {
+    height: 10vh;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    background-color: whitesmoke;
+    color: black;
+    text-align: center;
+}
