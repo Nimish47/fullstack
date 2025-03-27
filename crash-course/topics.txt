@@ -1,0 +1,27 @@
+
+Topics for Accenture interview:
+
+lazy loading
+optimization hooks
+important hooks
+redux context API
+
+position property
+box model
+media queries
+semantic tags
+flex and grids
+
+browser storage
+web workers
+
+strict
+this
+polyfills
+scoping js
+closure
+call apply bind
+callbacks vs promises vs async/await
+event loop
+
+
