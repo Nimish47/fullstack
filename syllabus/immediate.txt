@@ -1,0 +1,37 @@
+Javascript
+
+// make video
+Arrays
+Strings
+Loops
+Data types and memory storages
+Cloning
+Async all
+
+
+
+
+
+//random
+PRIMITIVE VS NON-PRIMITIVE (at the very last)
+
+this in objects and functions and etc
+polyfills
+Prototypes
+Browser storages
+Scopes and closures 
+Cors
+Web workers
+
+
+
+//function related
+what are functions in js
+Arrow functions
+Pure functions
+Bindings in functions: call, bind and apply
+Higher order functions
+iife
+Currying
+Memoization
+Debouncing and throttling

@@ -1,0 +1,34 @@
+.container {
+    padding: 0;
+    margin: 0;
+}
+
+.container div {
+    width: 100%;
+    height: 100px;
+}
+
+.header {
+    background-color: red;
+    color: white;
+    position: absolute;
+    top: 0;
+}
+
+.section {
+    background-color: blue;
+    color: white;
+}
+
+.container .main {
+    background-color: green;
+    color: white;
+    height: 800px;
+}
+
+.footer {
+    background-color: rgb(8, 67, 79);
+    color: white;
+    position: absolute;
+    bottom: 0;
+}

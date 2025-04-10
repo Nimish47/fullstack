@@ -1,0 +1,58 @@
+.container {
+    padding: 0;
+    margin: 0;
+}
+
+.parent {
+    position: relative;
+    height: 500px;
+    width: 500px;
+    background-color: rgb(51, 47, 47);
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 100px;
+}
+
+.parent div {
+    position: absolute;
+    width: 80px;
+    height: 80px;
+}
+
+.childA {
+    background-color: rgb(118, 181, 24);
+    color: white;
+    left: 0;
+    top: 0;
+}
+
+.childB {
+    background-color: red;
+    color: white;
+    right: 0;
+    top: 0;
+}
+
+.childC {
+    background-color: blue;
+    color: white;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+}
+
+.childD {
+    background-color: green;
+    color: white;
+    left: 0;
+    bottom: 0;
+}
+
+.childE {
+    background-color: rgb(53, 195, 223);
+    color: white;
+    right: 0;
+    bottom: 0;
+}

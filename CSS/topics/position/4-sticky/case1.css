@@ -1,0 +1,34 @@
+.container {
+    padding: 0;
+    margin: 0;
+}
+
+.container div {
+    width: 100%;
+    height: 100px;
+}
+
+.header {
+    background-color: rgb(172, 15, 156);
+    color: white;
+    position: sticky;
+    top: 0;
+}
+
+.section {
+    background-color: blue;
+    color: white;
+}
+
+.container .main {
+    background-image: linear-gradient(red, yellow);
+    color: white;
+    min-height: 800px;
+}
+
+.footer {
+    background-color: rgb(8, 67, 79);
+    color: white;
+    position: sticky;
+    bottom: 0;
+}
