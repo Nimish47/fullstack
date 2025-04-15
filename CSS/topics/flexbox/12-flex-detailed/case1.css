@@ -1,0 +1,26 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.parent {
+    background-color: bisque;
+    display: flex;
+}
+
+.parent div {
+    padding: 20px;
+    flex: 1 1 200px
+}
+
+.parent .child1 {
+    color: white;
+    background-color: red;
+    flex-shrink: 5;
+}
+
+.parent .child2 {
+    color: white;
+    background-color: blue;
+    flex-grow: 10;
+}

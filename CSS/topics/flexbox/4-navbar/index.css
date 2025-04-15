@@ -1,0 +1,34 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.navbar {
+    display: flex;
+    background-color: bisque;
+}
+
+.navbar div {
+    padding: 20px;
+}
+
+.logo {
+    color: white;
+    background-color: red;
+}
+
+.home {
+    color: white;
+    background-color: blue;
+    margin-left: auto;
+}
+
+.about {
+    color: white;
+    background-color: green;
+}
+
+.logout {
+    color: white;
+    background-color: black;
+}

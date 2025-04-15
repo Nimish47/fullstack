@@ -1,0 +1,25 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.parent {
+    background-color: bisque;
+    display: flex;
+}
+
+.parent div {
+    flex-grow: 0;
+    flex-shrink: 0;
+    flex-basis: 0;
+}
+
+.child1 {
+    color: white;
+    background-color: red;
+}
+
+.child2 {
+    color: white;
+    background-color: blue;
+}

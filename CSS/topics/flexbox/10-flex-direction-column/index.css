@@ -1,0 +1,56 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: black;
+}
+
+.parent {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 100vh;
+}
+.containerA,.containerB {
+    background-color: bisque;
+    height: 600px;
+    width: 600px;  
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.containerA div, .containerB div {
+    padding: 20px;
+}
+
+.containerB {
+    justify-content: flex-end;
+    align-items: flex-end;
+}
+
+.containerB .child2 {
+    align-self: flex-start;
+}
+
+.child1 {
+    color: white;
+    background-color: red;
+}
+
+.child2 {
+    color: white;
+    background-color: blue;
+}
+
+.child3 {
+    color: white;
+    background-color: green;
+}
+
+.child4 {
+    color: white;
+    background-color: rgb(223, 130, 130);
+}

@@ -1,0 +1,47 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.parent {
+    display: flex;
+    background-color: bisque;
+    width: 500px;
+    height: 500px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 100px;
+    border: solid rgb(94, 167, 46);
+}
+
+.parent div {
+    height: 100px;
+    width: 100px;
+}
+
+.child1 {
+    color: white;
+    background-color: rgb(95, 163, 17);
+}
+
+.child2 {
+    color: white;
+    background-color: rgb(43, 79, 189);
+}
+
+.child3 {
+    color: white;
+    background-color: rgb(201, 22, 94);
+}
+
+.child4 {
+    color: white;
+    background-color: rgb(217, 110, 33);
+    align-self: flex-end;
+}
+
+.child5 {
+    color: white;
+    background-color: rgb(100, 92, 92);
+    align-self: flex-end;
+}

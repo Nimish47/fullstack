@@ -1,0 +1,47 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    display: grid;
+    height: 100vh;
+    background-color: bisque;
+    grid-template-columns: 200px auto;
+    grid-template-rows: 100px 200px auto;
+    grid-gap: 10px;
+}
+
+.container div {
+    padding: 20px;
+}
+
+.one {
+    color: white;
+    background-color: red;
+}
+
+.two {
+    color: white;
+    background-color: blue;
+}
+
+.three {
+    color: white;
+    background-color: green;
+}
+
+.four {
+    color: white;
+    background-color: black;
+}
+
+.five {
+    color: white;
+    background-color: rgb(243, 141, 153);
+}
+
+.six {
+    color: white;
+    background-color: rgb(42, 235, 187);
+}

@@ -1,0 +1,48 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.case1 {
+    background-color: bisque;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.case1 div {
+    padding: 20px;
+    width: 600px;
+    /* min-width: 600px; */
+}
+
+.case2 {
+    margin-top: 100px;
+    background-color: bisque;
+    display: flex;
+    flex-wrap: wrap;    
+}
+
+.case2 div {
+    padding: 20px;
+    width: 200px;
+}
+
+.logo {
+    color: white;
+    background-color: red;
+}
+
+.home {
+    color: white;
+    background-color: blue;
+}
+
+.about {
+    color: white;
+    background-color: green;
+}
+
+.logout {
+    color: white;
+    background-color: black;
+}

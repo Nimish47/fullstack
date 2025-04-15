@@ -1,0 +1,40 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.navbar {
+    display: flex;
+    background-color: bisque;
+    height: 80vh;
+    border: solid rgb(94, 167, 46);
+    /* align-items: flex-start;
+    align-items: center;
+    align-items: flex-end; */
+}
+
+.navbar div {
+    padding: 20px;
+    flex: 1;
+    height: 100px;
+}
+
+.logo {
+    color: white;
+    background-color: red;
+}
+
+.home {
+    color: white;
+    background-color: blue;
+}
+
+.about {
+    color: white;
+    background-color: green;
+}
+
+.logout {
+    color: white;
+    background-color: black;
+}

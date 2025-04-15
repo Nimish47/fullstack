@@ -1,0 +1,26 @@
+## flex wrap:
+
+applied on whole flex-container
+
+## a tale of two cases:
+    in both scenarios flex items have been assigned a certain width.
+
+## case 2: if sum of widths of all flex items < flex container width
+    they will take only space w.r.t their width assined.
+    extra space will be available horizontally.
+
+## case1: if sum of widths of all flex items > flex container width   
+    each flex item will contract itself equally.
+    width of each flex-item less than specified width.
+    NOTICE: width is compromised here.
+    if you use: min-width, width will be preserved but would add a scrollbar!
+
+    here comes flex-wrap: wrap
+    if space not available for next flex item, move to next line
+    width is preserved.
+
+
+   
+
+
+

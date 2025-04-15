@@ -1,0 +1,35 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.navbar {
+    display: flex;
+    /* flex-direction: column;
+    flex-direction: row-reverse;
+    flex-direction: column-reverse; */
+}
+
+.navbar div {
+    padding: 20px;
+}
+
+.logo {
+    color: white;
+    background-color: red;
+}
+
+.home {
+    color: white;
+    background-color: blue;
+}
+
+.about {
+    color: white;
+    background-color: green;
+}
+
+.logout {
+    color: white;
+    background-color: black;
+}

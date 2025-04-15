@@ -1,0 +1,39 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.navbar {
+    display: flex;
+    background-color: bisque;
+    padding: 20px;
+    /* justify-content: flex-start;
+    justify-content: flex-end;
+    justify-content: space-around;
+    justify-content: space-between;
+    justify-content: space-evenly; */
+}
+
+.navbar div {
+    padding: 20px;
+}
+
+.logo {
+    color: white;
+    background-color: red;
+}
+
+.home {
+    color: white;
+    background-color: blue;
+}
+
+.about {
+    color: white;
+    background-color: green;
+}
+
+.logout {
+    color: white;
+    background-color: black;
+}

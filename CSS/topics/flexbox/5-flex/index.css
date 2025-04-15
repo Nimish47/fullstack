@@ -1,0 +1,39 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.navbar {
+    display: flex;
+    background-color: bisque;
+}
+
+.navbar div {
+    /* width: 300px;
+    min-width: 300px; */
+    max-width: 300px;
+    padding: 20px;
+    flex: 1;
+}
+
+.logo {
+    color: white;
+    background-color: red;
+    /* flex: 1; */
+}
+
+.home {
+    color: white;
+    background-color: blue;
+    /* flex: 2; */
+}
+
+.about {
+    color: white;
+    background-color: green;
+}
+
+.logout {
+    color: white;
+    background-color: black;
+}
