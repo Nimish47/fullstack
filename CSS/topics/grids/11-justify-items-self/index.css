@@ -1,0 +1,48 @@
+* {
+    margin: 0;
+    padding: 0;
+    background-color: bisque;
+}
+
+.container {
+    display: grid;
+    border: 5px black solid;
+    height: 70vh;
+    width: 900px;
+    margin: 100px auto;
+    grid-template-columns: repeat(6,150px);
+    grid-auto-rows: 200px;
+    justify-items: end;
+
+}
+
+.one {
+    color: white;
+    background-color: red;
+    justify-self: start;
+}
+
+.two {
+    color: white;
+    background-color: blue;
+}
+
+.three {
+    color: white;
+    background-color: green;
+}
+
+.four {
+    color: white;
+    background-color: black;
+}
+
+.five {
+    color: white;
+    background-color: rgb(243, 141, 153);
+}
+
+.six {
+    color: white;
+    background-color: rgb(42, 235, 187);
+}

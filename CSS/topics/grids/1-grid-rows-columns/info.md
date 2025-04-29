@@ -5,7 +5,7 @@
     specifies width of each column
     width of column  = width of grid element that occupies that space
 
-## grid-template-columns
+## grid-template-rows
     specifies width of each row
     width of row  = width of grid element that occupies that space
 

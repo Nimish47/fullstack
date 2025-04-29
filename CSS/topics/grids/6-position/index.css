@@ -1,0 +1,65 @@
+* {
+    margin: 0 20px;
+    padding: 0;
+    background-color: bisque;
+}
+
+.container {
+    display: grid;;
+    grid-template: 1fr 3fr 5fr 1.25fr / repeat(12,1fr);
+    grid-gap: 5px;
+    height: 100vh;
+}
+
+.container div {
+    padding: 20px;
+    margin: 0;
+    border: 2px solid whitesmoke;
+}
+
+.logo {
+    color: white;
+    background-color: rgb(55, 57, 48);
+    grid-column: 1/3;
+}
+
+.title {
+    text-align: center;
+    color: white;
+    background-color: rgb(223, 37, 17);
+    grid-column: 3/10;
+}
+
+.navitems {
+    color: white;
+    background-color: yellowgreen;
+    grid-column: 10/-1;
+    text-align: right;
+}
+
+.carousel {
+    color: white;
+    background-color: rgb(69, 52, 198);
+    grid-column: 1/-1;
+    grid-row: 2/3;
+}
+
+.content {
+    color: white;
+    background-color: rgb(16, 146, 122);
+    grid-column: 1/11;
+    grid-row: 3/4;
+}
+
+.ad {
+    color: white;
+    background-color: rgb(226, 131, 68);
+    grid-column: 11/-1;
+    grid-row: 3/4;
+}
+
+.footer {
+    color: white;
+    background-color: black;
+    grid-column: 1/-1;
+}

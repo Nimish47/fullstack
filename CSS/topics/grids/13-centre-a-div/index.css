@@ -1,0 +1,23 @@
+* {
+    margin: 0;
+    padding: 0;
+    background-color: bisque;
+}
+
+.parent {
+    display: grid;
+    border: 5px black solid;
+    height: 400px;
+    width: 400px;
+    margin: 200px auto;
+    background-color: yellow;
+    justify-content: center;
+    align-content: center;
+}
+
+.child {
+    color: white;
+    background-color: rgb(202, 10, 23);
+    width: 100px;
+    height: 100px;
+}

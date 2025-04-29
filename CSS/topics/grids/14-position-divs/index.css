@@ -1,0 +1,49 @@
+* {
+    margin: 0;
+    padding: 0;
+    background-color: bisque;
+}
+
+.parent {
+    display: grid;
+    border: 5px black solid;
+    height: 500px;
+    width: 500px;
+    margin: 200px auto;
+    background-color: yellow;
+}
+
+.parent div {
+    width: 100px;
+    height: 100px;
+}
+
+.child1 {
+    color: white;
+    background-color: rgb(202, 10, 23);
+}
+
+.child2 {
+    color: white;
+    background-color: rgb(70, 160, 21);
+    justify-self: end;
+    /* align-self: start; */
+}
+
+.child3 {
+    color: white;
+    background-color: rgb(19, 8, 119);
+}
+
+.child4 {
+    color: white;
+    background-color: rgb(144, 164, 29);
+    justify-self: end;
+}
+
+.child5 {
+    color: white;
+    background-color: rgb(12, 11, 11);
+    justify-self: center;
+    /* align-self: center; */
+}

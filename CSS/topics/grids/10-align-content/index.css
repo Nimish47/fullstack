@@ -1,0 +1,50 @@
+* {
+    margin: 0;
+    padding: 0;
+    background-color: bisque;
+}
+
+.container {
+    display: grid;
+    border: 5px black solid;
+    width: 75%;
+    height: 70vh;
+    margin: 100px auto 0 auto;
+    grid-template-columns: repeat(2,100px);
+    grid-auto-rows: 100px;
+    grid-gap: 2px;
+    align-content: start;
+    align-content: center;
+    align-content: end;
+    align-content: space-evenly;
+}
+
+.one {
+    color: white;
+    background-color: red;
+}
+
+.two {
+    color: white;
+    background-color: blue;
+}
+
+.three {
+    color: white;
+    background-color: green;
+}
+
+.four {
+    color: white;
+    background-color: black;
+}
+
+.five {
+    color: white;
+    background-color: rgb(243, 141, 153);
+}
+
+.six {
+    color: white;
+    background-color: rgb(42, 235, 187);
+}
