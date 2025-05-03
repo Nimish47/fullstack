@@ -1,0 +1,26 @@
+* {
+    margin: 0;
+    padding: 0;
+    background-color: bisque;
+}
+
+.parent {
+    display: grid;
+    border: 5px black solid;
+    height: 400px;
+    width: 400px;
+    margin: 200px auto;
+    background-color: rgb(38, 167, 77);
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3,1fr);
+    grid-template-areas: 
+    "a b b "
+    "a e c"
+    "a f c"
+}
+
+.child {
+    color: white;
+    background-color: rgb(76, 32, 143);
+    grid-area: e;
+}

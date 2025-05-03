@@ -6,3 +6,8 @@
 
     to use it in row wise:
         make sure to assign the grid container a specified height.
+        
+
+## VIDEO
+1. what happens when a row/column width is set as 'auto'
+2. to make 'auto' value work row-wise, define a height to grid container.      

@@ -9,8 +9,15 @@
     border: 5px black solid;
     height: 500px;
     width: 500px;
-    margin: 200px auto;
+    margin: 100px auto;
     background-color: yellow;
+    grid-template: repeat(5,100px) / repeat(5,100px);
+    grid-template-areas:
+    "c1 a a a c4"
+    "b b b b b"
+    "c c c5 d d"
+    "e e e e e"
+    "c2 f f f c3";
 }
 
 .parent div {
@@ -21,29 +28,31 @@
 .child1 {
     color: white;
     background-color: rgb(202, 10, 23);
+    grid-area: c1;
 }
 
 .child2 {
     color: white;
     background-color: rgb(70, 160, 21);
-    justify-self: end;
-    /* align-self: start; */
+    grid-area: c2;
 }
 
 .child3 {
     color: white;
     background-color: rgb(19, 8, 119);
+    grid-area: c3;
 }
 
-.child4 {
+.parent .child4 {
     color: white;
     background-color: rgb(144, 164, 29);
-    justify-self: end;
+    grid-area: c4;
+    width: 200px;
+    height: 200px;
 }
 
 .child5 {
     color: white;
     background-color: rgb(12, 11, 11);
-    justify-self: center;
-    /* align-self: center; */
+    grid-area: c5;
 }

@@ -8,7 +8,9 @@
     display: grid;
     grid-template-columns: 200px 600px 200px;
     grid-template-rows: 200px 200px;
-    grid-gap: 10px;
+    gap: 10px;
+    /* column-gap: 10px;
+    row-gap: 10px; */
 }
 
 .container div {

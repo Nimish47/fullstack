@@ -1,6 +1,5 @@
 ## justify content
-
-position grid content on main axis
+    position grid content on main axis
 
 ## values:
     justify-content: start; (default)
@@ -27,3 +26,11 @@ position grid content on main axis
                 and more..
 
 ## justify-content never works grid-element wise    
+
+
+
+## VIDEO
+justify-content for a grid container and all of its properties
+difficult to write theory but explaining is easy
+applied to whole grid-container not individual element
+positions whole grid-container on x-axis  w.r.t it's parent container: v.important

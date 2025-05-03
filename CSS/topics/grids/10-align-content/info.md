@@ -17,7 +17,7 @@ position grid content on cross axis
     here it distributes itself evenly w.r.t grid line
 
 
-## for below values, align-content works container-wise
+## for below values, align-content works parent-ontainer-wise
             align-content: start; (default)
             align-content: center;
             align-content: end;
@@ -29,3 +29,7 @@ position grid content on cross axis
 
 ## align-content never works grid-element wise
 
+
+## VIDEO
+same as justify-content but on cross axis
+everything else same

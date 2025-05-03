@@ -9,7 +9,7 @@
     height: 100vh;
     grid-template-columns: 1fr 5fr 1fr;
     grid-template-rows: 2fr 5fr;
-    grid-gap: 10px;
+    gap: 10px;
 }
 
 .container div {
