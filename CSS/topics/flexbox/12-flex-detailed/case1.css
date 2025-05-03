@@ -9,8 +9,12 @@
 }
 
 .parent div {
+    width: 500px;
+    /* min-width: 100px;
+    max-width: 100px; */
     padding: 20px;
-    flex: 1 1 200px
+    flex: 1 1 0px;
+    /* flex: 1 1 500px;  */
 }
 
 .parent .child1 {

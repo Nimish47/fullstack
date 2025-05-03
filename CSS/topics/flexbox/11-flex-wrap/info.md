@@ -9,7 +9,8 @@ applied on whole flex-container
     they will take only space w.r.t their width assined.
     extra space will be available horizontally.
 
-## case1: if sum of widths of all flex items > flex container width   
+## case1: if sum of widths of all flex items > flex container width  
+    when flex-wrap not used: 
     each flex item will contract itself equally.
     width of each flex-item less than specified width.
     NOTICE: width is compromised here.
@@ -21,6 +22,10 @@ applied on whole flex-container
 
 
    
+## VIDEO
+    by default a flex shrinks flex-item width if space not available
+    to preserve a certain width and to prevent scrollbar (check min-width), there comes flex-wrap: wrap 
+    check content above
 
 
 

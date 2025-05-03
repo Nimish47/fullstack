@@ -27,6 +27,7 @@
 .child2 {
     color: white;
     background-color: rgb(43, 79, 189);
+    align-self: flex-end;
 }
 
 .child3 {

@@ -19,7 +19,7 @@
     margin-top: 100px;
     background-color: bisque;
     display: flex;
-    flex-wrap: wrap;    
+    flex-wrap: wrap;    /* no efffect for this case */
 }
 
 .case2 div {

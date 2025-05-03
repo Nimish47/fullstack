@@ -7,6 +7,9 @@
     justify-content: space-between;
     justify-content: space-evenly;
 
-
+## VIDEO
+    alignment on main axis
+    applied to flex-container
+    discuss different values
 
 

@@ -9,9 +9,9 @@
 }
 
 .navbar div {
-    /* width: 300px;
-    min-width: 300px; */
-    max-width: 300px;
+    width: 300px;
+    /* min-width: 300px;
+    max-width: 300px; */
     padding: 20px;
     flex: 1;
 }
@@ -22,10 +22,10 @@
     /* flex: 1; */
 }
 
-.home {
+.navbar .home {
     color: white;
     background-color: blue;
-    /* flex: 2; */
+    flex: 2;
 }
 
 .about {

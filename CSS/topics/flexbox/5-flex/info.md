@@ -12,3 +12,20 @@
 
 ## above scenario but max-width is used?
 
+
+
+## VIDEO
+    flex: relative value
+    applied on individual flex-items not flex-container
+    purpose: responsiveness and full width utiilization
+    flex value is relative to flex values of other flex-items
+        what if only one flex-item has a flex value? Will it even matter what value it has? How does it behave in UI
+        what is default flex value?
+        show how items behave when they have relative flex values.
+
+    discuss the influence of:
+        width
+        min-width
+        max-width   on flex property of flex items
+
+    
