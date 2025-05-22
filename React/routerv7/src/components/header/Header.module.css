@@ -1,0 +1,45 @@
+.headerContainer {
+    display: flex;
+    align-items: center;
+    background-color: rgb(8, 8, 114);
+    color: white;
+    letter-spacing: 2px;
+    font-weight: 600;
+    position: sticky;
+    top: 0;
+    height: 100%;
+}
+
+/* apply this css to all links */
+a {
+    color: white;
+    letter-spacing: 2px;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+a:hover {
+    color: rgb(215, 153, 17);
+}
+
+.company {
+    font-weight: 900;
+    letter-spacing: 3px;
+    margin-left: 20px;
+    cursor: pointer;
+    color: rgb(215, 153, 17);
+}
+
+.about {
+    margin-left: auto;
+    cursor: pointer;  
+}
+
+.contact,.logout,.locker {
+    margin-left: 25px;
+    cursor: pointer;
+}
+
+.logout {
+    margin-right: 10px;
+}

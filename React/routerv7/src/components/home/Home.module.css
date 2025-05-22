@@ -1,0 +1,36 @@
+.homeContainer {
+    font-weight: 700;
+    font-size: 2em;
+    background-color: black;
+    color: whitesmoke;
+    height: 100%;
+}
+
+.label {
+    text-align: center;
+    letter-spacing: 2px;
+    font-size: 1.5em;
+    padding-top: 100px;
+}
+
+.flexContainer {
+    display: flex;
+    justify-content: center;
+    padding-top: 30px;
+    color: black;
+}
+
+.flexContainer div {
+    background-color: antiquewhite;
+    padding: 30px;
+    text-align: center;
+    cursor: pointer;
+}
+
+.flexContainer div:hover {
+    opacity: 0.7;
+}
+
+.pessi {
+    margin-right: 40px;
+}

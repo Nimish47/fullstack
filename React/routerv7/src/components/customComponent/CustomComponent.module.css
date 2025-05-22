@@ -1,0 +1,11 @@
+.customComponentContainer {
+    height: 100%;
+    background-color: bisque;
+    color: rgb(13, 5, 93);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 900;
+    letter-spacing: 2px;
+    font-size: 50px;
+}

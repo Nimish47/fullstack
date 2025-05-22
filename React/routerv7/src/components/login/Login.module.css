@@ -1,0 +1,85 @@
+.loginContainer {
+    height: 100vh;
+    display: flex;
+}
+
+.text {
+    font-size: 4em;
+    font-style: italic;
+    margin: 20px auto;
+    color: whitesmoke;
+}
+
+.imageContainer {
+    flex: 2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: black;
+}
+.image {
+    width: 95%;
+    height: 95%;
+    background-image: url('../../../public//new-york.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+.formContainer {
+    flex: 1;
+    background-color: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.loginForm {
+    width: 90%;
+    height: 90%;
+    background-color: rgb(0, 0, 0);
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+
+}
+
+.username {
+    padding: 25px;
+    width: 75%;
+    display: block;
+    margin: 40px auto;
+    margin-top: auto;
+    background-color: black;
+    color: whitesmoke;
+    border: solid white;
+    font-size: 1.25em;
+}
+
+.password {
+    padding: 25px;
+    width: 75%;
+    display: block;
+    margin: 0 auto;
+    background-color: black;
+    color: whitesmoke;
+    border: solid white;
+    font-size: 1.25em;
+}
+
+.loginbtn {
+    margin-top: auto;
+    padding: 15px;
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 20px;
+    background-color: black;
+    color: whitesmoke;
+    font-size: 1.5em;
+    border: solid white;
+}
+
+.loginbtn:hover {
+    background-color: rgb(46, 45, 45);
+    cursor: pointer;
+}

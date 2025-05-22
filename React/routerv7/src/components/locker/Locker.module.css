@@ -1,0 +1,38 @@
+.matrixContainer {
+    display: flex;
+    height: 100%; 
+    width: 100%;
+    background-color: black;
+}
+
+a:hover {
+    color: white;
+}
+
+.left,.right {
+    flex: 1;  
+    display: flex;
+    align-items: center;
+    justify-content: center;  
+}
+
+.left {
+    background-color: black;
+    font-size: 3em;
+    color: rgb(245, 245, 245);
+}
+
+.right {
+    background-color: rgb(192, 27, 27);
+    font-size: 3em;
+    color: whitesmoke;
+}
+
+.right:hover {
+    cursor: pointer;
+    opacity: 0.5;
+}
+
+.outlet {
+    flex: 1;
+}
