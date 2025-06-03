@@ -1,6 +1,7 @@
 
+import { Question } from '../question/Question';
 import styles from './Home.module.css';
-import { useNavigate, useLocation } from 'react-router-dom';
+import { useNavigate, useLocation, Link } from 'react-router-dom';
 
 export const Home = () => {
 
@@ -18,8 +19,12 @@ export const Home = () => {
         <div className={styles.homeContainer}>
             <div className={styles.label}>Where do you want to go!</div>
             <div className={styles.flexContainer}>
-                <div className={styles.pessi}>Dynamic</div>
+                <Link className={styles.link} to='/users'><div className={styles.pessi}> Users </div></Link>
                 <div onClick={sendCourier} className={styles.courier}>Courier</div>
+                <Link className={styles.link} to='/lazy'><div className={styles.lazyDiv}> Too lazy! </div></Link>
+            </div>
+            <div className={styles.questionContainer}>
+                <Question />
             </div>
         </div>
     )

@@ -4,6 +4,7 @@
     background-color: black;
     color: whitesmoke;
     height: 100%;
+    position: relative;
 }
 
 .label {
@@ -16,7 +17,7 @@
 .flexContainer {
     display: flex;
     justify-content: center;
-    padding-top: 30px;
+    padding-top: 60px;
     color: black;
 }
 
@@ -31,6 +32,46 @@
     opacity: 0.7;
 }
 
+.questionContainer {
+    display: flex;
+    justify-content: center;
+    padding-top: 70px;
+}
+
 .pessi {
     margin-right: 40px;
+}
+
+.query {
+    margin-left: 40px;
+}
+
+.link {
+    text-decoration: none;
+    color: black;
+}
+
+.link:hover {
+    color: black;
+}
+
+.lazyDiv {
+    position: absolute;
+    right: 70px;
+    top: 70px;
+    border-radius: 50%;
+    box-shadow:
+    -30px 0px 0 0 skyblue,
+    30px 0px 0 0 skyblue,
+    0px -20px 0 0 skyblue;
+}
+
+.flexContainer .lazyDiv {
+    background-color: skyblue;
+    color: darkblue;
+}
+
+.flexContainer .lazyDiv:hover {
+    opacity: 0.8;
+    color: whitesmoke;
 }

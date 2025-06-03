@@ -1,0 +1,33 @@
+.title {
+    text-align: center;
+    font-size: 2rem;
+    padding: 40px;
+    background-color: rgb(238, 156, 156);;
+    color: black;
+    border-top: 2px white solid;
+}
+
+.todoContainer {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    padding: 50px;
+}
+
+.todo {
+    background-color: rgb(238, 156, 156);
+    color: black;
+    padding: 30px;
+    border: 2px solid rgb(246, 236, 236);
+    text-align: center;
+    border-radius: 30px;
+    letter-spacing: 2px;
+}
+
+.todo:hover {
+    background-color: rgb(255, 255, 255);
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+    cursor: pointer;
+    color: black;
+}

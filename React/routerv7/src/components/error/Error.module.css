@@ -1,0 +1,18 @@
+.errorContainer {
+    height: 100%;
+    text-align: center;
+    background-color: whitesmoke;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 900;
+    letter-spacing: 2px;
+    font-size: 50px;
+    font-size: 2em;
+}
+
+.container {
+    background-color: red;
+    color: whitesmoke;
+    padding: 40px;
+}

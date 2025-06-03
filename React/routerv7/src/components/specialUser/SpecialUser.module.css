@@ -1,0 +1,20 @@
+.userContainer {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: bisque;
+    font-size: 2em;
+    letter-spacing: 7px;
+    line-height: 50px;
+}
+
+.hitman {
+    background-color: whitesmoke;
+    padding: 20px;
+}
+
+span {
+    color: red;
+    font-weight: 600;
+}

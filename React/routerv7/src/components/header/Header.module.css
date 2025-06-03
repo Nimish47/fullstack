@@ -10,24 +10,30 @@
     height: 100%;
 }
 
-/* apply this css to all links */
-a {
+.link {
     color: white;
     letter-spacing: 2px;
     font-weight: 600;
     text-decoration: none;
 }
 
-a:hover {
+.link:hover {
     color: rgb(215, 153, 17);
 }
 
 .company {
     font-weight: 900;
-    letter-spacing: 3px;
+    letter-spacing: 7px;
     margin-left: 20px;
     cursor: pointer;
     color: rgb(215, 153, 17);
+    text-decoration: none;
+    font-size: 1.2em;
+    font-style: italic;
+}
+
+.company:hover {
+    color: white;
 }
 
 .about {
@@ -41,5 +47,13 @@ a:hover {
 }
 
 .logout {
+    color: white;
+    letter-spacing: 2px;
+    font-weight: 600;
+    text-decoration: none;
     margin-right: 10px;
+}
+
+.logout:hover {
+    color: rgb(215, 153, 17);
 }

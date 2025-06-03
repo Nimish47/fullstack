@@ -1,0 +1,64 @@
+.container {
+    height: 100%;
+    background-color: antiquewhite;
+    position: relative;
+}
+
+.panda {
+    position: absolute;
+    opacity: 0.1;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.todos, .comments, .posts, .pictures  {
+    position: absolute;
+    padding: 50px;
+    height: 50px;
+    text-align: center;
+    cursor: pointer;
+    border-radius: 50%;
+    color: darkblue;
+    letter-spacing: 5px;
+    font-size: 1.45em;
+    box-shadow:
+    -30px 0px 0 0 skyblue,
+    30px 0px 0 0 skyblue,
+    0px -20px 0 0 skyblue;
+}
+
+.todos, .comments, .posts, .pictures {
+    background-color: skyblue;
+    color: darkblue;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.todos:hover, .comments:hover, .posts:hover, .pictures:hover  {
+    opacity: 0.7;
+}
+
+.todos {
+    top: 70px;
+    left: 70px; 
+}
+.comments {
+    top: 70px;
+    right: 70px;
+}
+.pictures {
+    bottom: 70px;
+    left: 70px;
+} 
+.posts {
+    bottom: 70px;
+    right: 70px;
+}
+
+.image {
+    margin-left: 10px;
+    width: 60px;
+    height: 60px;
+}

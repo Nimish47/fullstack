@@ -1,0 +1,95 @@
+.container {
+    max-height: 100vh;
+    background-color: black;
+    color:  whitesmoke;
+    font-weight: 900;
+    letter-spacing: 2px;
+    font-size: 50px;
+}
+
+.topText {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+    padding-top: 5px;
+    font-size: 0.7em;
+}
+
+.bubbles {
+    display: flex;
+    padding-top: 40px;
+    justify-content: space-around;
+}
+
+.goodBubble {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 250px;
+    height: 250px;
+    background-color: #097f09;
+    border-radius: 50%;
+}
+
+.badBubble {
+    background-color: red;
+}
+
+.text {
+    font-size: 1em;
+    color: white;
+    text-align: center;
+}
+
+.goodBubble:hover {
+    cursor: pointer;
+    transition: opacity 0.3s ease-in-out;
+    transform: scale(1.05);
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.badBubble {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 250px;
+    height: 250px;
+    background-color: rgb(152, 152, 12);
+    border-radius: 50%;
+}
+
+.badBubble:hover {
+    cursor: pointer;
+    transition: opacity 0.3s ease-in-out;
+    transform: scale(1.05);
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.worstBubble {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 250px;
+    height: 250px;
+    background-color: red;
+    border-radius: 50%;
+    margin-bottom: 32px;
+}
+
+.worstBubble:hover {
+    cursor: pointer;
+    transition: opacity 0.3s ease-in-out;
+    transform: scale(1.05);
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.container2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+}

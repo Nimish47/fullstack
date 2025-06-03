@@ -12,10 +12,10 @@ export const Header = () => {
 
     return (
         <div className={styles.headerContainer}>
-            <div className={styles.company}><Link to='/' className={styles.company}>WILLY HILLS</Link></div>
-            <div className={styles.about}><Link to='/about'>ABOUT</Link></div>
-            <div className={styles.contact}><Link to='/contact'>CONTACT</Link></div>
-            <div className={styles.locker}><Link to='/locker'>LOCKER</Link></div>
+            <div><Link to='/' className={styles.company}>WILLY HILLS</Link></div>
+            <div className={styles.about}><Link className={styles.link}to='/about'>ABOUT</Link></div>
+            <div className={styles.contact}><Link className={styles.link} to='/contact'>CONTACT</Link></div>
+            <div className={styles.locker}><Link className={styles.link} to='/locker'>LOCKER</Link></div>
             <div
                 className={styles.logout}
                 onClick={handleLogout}

@@ -1,0 +1,49 @@
+.queryContainer {
+    background-color:  rgb(95, 90, 90);;
+    color: black;
+    letter-spacing: 2px;
+    font-size: 2em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    text-align: center;
+    line-height: 50px;
+}
+
+.queryItems {
+    background-color: bisque;
+    color: black;
+    padding: 70px;
+    position: relative;
+}
+
+.new {
+    position: absolute;
+    height: 50px;
+    width: 50px;
+    right: 10px;
+    top: 10px;
+    color: whitesmoke;
+    background-color: green;
+}
+
+.flex {
+    display: flex;
+}
+
+.refreshContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 10px;
+}
+
+.refresh {
+    width: 30px;
+}
+
+.refresh:hover {
+    cursor: pointer;
+    opacity: 0.8;
+}

@@ -1,0 +1,15 @@
+.userContainer {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: bisque;
+    font-size: 2em;
+    letter-spacing: 7px;
+    line-height: 50px;
+}
+
+span {
+    color: rgb(28, 46, 207);
+    font-weight: 600;
+}

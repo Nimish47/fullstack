@@ -1,0 +1,42 @@
+.container {
+    background-color: black;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    font-size: 2em;
+    text-align: center;
+}
+
+.errorMessage {
+    color: red;
+    margin-top: 20px;
+    font-size: 0.7em;
+}
+
+.linkContainer {
+    margin-top: 50px;
+    background-color: white;
+    color: black;
+    padding: 10px;
+    font: 0.7em Arial, sans-serif;
+}
+
+.link {
+    color: blue;
+    letter-spacing: 2px;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.link:hover {
+    color: rgb(215, 153, 17);
+}
+
+.warning {
+    color: white;
+    width: 60px;
+    border: white;
+    margin-bottom: -10px;
+}
