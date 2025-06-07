@@ -1,0 +1,7 @@
+.graphContainer {
+    max-width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10px;
+    background-color: rgb(106, 181, 225);
+}

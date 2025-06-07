@@ -12,23 +12,53 @@
     transform: translate(-50%, -50%);
 }
 
-.todos, .comments, .posts, .pictures  {
+.panda2 {
+    width: 80px;
+    height: 80px;
+}
+
+.todos,
+.comments,
+.posts,
+.pictures {
     position: absolute;
-    padding: 50px;
-    height: 50px;
+    padding: 40px;
+    height: 30px;
     text-align: center;
     cursor: pointer;
     border-radius: 50%;
     color: darkblue;
     letter-spacing: 5px;
-    font-size: 1.45em;
+    font-size: 1.2em;
+    opacity: 0.8;
     box-shadow:
-    -30px 0px 0 0 skyblue,
-    30px 0px 0 0 skyblue,
-    0px -20px 0 0 skyblue;
+        -30px 0px 0 0 skyblue,
+        30px 0px 0 0 skyblue,
+        0px -20px 0 0 skyblue;
 }
 
-.todos, .comments, .posts, .pictures {
+.goodlazy,
+.badlazy,
+.worstlazy {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    position: absolute;
+    height: 50px;
+    width: 50px;
+    padding: 75px;
+    text-align: center;
+    cursor: pointer;
+    border-radius: 50%;
+    letter-spacing: 5px;
+    font-size: 1.25em;
+}
+
+.todos,
+.comments,
+.posts,
+.pictures {
     background-color: skyblue;
     color: darkblue;
     display: flex;
@@ -36,29 +66,73 @@
     justify-content: center;
 }
 
-.todos:hover, .comments:hover, .posts:hover, .pictures:hover  {
+.todos:hover,
+.comments:hover,
+.posts:hover,
+.pictures:hover {
+    opacity: 1;
+}
+
+.goodlazy:hover,
+.badlazy:hover,
+.worstlazy:hover {
     opacity: 0.7;
 }
 
 .todos {
     top: 70px;
-    left: 70px; 
+    left: 70px;
 }
+
 .comments {
     top: 70px;
     right: 70px;
 }
+
 .pictures {
     bottom: 70px;
     left: 70px;
-} 
+}
+
 .posts {
     bottom: 70px;
     right: 70px;
+}
+
+.goodlazy {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 1;
+    background-color: green;
+    color: whitesmoke;
+}
+
+.badlazy {
+    top: 50%;
+    left: 70%;
+    transform: translate(-50%, -50%);
+    opacity: 1;
+    background-color: yellow;
+    color: black;
+}
+
+.worstlazy {
+    top: 50%;
+    left: 30%;
+    transform: translate(-50%, -50%);
+    opacity: 1;
+    background-color: red;
+    color: whitesmoke;
 }
 
 .image {
     margin-left: 10px;
     width: 60px;
     height: 60px;
+}
+
+.text {
+    min-width: 200px;
+    padding: 20px;
 }

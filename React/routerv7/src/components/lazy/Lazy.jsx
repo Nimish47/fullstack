@@ -2,7 +2,7 @@ import styles from './Lazy.module.css'
 import panda from '../images/panda.png'
 import angry from '../images/angry.png'
 import hearts from '../images/hearts.png'
-import online from '../images/online.png'
+import muscular from '../images/muscular.png'
 import shocked from '../images/shocked.png'
 import { useNavigate } from 'react-router-dom'
 
@@ -19,7 +19,13 @@ function Lazy() {
         else if (e.currentTarget.dataset.name === 'comments')
             navigate('/comments')
         else if (e.currentTarget.dataset.name === 'posts')
-            navigate('/posts')
+            navigate('/posts')        
+        else if (e.currentTarget.dataset.name === 'goodlazy')
+            navigate('/goodlazy')
+        else if (e.currentTarget.dataset.name === 'badlazy')
+            navigate('/badlazy') 
+        else if (e.currentTarget.dataset.name === 'worstlazy')
+            navigate('/worstlazy')                  
         else
             alert('Invalid page name');
     }
@@ -31,7 +37,7 @@ function Lazy() {
                 className={styles.todos}
                 data-name='todos'
                 onClick={goToPage}
-            > 
+            >
                 Finish these todos!
                 <img src={angry} className={styles.image} alt='todoimage' />
             </div>
@@ -43,6 +49,30 @@ function Lazy() {
                 So many pictures
                 <img src={shocked} className={styles.image} alt='pictures' />
             </div>
+            <div
+                className={styles.goodlazy}
+                data-name='goodlazy'
+                onClick={goToPage}
+            >
+                <div className={styles.text}>Good Lazy</div>
+                
+            </div>
+            <div
+                className={styles.badlazy}
+                data-name='badlazy'
+                onClick={goToPage}
+            >
+                <div className={styles.text}>Bad Lazy</div>
+                
+            </div>
+            <div
+                className={styles.worstlazy}
+                data-name='worstlazy'
+                onClick={goToPage}
+            >
+                <div className={styles.text}>Worst Lazy</div>
+                
+            </div>                        
             <div
                 className={styles.comments}
                 data-name='comments'
@@ -56,8 +86,8 @@ function Lazy() {
                 data-name='posts'
                 onClick={goToPage}
             >
-                Archived posts (nostalgia)
-                <img src={online} className={styles.image} alt='nostalgia' />
+                Nostalgia Posts! (#staystrong)
+                <img src={muscular} className={styles.image} alt='posts' />
             </div>
         </div>
     )

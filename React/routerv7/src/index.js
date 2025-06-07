@@ -34,10 +34,17 @@ import Lazy from './components/lazy/Lazy.jsx';
 import Todos from './components/todos/Todos.jsx';
 import Pictures from './components/pictures/Pictures.jsx';
 import Comments from './components/comments/Comments.jsx';
-import Posts from './components/posts/Posts.jsx';
 import { fetchAllPictures } from './components/pictures/PicturesLoader.js';
 import { fetchAllComments } from './components/comments/CommentsLoader.js';
+// import Heavy from './components/heavy/Heavy.jsx';
+import { lazy, Suspense } from 'react';
 import { fetchAllPosts } from './components/posts/PostsLoader.js';
+import Posts from './components/posts/Posts.jsx';
+import GoodLazy from './components/goodlazy/GoodLazy.jsx';
+// import Lazycore from './lazycore/Lazycore.jsx';
+
+const BadLazy = lazy(() => import(/* webpackChunkName: "BadLazy" */ './components/badlazy/BadLazy.jsx'))
+const WorstLazy = lazy(() => import(/* webpackChunkName: "WorstLazy" */ './components/worstlazy/WorstLazy.jsx'))
 
 const router = createBrowserRouter([
   {
@@ -122,14 +129,36 @@ const router = createBrowserRouter([
             loader: fetchAllPictures
           },
           {
+            path: "posts",
+            element: <Posts />,
+            loader: fetchAllPosts
+          },
+          {
             path: "comments",
             element: <Comments />,
             loader: fetchAllComments
           },
           {
-            path: "posts",
-            element: <Posts />,
-            loader: fetchAllPosts
+            path: "badlazy",
+            element:
+              (
+                <Suspense fallback={<div>Loading BadLazy...</div>}>
+                  <BadLazy />
+                </Suspense>
+              ),
+          },
+          {
+            path: "worstlazy",
+            element:
+              (
+                <Suspense fallback={<div>Loading Heavy...</div>}>
+                  <WorstLazy />
+                </Suspense>
+              ),
+          },
+          {
+            path: "goodlazy",
+            element: <GoodLazy />
           },
           {
             path: "/error",
