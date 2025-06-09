@@ -1,7 +1,7 @@
-import React, { useEffect, useState } from 'react'
+import { useEffect, useState } from 'react'
 import SuspenseLoader from '../loadscreens/suspenseloader/SuspenseLoader';
 
-function GoodLazy() {
+function PostsChild() {
 
     const [count, setCount] = useState('')
 
@@ -10,7 +10,7 @@ function GoodLazy() {
             
             const axios = module.default
             
-            axios.get('https://jsonplaceholder.typicode.com/users')
+            axios.get('https://jsonplaceholder.typicode.com/posts')
                 .then((response) => {
                     setCount(response.data.length)
                 })
@@ -19,13 +19,11 @@ function GoodLazy() {
                 })
         })
     }, [])
-
     if (!count) return <SuspenseLoader />
 
-
     return (
-        <>This comp uses axios library and fetches the totalcount which is: {count}</>
+        <>{count} posts</>
     )
 }
 
-export default GoodLazy
+export default PostsChild

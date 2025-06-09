@@ -6,6 +6,7 @@ function Comments() {
 
     const data = useLoaderData();
 
+
     return (
         <div className={styles.container}>
             <div className={styles.title}>Here are your loved comments buddy!!</div>

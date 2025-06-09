@@ -33,3 +33,22 @@
     cursor: pointer;
     color: black;
 }
+
+.container {
+    position: relative;
+}
+
+.child {
+position: fixed;
+width: 21vh;
+height: 21vh;
+background-color: navy;
+right: 0;
+display: flex;
+align-items: center;
+justify-content: center;
+color: whitesmoke;
+font-size: 1.5em;
+border-bottom-left-radius: 50px;
+border-bottom-right-radius: 50px;
+}

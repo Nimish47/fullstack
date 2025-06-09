@@ -1,0 +1,27 @@
+.container {
+    height: 100%;
+}
+
+.topquote,.bottomquote,.outlet {
+    height: 10%;
+    background-color: red;
+    font-size: 2em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: whitesmoke;
+    letter-spacing: 2px;
+}
+
+.outlet {
+    height: 80%;
+    background-color: beige;
+    color: black;
+}
+
+.bottomquote {
+    background-color: green;
+    font-style: italic;
+    color: whitesmoke;
+    letter-spacing: 5px;
+}

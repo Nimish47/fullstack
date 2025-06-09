@@ -1,0 +1,28 @@
+import React, { useEffect, useState } from 'react'
+import axios from 'axios';
+import styles from './GoodLazy.module.css'
+import SuspenseLoader from '../loadscreens/suspenseloader/SuspenseLoader';
+
+function GoodLazy() {
+
+    const [count, setCount] = useState('')
+
+    useEffect(() => {
+        axios.get('https://jsonplaceholder.typicode.com/users')
+            .then((response) => {
+                setCount(response.data.length)
+            })
+            .catch(function (error) {
+                console.log(error);
+            })
+    }, [])
+
+    if (!count) return <SuspenseLoader />
+
+
+    return (
+        <>This comp uses axios library and fetches the totalcount which is: {count}</>
+    )
+}
+
+export default GoodLazy

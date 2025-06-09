@@ -1,0 +1,30 @@
+.container {
+    height: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-auto-rows: 40vh;
+    gap: 12px;
+    margin: 12px;
+}
+
+.container div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.one {
+    background-color: blue;
+}
+
+.two {
+    background-color: red;
+}
+
+.three {
+    background-color: greenyellow;
+}
+
+.four {
+    background-color: rgb(229, 130, 55);
+}

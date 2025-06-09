@@ -1,11 +1,15 @@
 import { useEffect, useState } from 'react'
 import styles from './Key.module.css'
+import { Navigate, useNavigate } from 'react-router-dom'
 
 export const Key = () => {
 
     const [key, setKey] = useState(Math.floor(Math.random() * 1000000))
     const [expiry, setExpired] = useState(false)
     const [counter, setCounter] = useState(10)
+    const navigate = useNavigate()
+
+    const isValidUser = localStorage.getItem("username") === "hitman47"
 
     useEffect(() => {
         const interval = setInterval(() => {
@@ -39,6 +43,9 @@ export const Key = () => {
             })
         }, 1000)
     }
+
+    //if (!isValidUser) navigate('/error')   Not a good idea
+    if (!isValidUser) return <Navigate to="/error"/>   // best approach
 
     return (
         <div className={styles.lockContainer}>

@@ -1,0 +1,32 @@
+import { useEffect, useState } from 'react';
+import styles from './BadLazy.module.css'
+import { Line } from 'react-chartjs-2';
+import {
+  Chart as ChartJS,
+  CategoryScale,
+  LinearScale,
+  PointElement,
+  LineElement,
+  Title,
+  Tooltip,
+  Legend,
+} from 'chart.js';
+
+
+// Register required Chart.js modules
+ChartJS.register(CategoryScale, LinearScale, PointElement, LineElement, Title, Tooltip, Legend);
+
+
+const data = {
+  labels: ['Jan', 'Feb'],
+  datasets: [{ label: 'Sales', data: [30, 40] }]
+};
+
+export default function BadLazy() {
+
+  return (
+    <div className={styles.graphContainer}>
+      <Line data={data} />
+    </div>
+  )
+}

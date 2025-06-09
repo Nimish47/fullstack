@@ -1,5 +1,8 @@
 import { useLoaderData } from 'react-router-dom';
 import styles from './Posts.module.css'
+import { lazy } from 'react';
+
+const PostsChild = lazy(() => import(/* webpackChunkName: "PostsChild" */  "../postschild/PostsChild"))
 
 
 function Posts() {
@@ -8,6 +11,9 @@ function Posts() {
 
     return (
         <div className={styles.container}>
+            <div className={styles.child}>
+                <PostsChild />
+            </div>
             <div className={styles.title}>Here are your posts! Nostalgia enough!!</div>
             <div className={styles.todoContainer}>
                 {data.length && data.map(todo => (

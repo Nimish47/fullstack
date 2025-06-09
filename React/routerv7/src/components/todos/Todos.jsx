@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import styles from './Todos.module.css'
 import { useLocation, useNavigate } from 'react-router-dom'
+import SuspenseLoader from '../loadscreens/suspenseloader/SuspenseLoader'
 
 
 function Todos() {
@@ -33,6 +34,8 @@ function Todos() {
             state: { errorMessage: message, fromRoute: location.pathname },
         })
     }
+
+    if(!todos.length) return <SuspenseLoader />
 
     return (
         <div className={styles.container}>

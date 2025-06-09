@@ -1,6 +1,5 @@
 import { useEffect, useState } from 'react';
 import styles from './BadLazy.module.css'
-import SuspenseLoader from '../loadscreens/suspenseloader/SuspenseLoader';
 
 const data = { labels: ['Jan', 'Feb'], datasets: [{ label: 'Sales', data: [30, 40] }] };
 
@@ -29,9 +28,7 @@ export default function BadLazy() {
   }, [])
 
   if (!lineObj) {
-    // Fallback while dependencies are loading
-    // return <div>Loading chart...</div> 
-    return <SuspenseLoader />
+    return <div>Loading chart...</div>; // Fallback while dependencies are loading
   }
 
   const { Line } = lineObj

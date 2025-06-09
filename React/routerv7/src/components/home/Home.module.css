@@ -61,17 +61,32 @@
     top: 70px;
     border-radius: 50%;
     box-shadow:
-    -30px 0px 0 0 skyblue,
-    30px 0px 0 0 skyblue,
-    0px -20px 0 0 skyblue;
+        -30px 0px 0 0 skyblue,
+        30px 0px 0 0 skyblue,
+        0px -20px 0 0 skyblue;
 }
 
-.flexContainer .lazyDiv {
+.duffur {
+    position: absolute;
+    left: 70px;
+    bottom: 70px;
+    border-radius: 50%;
+    box-shadow:
+        -30px 0px 0 0 rgb(246, 195, 137),
+        30px 0px 0 0 rgb(246, 195, 137),
+        0px -20px 0 0 rgb(246, 195, 137);
+}
+
+.flexContainer .lazyDiv{
     background-color: skyblue;
-    color: darkblue;
+    color: black;
 }
 
-.flexContainer .lazyDiv:hover {
+.flexContainer .duffur {
+    background-color: rgb(246, 195, 137);
+    color: black;
+}
+
+.flexContainer .lazyDiv:hover, .flexContainer .duffur {
     opacity: 0.8;
-    color: whitesmoke;
 }

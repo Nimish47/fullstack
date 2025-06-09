@@ -36,15 +36,24 @@ import Pictures from './components/pictures/Pictures.jsx';
 import Comments from './components/comments/Comments.jsx';
 import { fetchAllPictures } from './components/pictures/PicturesLoader.js';
 import { fetchAllComments } from './components/comments/CommentsLoader.js';
-// import Heavy from './components/heavy/Heavy.jsx';
 import { lazy, Suspense } from 'react';
 import { fetchAllPosts } from './components/posts/PostsLoader.js';
 import Posts from './components/posts/Posts.jsx';
-import GoodLazy from './components/goodlazy/GoodLazy.jsx';
-// import Lazycore from './lazycore/Lazycore.jsx';
+import SuspenseLoader from './components/loadscreens/suspenseloader/SuspenseLoader.jsx';
+import GoodLazyWrapper from './components/goodlazywrapper/GoodLazyWrapper.jsx';
+import Duffur from './components/duffur/Duffur.jsx';
+import { loadDufferData } from './components/duffur/DuffurLoader.js';
+
+
+// import GoodLazy from './components/goodlazy/GoodLazy.jsx';
+const GoodLazy = lazy(()=> import(/* webpackChunkName: "GoodLazy" */  './components/goodlazy/GoodLazy.jsx'))
 
 const BadLazy = lazy(() => import(/* webpackChunkName: "BadLazy" */ './components/badlazy/BadLazy.jsx'))
+// import BadLazy from './components/badlazy/BadLazy.jsx';
+
 const WorstLazy = lazy(() => import(/* webpackChunkName: "WorstLazy" */ './components/worstlazy/WorstLazy.jsx'))
+// import WorstLazy from './components/worstlazy/WorstLazy.jsx';
+
 
 const router = createBrowserRouter([
   {
@@ -120,6 +129,11 @@ const router = createBrowserRouter([
             element: <Lazy />
           },
           {
+            path: "duffur",
+            element: <Duffur />,
+            // loader: loadDufferData
+          },          
+          {
             path: "todos",
             element: <Todos />
           },
@@ -140,25 +154,37 @@ const router = createBrowserRouter([
           },
           {
             path: "badlazy",
+            // element: <BadLazy />
             element:
               (
-                <Suspense fallback={<div>Loading BadLazy...</div>}>
+                <Suspense fallback={<SuspenseLoader />}>
                   <BadLazy />
                 </Suspense>
               ),
           },
           {
             path: "worstlazy",
+            // element: <WorstLazy />
             element:
               (
-                <Suspense fallback={<div>Loading Heavy...</div>}>
+                <Suspense fallback={<SuspenseLoader />}>
                   <WorstLazy />
                 </Suspense>
               ),
           },
           {
-            path: "goodlazy",
-            element: <GoodLazy />
+            path: "goodlazywrapper",
+            element: <GoodLazyWrapper />,
+            children: [
+              {
+                path: "",
+                element: (
+                  <Suspense fallback={<SuspenseLoader />}>
+                    <GoodLazy />
+                  </Suspense>
+                )
+              }
+            ]
           },
           {
             path: "/error",

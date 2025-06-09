@@ -19,13 +19,13 @@ function Lazy() {
         else if (e.currentTarget.dataset.name === 'comments')
             navigate('/comments')
         else if (e.currentTarget.dataset.name === 'posts')
-            navigate('/posts')        
-        else if (e.currentTarget.dataset.name === 'goodlazy')
-            navigate('/goodlazy')
+            navigate('/posts')
+        else if (e.currentTarget.dataset.name === 'goodlazywrapper')
+            navigate('/goodlazywrapper')
         else if (e.currentTarget.dataset.name === 'badlazy')
-            navigate('/badlazy') 
+            navigate('/badlazy')
         else if (e.currentTarget.dataset.name === 'worstlazy')
-            navigate('/worstlazy')                  
+            navigate('/worstlazy')
         else
             alert('Invalid page name');
     }
@@ -37,57 +37,43 @@ function Lazy() {
                 className={styles.todos}
                 data-name='todos'
                 onClick={goToPage}
-            >
-                Finish these todos!
-                <img src={angry} className={styles.image} alt='todoimage' />
+            > Finish these todos! <img src={angry} className={styles.image} alt='todoimage' />
             </div>
             <div
                 className={styles.pictures}
                 data-name='pictures'
                 onClick={goToPage}
-            >
-                So many pictures
-                <img src={shocked} className={styles.image} alt='pictures' />
+            > So many pictures <img src={shocked} className={styles.image} alt='pictures' />
             </div>
             <div
                 className={styles.goodlazy}
-                data-name='goodlazy'
+                data-name='goodlazywrapper'
                 onClick={goToPage}
-            >
-                <div className={styles.text}>Good Lazy</div>
-                
+            ><div className={styles.text}>Lazy via Axios</div>
             </div>
             <div
                 className={styles.badlazy}
                 data-name='badlazy'
                 onClick={goToPage}
-            >
-                <div className={styles.text}>Bad Lazy</div>
-                
+            > <div className={styles.text}>Lazy via Chart.js</div>
             </div>
             <div
                 className={styles.worstlazy}
                 data-name='worstlazy'
                 onClick={goToPage}
-            >
-                <div className={styles.text}>Worst Lazy</div>
-                
-            </div>                        
+            >  <div className={styles.text}>Lazy via lodash</div>
+            </div>
             <div
                 className={styles.comments}
                 data-name='comments'
                 onClick={goToPage}
-            >
-                Comments about me
-                <img src={hearts} className={styles.image} alt='comments' />
+            > Comments about me <img src={hearts} className={styles.image} alt='comments' />
             </div>
             <div
                 className={styles.posts}
                 data-name='posts'
                 onClick={goToPage}
-            >
-                Nostalgia Posts! (#staystrong)
-                <img src={muscular} className={styles.image} alt='posts' />
+            > Nostalgia Posts! (#staystrong) <img src={muscular} className={styles.image} alt='posts' />
             </div>
         </div>
     )
