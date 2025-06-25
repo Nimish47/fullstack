@@ -1,0 +1,78 @@
+.container {
+    background-color: black;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.form {
+    background-color: rgb(228, 215, 181);
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    width: 60%;
+    height: 70vh;
+    position: relative;
+    padding-top: 70px;
+    border: 5px solid white;
+}
+
+.input {
+    padding: 10px;
+    background-color: white;
+    border: none;
+    color: black;
+    width: 70%;
+    font-size: 1em;
+    margin-bottom: 20px;
+}
+
+.input:focus {
+    outline: none;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
+}
+
+.submit {
+    display: block;
+    background-color: green;
+    color: white;
+    border: none;
+    font-size: 1.2em;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    padding: 15px;
+}
+
+.submit:hover {
+    background-color: darkgreen;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.radioButtons, .checkButtons, .dropdownButtons {
+    display: flex;
+    margin-bottom: 20px;
+    padding: 10px;
+    margin-left: 110px;
+}
+
+.inputRadio, .inputCheck {
+    margin-right: 4px;
+    width: 18px;
+    height: 18px;
+}
+
+.inputRadioLabel, .inputCheckLabel {
+    font-size: 1.2em;
+    color: black;
+    margin-right: 30px;
+}
+
+.inputDropdown {
+    width: 30%;
+    padding: 10px;
+    background-color: white;
+    border: none;
+    color: black;
+    font-size: 1em;
+}
