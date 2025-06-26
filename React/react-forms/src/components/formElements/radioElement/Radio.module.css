@@ -1,0 +1,18 @@
+.radioButtons {
+    display: flex;
+    margin-bottom: 20px;
+    padding: 10px;
+    margin-left: 75px;
+}
+
+.inputRadio {
+    margin-right: 4px;
+    width: 18px;
+    height: 18px;
+}
+
+.inputRadioLabel {
+    font-size: 1.2em;
+    color: black;
+    margin-right: 30px;
+}

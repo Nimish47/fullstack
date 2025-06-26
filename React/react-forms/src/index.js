@@ -7,6 +7,7 @@ import PageNotFound from './routes/pagenotfound/PageNotFound';
 import Home from './routes/home/Home';
 import FormData from './components/formdata/FormData';
 import BasicForm from './components/basicform/BasicForm';
+import Individual from './routes/individual/Individual';
 
 
 const router = createBrowserRouter([
@@ -25,6 +26,10 @@ const router = createBrowserRouter([
       {
         path: "formdata",
         element: <FormData />
+      },
+      {
+        path: "individual",
+        element: <Individual />
       }
     ]
   },

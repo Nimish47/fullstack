@@ -1,0 +1,17 @@
+.submit {
+    display: block;
+    background-color: green;
+    color: white;
+    border: none;
+    font-size: 1.2em;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    padding: 15px;
+}
+
+.submit:hover {
+    background-color: darkgreen;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
