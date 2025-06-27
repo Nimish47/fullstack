@@ -23,6 +23,12 @@ function Individual() {
     city: ''
   })
   const [selectAll, setSelectAll] = useState(false)
+  const [error, setError] = useState({
+    password: false,
+    email: false,
+    age: false
+  })
+
 
   const radioOptions = ['male', 'female', 'lgbtq+']
   const checkOptions = ['pizza', 'cake', 'cola']
@@ -47,6 +53,12 @@ function Individual() {
 
   const changeHandler = (event) => {
     const { name, value, checked } = event.target;
+
+    // run the validator function for specific fields
+    if (name === 'password' || name === 'email' || name === 'age') {
+      if (value) validator(name, value);
+      else setError(prevError => ({ ...prevError, [name]: false }));
+    }
 
     if (name !== 'food' && name !== 'foodSelectAll') {
       setFormData(prevData => ({
@@ -83,6 +95,23 @@ function Individual() {
     }
   }
 
+  const validator = (name, value) => {
+    // run the validator function
+    if (name === 'password') {
+      if (value.length < 6) setError(prevError => ({ ...prevError, password: true }))
+      else setError(prevError => ({ ...prevError, password: false }))
+    }
+    if (name === 'email') {
+      if (value.length < 6) setError(prevError => ({ ...prevError, email: true }))
+      else setError(prevError => ({ ...prevError, email: false }))
+    }
+
+    if (name === 'age') {
+      if (value < 18) setError(prevError => ({ ...prevError, age: true }))
+      else setError(prevError => ({ ...prevError, age: false }))
+    }
+  }
+
   return (
     <div className={styles.container}>
       <form onSubmit={handleSubmit} className={styles.form}>
@@ -99,6 +128,7 @@ function Individual() {
           changeHandler={changeHandler}
           placeHolderText={'Password'}
           requiredFlag={true}
+          error={error.password}
         />
         <Email
           title='email'
@@ -106,6 +136,7 @@ function Individual() {
           changeHandler={changeHandler}
           placeHolderText={'Email'}
           requiredFlag={false}
+          error={error.email}
         />
         <Number
           title='age'
@@ -113,6 +144,7 @@ function Individual() {
           changeHandler={changeHandler}
           placeHolderText={'Age'}
           requiredFlag={false}
+          error={error.age}
         />
         <Date
           title='dob'
@@ -141,7 +173,10 @@ function Individual() {
           dropdownOptions={dropdownOptions}
           placeHolderText={'Select a city'}
         />
-        <Button placeholder={'Submit'} />
+        <Button
+          placeholder={'Submit'}
+          error={error}
+        />
       </form>
     </div>
   )

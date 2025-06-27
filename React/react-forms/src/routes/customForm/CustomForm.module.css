@@ -1,0 +1,16 @@
+.container {
+    background-color: black;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.form {
+    background-color: rgb(141, 132, 131);
+    width: 45%;
+    height: 70vh;
+    padding-top: 30px;
+    border: 2px solid white;
+    position: relative;
+}

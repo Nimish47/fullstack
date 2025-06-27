@@ -16,7 +16,7 @@
     border: 5px solid white;
 }
 
-.input {
+.input, .inputError {
     padding: 10px;
     background-color: white;
     border: none;
@@ -26,12 +26,16 @@
     margin-bottom: 20px;
 }
 
-.input:focus {
+.input:focus, .inputError:focus {
     outline: none;
     box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
 }
 
-.submit {
+.inputError {
+    border: 2px solid red;
+}
+
+.submit,.submitError {
     display: block;
     background-color: green;
     color: white;
@@ -43,10 +47,14 @@
     padding: 15px;
 }
 
-.submit:hover {
-    background-color: darkgreen;
+.submitError {
+    background-color: red;
+    cursor: not-allowed;
+}
+
+.submit:hover, .submitError:hover {
+    opacity: 0.8;
     transition: all 0.3s ease;
-    cursor: pointer;
 }
 
 .radioButtons, .checkButtons, .dropdownButtons {

@@ -1,4 +1,5 @@
-.submit {
+.submit,
+.submitError {
     display: block;
     background-color: green;
     color: white;
@@ -10,8 +11,13 @@
     padding: 15px;
 }
 
-.submit:hover {
-    background-color: darkgreen;
+.submit:hover,
+.submitError:hover {
+    opacity: 0.8;
     transition: all 0.3s ease;
-    cursor: pointer;
+}
+
+.submitError {
+    background-color: red;
+    cursor: not-allowed;
 }

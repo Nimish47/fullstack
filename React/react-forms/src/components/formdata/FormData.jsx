@@ -13,6 +13,13 @@ function FormData() {
         food: [],
         city: ''
     })
+
+    const [error, setError] = useState({
+        password: false,
+        email: false,
+        age: false
+    })
+
     const [selectAll, setSelectAll] = useState(false)
 
     const radioOptions = ['male', 'female', 'lgbtq+']
@@ -38,6 +45,12 @@ function FormData() {
 
     const changeHandler = (event) => {
         const { name, value, checked } = event.target;
+
+        // run the validator function for specific fields
+        if (name === 'password' || name === 'email' || name === 'age') {
+            if (value) validator(name, value);
+            else setError(prevError => ({ ...prevError, [name]: false }));
+        }
 
         if (name !== 'food' && name !== 'foodSelectAll') {
             setFormData(prevData => ({
@@ -74,6 +87,22 @@ function FormData() {
         }
     }
 
+    const validator = (name, value) => {
+        // run the validator function
+        if (name === 'password') {
+            if (value.length < 6) setError(prevError => ({ ...prevError, password: true }))
+            else setError(prevError => ({ ...prevError, password: false }))
+        }
+        if (name === 'email') {
+            if (value.length < 6) setError(prevError => ({ ...prevError, email: true }))
+            else setError(prevError => ({ ...prevError, email: false }))
+        }
+
+        if (name === 'age') {
+            if (value < 18) setError(prevError => ({ ...prevError, age: true }))
+            else setError(prevError => ({ ...prevError, age: false }))
+        }
+    }
 
 
     return (
@@ -92,7 +121,7 @@ function FormData() {
                     type='password'
                     placeholder='Enter your password, Type = "password"'
                     name='password'
-                    className={styles.input}
+                    className={error.password ? styles.inputError : styles.input}
                     value={formData.password}
                     onChange={changeHandler}
                     required
@@ -101,7 +130,7 @@ function FormData() {
                     type='email'
                     placeholder='Enter your email, Type = "email"'
                     name='email'
-                    className={styles.input}
+                    className={error.email ? styles.inputError : styles.input}
                     value={formData.email}
                     onChange={changeHandler}
                 />
@@ -109,7 +138,7 @@ function FormData() {
                     type='number'
                     placeholder='Enter your age, Type = "number"'
                     name='age'
-                    className={styles.input}
+                    className={error.age ? styles.inputError : styles.input}
                     value={formData.age}
                     onChange={changeHandler}
                 />
@@ -185,7 +214,8 @@ function FormData() {
                 </div>
                 <button
                     type="submit"
-                    className={styles.submit}
+                    className={error.password || error.email || error.age ? styles.submitError : styles.submit}
+                    disabled={error.password || error.email || error.age}
                 >
                     Submit
                 </button>

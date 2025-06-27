@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 
 function Home() {
 
-    const data = ['inputs', 'formdata', 'individual', 'metrics', 'artifacts', 'logs'];
+    const data = ['inputs', 'formdata', 'individual', 'useform-custom', 'artifacts', 'logs'];
 
     return (
         <div className={styles.parent}>

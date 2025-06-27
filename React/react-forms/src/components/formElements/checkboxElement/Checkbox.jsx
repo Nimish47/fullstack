@@ -1,7 +1,7 @@
 import React from 'react'
 import styles from './Checkbox.module.css'
 
-function Checkbox({title,titleAll,selectAll,val,changeHandler,checkOptions}) {
+function Checkbox({ title, titleAll, selectAll, val, changeHandler, checkOptions }) {
   return (
     <div className={styles.checkButtons}>
       <label className={styles.inputCheckLabel}>
