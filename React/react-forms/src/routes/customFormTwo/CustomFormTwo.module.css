@@ -14,3 +14,12 @@
     border: 2px solid white;
     position: relative;
 }
+
+.sideText {
+    position: absolute;
+    right: 0;
+    top: 0;
+    padding: 10px;
+    background-color: red;
+    color: white;
+}

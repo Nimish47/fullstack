@@ -59,7 +59,7 @@ function CustomFormTwo() {
         setError({})
     }
 
-    const options = { submitHandlerCustom, changeHandlerCustom }    
+    const options = { submitHandlerCustom, changeHandlerCustom }
 
     const {
         formData,
@@ -73,6 +73,7 @@ function CustomFormTwo() {
     return (
         <div className={styles.container}>
             <form onSubmit={submitHandler} className={styles.form}>
+                <div className={styles.sideText}>New!</div>
                 <Text
                     title='username'
                     val={formData.username || ''}
