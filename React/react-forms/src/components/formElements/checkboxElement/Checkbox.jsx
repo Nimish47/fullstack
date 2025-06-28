@@ -1,16 +1,16 @@
 import React from 'react'
 import styles from './Checkbox.module.css'
 
-function Checkbox({ title, titleAll, selectAll, val, changeHandler, checkOptions }) {
+function Checkbox({ title, val, changeHandler, checkOptions }) {
   return (
     <div className={styles.checkButtons}>
       <label className={styles.inputCheckLabel}>
         <input
           type='checkbox'
-          name={titleAll} // name doesn't groups a set of checkboxes together, but used to identify the checkbox
+          name={title} // name doesn't groups a set of checkboxes together, but used to identify the checkbox
           className={styles.inputCheck}
-          // value={selectAll} // not important here, since only true or false is expected
-          checked={selectAll}
+          value={'selectAll'}
+          checked={val.length === checkOptions.length}
           onChange={changeHandler}
         />
         Select All

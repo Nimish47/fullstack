@@ -20,8 +20,6 @@ function FormData() {
         age: false
     })
 
-    const [selectAll, setSelectAll] = useState(false)
-
     const radioOptions = ['male', 'female', 'lgbtq+']
     const checkOptions = ['pizza', 'cake', 'cola']
     const dropdownOptions = ['Mumbai', 'New Delhi', 'Kolkata', 'Bangalore', 'Chennai']
@@ -39,7 +37,6 @@ function FormData() {
             food: [],
             city: ''
         })
-        setSelectAll(false)
         alert(`Username: ${formData.username} Password: ${formData.password} Email: ${formData.email} Age: ${formData.age} DOB: ${formData.dob} City: ${formData.city}`)
     }
 
@@ -60,29 +57,21 @@ function FormData() {
         }
 
         if (name === 'food') {
+
+            if(value === 'selectAll') {
+                // if select all is checked, set all food options
+                setFormData(prevData => ({
+                    ...prevData,
+                    food: checked ? checkOptions : []
+                }))
+                return;
+            }
+
             setFormData(prevData => ({
                 ...prevData,
                 [name]: checked
                     ? [...prevData.food, value]
                     : prevData.food.filter(item => item !== value)
-            }))
-
-            setSelectAll(false)
-        }
-
-        if (name === 'foodSelectAll') {
-            let arr = [];
-            if (checked) {
-                setSelectAll(true);
-                arr = checkOptions; // add all options
-            }
-            else {
-                setSelectAll(false);
-                arr = []; // remove all options
-            }
-            setFormData(prevData => ({
-                ...prevData,
-                food: arr
             }))
         }
     }
@@ -170,10 +159,10 @@ function FormData() {
                     <label className={styles.inputCheckLabel}>
                         <input
                             type='checkbox'
-                            name='foodSelectAll'
+                            name='food'
                             className={styles.inputCheck}
-                            // value={selectAll} // not important here, since only true or false is expected
-                            checked={selectAll}
+                            value={'selectAll'}
+                            checked={formData.food.length === checkOptions.length}
                             onChange={changeHandler}
                         />
                         Select All

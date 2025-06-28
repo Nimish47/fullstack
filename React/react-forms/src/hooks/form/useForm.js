@@ -1,7 +1,7 @@
 import { useState } from "react"
 
 
-export function useForm(checkCompArrayData = []) {
+export function useForm(options = {}) {
     const [formData, setFormData] = useState({
         username: '',
         password: '',
@@ -45,7 +45,7 @@ export function useForm(checkCompArrayData = []) {
             else setError(prevError => ({ ...prevError, [name]: false }));
         }
 
-        if (name !== 'food' && name !== 'foodSelectAll') {
+        if (name !== 'food') {
             setFormData(prevData => ({
                 ...prevData,
                 [name]: value
@@ -53,6 +53,16 @@ export function useForm(checkCompArrayData = []) {
         }
 
         if (name === 'food') {
+
+            if (value === 'selectAll' && options.checkBoxData) {
+                // if select all is checked, set all food options
+                setFormData(prevData => ({
+                    ...prevData,
+                    food: checked ? options.checkBoxData : []
+                }))
+                return;
+            }
+
             setFormData(prevData => ({
                 ...prevData,
                 [name]: checked
@@ -61,22 +71,6 @@ export function useForm(checkCompArrayData = []) {
             }))
 
             setSelectAll(false)
-        }
-
-        if (name === 'foodSelectAll' && checkCompArrayData.length > 0) {
-            let arr = [];
-            if (checked) {
-                setSelectAll(true);
-                arr = checkCompArrayData; // add all options
-            }
-            else {
-                setSelectAll(false);
-                arr = []; // remove all options
-            }
-            setFormData(prevData => ({
-                ...prevData,
-                food: arr
-            }))
         }
     }
 

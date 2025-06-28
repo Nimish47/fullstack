@@ -17,7 +17,8 @@ const checkOptions = ['pizza', 'cake', 'cola']
 const dropdownOptions = ['Mumbai', 'New Delhi', 'Kolkata', 'Bangalore', 'Chennai']
 
 function CustomForm() {
-    const { formData, selectAll, error, handleSubmit, changeHandler } = useForm(checkOptions);
+    const options = { checkBoxData: checkOptions }
+    const { formData, selectAll, error, handleSubmit, changeHandler } = useForm(options);
 
     return (
         <div className={styles.container}>
