@@ -41,7 +41,7 @@ function FormData() {
     }
 
     const changeHandler = (event) => {
-        const { name, value, checked, type } = event.target;
+        const { name, value, checked } = event.target;
 
         // run the validator function for specific fields
         if (name === 'password' || name === 'email' || name === 'age') {

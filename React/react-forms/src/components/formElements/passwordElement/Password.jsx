@@ -1,17 +1,17 @@
 import React from 'react'
 import styles from './Password.module.css'
 
-function Password({ title, val, changeHandler, placeHolderText, requiredFlag, error }) {
+function Password({ name, placeholder, value, changeHandler, required, error }) {
   return (
     <div>
       <input
         type='password'
-        placeholder={placeHolderText || 'Enter password here'}
-        name={title}
+        placeholder={placeholder || 'Enter password here'}
+        name={name}
         className={error ? styles.inputError : styles.input}
-        value={val}
+        value={value}
         onChange={changeHandler}
-        required={requiredFlag}
+        required={required}
       />
     </div>
   )

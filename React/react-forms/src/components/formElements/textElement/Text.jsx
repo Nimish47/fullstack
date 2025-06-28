@@ -1,17 +1,17 @@
 import React from 'react'
 import styles from './Text.module.css'
 
-function Text({ title, val, changeHandler, placeHolderText, requiredFlag }) {
+function Text({ name, placeholder, value, changeHandler, required, error }) {
   return (
     <div>
       <input
         type='text'
-        placeholder={placeHolderText || 'Enter text here'}
-        name={title}
+        placeholder={placeholder}
+        name={name}
         className={styles.input}
-        value={val}
+        value={value}
         onChange={changeHandler}
-        required={requiredFlag}
+        required={required}
       />
     </div>
   )

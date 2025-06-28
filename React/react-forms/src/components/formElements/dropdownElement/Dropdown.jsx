@@ -1,16 +1,16 @@
 import React from 'react'
 import styles from './Dropdown.module.css'
 
-function Dropdown({ title, val, changeHandler, dropdownOptions, placeHolderText }) {
+function Dropdown({ name, placeholder, value, changeHandler, dropdownOptions, error }) {
   return (
     <div className={styles.dropdownButtons}>
       <select
-        name={title}
+        name={name}
         className={styles.inputDropdown}
         onChange={changeHandler}
-        value={val}
+        value={value}
       >
-        <option value=''>{placeHolderText}</option>
+        <option value=''>{placeholder}</option>
         {
           dropdownOptions.map((option) => (
             <option

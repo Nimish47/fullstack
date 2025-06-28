@@ -1,17 +1,17 @@
 import React from 'react'
 import styles from './Email.module.css'
 
-function Email({ title, val, changeHandler, placeHolderText, requiredFlag, error }) {
+function Email({ name, placeholder, value, changeHandler, required, error }) {
   return (
     <div>
       <input
         type='email'
-        placeholder={placeHolderText || 'Enter email here'}
-        name={title}
+        placeholder={placeholder || 'Enter email here'}
+        name={name}
         className={error ? styles.inputError : styles.input}
-        value={val}
+        value={value}
         onChange={changeHandler}
-        required={requiredFlag}
+        required={required}
       />
     </div>
   )

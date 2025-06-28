@@ -1,17 +1,17 @@
 import React from 'react'
 import styles from './Number.module.css'
 
-function Number({ title, val, changeHandler, placeHolderText, requiredFlag, error }) {
+function Number({ name, placeholder, value, changeHandler, required, error }) {
   return (
     <div>
       <input
         type='number'
-        placeholder={placeHolderText || 'Enter age here'}
-        name={title}
+        placeholder={placeholder || 'Enter age here'}
+        name={name}
         className={error ? styles.inputError : styles.input}
-        value={val}
+        value={value}
         onChange={changeHandler}
-        required={requiredFlag}
+        required={required}
       />
     </div>
   )

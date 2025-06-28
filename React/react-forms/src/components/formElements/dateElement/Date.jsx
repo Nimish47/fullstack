@@ -1,16 +1,16 @@
 import React from 'react'
 import styles from './Date.module.css'
 
-function Date({ title, val, changeHandler, requiredFlag }) {
+function Date({ name, value, changeHandler, required, error }) {
   return (
     <div>
       <input
         type='date'
-        name={title}
+        name={name}
         className={styles.input}
-        value={val}
+        value={value}
         onChange={changeHandler}
-        required={requiredFlag}
+        required={required}
       />
     </div>
   )
