@@ -28,48 +28,52 @@ function CustomForm() {
     return (
         <div className={styles.container}>
             <form onSubmit={submitHandler} className={styles.form}>
+                <div className={styles.sideText}>New!</div>
                 <Text
-                    title='username'
-                    val={formData.username || ''}
+                    name='username'
+                    value={formData.username || ''}
                     changeHandler={changeHandler}
-                    placeHolderText={'Username'}
-                    requiredFlag={true}
+                    placeholder={'Username'}
+                    required={true}
+                    error={error.username}
                 />
                 <Password
-                    title='password'
-                    val={formData.password || ''}
+                    name='password'
+                    value={formData.password || ''}
                     changeHandler={changeHandler}
-                    placeHolderText={'Password'}
-                    requiredFlag={true}
+                    placeholder={'Password'}
+                    required={true}
                     error={error.password}
                 />
                 <Email
-                    title='email'
-                    val={formData.email || ''}
+                    name='email'
+                    value={formData.email || ''}
                     changeHandler={changeHandler}
-                    placeHolderText={'Email'}
-                    requiredFlag={false}
+                    placeholder={'Email'}
+                    required={false}
                     error={error.email}
                 />
                 <Number
-                    title='age'
-                    val={formData.age || ''}
+                    name='age'
+                    value={formData.age || ''}
                     changeHandler={changeHandler}
-                    placeHolderText={'Age'}
-                    requiredFlag={false}
+                    placeholder={'Age'}
+                    required={false}
                     error={error.age}
                 />
                 <Date
-                    title='dob'
-                    val={formData.dob || ''}
+                    name='dob'
+                    value={formData.dob || ''}
                     changeHandler={changeHandler}
-                    requiredFlag={false}
+                    required={false}
+                    error={error.dob}
                 />
                 <Radio
+                    name='gender'
+                    value={formData.gender || ''}
                     radioOptions={radioOptions}
-                    title='gender'
-                    val={formData.gender || ''}
                     changeHandler={changeHandler}
+                    error={error.gender}
                 />
                 {/* <Checkbox
                     title='food'
@@ -80,11 +84,12 @@ function CustomForm() {
                     checkOptions={checkOptions}
                 /> */}
                 <Dropdown
-                    title='city'
-                    val={formData.city || ''}
+                    name='city'
+                    placeholder={'Select a city'}
+                    value={formData.city || ''}
                     changeHandler={changeHandler}
                     dropdownOptions={dropdownOptions}
-                    placeHolderText={'Select a city'}
+                    error={error.city}
                 />
                 <Button
                     placeholder={'Submit'}

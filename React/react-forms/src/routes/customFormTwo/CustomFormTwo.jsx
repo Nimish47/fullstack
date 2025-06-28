@@ -116,8 +116,8 @@ function CustomFormTwo() {
                 <Radio
                     name='gender'
                     value={formData.gender || ''}
-                    changeHandler={changeHandler}
                     radioOptions={radioOptions}
+                    changeHandler={changeHandler}
                     error={error.gender}
                 />
                 {/* <Checkbox
