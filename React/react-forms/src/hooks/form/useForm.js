@@ -2,79 +2,11 @@ import { useState } from "react"
 
 
 export function useForm(options = {}) {
-    const [formData, setFormData] = useState({
-        username: '',
-        password: '',
-        email: '',
-        age: '',
-        dob: '',
-        gender: '',
-        food: [],
-        city: ''
-    })
-    const [selectAll, setSelectAll] = useState(false)
-    const [error, setError] = useState({
-        password: false,
-        email: false,
-        age: false
-    })
+    const [formData, setFormData] = useState({})
+    const [error, setError] = useState({})
 
-    const handleSubmit = (event) => {
-        event.preventDefault();
 
-        setFormData({
-            username: '',
-            password: '',
-            email: '',
-            age: '',
-            dob: '',
-            gender: '',
-            food: [],
-            city: ''
-        })
-        setSelectAll(false)
-        alert(`Username: ${formData.username} Password: ${formData.password} Email: ${formData.email} Age: ${formData.age} DOB: ${formData.dob} City: ${formData.city}`)
-    }
-
-    const changeHandler = (event) => {
-        const { name, value, checked } = event.target;
-
-        // run the validator function for specific fields
-        if (name === 'password' || name === 'email' || name === 'age') {
-            if (value) validator(name, value);
-            else setError(prevError => ({ ...prevError, [name]: false }));
-        }
-
-        if (name !== 'food') {
-            setFormData(prevData => ({
-                ...prevData,
-                [name]: value
-            }))
-        }
-
-        if (name === 'food') {
-
-            if (value === 'selectAll' && options.checkBoxData) {
-                // if select all is checked, set all food options
-                setFormData(prevData => ({
-                    ...prevData,
-                    food: checked ? options.checkBoxData : []
-                }))
-                return;
-            }
-
-            setFormData(prevData => ({
-                ...prevData,
-                [name]: checked
-                    ? [...prevData.food, value]
-                    : prevData.food.filter(item => item !== value)
-            }))
-
-            setSelectAll(false)
-        }
-    }
-
-    const validator = (name, value) => {
+    const validatorDefault = (name, value) => {
         // run the validator function
         if (name === 'password') {
             if (value.length < 6) setError(prevError => ({ ...prevError, password: true }))
@@ -91,12 +23,34 @@ export function useForm(options = {}) {
         }
     }
 
+    const changeHandlerDefault = (event) => {
+        const { name, value, checked, type } = event.target;
+
+        // run the validator function for specific fields
+        if (name === 'password' || name === 'email' || name === 'age') {
+            if (value) validatorDefault(name, value);
+            else setError(prevError => ({ ...prevError, [name]: false }));
+        }
+
+        // except for checkbox, set the form data for all other kind of feilds
+        if (type !== 'checkbox') setFormData(prevData => ({ ...prevData, [name]: value }))
+    
+        }
+
+    const submitHandlerDefault = (event) => {
+        event.preventDefault();
+        alert('Submitted successfully (default)')
+        setFormData({})
+        setError({})
+    }
+
     return {
         formData,
-        selectAll,
+        setFormData,
         error,
-        handleSubmit,
-        changeHandler
+        setError,
+        submitHandler: options.submitHandlerCustom ? options.submitHandlerCustom : submitHandlerDefault,
+        changeHandler: options.changeHandlerCustom ? options.changeHandlerCustom : changeHandlerDefault
     }
 }
 

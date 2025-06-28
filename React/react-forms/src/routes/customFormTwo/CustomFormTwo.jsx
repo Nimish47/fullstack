@@ -1,5 +1,5 @@
 import React from 'react'
-import styles from './CustomForm.module.css'
+import styles from './CustomFormTwo.module.css'
 import Text from '../../components/formElements/textElement/Text'
 import Password from '../../components/formElements/passwordElement/Password'
 import Email from '../../components/formElements/emailElement/Email'
@@ -16,14 +16,59 @@ const radioOptions = ['male', 'female', 'lgbtq+']
 const checkOptions = ['pizza', 'cake', 'cola']
 const dropdownOptions = ['Mumbai', 'New Delhi', 'Kolkata', 'Bangalore', 'Chennai']
 
-function CustomForm() {
+function CustomFormTwo() {
+
+    const validatorCustom = (name, value) => {
+        // run the validator function
+        if (name === 'password') {
+            if (value.length < 3) setError(prevError => ({ ...prevError, password: true }))
+            else setError(prevError => ({ ...prevError, password: false }))
+        }
+        if (name === 'email') {
+            if (value.length < 6) setError(prevError => ({ ...prevError, email: true }))
+            else setError(prevError => ({ ...prevError, email: false }))
+        }
+
+        if (name === 'age') {
+            if (value > 18) setError(prevError => ({ ...prevError, age: true }))
+            else setError(prevError => ({ ...prevError, age: false }))
+        }
+    }
+
+    const changeHandlerCustom = (event) => {
+        const { name, value, checked } = event.target;
+
+        // run the validator function for specific fields
+        if (name === 'password' || name === 'email' || name === 'age') {
+            if (value) validatorCustom(name, value);
+            else setError(prevError => ({ ...prevError, [name]: false }));
+        }
+
+        if (name !== 'food') {
+            setFormData(prevData => ({
+                ...prevData,
+                [name]: value
+            }))
+        }
+    }
+
+    const submitHandlerCustom = (event) => {
+        event.preventDefault();
+        alert('Submitted successfully from a custom handler')
+        setFormData({})
+        setError({})
+    }
+
+    const options = { submitHandlerCustom, changeHandlerCustom }    
 
     const {
         formData,
+        setFormData,
         error,
+        setError,
         submitHandler,
         changeHandler
-    } = useForm();
+    } = useForm(options);
 
     return (
         <div className={styles.container}>
@@ -95,4 +140,4 @@ function CustomForm() {
     )
 }
 
-export default CustomForm
+export default CustomFormTwo

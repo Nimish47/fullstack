@@ -9,6 +9,7 @@ import FormData from './components/formdata/FormData';
 import BasicForm from './components/basicform/BasicForm';
 import Individual from './routes/individual/Individual';
 import CustomForm from './routes/customForm/CustomForm';
+import CustomFormTwo from './routes/customFormTwo/CustomFormTwo';
 
 
 const router = createBrowserRouter([
@@ -35,6 +36,10 @@ const router = createBrowserRouter([
       {
         path: "useform-custom",
         element: <CustomForm />
+      },
+      {
+        path: "useform-custom-2",
+        element: <CustomFormTwo />
       }
     ]
   },
