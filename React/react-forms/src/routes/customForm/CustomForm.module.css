@@ -7,7 +7,7 @@
 }
 
 .form {
-    background-color: rgb(141, 132, 131);
+    background-color: rgb(238, 185, 145);
     width: 45%;
     height: 70vh;
     padding-top: 30px;
@@ -20,4 +20,28 @@
     margin-bottom: 20px;
     padding: 10px;
     margin-left: 75px;
+}
+
+.sideText {
+    position: absolute;
+    right: 0;
+    top: 0;
+    background-color: yellow;
+    color: black;
+    padding: 10px;
+    border: 3px solid black;
+}
+
+.submitButtonContainer {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 50%;
+}
+
+.resetButtonContainer {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 50%;
 }

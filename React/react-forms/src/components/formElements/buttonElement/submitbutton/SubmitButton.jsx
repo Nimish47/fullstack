@@ -1,7 +1,7 @@
 import React from 'react'
-import styles from '../buttonElement/Button.module.css'
+import styles from './SubmitButton.module.css'
 
-function Button({ placeholder, error }) {
+function SubmitButton({ placeholder, error }) {
     return (
         <div>
             <button
@@ -15,4 +15,4 @@ function Button({ placeholder, error }) {
     )
 }
 
-export default Button
+export default SubmitButton

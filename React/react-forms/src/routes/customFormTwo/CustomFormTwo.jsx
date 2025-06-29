@@ -8,8 +8,8 @@ import Date from '../../components/formElements/dateElement/Date'
 import Radio from '../../components/formElements/radioElement/Radio'
 import Checkbox from '../../components/formElements/checkboxElement/Checkbox'
 import Dropdown from '../../components/formElements/dropdownElement/Dropdown'
-import Button from '../../components/formElements/buttonElement/Button'
 import { useForm } from '../../hooks/form/useForm'
+import SubmitButton from '../../components/formElements/buttonElement/submitbutton/SubmitButton'
 
 
 const radioOptions = ['male', 'female', 'lgbtq+']
@@ -36,7 +36,7 @@ function CustomFormTwo() {
     }
 
     const changeHandlerCustom = (event) => {
-        const { name, value, checked } = event.target;
+        const { name, value, checked, type } = event.target;
 
         // run the validator function for specific fields
         if (name === 'password' || name === 'email' || name === 'age') {
@@ -44,10 +44,19 @@ function CustomFormTwo() {
             else setError(prevError => ({ ...prevError, [name]: false }));
         }
 
-        if (name !== 'food') {
+        // except for checkbox, set the form data for all other kind of feilds
+        if (type !== 'checkbox') setFormData(prevData => ({ ...prevData, [name]: value }))
+
+        if (type === 'checkbox') {
             setFormData(prevData => ({
                 ...prevData,
-                [name]: value
+                [name]: checked
+                    ? (
+                        prevData[name] && prevData[name].length > 0
+                            ? [...prevData[name], value]
+                            : [value]
+                    )
+                    : prevData[name].filter(item => item !== value)
             }))
         }
     }
@@ -120,14 +129,17 @@ function CustomFormTwo() {
                     changeHandler={changeHandler}
                     error={error.gender}
                 />
-                {/* <Checkbox
-                    title='food'
-                    titleAll='foodSelectAll'
-                    selectAll={selectAll}
-                    val={formData.food}
-                    changeHandler={changeHandler}
-                    checkOptions={checkOptions}
-                /> */}
+                <div className={styles.checkButtons}>
+                    {checkOptions.map((option, index) => (
+                        <Checkbox
+                            key={index}
+                            name='food'
+                            value={formData.food || ''}
+                            changeHandler={changeHandler}
+                            option={option}
+                        />
+                    ))}
+                </div>
                 <Dropdown
                     name='city'
                     placeholder={'Select a city'}
@@ -136,7 +148,7 @@ function CustomFormTwo() {
                     dropdownOptions={dropdownOptions}
                     error={error.city}
                 />
-                <Button
+                <SubmitButton
                     placeholder={'Submit'}
                     error={error}
                 />

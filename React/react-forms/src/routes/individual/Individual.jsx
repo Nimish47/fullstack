@@ -5,10 +5,10 @@ import Password from '../../components/formElements/passwordElement/Password';
 import Email from '../../components/formElements/emailElement/Email';
 import Number from '../../components/formElements/numberElement/Number';
 import Date from '../../components/formElements/dateElement/Date';
-import Button from '../../components/formElements/buttonElement/Button';
 import Radio from '../../components/formElements/radioElement/Radio';
 import Checkbox from '../../components/formElements/checkboxElement/Checkbox';
 import Dropdown from '../../components/formElements/dropdownElement/Dropdown';
+import SubmitButton from '../../components/formElements/buttonElement/submitbutton/SubmitButton';
 
 function Individual() {
 
@@ -173,7 +173,7 @@ function Individual() {
           dropdownOptions={dropdownOptions}
           placeHolderText={'Select a city'}
         />
-        <Button
+        <SubmitButton
           placeholder={'Submit'}
           error={error}
         />

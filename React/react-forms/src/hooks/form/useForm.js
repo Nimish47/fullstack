@@ -23,7 +23,7 @@ export function useForm(options = {}) {
         }
     }
 
-    const changeHandlerDefault = (event) => {
+    const changeHandlerDefault = (event, allCheckValues = []) => {
         const { name, value, checked, type } = event.target;
 
         // run the validator function for specific fields
@@ -36,6 +36,14 @@ export function useForm(options = {}) {
         if (type !== 'checkbox') setFormData(prevData => ({ ...prevData, [name]: value }))
 
         if (type === 'checkbox') {
+            if (value === 'select_all') {
+                setFormData(prevData => ({
+                    ...prevData,
+                    [name]: checked ? allCheckValues : []
+                }))
+                return;
+            }
+
             setFormData(prevData => ({
                 ...prevData,
                 [name]: checked
@@ -56,13 +64,19 @@ export function useForm(options = {}) {
         setError({})
     }
 
+    const clearHandlerDefault = (event) => {
+        setFormData({})
+        setError({})
+    }
+
     return {
         formData,
         setFormData,
         error,
         setError,
         submitHandler: options.submitHandlerCustom ? options.submitHandlerCustom : submitHandlerDefault,
-        changeHandler: options.changeHandlerCustom ? options.changeHandlerCustom : changeHandlerDefault
+        changeHandler: options.changeHandlerCustom ? options.changeHandlerCustom : changeHandlerDefault,
+        clearHandler: options.clearHandlerCustom ? options.clearHandlerCustom : clearHandlerDefault
     }
 }
 
