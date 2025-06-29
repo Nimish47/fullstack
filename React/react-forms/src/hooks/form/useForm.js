@@ -35,12 +35,16 @@ export function useForm(options = {}) {
         // except for checkbox, set the form data for all other kind of feilds
         if (type !== 'checkbox') setFormData(prevData => ({ ...prevData, [name]: value }))
 
-        if (type === 'checkbox' && name === 'food') {
+        if (type === 'checkbox') {
             setFormData(prevData => ({
                 ...prevData,
                 [name]: checked
-                    ? (prevData.food && prevData.food.length > 0 ? [...prevData.food, value] : [value])
-                    : prevData.food.filter(item => item !== value)
+                    ? (
+                        prevData[name] && prevData[name].length > 0
+                            ? [...prevData[name], value]
+                            : [value]
+                    )
+                    : prevData[name].filter(item => item !== value)
             }))
         }
     }
