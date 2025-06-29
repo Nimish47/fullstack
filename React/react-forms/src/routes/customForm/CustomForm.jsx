@@ -75,14 +75,18 @@ function CustomForm() {
                     changeHandler={changeHandler}
                     error={error.gender}
                 />
-                {/* <Checkbox
-                    title='food'
-                    titleAll='foodSelectAll'
-                    selectAll={selectAll}
-                    val={formData.food}
-                    changeHandler={changeHandler}
-                    checkOptions={checkOptions}
-                /> */}
+                <div className={styles.checkButtons}>
+                    {checkOptions.map((option, index) => (
+                        <Checkbox
+                            key={index}
+                            name='food'
+                            value={formData.food || ''}
+                            changeHandler={changeHandler}
+                            option={option}
+                        />))}
+                </div>
+
+
                 <Dropdown
                     name='city'
                     placeholder={'Select a city'}

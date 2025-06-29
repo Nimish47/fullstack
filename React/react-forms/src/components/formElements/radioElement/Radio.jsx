@@ -4,8 +4,8 @@ import styles from './Radio.module.css'
 function Radio({ radioOptions, name, value, changeHandler, error }) {
   return (
     <div className={styles.radioButtons}>
-      {radioOptions.map((option) => (
-        <label className={styles.inputRadioLabel}>
+      {radioOptions.map((option, index) => (
+        <label className={styles.inputRadioLabel} key={index}>
           <input
             type='radio'
             name={name}              // name groups a set of radio buttons together
