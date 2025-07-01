@@ -14,3 +14,16 @@
     border: 2px solid white;
     position: relative;
 }
+
+.checkButtons {
+    display: flex;
+    margin-bottom: 20px;
+    padding: 10px;
+    margin-left: 75px;
+}
+
+.submitButtonContainer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}

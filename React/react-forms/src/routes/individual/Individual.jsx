@@ -12,17 +12,7 @@ import SubmitButton from '../../components/formElements/buttonElement/submitbutt
 
 function Individual() {
 
-  const [formData, setFormData] = useState({
-    username: '',
-    password: '',
-    email: '',
-    age: '',
-    dob: '',
-    gender: '',
-    food: [],
-    city: ''
-  })
-  const [selectAll, setSelectAll] = useState(false)
+  const [formData, setFormData] = useState({})
   const [error, setError] = useState({
     password: false,
     email: false,
@@ -33,67 +23,6 @@ function Individual() {
   const radioOptions = ['male', 'female', 'lgbtq+']
   const checkOptions = ['pizza', 'cake', 'cola']
   const dropdownOptions = ['Mumbai', 'New Delhi', 'Kolkata', 'Bangalore', 'Chennai']
-
-  const handleSubmit = (event) => {
-    event.preventDefault();
-
-    setFormData({
-      username: '',
-      password: '',
-      email: '',
-      age: '',
-      dob: '',
-      gender: '',
-      food: [],
-      city: ''
-    })
-    setSelectAll(false)
-    alert(`Username: ${formData.username} Password: ${formData.password} Email: ${formData.email} Age: ${formData.age} DOB: ${formData.dob} City: ${formData.city}`)
-  }
-
-  const changeHandler = (event) => {
-    const { name, value, checked } = event.target;
-
-    // run the validator function for specific fields
-    if (name === 'password' || name === 'email' || name === 'age') {
-      if (value) validator(name, value);
-      else setError(prevError => ({ ...prevError, [name]: false }));
-    }
-
-    if (name !== 'food' && name !== 'foodSelectAll') {
-      setFormData(prevData => ({
-        ...prevData,
-        [name]: value
-      }))
-    }
-
-    if (name === 'food') {
-      setFormData(prevData => ({
-        ...prevData,
-        [name]: checked
-          ? [...prevData.food, value]
-          : prevData.food.filter(item => item !== value)
-      }))
-
-      setSelectAll(false)
-    }
-
-    if (name === 'foodSelectAll') {
-      let arr = [];
-      if (checked) {
-        setSelectAll(true);
-        arr = checkOptions; // add all options
-      }
-      else {
-        setSelectAll(false);
-        arr = []; // remove all options
-      }
-      setFormData(prevData => ({
-        ...prevData,
-        food: arr
-      }))
-    }
-  }
 
   const validator = (name, value) => {
     // run the validator function
@@ -112,71 +41,124 @@ function Individual() {
     }
   }
 
+  const changeHandler = (event, allCheckValues = []) => {
+    const { name, value, checked, type } = event.target;
+
+    // run the validator function for specific fields
+    if (name === 'password' || name === 'email' || name === 'age') {
+      if (value) validator(name, value);
+      else setError(prevError => ({ ...prevError, [name]: false }));
+    }
+
+    // except for checkbox, set the form data for all other kind of feilds
+    if (type !== 'checkbox') setFormData(prevData => ({ ...prevData, [name]: value }))
+
+    if (type === 'checkbox') {
+      if (value === 'select_all') {
+        setFormData(prevData => ({
+          ...prevData,
+          [name]: checked ? allCheckValues : []
+        }))
+        return;
+      }
+
+      setFormData(prevData => ({
+        ...prevData,
+        [name]: checked
+          ? (
+            prevData[name] && prevData[name].length > 0
+              ? [...prevData[name], value]
+              : [value]
+          )
+          : prevData[name].filter(item => item !== value)
+      }))
+    }
+  }
+
+  const submitHandler = (event) => {
+    event.preventDefault();
+    alert('Submitted successfully (individual)')
+    setFormData({})
+    setError({})
+  }
+
   return (
     <div className={styles.container}>
-      <form onSubmit={handleSubmit} className={styles.form}>
+      <form
+        onSubmit={submitHandler}
+        className={styles.form}
+      >
         <Text
-          title='username'
-          val={formData.username}
+          name='username'
+          value={formData.username || ''}
           changeHandler={changeHandler}
-          placeHolderText={'Username'}
-          requiredFlag={true}
+          placeholder={'Username'}
+          required={true}
+          error={error.username}
         />
         <Password
-          title='password'
-          val={formData.password}
+          name='password'
+          value={formData.password || ''}
           changeHandler={changeHandler}
-          placeHolderText={'Password'}
-          requiredFlag={true}
+          placeholder={'Password'}
+          required={true}
           error={error.password}
         />
         <Email
-          title='email'
-          val={formData.email}
+          name='email'
+          value={formData.email || ''}
           changeHandler={changeHandler}
-          placeHolderText={'Email'}
-          requiredFlag={false}
+          placeholder={'Email'}
+          required={false}
           error={error.email}
         />
         <Number
-          title='age'
-          val={formData.age}
+          name='age'
+          value={formData.age || ''}
           changeHandler={changeHandler}
-          placeHolderText={'Age'}
-          requiredFlag={false}
+          placeholder={'Age'}
+          required={false}
           error={error.age}
         />
         <Date
-          title='dob'
-          val={formData.dob}
+          name='dob'
+          value={formData.dob || ''}
           changeHandler={changeHandler}
-          requiredFlag={false}
+          required={false}
+          error={error.dob}
         />
         <Radio
+          name='gender'
+          value={formData.gender || ''}
           radioOptions={radioOptions}
-          title='gender'
-          val={formData.gender}
           changeHandler={changeHandler}
+          error={error.gender}
         />
-        <Checkbox
-          title='food'
-          titleAll='foodSelectAll'
-          selectAll={selectAll}
-          val={formData.food}
-          changeHandler={changeHandler}
-          checkOptions={checkOptions}
-        />
+        <div className={styles.checkButtons}>
+          {checkOptions.map((option, index) => (
+            <Checkbox
+              key={index}
+              name='food'
+              value={formData.food || ''}
+              changeHandler={changeHandler}
+              option={option}
+            />
+          ))}
+        </div>
         <Dropdown
-          title='city'
-          val={formData.city}
+          name='city'
+          placeholder={'Select a city'}
+          value={formData.city || ''}
           changeHandler={changeHandler}
           dropdownOptions={dropdownOptions}
-          placeHolderText={'Select a city'}
+          error={error.city}
         />
-        <SubmitButton
-          placeholder={'Submit'}
-          error={error}
-        />
+        <div className={styles.submitButtonContainer}>
+          <SubmitButton
+            placeholder={'Submit'}
+            error={error}
+          />
+        </div>
       </form>
     </div>
   )

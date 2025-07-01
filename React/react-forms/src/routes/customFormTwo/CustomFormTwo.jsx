@@ -35,7 +35,7 @@ function CustomFormTwo() {
         }
     }
 
-    const changeHandlerCustom = (event) => {
+    const changeHandlerCustom = (event, allCheckValues = []) => {
         const { name, value, checked, type } = event.target;
 
         // run the validator function for specific fields
@@ -48,6 +48,14 @@ function CustomFormTwo() {
         if (type !== 'checkbox') setFormData(prevData => ({ ...prevData, [name]: value }))
 
         if (type === 'checkbox') {
+            if (value === 'select_all') {
+                setFormData(prevData => ({
+                    ...prevData,
+                    [name]: checked ? allCheckValues : []
+                }))
+                return;
+            }
+
             setFormData(prevData => ({
                 ...prevData,
                 [name]: checked
@@ -81,7 +89,10 @@ function CustomFormTwo() {
 
     return (
         <div className={styles.container}>
-            <form onSubmit={submitHandler} className={styles.form}>
+            <form
+                onSubmit={submitHandler}
+                className={styles.form}
+            >
                 <div className={styles.sideText}>New!</div>
                 <Text
                     name='username'
@@ -148,10 +159,12 @@ function CustomFormTwo() {
                     dropdownOptions={dropdownOptions}
                     error={error.city}
                 />
-                <SubmitButton
-                    placeholder={'Submit'}
-                    error={error}
-                />
+                <div className={styles.submitButtonContainer}>
+                    <SubmitButton
+                        placeholder={'Submit'}
+                        error={error}
+                    />
+                </div>
             </form>
         </div>
     )

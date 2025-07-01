@@ -24,3 +24,16 @@
     color: white;
     border: 3px solid white;
 }
+
+.checkButtons {
+    display: flex;
+    margin-bottom: 20px;
+    padding: 10px;
+    margin-left: 75px;
+}
+
+.submitButtonContainer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
