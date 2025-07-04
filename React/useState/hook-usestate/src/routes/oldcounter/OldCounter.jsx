@@ -5,6 +5,10 @@ function OldCounter() {
 
     const [counter, setCounter] = useState(0)
 
+    const incrementCount = () => setCounter(counter + 1)
+    const decrementCount = () => setCounter(counter - 1)
+
+
     return (
         <div className={styles.wrapper}>
             <div className={styles.container}>
@@ -12,8 +16,18 @@ function OldCounter() {
                     <div className={styles.value}>{counter}</div>
                 </div>
                 <div className={styles.buttons}>
-                    <div className={styles.increment}>Increment</div>
-                    <div className={styles.decrement}>Decrement</div>
+                    <div
+                        className={styles.increment}
+                        onClick={incrementCount}
+                    >
+                        Increment
+                    </div>
+                    <div
+                        className={styles.decrement}
+                        onClick={decrementCount}
+                    >
+                        Decrement
+                    </div>
                 </div>
             </div>
         </div>
