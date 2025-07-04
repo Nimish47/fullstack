@@ -1,0 +1,49 @@
+.wrapper {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.counterValue {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 4em;
+    margin-bottom: 150px;
+}
+
+.value {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    background-color: black;
+    border: 2px solid white;
+}
+
+.buttons {
+    display: flex;
+}
+
+.buttons div {
+    background-color: beige;
+    color: black;
+    padding: 50px;
+    font-size: 2em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.decrement {
+    margin-left: 100px;
+}
+
+.increment:hover,
+.decrement:hover {
+    cursor: pointer;
+    opacity: 0.8;
+}

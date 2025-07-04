@@ -5,6 +5,7 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import Home from './routes/home/Home';
+import OldCounter from './routes/oldcounter/OldCounter';
 
 const router = createBrowserRouter([
   {
@@ -14,6 +15,10 @@ const router = createBrowserRouter([
       {
         path: '',
         element: <Home />
+      },
+      {
+        path: 'old-counter',
+        element: <OldCounter />
       }
     ]
   }
