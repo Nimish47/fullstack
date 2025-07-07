@@ -42,8 +42,13 @@
     margin-left: 100px;
 }
 
+.delayed {
+    margin-left: 100px;
+} 
+
 .increment:hover,
-.decrement:hover {
+.decrement:hover,
+.delayed:hover {
     cursor: pointer;
     opacity: 0.8;
 }

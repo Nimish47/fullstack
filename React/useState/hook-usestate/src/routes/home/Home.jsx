@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 
 function Home() {
 
-    const data = ['old-counter', 'two', 'three', 'four', 'five', 'six'];
+    const data = ['old-counter', 'lazy-usestate'];
 
     return (
         <div className={styles.parent}>
