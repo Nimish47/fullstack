@@ -1,65 +1,56 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 import styles from './GoodInterval.module.css'
 
 function GoodInterval() {
 
-  const [status, setStatus] = useState('')
+  const [status, setStatus] = useState('No news yet!')
+  const timeout = useRef([])
 
-  // useEffect(() => { regularFn() }, [])
+  useEffect(() => {
+    regularFn()
 
-  const regularFnOne = async () => {
+    return () => {
+      if (timeout.current.length) {
+        timeout.current.forEach(timeoutId => clearTimeout(timeoutId))
+        timeout.current = []
+      }
+    }
+
+  }, [])
+
+  const regularFn = async () => {
+
+    // clear all timeouts in previous call
+    if (timeout.current.length) {
+      timeout.current.forEach(timeoutId => clearTimeout(timeoutId))
+      timeout.current = []
+    }
+
+    // proceed towards fn execution
     setStatus('Cooking started')
 
     // cause a deliberate 1s delay
     await new Promise(resolve => {
-      // console.log('hello')
-      // setStatus('Cooker!')
-      setTimeout(resolve, 1000)
-      //resolve()
+      const timeoutid = setTimeout(resolve, 1000)
+      timeout.current.push(timeoutid)
     })
-    setStatus('Cooking in progress!')
+    setStatus('Cooking is in progress!')
 
-    // cause a deliberate 2s delay
-    await new Promise(resolve => setTimeout(resolve, 2000))
+    // cause a deliberate 1s delay
+    await new Promise(resolve => {
+      const timeoutid = setTimeout(resolve, 2000)
+      timeout.current.push(timeoutid)
+    })
     setStatus('Cooking finished, pizza ready!')
 
     // wait 1s before repeating again
-    setTimeout(regularFnOne, 1000)
+    const timeoutid = setTimeout(regularFn, 3000)
+    timeout.current.push(timeoutid)
   }
-
-  const regularFnTwo = async () => {
-    setStatus('Cooking started')
-
-    // cause a deliberate 1s delay
-    await new Promise(resolve => setTimeout(resolve, 2000))
-
-    setStatus('Cooking in progress')
-    setStatus('Cooking finished')
-
-    setTimeout(regularFnTwo, 1000)
-  }
-
-  const regularFnThree = () => {
-    setStatus('Pick mobile')
-    setTimeout(() => { }, 1000)
-    setStatus('Order Burger')
-    setTimeout(() => { }, 1000)
-  }
-
-  console.log('Render', status)
 
   return (
     <div className={styles.container}>
       <div className={styles.status}>{status}</div>
-      <div
-        className={styles.clickMe}
-        onClick={regularFnOne}>One</div>
-      <div
-        className={styles.clickMe}
-        onClick={regularFnTwo}>Two</div>
-      <div
-        className={styles.clickMe}
-        onClick={regularFnThree}>Three</div>
     </div>
   )
 }

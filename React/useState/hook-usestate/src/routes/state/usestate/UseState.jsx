@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 
 function UseState() {
 
-    const data = ['old-counter', 'lazy-usestate', 'batching'];
+    const data = ['old-counter', 'lazy-usestate', 'batching','advanced-batching'];
 
     return (
         <div className={styles.parent}>

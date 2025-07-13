@@ -16,6 +16,7 @@ import Batching from './routes/state/batching/Batching';
 import IntervalContainer from './routes/allintervals/intervalcontainer/IntervalContainer';
 import GoodInterval from './routes/allintervals/goodinterval/GoodInterval';
 import BadInterval from './routes/allintervals/badinterval/BadInterval';
+import AdvancedBatching from './routes/state/batching-advanced/AdvancedBatching';
 
 const users = [
   { id: 1, country: 'India' },
@@ -49,6 +50,10 @@ const router = createBrowserRouter([
       {
         path: 'state/batching',
         element: <Batching />
+      },
+      {
+        path: 'state/advanced-batching',
+        element: <AdvancedBatching />
       },
       {
         path: 'timeout',

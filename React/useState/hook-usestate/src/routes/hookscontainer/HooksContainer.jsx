@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 
 function HooksContainer() {
 
-    const data = ['state', 'usereducer', 'useref','timeout', 'interval'];
+    const data = ['state', 'timeout', 'interval'];
 
     return (
         <div className={styles.parent}>
