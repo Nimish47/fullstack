@@ -1,0 +1,24 @@
+.container{
+    font-size: 4em;
+    color: bisque;
+    font-style: italic;
+    text-align: center;
+    padding-top: 300px;
+}
+
+.clickMe {
+    background-color: bisque;
+    color: black;
+    padding: 20px;
+    width: 200px;
+    text-align: center;
+    font-size: 0.5em;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 100px;
+}
+
+.clickMe:hover {
+    opacity: 0.6;
+    cursor: pointer;
+}

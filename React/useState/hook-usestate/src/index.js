@@ -4,9 +4,18 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
-import Home from './routes/home/Home';
-import OldCounter from './routes/oldcounter/OldCounter';
-import LazyState from './routes/lazystate/LazyState';
+import HooksContainer from './routes/hookscontainer/HooksContainer';
+import UseState from './routes/state/usestate/UseState';
+import OldCounter from './routes/state/oldcounter/OldCounter';
+import LazyState from './routes/state/lazystate/LazyState';
+import SetTimeout from './routes/alltimeouts/settimeout/SetTimeout';
+import ClearTimeout from './routes/alltimeouts/cleartimeout/ClearTimeout';
+import Timeout from './routes/alltimeouts/timeout/Timeout';
+import TimeoutContainer from './routes/alltimeouts/timeoutcontainer/TimeoutContainer';
+import Batching from './routes/state/batching/Batching';
+import IntervalContainer from './routes/allintervals/intervalcontainer/IntervalContainer';
+import GoodInterval from './routes/allintervals/goodinterval/GoodInterval';
+import BadInterval from './routes/allintervals/badinterval/BadInterval';
 
 const users = [
   { id: 1, country: 'India' },
@@ -23,15 +32,51 @@ const router = createBrowserRouter([
     children: [
       {
         path: '',
-        element: <Home />
+        element: <HooksContainer />
       },
       {
-        path: 'old-counter',
+        path: 'state',
+        element: <UseState />
+      },
+      {
+        path: 'state/old-counter',
         element: <OldCounter />
       },
       {
-        path: 'lazy-usestate',
-        element: <LazyState users={users}/>
+        path: 'state/lazy-usestate',
+        element: <LazyState users={users} />
+      },
+      {
+        path: 'state/batching',
+        element: <Batching />
+      },
+      {
+        path: 'timeout',
+        element: <TimeoutContainer />
+      },
+      {
+        path: 'timeout/settimeout',
+        element: <SetTimeout />
+      },
+      {
+        path: 'timeout/cleartimeout',
+        element: <ClearTimeout />
+      },
+      {
+        path: 'timeout/timeout',
+        element: <Timeout />
+      },
+      {
+        path: 'interval',
+        element: <IntervalContainer />
+      },
+      {
+        path: 'interval/goodinterval',
+        element: <GoodInterval />
+      },
+      {
+        path: 'interval/badinterval',
+        element: <BadInterval />
       }
     ]
   }

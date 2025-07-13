@@ -1,10 +1,10 @@
 import React from 'react'
-import styles from './Home.module.css'
+import styles from './UseState.module.css'
 import { Link } from 'react-router-dom';
 
-function Home() {
+function UseState() {
 
-    const data = ['old-counter', 'lazy-usestate'];
+    const data = ['old-counter', 'lazy-usestate', 'batching'];
 
     return (
         <div className={styles.parent}>
@@ -12,7 +12,9 @@ function Home() {
             <div className={styles.container}>
                 {
                     data.map((item) => (
-                        <Link className={styles.link} to={`/${item}`} key={item}>
+                        //a very important thing about Link
+                        // does not replace URL but appends
+                        <Link className={styles.link} to={`${item}`} key={item}>
                             {item}
                         </Link>
                     ))
@@ -23,4 +25,4 @@ function Home() {
     )
 }
 
-export default Home
+export default UseState

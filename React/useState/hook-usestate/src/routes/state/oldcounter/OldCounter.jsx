@@ -7,7 +7,7 @@ function OldCounter() {
     const [name, setName] = useState('Arjun')
 
     const incrementCount = () => {
-        // explain what happens and why line 10 updation gets ignored
+        // explain what happens and why line 11 updation gets ignored
         setCounter(counter + 2)
         setCounter(counter + 1)
     }
