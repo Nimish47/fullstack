@@ -1,14 +1,14 @@
 import React from 'react'
-import styles from './HooksContainer.module.css'
+import styles from './ReactUseMemo.module.css'
 import { Link } from 'react-router-dom';
 
-function HooksContainer() {
+function ReactUseMemo() {
 
-    const data = ['state', 'timeout', 'interval', 'memo'];
+    const data = ['case3A'];
 
     return (
         <div className={styles.parent}>
-            <div className={styles.title}>The core hooks</div>
+            <div className={styles.title}>The useMemo hook</div>
             <div className={styles.container}>
                 {
                     data.map((item) => (
@@ -21,7 +21,8 @@ function HooksContainer() {
                 }
             </div>
         </div>
+
     )
 }
 
-export default HooksContainer
+export default ReactUseMemo

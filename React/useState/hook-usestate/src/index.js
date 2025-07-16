@@ -17,6 +17,13 @@ import IntervalContainer from './routes/allintervals/intervalcontainer/IntervalC
 import GoodInterval from './routes/allintervals/goodinterval/GoodInterval';
 import BadInterval from './routes/allintervals/badinterval/BadInterval';
 import AdvancedBatching from './routes/state/batching-advanced/AdvancedBatching';
+import MemoContainer from './routes/allmemo/memocontainer/MemoContainer';
+import ReactUseMemo from './routes/allmemo/react-usememo/ReactUseMemo';
+import ReactCallback from './routes/allmemo/react-callback/ReactCallback';
+import ReactMemo from './routes/allmemo/react-memo/ReactMemo';
+import Case3A from './routes/allmemo/react-usememo/case3A/Case3A';
+import Case2A from './routes/allmemo/react-memo/case2A/Case2A';
+import Case1A from './routes/allmemo/react-callback/case1/Case1A';
 
 const users = [
   { id: 1, country: 'India' },
@@ -82,7 +89,35 @@ const router = createBrowserRouter([
       {
         path: 'interval/badinterval',
         element: <BadInterval />
-      }
+      },
+      {
+        path: 'memo',
+        element: <MemoContainer />
+      },
+      {
+        path: 'memo/usememo',
+        element: <ReactUseMemo />
+      },
+      {
+        path: 'memo/usememo/case3A',
+        element: <Case3A />
+      },            
+      {
+        path: 'memo/usecallback',
+        element: <ReactCallback />
+      },
+      {
+        path: 'memo/usecallback/case1A',
+        element: <Case2A />
+      },        
+      {
+        path: 'memo/react-memo',
+        element: <ReactMemo />
+      },
+      {
+        path: 'memo/react-memo/case2A',
+        element: <Case2A />
+      },        
     ]
   }
 ])
