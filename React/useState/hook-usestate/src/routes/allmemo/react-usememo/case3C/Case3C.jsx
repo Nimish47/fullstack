@@ -1,18 +1,11 @@
 import React, { useMemo, useState } from 'react'
-import styles from './Case2A.module.css'
-import Child2A from './Child2A'
+import styles from './Case3C.module.css'
+import Child3C from './Child3C'
 
-function Case2A() {
+function Case3C() {
 
   const [random, setRandom] = useState(0)
   const [numValue, setNumValue] = useState(0)
-  const [selected, setSelected] = useState(false)
-
-  const childObj = { fullName: 'Akarsh Singh', age: 29 }
-  const handleSelect = (prev) => {
-    console.log('Inside handleSelect function')
-    setSelected(!prev)
-  }
 
   const generateRandomNumber = () => {
     const num = Math.ceil(Math.random() * 10)
@@ -30,15 +23,10 @@ function Case2A() {
         </div>
       </div>
       <div className={styles.childContainer}>
-        <Child2A
-          id={numValue}
-          details={childObj}
-          handleSelect={handleSelect}
-          selected={selected}
-        />
+        <Child3C id={numValue}/>
       </div>
     </div>
   )
 }
 
-export default Case2A
+export default Case3C

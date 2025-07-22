@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 
 function ReactMemo() {
 
-    const data = ['case2A'];
+    const data = ['case2A','case2B','case2C','case2D','case2E'];
 
     return (
         <div className={styles.parent}>

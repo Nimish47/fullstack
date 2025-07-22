@@ -24,6 +24,12 @@ import ReactMemo from './routes/allmemo/react-memo/ReactMemo';
 import Case3A from './routes/allmemo/react-usememo/case3A/Case3A';
 import Case2A from './routes/allmemo/react-memo/case2A/Case2A';
 import Case1A from './routes/allmemo/react-callback/case1/Case1A';
+import Case3B from './routes/allmemo/react-usememo/case3B/Case3B';
+import Case3C from './routes/allmemo/react-usememo/case3C/Case3C';
+import Case2B from './routes/allmemo/react-memo/case2B/Case2B';
+import Case2C from './routes/allmemo/react-memo/case2C/Case2C';
+import Case2D from './routes/allmemo/react-memo/case2D/Case2D';
+import Case2E from './routes/allmemo/react-memo/case2E/Case2E';
 
 const users = [
   { id: 1, country: 'India' },
@@ -101,15 +107,23 @@ const router = createBrowserRouter([
       {
         path: 'memo/usememo/case3A',
         element: <Case3A />
-      },            
+      },
+      {
+        path: 'memo/usememo/case3B',
+        element: <Case3B />
+      },
+      {
+        path: 'memo/usememo/case3C',
+        element: <Case3C />
+      },
       {
         path: 'memo/usecallback',
         element: <ReactCallback />
       },
       {
         path: 'memo/usecallback/case1A',
-        element: <Case2A />
-      },        
+        element: <Case1A />
+      },
       {
         path: 'memo/react-memo',
         element: <ReactMemo />
@@ -117,7 +131,23 @@ const router = createBrowserRouter([
       {
         path: 'memo/react-memo/case2A',
         element: <Case2A />
-      },        
+      },
+      {
+        path: 'memo/react-memo/case2B',
+        element: <Case2B />
+      },
+      {
+        path: 'memo/react-memo/case2C',
+        element: <Case2C />
+      },
+      {
+        path: 'memo/react-memo/case2D',
+        element: <Case2D />
+      },
+      {
+        path: 'memo/react-memo/case2E',
+        element: <Case2E />
+      }               
     ]
   }
 ])
