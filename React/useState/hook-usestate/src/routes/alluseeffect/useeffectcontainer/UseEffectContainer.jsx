@@ -1,14 +1,14 @@
 import React from 'react'
-import styles from './ReactMemo.module.css'
+import styles from './UseEffectContainer.module.css'
 import { Link } from 'react-router-dom';
 
-function ReactMemo() {
+function UseEffectContainer() {
 
-    const data = ['case2A','case2B','case2C','case2D','case2E','case2F'];
+    const data = ['case1', 'case2', 'case3'];
 
     return (
         <div className={styles.parent}>
-            <div className={styles.title}>React.Memo</div>
+            <div className={styles.title}>The Great useEffect hook!</div>
             <div className={styles.container}>
                 {
                     data.map((item) => (
@@ -25,4 +25,4 @@ function ReactMemo() {
     )
 }
 
-export default ReactMemo
+export default UseEffectContainer

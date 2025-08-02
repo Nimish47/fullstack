@@ -30,6 +30,9 @@ import Case2B from './routes/allmemo/react-memo/case2B/Case2B';
 import Case2C from './routes/allmemo/react-memo/case2C/Case2C';
 import Case2D from './routes/allmemo/react-memo/case2D/Case2D';
 import Case2E from './routes/allmemo/react-memo/case2E/Case2E';
+import Case2F from './routes/allmemo/react-memo/case2F/Case2F';
+import UseEffectContainer from './routes/alluseeffect/useeffectcontainer/UseEffectContainer';
+import Case1 from './routes/alluseeffect/case1/Case1';
 
 const users = [
   { id: 1, country: 'India' },
@@ -147,7 +150,19 @@ const router = createBrowserRouter([
       {
         path: 'memo/react-memo/case2E',
         element: <Case2E />
-      }               
+      },
+      {
+        path: 'memo/react-memo/case2F',
+        element: <Case2F />
+      },
+      {
+        path: 'useeffect',
+        element: <UseEffectContainer />
+      },
+      {
+        path: 'useeffect/case1',
+        element: <Case1 />
+      }                         
     ]
   }
 ])

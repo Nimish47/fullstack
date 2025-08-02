@@ -1,0 +1,47 @@
+.parent {
+    display: grid;
+    background-color: black;
+}
+
+.title {
+    color: wheat;
+    font-size: 2em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 20vh;
+}
+
+.container {
+    color: white;
+    display: grid;
+    justify-content: center;
+    gap: 250px;
+    grid-template-columns: repeat(3, 250px);
+    grid-auto-rows: 250px;
+    height: 80vh;
+}
+
+.link {
+    border: 5px solid rgb(228, 228, 241);
+    background-color: rgb(70, 2, 2);
+    font-size: 1.1em;
+    letter-spacing: 2px;
+    color: rgb(106, 223, 128);
+    text-transform: uppercase;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    letter-spacing: 5px;
+    border-radius: 50%;
+}
+
+.link:hover {
+    background-color: rgb(255, 255, 255);
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+    cursor: pointer;
+    color: black;
+}

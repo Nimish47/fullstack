@@ -1,0 +1,15 @@
+.item {
+    background-color: rgb(226, 54, 54);
+    color: white;
+    padding: 30px;
+    border: solid white;
+    width: 100%;
+    font-size: 2em;
+    text-align: center;
+    box-sizing: border-box;
+}
+
+.item:hover {
+    cursor: pointer;
+    opacity: 0.6;
+}

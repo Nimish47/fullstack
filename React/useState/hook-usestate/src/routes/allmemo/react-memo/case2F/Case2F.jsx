@@ -1,13 +1,16 @@
-import React, { useEffect, useState } from 'react'
-import styles from './Case2E.module.css'
+import React, { useCallback, useEffect, useMemo, useState } from 'react'
+import styles from './Case2F.module.css'
 import BigList from './BigList'
 import Counter from './Counter'
 import Animal from './Animal'
 
-function Case2E() {
+function Case2F() {
 
     const [list, setList] = useState([])
     const [count, setCount] = useState(0)
+
+    //const type = useMemo(() => { return "MAMMALS" }, [])
+    const type = "MAMMALS" // IF ITS A CONSTANT, no need to memoize
 
     useEffect(() => {
         // faking a big array
@@ -24,7 +27,11 @@ function Case2E() {
     }, [])
 
     const incrementCounter = () => setCount(prev => prev + 1)
-    const logger = (index) => { console.log(`Someone clicked list id: ${index}`) }
+
+    const logger = useCallback((index) => {
+        console.log(`Someone clicked list id: ${index}`)
+    }, [])
+    // const logger = (index) => { console.log(`Someone clicked list id: ${index}`) }
 
     if (!list.length) return <div className={styles.noshowcontainer}>Nothing here buddy!</div>
 
@@ -38,10 +45,10 @@ function Case2E() {
                         count={count}
                         incrementCounter={incrementCounter}
                     />
-                  </div>  
-                    <div className={styles.animalContainer}>
-                        <Animal />
-                    </div>
+                </div>
+                <div className={styles.animalContainer}>
+                    <Animal type={type} />
+                </div>
             </div>
             <div className={styles.listContainer}>
                 {list.map((listitem, index) => (
@@ -56,4 +63,4 @@ function Case2E() {
     )
 }
 
-export default Case2E
+export default Case2F
