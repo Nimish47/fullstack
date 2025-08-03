@@ -1,0 +1,32 @@
+.container,.containerGrey {
+    height: 100vh;
+    width: 100%;
+    background-color: black;
+    color: whitesmoke;
+    position: relative;
+    padding-left: 20px;
+    padding-top: 20px;
+    box-sizing: border-box;
+    font-size: 2em;
+}
+
+.containerGrey {
+    background-color: grey;
+    color: white;
+}
+
+.toggler{
+    background-color: green;
+    color: white;
+    padding: 20px;
+    width: 20%;
+    text-align: center;
+    position: absolute;
+    right: 10px;
+    top: 10px;
+}
+
+.toggler:hover{
+    cursor: pointer;
+    opacity: 0.8;
+}
