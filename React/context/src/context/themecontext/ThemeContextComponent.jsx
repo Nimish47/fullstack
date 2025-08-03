@@ -1,8 +1,8 @@
 import React, { createContext, useState } from "react";
 
 // this is main context
-// to 'provide' data to child comps - context.provider
-// to 'consume' data from this context - usecontext
+// it 'provides' data to child comps - context.provider
+// it 'consumes' data from this context - usecontext
 export const ThemeContext = createContext();
 
 // Create Provider component - its just a wrapper
@@ -21,4 +21,4 @@ function ThemeContextComponent({ children }) {
   );
 }
 
-export default ThemeContextComponent
+export default ThemeContextComponent;

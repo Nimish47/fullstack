@@ -6,10 +6,11 @@ import reportWebVitals from './reportWebVitals';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import Home from './component/home/Home';
 import PageNotFound from './component/pagenotfound/PageNotFound';
-import ThemeContextComponent from './context/themecontext/ThemeContextComponent';
-import Basic from './component/base/Basic';
-import Case1 from './component/basic/Case1';
 import Complex1 from './component/complex1/Complex1';
+import Basic from './component/basic/Basic';
+import Case1 from './component/base/Case1';
+import ThemeContextComponent from './context/themecontext/ThemeContextComponent';
+import BeautifierContextComponent from './context/beautifierContext/BeautifierContextComponent';
 
 
 const router = createBrowserRouter([
@@ -33,7 +34,12 @@ const router = createBrowserRouter([
   },
   {
     path: '/complex1',
-    element: <Complex1 />
+    element:
+      <ThemeContextComponent>
+        <BeautifierContextComponent>
+          <Complex1 />
+        </BeautifierContextComponent>
+      </ThemeContextComponent>
   },
   {
     path: "*",

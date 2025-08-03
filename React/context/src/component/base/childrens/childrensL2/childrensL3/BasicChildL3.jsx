@@ -1,12 +1,10 @@
-import React, { useContext } from 'react'
+import React from 'react'
 import styles from './BasicChildL3.module.css'
-import { ThemeContext } from '../../../../../context/themecontext/ThemeContextComponent';
 
-function BasicChildL3() {
+function BasicChildL3({ theme }) {
 
-    const { theme } = useContext(ThemeContext);
+    console.log('render:great great grandchild')
 
-    console.log('render:greatgrandchild')
     return (
         <div className={theme ? styles.containerGrey : styles.container}>Great Grand Child</div>
     )

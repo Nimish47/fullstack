@@ -11,7 +11,7 @@ function Basic() {
 
     return (
         <div className={theme ? styles.containerGrey : styles.container}>
-            <div>Parent</div>
+            <div>A very basic context</div>
             <div className={styles.toggler} onClick={toggler}>Toggle</div>
             <BasicChild />
         </div>

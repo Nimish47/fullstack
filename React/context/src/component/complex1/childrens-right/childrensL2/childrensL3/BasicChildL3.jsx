@@ -6,9 +6,10 @@ function BasicChildL3() {
 
     const { theme } = useContext(ThemeContext);
 
-    console.log('render:greatgrandchild')
+    console.log('render:great great grandchild:right')
+
     return (
-        <div className={theme ? styles.containerGrey : styles.container}>Great Grand Child</div>
+        <div className={theme ? styles.containerGrey : styles.container}>GG Child(right)</div>
     )
 }
 

@@ -1,7 +1,8 @@
-.container,.containerGrey {
+.container,
+.containerGrey {
     height: 100vh;
     width: 100%;
-    background-color: black;
+    background-color: grey;
     color: whitesmoke;
     position: relative;
     padding-left: 20px;
@@ -11,22 +12,50 @@
 }
 
 .containerGrey {
-    background-color: grey;
+    background-color: black;
     color: white;
 }
 
-.toggler{
+.toggler {
     background-color: green;
     color: white;
     padding: 20px;
-    width: 20%;
+    width: 7%;
     text-align: center;
     position: absolute;
     right: 10px;
     top: 10px;
+    font-size: 0.5em;
 }
 
-.toggler:hover{
+.beautifier,
+.beautifierCurved {
+    background-color: rgb(10, 34, 171);
+    color: white;
+    padding: 20px;
+    width: 7%;
+    text-align: center;
+    position: absolute;
+    right: 180px;
+    top: 10px;
+    font-size: 0.5em;
+}
+
+.beautifierCurved {
+    border-radius: 50px;
+}
+
+.toggler:hover,
+.beautifier:hover,
+.beautifierCurved:hover {
     cursor: pointer;
     opacity: 0.8;
+}
+
+.label {
+    text-align: center;
+    font-size: 2em;
+    padding-top: 100px;
+    text-decoration: underline;
+    letter-spacing: 2px;
 }
