@@ -3,6 +3,7 @@ import React, { createContext, useState } from "react";
 // this is main context
 // it 'provides' data to child comps - context.provider
 // it 'consumes' data from this context - usecontext
+// needs to be created outside component since it gets exported 
 export const BeautyContext = createContext();
 
 // Create Provider component - its just a wrapper

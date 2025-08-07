@@ -16,7 +16,6 @@ function Child1A({ id }) {
         setValue(memoized_Fn())
     }, [memoized_Fn])
 
-
     console.log('render child1A')
 
     return (

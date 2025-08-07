@@ -1,0 +1,38 @@
+.container {
+    height: 100vh;
+    background-color: black;
+}
+
+.containerWhite {
+    height: 100vh;
+    background-color: grey;
+}
+
+.commonflex {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-height: 100%;
+}
+
+.label {
+    color: white;
+    text-align: center;
+    padding-top: 100px;
+    font-size: 3em;
+    margin-bottom: 100px;
+}
+
+.random {
+    background-color: rgb(30, 40, 223);
+    color: white;
+    padding: 40px;
+    position: absolute;
+    right: 10px;
+    top: 10px;
+}
+
+.random:hover {
+    cursor: pointer;
+    opacity: 0.9;
+}

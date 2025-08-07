@@ -1,0 +1,10 @@
+.container,
+.containerRed {
+    height: 100vh;
+    background-color: black;
+    color: white;
+}
+
+.containerRed {
+    background-color: red;
+}

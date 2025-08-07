@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 
 function Home() {
 
-    const data = ['issue', 'basic', 'complex1'];
+    const data = ['issue', 'basic', 'complex1', 'complex2', 'complex3'];
 
     return (
         <div className={styles.parent}>

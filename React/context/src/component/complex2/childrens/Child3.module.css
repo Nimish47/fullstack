@@ -1,0 +1,15 @@
+.container,.containerRed {
+    width: 200px;
+    height: 200px;
+    background-color: yellow;
+    border-radius: 50%;
+}
+
+.containerRed {
+    background-color: red;
+}
+
+.container:hover, .containerRed:hover {
+    opacity: 0.8;
+    cursor: pointer;
+}
