@@ -33,6 +33,7 @@ import Case2E from './routes/allmemo/react-memo/case2E/Case2E';
 import Case2F from './routes/allmemo/react-memo/case2F/Case2F';
 import UseEffectContainer from './routes/alluseeffect/useeffectcontainer/UseEffectContainer';
 import Case1 from './routes/alluseeffect/case1/Case1';
+import Main from './routes/allusereducer/main';
 
 const users = [
   { id: 1, country: 'India' },
@@ -162,7 +163,11 @@ const router = createBrowserRouter([
       {
         path: 'useeffect/case1',
         element: <Case1 />
-      }                         
+      },
+      {
+        path: 'usereducer',
+        element: <Main />
+      }
     ]
   }
 ])

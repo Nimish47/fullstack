@@ -10,6 +10,7 @@ import BasicForm from './components/basicform/BasicForm';
 import Individual from './routes/individual/Individual';
 import CustomForm from './routes/customForm/CustomForm';
 import CustomFormTwo from './routes/customFormTwo/CustomFormTwo';
+import CustomFormThree from './routes/customFormThree/CustomFormThree';
 
 
 const router = createBrowserRouter([
@@ -40,6 +41,11 @@ const router = createBrowserRouter([
       {
         path: "useform-custom-2",
         element: <CustomFormTwo />
+      },
+      {
+        path: "useform-reducer",
+        element: <CustomFormThree />
+
       }
     ]
   },
