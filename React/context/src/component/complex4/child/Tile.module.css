@@ -1,0 +1,59 @@
+.tile,.tileTrue {
+    display: flex;
+    align-items: center;
+    width: 80%;
+    background-color: rgb(11, 201, 80);
+    color: white;
+    padding: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 20px}
+
+.tileTrue {
+    background-color: red;
+    border: 5px solid white;
+
+}
+
+.flag,
+.task,
+.assigned,
+.delete {
+    background-color: rgb(231, 228, 146);
+    color: black;
+    padding: 15px;
+    border-radius: 50px;
+}
+
+.flag {
+    margin-left: auto;
+    border-radius: 22px;
+    border: 1px solid white;
+}
+
+.task {
+    background-color: green;
+    color: white;
+    width: 20%;
+    text-align: center;
+}
+
+.assigned {
+    background-color: grey;
+    color: white;
+    margin-left: 10px;
+    width: 20%;
+    text-align: center;
+}
+
+.delete {
+    background-color: rgb(43, 43, 227);
+    color: white;
+    margin-left: 20px;
+}
+
+.flag:hover,
+.delete:hover {
+    opacity: 0.8;
+    cursor: pointer;
+}

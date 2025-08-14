@@ -17,9 +17,6 @@ function Complex2() {
             <div className={styles.label}>Traffic signal</div>
             <div onClick={someRandomStuff} className={styles.random}>Random Stuff</div>
             <div className={styles.commonflex}>
-                {/* "value" memoization in context won't work in this file
-                because in each re-render of parent, a "new" context is created
-                to prevent re-render, react.memo each child */}
                 <TrafficContextComponent>
                     <Child1 />
                     <Child2 />

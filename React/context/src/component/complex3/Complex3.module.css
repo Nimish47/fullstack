@@ -3,8 +3,35 @@
     height: 100vh;
     background-color: black;
     color: white;
+    padding: 125px;
+    box-sizing: border-box;
 }
 
 .containerRed {
     background-color: red;
+}
+
+.type1button {
+    background-color: green;
+    color: white;
+    padding: 20px;
+    width: 100px;
+    text-align: center;
+    border-radius: 40px;
+    font-size: 1.25em;
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    text-decoration: none;
+    border: 5px solid white;
+}
+
+.type1button:hover {
+    cursor: pointer;
+    opacity: 0.8;
+}
+
+.outlet {
+    border: 5px solid white;
+    height: 100%;
 }

@@ -1,27 +1,26 @@
 
-import { useReducer, useState } from "react"
-import { INITIAL_STATE } from "./reducer"
-import { reducer } from "./reducer"
+import { useReducer } from "react"
+import { INITIAL_STATE, reducer } from "./reducer"
+import { errorReducer } from "./errorReducer"
 
 
 export function useFormReducer(options = {}) {
-    const [error, setError] = useState({})
     const [formData, dispatch] = useReducer(reducer, INITIAL_STATE)
+    const [error, dispatchError] = useReducer(errorReducer, {})
 
     const validatorDefault = (name, value) => {
         // run the validator function
         if (name === 'password') {
-            if (value.length < 6) setError(prevError => ({ ...prevError, password: true }))
-            else setError(prevError => ({ ...prevError, password: false }))
+            if (value.length < 6) dispatchError({ type: 'SET_ERROR', payload: { name } })
+            else dispatchError({ type: 'NO_ERROR', payload: { name } })
         }
         if (name === 'email') {
-            if (value.length < 6) setError(prevError => ({ ...prevError, email: true }))
-            else setError(prevError => ({ ...prevError, email: false }))
+            if (value.length < 6) dispatchError({ type: 'SET_ERROR', payload: { name } })
+            else dispatchError({ type: 'NO_ERROR', payload: { name } })
         }
-
         if (name === 'age') {
-            if (value < 18) setError(prevError => ({ ...prevError, age: true }))
-            else setError(prevError => ({ ...prevError, age: false }))
+            if (value < 18) dispatchError({ type: 'SET_ERROR', payload: { name } })
+            else dispatchError({ type: 'NO_ERROR', payload: { name } })
         }
     }
 
@@ -31,7 +30,7 @@ export function useFormReducer(options = {}) {
         // run the validator function for specific fields
         if (name === 'password' || name === 'email' || name === 'age') {
             if (value) validatorDefault(name, value);
-            else setError(prevError => ({ ...prevError, [name]: false }));
+            else dispatchError({ type: 'NO_ERROR', payload: { name } })
         }
 
         // except for checkbox, set the form data for all other kind of feilds
@@ -53,18 +52,17 @@ export function useFormReducer(options = {}) {
         event.preventDefault();
         alert('Submitted successfully (default)')
         dispatch({ type: "SUBMIT_FORM" })
-        setError({})
+        dispatchError({ type: "CLEAR_ERROR" })
     }
 
     const clearHandlerDefault = (event) => {
         dispatch({ type: "CLEAR_FORM" })
-        setError({})
+        dispatchError({ type: "CLEAR_ERROR" })
     }
 
     return {
         formData,
         error,
-        setError,
         submitHandler: options.submitHandlerCustom ? options.submitHandlerCustom : submitHandlerDefault,
         changeHandler: options.changeHandlerCustom ? options.changeHandlerCustom : changeHandlerDefault,
         clearHandler: options.clearHandlerCustom ? options.clearHandlerCustom : clearHandlerDefault

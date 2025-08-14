@@ -1,0 +1,7 @@
+.container {
+    background-color: beige;
+    font-size: 10em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

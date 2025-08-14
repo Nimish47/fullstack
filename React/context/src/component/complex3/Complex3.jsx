@@ -1,6 +1,6 @@
 import React from 'react'
 import styles from './Complex3.module.css'
-import { Outlet } from 'react-router-dom'
+import { Link, Outlet } from 'react-router-dom'
 import { useTraffic } from '../../context/trafficContext/TrafficContextComponent'
 function Complex3() {
 
@@ -10,7 +10,10 @@ function Complex3() {
 
     return (
         <div className={stop ? styles.containerRed : styles.container}>
-            <Outlet />
+            <Link className={styles.type1button} to={`type1`}>Type 1</Link>
+            <div className={styles.outlet}>
+                <Outlet />
+            </div>
         </div>
     )
 }

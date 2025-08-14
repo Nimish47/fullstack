@@ -15,6 +15,7 @@ import Complex2 from './component/complex2/Complex2';
 import Complex3 from './component/complex3/Complex3';
 import TrafficContextComponent from './context/trafficContext/TrafficContextComponent';
 import Child1 from './component/complex3/children/Child1';
+import Complex4 from './component/complex4/Complex4';
 
 
 const router = createBrowserRouter([
@@ -58,6 +59,10 @@ const router = createBrowserRouter([
         element: <Child1 />
       }
     ]
+  },
+  {
+    path: '/complex4',
+    element: <Complex4 />
   },
   {
     path: "*",
