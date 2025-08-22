@@ -11,7 +11,7 @@ function Timeout() {
     useEffect(() => {
         const id = setTimeout(function partyStart() {
             setMessage('Party starts!!!')
-        }, 2000);
+        }, 1000);
         ref.current.clearRefs.push(id)
 
         return () => {
@@ -29,7 +29,7 @@ function Timeout() {
         if (ref.current.buttonRef) clearTimeout(ref.current.buttonRef)
         const id = setTimeout(function partyEnd() {
             setMessage('GoodBye everyone!!!')
-        }, 2000);
+        }, 1000);
 
         ref.current.buttonRef = id
     }

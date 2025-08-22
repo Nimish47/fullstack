@@ -16,13 +16,16 @@ function Case1() {
 
     // this runs everytime this comp re-renders
     useEffect(()=>{
-        console.log('parent: madman')
+        console.log('madman:parent')
+        return () => { console.log('cleanup:parent') }
     })
 
     const handleDetails = () => {
         const newage = Math.floor(Math.random() * 10)
         setDetails(prev => { return { ...prev, age: newage } })
     }
+
+    console.log('render parent')
 
     return (
         <div className={styles.container}>

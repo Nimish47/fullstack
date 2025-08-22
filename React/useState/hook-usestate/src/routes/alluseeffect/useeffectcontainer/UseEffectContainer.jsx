@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 
 function UseEffectContainer() {
 
-    const data = ['case1', 'case2', 'case3'];
+    const data = ['case1'];
 
     return (
         <div className={styles.parent}>

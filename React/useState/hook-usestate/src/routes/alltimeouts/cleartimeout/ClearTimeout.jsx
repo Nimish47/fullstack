@@ -9,7 +9,7 @@ function ClearTimeout() {
     useEffect(() => {
         const id = setTimeout(function partyStart() {
             setMessage('Party starts!!!')
-        }, 2000);
+        }, 1000);
         clearRefs.current.push(id)
 
         return () => {
@@ -27,11 +27,10 @@ function ClearTimeout() {
         if (buttonRef.current) clearTimeout(buttonRef.current)
         const id = setTimeout(function partyEnd() {
             setMessage('GoodBye everyone!!!')
-        }, 2000);
+        }, 1000);
 
         buttonRef.current = id
     }
-
 
     return (
         <div className={styles.container}>

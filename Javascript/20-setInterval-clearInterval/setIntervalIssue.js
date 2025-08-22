@@ -12,7 +12,7 @@ const irregularFn = () => {
     }, 1000);
 }
 
-// irregularFn()
+irregularFn()
 
 const regularFn = async () => {
     console.log('Cooking started')
@@ -27,7 +27,7 @@ const regularFn = async () => {
     setTimeout(regularFn, 1000)
 }
 
-regularFn()
+//regularFn()
 
 
 // meaning of below line

@@ -1,7 +1,7 @@
 import React, { useCallback, useEffect, useMemo, useRef } from 'react'
 import styles from './Child2.module.css'
 
-function Child2({ id }) {
+function Child2() {
 
     const prim = 123;
     const ref = useRef(0)
@@ -33,16 +33,20 @@ function Child2({ id }) {
     }, [ref])
 
     useEffect(() => {
-        console.log('grandchild: madman')
-
-        return () => { console.log('grandchild: madman pre/post cleanup') }
+        console.log('madman:grandchild')
+        return () => { console.log('cleanup:grandchild') }
     })
 
-    const updateRef = () => { ref.current = ref.current + 1 }
+    const updateRef = () => { 
+        ref.current = ref.current + 1 
+        console.log('updated ref value', ref.current)        
+    }
+
+    console.log('render grandchild')
 
     return (
         <div className={styles.container} onClick={updateRef}>
-            {prim} | {non_prim.fName}
+            {prim} - {non_prim.fName}
         </div>
     )
 }

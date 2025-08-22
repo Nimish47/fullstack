@@ -8,9 +8,9 @@ function Case2F() {
 
     const [list, setList] = useState([])
     const [count, setCount] = useState(0)
-
-    //const type = useMemo(() => { return "MAMMALS" }, [])
-    const type = "MAMMALS" // IF ITS A CONSTANT, no need to memoize
+    
+    // primitive value, no need to memoize
+    const type = "MAMMALS"
 
     useEffect(() => {
         // faking a big array

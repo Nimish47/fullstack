@@ -15,6 +15,7 @@ function Child3B({ id }) {
 
     useEffect(() => {
         console.log(`Side Effect, memoized value: ${memoized_Value}`)
+        // perform some other action if memoized val changes
     }, [memoized_Value])
 
     console.log('render child3B')

@@ -1,4 +1,4 @@
-import React, { useMemo, useState } from 'react'
+import { useState } from 'react'
 import styles from './Case2A.module.css'
 import Child2A from './Child2A'
 
@@ -9,9 +9,9 @@ function Case2A() {
   const [selected, setSelected] = useState(false)
 
   const childObj = { fullName: 'Akarsh Singh', age: 29 }
-  const handleSelect = (prev) => {
+  const handleSelect = () => {
     console.log('Inside handleSelect function')
-    setSelected(!prev)
+    setSelected(prev => !prev)
   }
 
   const generateRandomNumber = () => {

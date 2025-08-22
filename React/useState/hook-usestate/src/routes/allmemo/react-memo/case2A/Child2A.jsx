@@ -7,7 +7,7 @@ function Child2A({ id, details, handleSelect, selected }) {
 
     // a random fn
     const randomFn = (id) => {
-        console.log(`inside random fn child3C`)
+        console.log(`inside random fn child2A`)
         return id * id;
     }
 
@@ -15,7 +15,6 @@ function Child2A({ id, details, handleSelect, selected }) {
         console.log(`Side Effect, state value: ${value}`)
         setValue(randomFn(id))
     }, [id])
-
 
     console.log('render child2A')
 

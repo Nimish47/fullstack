@@ -4,11 +4,10 @@ import styles from './SetTimeout.module.css'
 function SetTimeout() {
     const [message, setMessage] = useState('Loading...')
 
+    const partyStartFn = () => setMessage('Party starts!!!')
+
     useEffect(() => {
-        const id = setTimeout(function something() {
-            console.log('hola')
-            setMessage('Party starts!!!')
-        }, 5000);
+        const id = setTimeout(partyStartFn, 1000);
         console.log(id)
 
         // clearTimeout(id)

@@ -4,7 +4,6 @@ import styles from './Child1.module.css'
 
 function Child1({ details, handleDetails }) {
 
-    const id = '#1234'
     const [count, setCount] = useState(0)
     const ref = useRef()
 
@@ -14,6 +13,7 @@ function Child1({ details, handleDetails }) {
         mockFetch()
         return () => {
             console.log('child: cleanup')
+            clearTimeout(ref.current)
             ref.current = null
         }
     }, [])
@@ -22,24 +22,22 @@ function Child1({ details, handleDetails }) {
         console.log('child: details updated', details)
     }, [details])
 
-    useEffect(()=>{
-        console.log('child: madman')
-
-        return () => {console.log('child: madman pre/post cleanup')}
+    useEffect(() => {
+        console.log('madman:child')
+        return () => { console.log('cleanup:child') }
     })
 
     const mockFetch = () => {
-        const id = setTimeout(() => {
-            setCount(prev => prev + 1)
-        }, 2000);
-
-        ref.current = id
+        const timeoutid = setTimeout(() => setCount(prev => prev + 1), 2000);
+        ref.current = timeoutid
     }
+
+    console.log('render child')
 
     return (
         <div className={styles.container}>
             <div onClick={handleDetails} className={styles.agechange}>Age changer: {details.age}</div>
-            <Child2 id={id} />
+            <Child2 />
         </div>
     )
 }

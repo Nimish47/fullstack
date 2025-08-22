@@ -12,7 +12,7 @@ function ReactUseMemo() {
             <div className={styles.container}>
                 {
                     data.map((item) => (
-                        //a very important thing about Link
+                        // a very important thing about Link
                         // does not replace URL but appends
                         <Link className={styles.link} to={`${item}`} key={item}>
                             {item}
