@@ -4,11 +4,10 @@ const isAuthenticated = () => localStorage.getItem("auth") === "true"
 
 export const AuthLoader = () => {
 
-    console.log('from the auth loader')
+    console.log('loader: authloader')
 
-    if (!isAuthenticated()) {
-        return redirect("/login");
-    }
+    if (!isAuthenticated()) return redirect("/login");    
+
     return null;
 }
 

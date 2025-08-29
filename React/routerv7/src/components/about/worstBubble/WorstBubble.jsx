@@ -4,8 +4,6 @@ import { useLocation, useNavigate } from 'react-router-dom';
 
 export const WorstBubble = () => {
 
-    const [err, setErr] = useState(false);
-    const [message, setMessage] = useState('')
     const navigate = useNavigate();
     const location = useLocation();
 
@@ -15,6 +13,7 @@ export const WorstBubble = () => {
         // not handled by errorElement
         // only way to handle async fn errors is: use [try and catch] to handle this
         // navigate to show fallback UI
+
         // fetchUserNotExist()
     }, []);
 
@@ -24,15 +23,10 @@ export const WorstBubble = () => {
             const response = await fetch(INVALID_URL);
             return response.json();
         } catch (error) {
-            setErr(true)
-            setMessage(error)
+            navigate('/error', {
+                state: { errorMessage: error, fromRoute: location.pathname },
+            })
         }
-    }
-
-    if (err) {
-        navigate('/error', {
-            state: { errorMessage: message, fromRoute: location.pathname },
-        })
     }
 
     return (

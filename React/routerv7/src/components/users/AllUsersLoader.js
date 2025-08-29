@@ -1,3 +1,4 @@
+import { redirect } from "react-router-dom";
 
 
 
@@ -12,6 +13,7 @@ export const fetchAllUsers = async () => {
 
     } catch (error) {
         console.log("Error fetching data:", error);
+        return redirect('/error')
     }
 }
 

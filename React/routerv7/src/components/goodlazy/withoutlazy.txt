@@ -1,6 +1,5 @@
-import React, { useEffect, useState } from 'react'
+import { useEffect, useState } from 'react'
 import axios from 'axios';
-import styles from './GoodLazy.module.css'
 import SuspenseLoader from '../loadscreens/suspenseloader/SuspenseLoader';
 
 function GoodLazy() {

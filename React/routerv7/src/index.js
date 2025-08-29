@@ -43,10 +43,13 @@ import SuspenseLoader from './components/loadscreens/suspenseloader/SuspenseLoad
 import GoodLazyWrapper from './components/goodlazywrapper/GoodLazyWrapper.jsx';
 import Duffur from './components/duffur/Duffur.jsx';
 import { loadDufferData } from './components/duffur/DuffurLoader.js';
+import SyncError from './components/syncError/SyncError.jsx';
+import SyncErrorHandler from './components/errorRouteHandler/syncerror/SyncErrorHandler.jsx';
+import { syncLoaderFn } from './components/syncError/SyncLoader.js';
 
 
 // import GoodLazy from './components/goodlazy/GoodLazy.jsx';
-const GoodLazy = lazy(()=> import(/* webpackChunkName: "GoodLazy" */  './components/goodlazy/GoodLazy.jsx'))
+const GoodLazy = lazy(() => import(/* webpackChunkName: "GoodLazy" */  './components/goodlazy/GoodLazy.jsx'))
 
 const BadLazy = lazy(() => import(/* webpackChunkName: "BadLazy" */ './components/badlazy/BadLazy.jsx'))
 // import BadLazy from './components/badlazy/BadLazy.jsx';
@@ -59,6 +62,7 @@ const router = createBrowserRouter([
   {
     path: "/",
     loader: AuthLoader,
+    shouldRevalidate: () => true,   // <--- forces rerun on every navigation           
     element: <AuthComponent />,
     errorElement: <RootErrorElement />,
     children: [
@@ -132,7 +136,7 @@ const router = createBrowserRouter([
             path: "duffur",
             element: <Duffur />,
             // loader: loadDufferData
-          },          
+          },
           {
             path: "todos",
             element: <Todos />
@@ -215,6 +219,12 @@ const router = createBrowserRouter([
     path: "/login",
     loader: LoginLoader,
     element: <Login />
+  },
+  {
+    path: "/syncerror/:source",
+    element: <SyncError />,
+    loader: syncLoaderFn,
+    errorElement: <SyncErrorHandler />
   },
   { /** need to be placed at the very end! */
     path: "*",

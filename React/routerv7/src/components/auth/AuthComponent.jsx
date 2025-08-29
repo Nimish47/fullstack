@@ -4,14 +4,12 @@ import SuspenseLoader from "../loadscreens/suspenseloader/SuspenseLoader";
 export default function AuthComponent() {
 
     // why used?    
-    //useLoaderData();
+    // useLoaderData();
 
     const navigation = useNavigation();
 
-    if (navigation.state === "loading") {
-        return <SuspenseLoader />
-        // return <div>Loading...</div>
-    }
+    // console.log('navigation: ', navigation.state)
 
+    if (navigation.state === "loading") return <SuspenseLoader />
     return <Outlet />
 }

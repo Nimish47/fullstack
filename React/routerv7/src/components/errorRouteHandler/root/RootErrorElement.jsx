@@ -11,7 +11,7 @@ export const RootErrorElement = () => {
     // Handle the error and set the message based on the type of error
     useEffect(() => {
         if (isRouteErrorResponse(error)) {
-            setMessage(`${error.statusText}. ${error.data}`)
+            setMessage(`${error.statusText} ${error.data}`)
         } else if (error instanceof Error) {
             setMessage(error.message)
         } else {
@@ -26,5 +26,6 @@ export const RootErrorElement = () => {
                 <div className={styles.errorMessage}>{message}</div>
                 <div className={styles.linkContainer}>Click to go back to <Link className={styles.link} to='/'>Home</Link></div>
             </div>
-        </div>)
+        </div>
+    )
 }

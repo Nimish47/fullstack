@@ -1,5 +1,6 @@
 
 export const checkForHitman = ({ request }) => {
+
     const queryParams = new URL(request.url).searchParams;
     const name = queryParams.get('name');
 

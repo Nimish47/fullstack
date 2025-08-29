@@ -13,5 +13,6 @@ export const QueryErrorElement = () => {
                 <div className={styles.errorMessage}>{error.statusText}. {error.data}</div>
                 <div className={styles.linkContainer}>Click to go back to <Link className={styles.link} to='/'>Home</Link></div>
             </div>
-        </div>)
+        </div>
+    )
 }

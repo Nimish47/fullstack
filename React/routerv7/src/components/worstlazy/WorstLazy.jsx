@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import styles from './WorstLazy.module.css'
-import SuspenseLoader from '../loadscreens/suspenseloader/SuspenseLoader';
+import CustomLoader from '../loadscreens/customloader/CustomLoader';
 
 function WorstLazy() {
 
@@ -18,7 +18,7 @@ function WorstLazy() {
     }, [])
 
     if (!text) {
-        return <SuspenseLoader />
+        return <CustomLoader />
     }
 
     return (

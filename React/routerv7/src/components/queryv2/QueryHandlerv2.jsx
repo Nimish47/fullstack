@@ -8,7 +8,7 @@ export const QueryHandlerv2 = () => {
 
     const [name, setName] = useState('');
     const [rollNumber, setRollNumber] = useState('');
-    const [params,setParams] = useSearchParams();
+    const [params, setParams] = useSearchParams();
     const location = useLocation();
     const navigate = useNavigate();
 
@@ -19,12 +19,18 @@ export const QueryHandlerv2 = () => {
 
     const refreshHandler = () => {
         const newRollNumber = Math.floor(Math.random() * 1000);
-        
-        // two step to update the query parameters
-        params.set('rollNumber', newRollNumber);
-        setParams(params);
 
-        navigate(`${location.pathname}?${params.toString()}`,{replace: true});
+        // updating query param using the updater fn
+        // prev is nothing but same as params - URLSearchParams object
+        // this is classic approach to update query string seperated by many '&'
+        setParams(prev => {
+            prev.set("rollNumber", newRollNumber);
+            return prev;
+        });
+
+        console.log()
+
+        navigate(`${location.pathname}?${params.toString()}`, { replace: true });
 
     }
 

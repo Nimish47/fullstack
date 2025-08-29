@@ -1,6 +1,9 @@
 
 
 export const fetchData = async () => {
+
+    console.log('loader: fetchdata')
+
     try {
         const response = await fetch('https://jsonplaceholder.typicode.com/users');    
         // below line works even without await!

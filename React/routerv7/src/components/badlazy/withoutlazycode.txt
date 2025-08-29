@@ -1,5 +1,5 @@
-import { useEffect, useState } from 'react';
 import styles from './BadLazy.module.css'
+
 import { Line } from 'react-chartjs-2';
 import {
   Chart as ChartJS,
@@ -15,7 +15,6 @@ import {
 
 // Register required Chart.js modules
 ChartJS.register(CategoryScale, LinearScale, PointElement, LineElement, Title, Tooltip, Legend);
-
 
 const data = {
   labels: ['Jan', 'Feb'],

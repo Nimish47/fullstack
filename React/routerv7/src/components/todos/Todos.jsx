@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import styles from './Todos.module.css'
 import { useLocation, useNavigate } from 'react-router-dom'
-import SuspenseLoader from '../loadscreens/suspenseloader/SuspenseLoader'
+import CustomLoader from '../loadscreens/customloader/CustomLoader'
 
 
 function Todos() {
@@ -17,6 +17,14 @@ function Todos() {
         fetchAllTodos()
     }, []);
 
+    useEffect(() => {
+        if (error) {
+            navigate('/error', {
+                state: { errorMessage: message, fromRoute: location.pathname },
+            })
+        }
+    }, [error])
+
     const fetchAllTodos = async () => {
         try {
             const response = await fetch('https://jsonplaceholder.typicode.com/todos')
@@ -29,13 +37,10 @@ function Todos() {
         }
     }
 
-    if (error) {
-        navigate('/error', {
-            state: { errorMessage: message, fromRoute: location.pathname },
-        })
-    }
-
-    if(!todos.length) return <SuspenseLoader />
+    // authcomponent loader won't handle this
+    // this is because - no route change here
+    // api call after component loads
+    if (!todos.length) return <CustomLoader />
 
     return (
         <div className={styles.container}>

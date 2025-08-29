@@ -25,7 +25,7 @@ export const Header = () => {
                 <Link
                     className={styles.link}
                     to='/contact'
-                    state={{ message: 'Link has send this message! Back button wont take you back!!! Yore trapped haha' }}
+                    state={{ message: 'Link has send this message! Back button wont take you back!!! You are trapped haha' }}
                     replace
                 >
                     CONTACT

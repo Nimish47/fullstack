@@ -7,7 +7,7 @@ export const Key = () => {
     const [key, setKey] = useState(Math.floor(Math.random() * 1000000))
     const [expiry, setExpired] = useState(false)
     const [counter, setCounter] = useState(10)
-    const navigate = useNavigate()
+    // const navigate = useNavigate()
 
     const isValidUser = localStorage.getItem("username") === "hitman47"
 

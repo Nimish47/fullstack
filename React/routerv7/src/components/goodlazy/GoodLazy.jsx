@@ -1,5 +1,5 @@
-import React, { useEffect, useState } from 'react'
-import SuspenseLoader from '../loadscreens/suspenseloader/SuspenseLoader';
+import { useEffect, useState } from 'react'
+import CustomLoader from '../loadscreens/customloader/CustomLoader';
 
 function GoodLazy() {
 
@@ -20,7 +20,7 @@ function GoodLazy() {
         })
     }, [])
 
-    if (!count) return <SuspenseLoader />
+    if (!count) return <CustomLoader />
 
 
     return (

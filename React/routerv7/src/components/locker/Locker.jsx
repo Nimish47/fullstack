@@ -20,11 +20,12 @@ export const Locker = () => {
                 <img src={bank} alt="bank" className={styles.lock} />
             </div>
             {
-                !lock && <div className={styles.right} onClick={showMatrix}>
-                    <img src={key} alt="key" className={styles.key} />
-                </div>
+                lock
+                    ? <div className={styles.outlet}> <Outlet /> </div>
+                    : <div className={styles.right} onClick={showMatrix}>
+                        <img src={key} alt="key" className={styles.key} />
+                    </div>
             }
-            {lock && <div className={styles.outlet}> <Outlet /> </div>}
         </div>
     )
 }

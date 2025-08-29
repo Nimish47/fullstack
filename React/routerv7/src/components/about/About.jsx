@@ -1,5 +1,5 @@
 // import { useState } from 'react'
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import styles from './About.module.css'
 import { BadBubble } from './badBubble/BadBubble'
 import { WorstBubble } from './worstBubble/WorstBubble'
@@ -7,10 +7,6 @@ import { useLocation, useNavigate } from 'react-router-dom'
 
 
 export const About = () => {
-
-    // const [goodApplesObj] = useState({})
-    const [err, setErr] = useState(false);
-    const [message, setMessage] = useState('')
     const navigate = useNavigate();
     const location = useLocation();
 
@@ -23,15 +19,10 @@ export const About = () => {
             const data = goodApples.map(item => item);
             console.log(data)
         } catch (error) {
-            setErr(true)
-            setMessage(error)
+            navigate('/error', {
+                state: { errorMessage: error, fromRoute: location.pathname },
+            })
         }
-    }
-
-    if (err) {
-        navigate('/error', {
-            state: { errorMessage: message, fromRoute: location.pathname },
-        })
     }
 
     return (

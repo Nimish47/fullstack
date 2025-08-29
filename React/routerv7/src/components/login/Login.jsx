@@ -9,7 +9,6 @@ export const Login = () => {
     const [password, setPassword] = useState("");
     const navigate = useNavigate();
 
-
     const changeHandler = (e) => {
         if (e.target.name === "username") setUsername(e.target.value);
         if (e.target.name === "password") setPassword(e.target.value);
