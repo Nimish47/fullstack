@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react'
 import axios from 'axios';
-import SuspenseLoader from '../loadscreens/suspenseloader/SuspenseLoader';
+import CustomLoader from '../loadscreens/customloader/CustomLoader';
 
 function GoodLazy() {
 
@@ -16,7 +16,7 @@ function GoodLazy() {
             })
     }, [])
 
-    if (!count) return <SuspenseLoader />
+    if (!count) return <CustomLoader />
 
 
     return (

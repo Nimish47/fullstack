@@ -1,0 +1,36 @@
+.container {
+    height: 100vh;
+    background-color: rgb(3, 42, 65);
+    color: whitesmoke;
+    font-size: 2em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.value {
+    text-align: center;
+    margin-bottom: 100px;
+    font-size: 2em;
+}
+
+.buttons {
+    display: flex;
+}
+
+.buttons div {
+    padding: 20px;
+    width: 200px;
+    text-align: center;
+    border: 2px solid white;
+}
+
+.decrement {
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.increment:hover, .decrement:hover, .custom:hover {
+    background-color: rgb(41, 127, 203);
+    cursor: pointer;
+}

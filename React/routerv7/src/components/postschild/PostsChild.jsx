@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react'
-import SuspenseLoader from '../loadscreens/suspenseloader/SuspenseLoader';
+import CustomLoader from '../loadscreens/customloader/CustomLoader';
 
 function PostsChild() {
 
@@ -19,10 +19,10 @@ function PostsChild() {
                 })
         })
     }, [])
-    if (!count) return <SuspenseLoader />
+    if (!count) return <CustomLoader />
 
     return (
-        <>{count} posts</>
+        <>{count}</>
     )
 }
 

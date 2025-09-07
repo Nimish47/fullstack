@@ -30,7 +30,6 @@ export default function BadLazy() {
 
   if (!lineObj) {
     // Fallback while dependencies are loading
-    // return <div>Loading chart...</div> 
     return <CustomLoader />
   }
 

@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react';
 import styles from './BadLazy.module.css'
+import CustomLoader from '../loadscreens/customloader/CustomLoader';
 
 const data = { labels: ['Jan', 'Feb'], datasets: [{ label: 'Sales', data: [30, 40] }] };
 
@@ -28,9 +29,11 @@ export default function BadLazy() {
   }, [])
 
   if (!lineObj) {
-    return <div>Loading chart...</div>; // Fallback while dependencies are loading
+    // Fallback while dependencies are loading
+    return <CustomLoader />
   }
 
+  // reatc enforces rule that component needs to be in caps
   const { Line } = lineObj
 
   return (

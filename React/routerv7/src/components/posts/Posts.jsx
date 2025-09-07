@@ -1,9 +1,10 @@
 import { useLoaderData } from 'react-router-dom';
 import styles from './Posts.module.css'
-import { lazy } from 'react';
+import { lazy, Suspense } from 'react';
+import SuspenseLoader from '../loadscreens/suspenseloader/SuspenseLoader';
+// import PostsChild from '../postschild/PostsChild'
 
 const PostsChild = lazy(() => import(/* webpackChunkName: "PostsChild" */  "../postschild/PostsChild"))
-
 
 function Posts() {
 
@@ -12,7 +13,9 @@ function Posts() {
     return (
         <div className={styles.container}>
             <div className={styles.child}>
-                <PostsChild />
+                <Suspense fallback={<SuspenseLoader />}>
+                    <PostsChild />
+                </Suspense>
             </div>
             <div className={styles.title}>Here are your posts! Nostalgia enough!!</div>
             <div className={styles.todoContainer}>

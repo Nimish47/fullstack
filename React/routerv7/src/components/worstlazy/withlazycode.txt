@@ -1,14 +1,12 @@
 import React, { useEffect, useState } from 'react'
 import styles from './WorstLazy.module.css'
-// import _ from 'lodash';
+import CustomLoader from '../loadscreens/customloader/CustomLoader';
 
 function WorstLazy() {
 
     const [text, setText] = useState("")
 
     useEffect(() => {
-        // const capsdata = _.capitalize('hello by danny')
-        // setText(capsdata)
 
         import(/* webpackChunkName: "lodash" */ "lodash").then((module) => {
             //  Lodash uses CommonJS, so when you dynamically import it,
@@ -17,11 +15,10 @@ function WorstLazy() {
             const capsdata = _.capitalize('hello by danny')
             setText(capsdata)
         });
-
     }, [])
 
     if (!text) {
-        return <div>A bit late</div>
+        return <CustomLoader />
     }
 
     return (
