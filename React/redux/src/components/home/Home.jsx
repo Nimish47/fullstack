@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 
 function Home() {
 
-    const data = ['1-counter'];
+    const data = ['1-counter','2-object'];
 
     return (
         <div className={styles.parent}>

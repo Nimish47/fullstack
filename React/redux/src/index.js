@@ -6,6 +6,7 @@ import { Provider } from 'react-redux';
 import { store } from './store';
 import Home from './components/home/Home';
 import Counter from './components/counter/Counter';
+import Example2 from './components/object/Example2';
 
 const router = createBrowserRouter([
   {
@@ -15,6 +16,10 @@ const router = createBrowserRouter([
   {
     path: "/1-counter",
     element: <Counter />
+  },
+  {
+    path: "2-object",
+    element: <Example2 />
   }
 ])
 
