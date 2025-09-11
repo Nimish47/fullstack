@@ -1,0 +1,12 @@
+const actionTypes = {
+    "BUY_CAKE": "BUY_CAKE",
+    "REFILL_CAKE_STOCK": "REFILL_CAKE_STOCK",
+    "BUY_ICE_CREAM": "BUY_ICE_CREAM",
+    "REFILL_ICE_CREAM_STOCK": "REFILL_ICE_CREAM_STOCK",
+    "FETCH_POST_WITH_ID": "FETCH_POST_WITH_ID"
+}
+
+
+
+
+module.exports = actionTypes

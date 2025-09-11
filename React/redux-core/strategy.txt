@@ -1,0 +1,34 @@
+//topics
+
+## keywords
+// action creator fns
+// reducer
+// store subscribing
+// Immer
+// combine reducers
+// middlewares
+    // custom middlewares
+    // multiple middlewares
+    // specified middlewares
+    // redux-thunk
+
+>>>>>>>>>>>>>
+
+## Dialects
+
+1. understand thunk fully
+    understand the await store thing
+    thunk - sync fn
+    thunk - async fn
+        block code
+        non-block code
+    customMiddleware1 + thunk + customMiddleware2
+    inside thunk fn dispatch a action creator that triggers another thunk
+2. notes
+    prepare index
+    write it down
+    once all completed, refine notes with GPT
+
+move to next section >> react-redux
+
+
