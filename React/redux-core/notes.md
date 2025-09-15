@@ -12,3 +12,10 @@ NOTES
 ## explain the need for redux thunk
     ## are we able to perform async taks without thunk?
 
+## thunk flow
+- see cutom thunk definition
+- if action-creator = fn, flow goes inside thunk-return-fn
+- else goes next(action), thunk does nothing
+
+
+

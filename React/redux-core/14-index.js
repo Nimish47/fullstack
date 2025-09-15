@@ -1,6 +1,6 @@
 // library middleware
 // redux-thunk
-// action creater returns async fn
+// what if don't await store.dispatch
 
 const redux = require('redux')
 const { thunk } = require('redux-thunk')
@@ -19,15 +19,12 @@ const rootReducer = combineReducers({
 
 const store = createStore(rootReducer, applyMiddleware(thunk))
 
-// dispatch a thunk related action
-// async fn needed as we wan't to await redux related thunk
-// and await not possible without a async fn
-const fireAllDispatch = async () => {
-    console.log('Initial state:', store.getState())
-    store.dispatch(buyCake())
-    console.log('Waiting...')
-    await store.dispatch(fetchPostAsync(10))
-    console.log('Final state:', store.getState())
-}
+console.log('Initial state:', store.getState())
 
-fireAllDispatch()
+//fire all dispatches
+store.dispatch(buyCake())
+console.log('Waiting...')
+// without async-await her, it won't wait
+store.dispatch(fetchPostAsync(10))
+
+console.log('Final state:', store.getState())

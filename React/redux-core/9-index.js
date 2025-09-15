@@ -16,7 +16,6 @@ const rootReducer = combineReducers({
     iceCream: iceCreamReducer
 })
 
-// bad middleware
 const middlewareOne = store => next => action => {
     console.log('first middleware')
     return next()

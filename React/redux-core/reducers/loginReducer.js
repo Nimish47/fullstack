@@ -1,16 +1,17 @@
 const { produce } = require('immer')
-const { FETCH_POST_WITH_ID } = require('../actions/action-types/actionTypes')
+const { LOGIN } = require('../actions/action-types/actionTypes')
 
-const initialState = {}
+const initialState = { userDetails: {} }
 
 const reducer = (state = initialState, action) => {
     return produce(state, (draft) => {
         switch (action.type) {
-            case FETCH_POST_WITH_ID:
-                draft.content =  action.payload
+            case LOGIN:
+                draft.userDetails = action.payload
                 break;
         }
     })
+
 }
 
 module.exports = reducer;
