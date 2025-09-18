@@ -17,7 +17,7 @@ const rootReducer = combineReducers({
 // first middleware fn
 // the signature is needed for a redux middleware - 
 // const customMiddleware = (store, action, next) => { ... }
-// a middleware fn can have only one return statement and that is return next(action)
+// a middleware fn needs to have a mandatory return next(action)
 // return next(action)
     // is mandatory to be present (no other "returns" before it)
     // if next omitted flow won't move to next middleware/reducer

@@ -1,13 +1,14 @@
 const { createSlice, createAsyncThunk } = require('@reduxjs/toolkit')
 const axios = require('axios')
 
-const initialState = { content: '', pending: false, error: '', type: 'youtube' }
+const initialState = { content: '', loading: false, error: '', type: 'youtube' }
 
 // self cretated action handlers (3)
-    // pending-fullfilled-rejected
-const fetchPost = createAsyncThunk('comment/fetchPost', async (id) => {
-    const response = await axios.get(`https://jsonplaceholder.typicode.com/comments/${id}`)
-    return response.data.body;
+// pending-fullfilled-rejected
+const fetchPost = createAsyncThunk('comment/fetchPost', async (id, thunkAPI) => {
+    const response1 = await axios.get(`https://jsonplaceholder.typicode.com/comments/${id}`)
+    const response2 = await axios.get(`https://jsonplaceholder.typicode.com/comments/${id}`)
+    return response2.data.body + response1.data.body;
 })
 
 const commentSlice = createSlice({

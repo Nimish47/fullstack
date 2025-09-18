@@ -1,8 +1,0 @@
-// path
-
-imitate a slice
-slice core concept = reducer concept
-    slice for a particular feature!
-
-code first slice - rtk
-cover other scenarios

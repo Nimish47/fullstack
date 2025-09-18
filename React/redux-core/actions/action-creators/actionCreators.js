@@ -6,7 +6,8 @@ const {
     REFILL_ICE_CREAM_STOCK,
     FETCH_POST_WITH_ID,
     DO_SOMETHING_SYNC,
-    LOGIN
+    LOGIN,
+    ORDER_FOOD_ANY_PLATFORM
 } = require('../action-types/actionTypes')
 
 const buyCake = () => ({ type: BUY_CAKE })
@@ -16,6 +17,7 @@ const refillIceCreamStock = (count) => ({ type: REFILL_ICE_CREAM_STOCK, payload:
 const fetchPostWithId = (post) => ({ type: FETCH_POST_WITH_ID, payload: post })
 const syncFn = (num) => ({ type: DO_SOMETHING_SYNC, payload: num })
 const loginUser = (userData) => ({ type: LOGIN, payload: userData })
+const orderFoodAnyPlatform = (orderDetails) => ({ type: ORDER_FOOD_ANY_PLATFORM, payload: orderDetails })
 
 // returns a function, not a plain object, hence thunk handles it
 // need to await store.dispatch in index.js
@@ -72,5 +74,6 @@ module.exports = {
     fetchPostAsync,
     doSomethingSync,
     fetchBadPostAsync,
-    loginUser
+    loginUser,
+    orderFoodAnyPlatform
 }

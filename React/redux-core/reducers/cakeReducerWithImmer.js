@@ -14,7 +14,6 @@ const reducer = (state = initialState, action) => {
                 break;
         }
     })
-
 }
 
 module.exports = reducer;

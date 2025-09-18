@@ -2,10 +2,13 @@
 // actual slice in different repo
 
 const redux = require('redux')
+const { createLogger } = require('redux-logger')
 const { swiggyReducer } = require('./reducers/swiggyReducer')
 const { zomatoReducer } = require('./reducers/zomatoReducer')
 
 const { createStore, combineReducers, applyMiddleware } = redux
+
+const logger = createLogger()
 
 const rootReducer = combineReducers({
     zomato: zomatoReducer,
@@ -17,6 +20,6 @@ const pokeyMiddleware = store => next => action => {
     return next(action)
 }
 
-const store = createStore(rootReducer, applyMiddleware(pokeyMiddleware))
+const store = createStore(rootReducer, applyMiddleware(logger))
 
 module.exports = store
