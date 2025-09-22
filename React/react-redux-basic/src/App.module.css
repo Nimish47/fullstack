@@ -1,0 +1,26 @@
+.rootContainer {
+  height: 100vh;
+  background-color: beige;
+  box-sizing: border-box;
+}
+
+.headerContainer {
+    background-color: black;
+    color: white;
+    height: 7vh;
+    width: 100%;
+}
+
+.mainContainer {
+    background-color: rgb(175, 54, 54);
+    color: white;
+    height: 86vh;
+    width: 100%;
+}
+
+.footerContainer {
+    background-color: black;
+    color: white;
+    height: 7vh;
+    width: 100%;
+}

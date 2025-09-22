@@ -1,0 +1,56 @@
+.container {
+    height: 100%;
+    position: relative;
+}
+
+.verbiage {
+    position: absolute;
+    top: 70px;
+    width: 100%;
+    text-align: center;
+    font-size: 2em;
+    letter-spacing: 2px;
+    font-weight: 700;
+}
+
+.tabs {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    height: 100%;
+}
+
+.zomatoTab {
+    padding: 20px;
+    background-color: red;
+    color: white;
+    width: 300px;
+    text-align: center;
+    font-size: 1.5em;
+    border: 5px solid white;
+}
+
+.zomatoTab:hover {
+    opacity: 0.7;
+    cursor: pointer;
+}
+
+.swiggyTab {
+    padding: 20px;
+    background-color: rgb(177, 168, 38);
+    color: white;
+    width: 300px;
+    text-align: center;
+    font-size: 1.5em;
+    border: 5px solid white;
+}
+
+.swiggyTab:hover {
+    opacity: 0.7;
+    cursor: pointer;
+}
+
+.link {
+    text-decoration: none;
+    color: white;
+}

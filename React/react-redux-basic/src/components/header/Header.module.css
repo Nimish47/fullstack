@@ -1,0 +1,41 @@
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    font-size: large;
+    font-weight: 600;
+    color: white;
+}
+
+.verbiage {
+    font-style: italic;
+    margin-left: 20px;
+}
+
+.analyticsTab {
+    font-style: normal;
+    background-color: rgb(131, 125, 125);
+    padding: 5px;
+    width: 100px;
+    text-align: center;
+    border-radius: 7px;
+
+}
+
+.analyticsLink {
+    margin-left: auto;
+    margin-right: 20px;
+    text-decoration: none;
+    color: white;
+}
+
+.analyticsTab:hover {
+    opacity: 0.7;
+    cursor: pointer;
+}
+
+.link {
+    text-decoration: none;
+    color: white;
+}
