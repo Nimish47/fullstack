@@ -27,14 +27,20 @@ function Analytics() {
   const approveRequest = () => {
     if (flagS && flagZ) {
       dispatch(refillStock())
+      setFlagS(false)
+      setFlagZ(false)
       return;
     }
     if (flagS) {
       dispatch(refillStockSwiggy())
+      setFlagS(false)
+      setFlagZ(false)
       return;
     }
     if (flagZ) {
       dispatch(refillStockZomato())
+      setFlagS(false)
+      setFlagZ(false)
       return;
     }
   }

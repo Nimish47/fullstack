@@ -1,7 +1,19 @@
-import { createSlice } from '@reduxjs/toolkit';
+import axios from 'axios'
+import { createAsyncThunk, createSlice } from '@reduxjs/toolkit';
 import { refillStock, refillStockSwiggy } from './restaurantSlice';
 
-const initialState = { fishAndChips: 50, beer: 200, orders: 0 }
+const initialState = {
+    fishAndChips: 50,
+    beer: 200,
+    orders: 0,
+    posts: { loading: true, error: "", data: [], count: 0 }
+}
+
+// export directly
+export const fetchPosts = createAsyncThunk('swiggyOrder/posts', async (URL) => {
+    const resp = await axios.get(URL)
+    return resp.data;
+})
 
 const swiggySlice = createSlice({
     name: 'swiggyOrder',
@@ -13,14 +25,26 @@ const swiggySlice = createSlice({
     },
     extraReducers: (builder) => {
         builder
-            .addCase(refillStock, (state) => { 
+            .addCase(refillStock, (state) => {
                 state.fishAndChips += initialState.fishAndChips - state.fishAndChips;
                 state.beer += initialState.beer - state.beer;
             })
-            .addCase(refillStockSwiggy, (state) => { 
+            .addCase(refillStockSwiggy, (state) => {
                 state.fishAndChips += initialState.fishAndChips - state.fishAndChips;
                 state.beer += initialState.beer - state.beer;
-            })            
+            })
+            .addCase(fetchPosts.pending, (state) => {
+                state.posts.loading = true
+            })
+            .addCase(fetchPosts.fulfilled, (state, action) => {
+                state.posts.loading = false;
+                state.posts.data = action.payload;
+                state.posts.count = action.payload.length;
+            })
+            .addCase(fetchPosts.rejected, (state, action) => {
+                state.posts.loading = false;
+                state.posts.error = action.error.message;
+            })
     }
 })
 

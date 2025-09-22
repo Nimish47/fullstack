@@ -1,29 +1,30 @@
 import React, { useEffect, useState } from 'react'
 import styles from './Swiggy.module.css'
 import { useDispatch, useSelector } from 'react-redux'
-import { orderBeer, orderFishAndChips, updateNumOfOrders } from '../../redux/slice/swiggySlice'
+import { fetchPosts, orderBeer, orderFishAndChips, updateNumOfOrders } from '../../redux/slice/swiggySlice'
+import Loader from '../../components/loader/Loader'
 
 function Swiggy() {
 
     const [item1, setItem1] = useState(false)
     const [item2, setItem2] = useState(false)
-    const [count, setCount] = useState(0)
-    const URL = 'https://jsonplaceholder.typicode.com/posts'
-
-    // Read state from the Redux store
-    const { orders } = useSelector((state) => state.swiggy);
-
-    const dispatch = useDispatch(); // Initialize dispatch
+    const { orders, posts } = useSelector((state) => state.swiggy);
+    const dispatch = useDispatch();
 
     useEffect(() => {
-        setCount(fetchSomething())
-    }, [])
+        fetchData();
+    }, []);
 
-    const fetchSomething = async () => {
-        const res = await fetch(URL)
-        const data = await res.json()
-        return data.length
-    }
+    // async await works here
+    const fetchData = async () => {
+        const URL = 'https://jsonplaceholder.typicode.com/posts';
+        try {
+            const result = await dispatch(fetchPosts(URL)); // Await the dispatch
+            console.log('Fetch result:', result); // Logs the result of the fetchPosts thunk
+        } catch (error) {
+            console.error('Error fetching posts:', error);
+        }
+    };
 
     const orderItem1 = () => setItem1(prev => !prev)
     const orderItem2 = () => setItem2(prev => !prev)
@@ -51,10 +52,10 @@ function Swiggy() {
             <div className={styles.rightPane}>
                 <div className={styles.realtime}>
                     <div className={styles.box1}>
-                        <div>
-                            <div className={styles.count}>{count}</div>
+                        {posts.loading ? <Loader /> : (<div>
+                            <div className={styles.count}>{posts.count}</div>
                             <div className={styles.verbiage}>user reviews</div>
-                        </div>
+                        </div>)}
                     </div>
                     <div className={styles.box2}>
                         <div>
