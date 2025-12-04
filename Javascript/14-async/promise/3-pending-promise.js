@@ -5,7 +5,7 @@
 
 const fetchData = new Promise((resolve, reject) => {
     setTimeout(() => {
-        return resolve('Finally data is here!')
+        resolve('Finally data is here!')
     }, 2000);
 })
 

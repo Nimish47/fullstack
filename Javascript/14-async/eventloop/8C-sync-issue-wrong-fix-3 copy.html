@@ -1,0 +1,127 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Sync Issue Right Fix</title>
+    <style>
+        /* Basic page styling */
+        :root {
+            --bg: #f7fafc;
+            --card: #ffffff;
+            --accent: #2b6cb0;
+            --muted: #6b7280;
+        }
+
+        html,
+        body {
+            height: 100%;
+            margin: 0;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+            background: var(--bg);
+            color: #111827;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        .container {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 24px;
+        }
+
+        .card {
+            background: var(--card);
+            border-radius: 10px;
+            box-shadow: 0 6px 18px rgba(15, 23, 42, 0.08);
+            padding: 28px;
+            max-width: 520px;
+            width: 100%;
+            text-align: center;
+        }
+
+        h1 {
+            margin: 0 0 8px 0;
+            font-size: 20px;
+        }
+
+        p {
+            margin: 0 0 18px 0;
+            color: var(--muted);
+        }
+
+        .buttons {
+            display: flex;
+            gap: 12px;
+            justify-content: center;
+            margin-top: 8px;
+        }
+
+        button {
+            appearance: none;
+            border: none;
+            padding: 10px 16px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 14px;
+        }
+
+        #btn1 {
+            background: var(--accent);
+            color: white;
+        }
+
+        #btn2 {
+            background: transparent;
+            border: 1px solid #d1d5db;
+            color: #111827;
+            opacity: 0.6;
+        }
+
+        #btn1:hover,
+        #btn2:hover {
+            border: 2px solid black;
+            opacity: 0.9;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="card">
+            <h1>Sync Issue Right Fix</h1>
+            <p>Two buttons below each have an event listener in the same file. Click to see alerts.</p>
+
+            <div class="buttons">
+                <button id="btn1" type="button">Async button</button>
+                <button id="btn2" type="button">Quickie quick</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Grab the buttons by ID
+        const btn1 = document.getElementById('btn1');
+        const btn2 = document.getElementById('btn2');
+
+        // bad fix again
+        btn1.addEventListener('click', () => {
+            console.log("Deferring heavy work...");
+
+            setTimeout(() => {
+                console.log("Starting heavy loop...");
+                for (let i = 0; i < 50000000000; i++) { }
+                console.log("Loop finished");
+            }, 0);
+        });
+
+        btn2.addEventListener('click', function onBtn2Click(event) {
+            alert('I had to wait so long, huh!');
+        });
+    </script>
+</body>
+
+</html>

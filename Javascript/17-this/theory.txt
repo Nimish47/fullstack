@@ -48,9 +48,9 @@ What is the value of 'this'?
 			DOM node on which the event occured
 			
 Why the need for 'this'?
-	Many reasons. Few of them below:
+	Many reasons. Few of them listed below:
 	1. Access object properties from an object's method.
-	2. Reuse a function many times by changing object ar call time (using call or bind or apply)
+	2. Reuse a function many times by changing object at call time (using call or bind or apply)
 
 Arrow functions and 'this':
 	Arrow function like - normal functions have their own this.
@@ -64,7 +64,7 @@ Arrow functions and 'this':
 'this' methods:
 	there are three methods - bind,call, apply
 	they let us EXPLICITLY define the value of 'this' when calling a function.
-    basically they callow us to dictate the value of 'this'
+    basically they allow us to dictate the value of 'this'
     this feature is powerful and makes the functions reusable.
 
 	bind,call,apply similarities:
@@ -79,5 +79,5 @@ Arrow functions and 'this':
 		  using bind we must execute it separately.
 	
 	call vs apply:
-		call accepts parameters as a list separated by colons (as the last example we saw),
+		call accepts parameters as a list separated by commas (as the last example we saw),
 		and apply accepts them as an array.

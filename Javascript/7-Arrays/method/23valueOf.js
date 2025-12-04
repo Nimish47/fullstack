@@ -1,11 +1,5 @@
 // METHOD - valueOf
-
-// used to create a copy of array
-// copy type: shallow
-// a change in properties of copy array leads to change in original array
-// arr.valueOf()
-// returns copied array
-// original array untouched (but a change in properties of copy array leads to change in original array)
+// referential copy occurs
 
 const arr = ["apple","grapes"]
 const copyArr = arr.valueOf()

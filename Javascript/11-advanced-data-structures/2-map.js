@@ -70,38 +70,47 @@ log(list1.size)     // 0
 log(list2.size)     // 2    
 
 // loop - for of (entries)
-   for (const item of list2.entries()) { log(item) }
+for (const item of list2.entries()) { log(item) }
 // [ 'category', 'Grocery' ]
 // [ 'amount', 999 ]
 
 // loop - for of (values)
-   for (const item of list2.values()) { log(item) } 
+for (const item of list2.values()) { log(item) }
 // Grocery
 // 999
 
 // loop -for of (keys)
-   for (const item of list2.keys()) { log(item) }
+for (const item of list2.keys()) { log(item) }
 // category
 // amount
 
+// loop -forof best
+for (const [key, value] of list2) {
+   console.log(key, ':', value);
+}
+
+
 // loop - forEach
-   list2.forEach((item, index) => { log(`Index: ${index}, Item: ${item}`) })
+list2.forEach((item, index) => { log(`Index: ${index}, Item: ${item}`) })
 // Index: category, Item: Grocery
 // Index: amount, Item: 999
 
+// get
+console.log(list3.get("employee"))
+
 // set
-   list1.set('name', 'Anshu')
-   list1.set('age', 25)
-   log(list1)      // Map(2) { 'name' => 'Anshu', 'age' => 25 }
+list1.set('name', 'Anshu')
+list1.set('age', 25)
+log(list1)      // Map(2) { 'name' => 'Anshu', 'age' => 25 }
 
 // has
-   log(list1.has('age'))   // true
+log(list1.has('age'))   // true
 
 // delete
-   list1.delete('age')
-   log(list1)          // Map(1) { 'name' => 'Anshu' }
+list1.delete('age')
+log(list1)          // Map(1) { 'name' => 'Anshu' }
 
 // clear
-   list1.clear()
-   log(list1)              // Map(0) {}
+list1.clear()
+log(list1)              // Map(0) {}
 

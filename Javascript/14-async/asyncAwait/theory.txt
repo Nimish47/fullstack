@@ -1,8 +1,8 @@
 Async/Await
     Best way to perform an asynchronous operation
-        A function is declared as 'Async'
+        A function is declared as 'async'
         and the async job that we need to perform is prefixed with 'await'
-    error handling (simalar to catch) is done via try catch block
+    error handling (simalar to catch) is done via try-catch block
 
 Async
     Asynchronous functions contains the async keyword.
@@ -16,8 +16,7 @@ Await
         "if promise resolved you can store the value in a variable"
         "if promise rejected handle it in catch block"    
 
-AN ASYNC FUNCTION ALWAYS RETURNS A PROMISE OBJECT
-IF WE return SOMETHING INSIDE ASYNC FN IT BECOMES RESOLVED VALUE OF PROMISE
+
 
 // GENERAL STRUCTURE - START
 

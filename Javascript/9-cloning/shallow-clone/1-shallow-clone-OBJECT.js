@@ -10,7 +10,7 @@
  *              - SHALLOW COPY:
  *                   - one level deep elements are copied by value
  *                        - it means if one-level deep copy elements are modified, original object remains same
- *                   - deeper elements (level >1) are copied by reference
+ *                   - deeper elements (level > 1) are copied by reference
  *                        - it means if deeper copy elements are modified, original object also modified       
  *    - using assignment operator
  *          - let copy_obj = obj
@@ -28,6 +28,7 @@ const obj2 = { firstName: 'Amit', location: { lat: '303', long: '432' } }
 // clone - spread opr
 let shallowCopyViaSpread = { ...obj1 }
 shallowCopyViaSpread.firstName = 'harsh'
+// shallowCopyViaSpread.location = "hello"
 shallowCopyViaSpread.location.lat = '708'
 console.log(shallowCopyViaSpread)               // { firstName: 'harsh', location: { lat: '708', long: '432' } }
 console.log(obj1)                               // { firstName: 'Amit', location: { lat: '708', long: '432' } }

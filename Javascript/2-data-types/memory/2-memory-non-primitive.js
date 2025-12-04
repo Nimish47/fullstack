@@ -1,5 +1,8 @@
 // how non-primitive types are stored in memory
 // we will understand this by cloning the variable and trying to update it
+// use "=" to assign a new object to a variable
+// use "." operator to alter value of existing object
+// use indexing [] to alter value of existing object (Array)
 
 const a = [1, 2, 3, 4]
 const b = { name: "Nishant", age: 41 }
@@ -16,11 +19,17 @@ let b_copy = b     // "b_copy" now points to original reference of "b" variable*
 let c_copy = c     // "c_copy" points to copied reference of "c" variable
 let d_copy = d     // "d_copy" now points to original reference of "d" variable*
 
-//updating the copy variables
+// assign a new object
 a_copy = ['a', 'b', 'c', 'd']
+
+// altering the existing object
 b_copy.name = "Nimish"
+
+// assign a new object
 c_copy = function () { return "banana" }
 // d_copy[0].name = "Karan"
+
+// altering the exisiting object
 d_copy[0] = {fruit: 'banana', count: 10}
 
 

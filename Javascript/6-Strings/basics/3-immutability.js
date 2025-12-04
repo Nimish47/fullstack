@@ -10,6 +10,8 @@ console.log(`a: ${a} b: ${b}`)                          // a: boya b: kimichi
 console.log(`First index - a:${a[0]} b:${b[0]}`)        // First index - a:X b:k
 
 // Strings are immutable in javascript
+// apply any method or update via index and a new string will be created in memeory. 
+//  old will be garbage collected if not stored
 // "Xoya" and "kimichi" are created in memeory and they CANNOT be changed
 
 a[0] = 'Y'      // it may seem we are trying to update X with Y here but thats not the case

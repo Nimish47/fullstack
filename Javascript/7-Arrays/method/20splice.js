@@ -22,7 +22,7 @@ const arr4 = ["Jan", "Feb", "Mar", "Apr"]
 
 const removedArr1 = arr1.splice()
 const removedArr2 = arr2.splice(1)
-const removedArr3 = arr3.splice(1,2)
+const removedArr3 = arr3.splice(2,3)
 const removedArr4 = arr4.splice(1,2,"Nov","Oct")
 
 console.log(`${arr1} | ${removedArr1}`)        // ["Jan","Feb","Mar","Apr"] | []

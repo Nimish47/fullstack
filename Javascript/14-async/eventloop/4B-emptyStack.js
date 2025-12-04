@@ -49,7 +49,7 @@ const homework = () => {
 const maidDuties = () => {
     start()
     cleaning()
-    orderPizza()
+    orderPizza() // async fn
     homework()
     homework()
     console.log('Going home! Bye Bye')

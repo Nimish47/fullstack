@@ -1,4 +1,4 @@
-// for in loop with arrays
+// for of loop with arrays
 
 const obj = {
     id: 1,

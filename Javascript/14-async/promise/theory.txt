@@ -11,7 +11,7 @@ Purpose of a PROMISE
     Asynchronous task can be done without promises too but what makes promises powerful is:
         - ability to perform some task once async operation is finished
     Synchronous task can also be done inside promises but it doesn't make any sense    
-
+    
 3 states of a PROMISE
     1. Pending
     2. Fulfilled
@@ -39,7 +39,7 @@ Purpose of a PROMISE
         parameter: value with which promise Fulfills
     .catch : 
         callback: used to perform some operation in the aftermath of promise rejection OR error handling
-        parameter: value with which promise rejected  OR some wrror got thrown  
+        parameter: value with which promise rejected  OR some error got thrown  
 
 Executor and Consumer Function in promises (deep dive)
 
@@ -59,8 +59,6 @@ Promise Hell v/s Promise Chaining
     check 6A and 6B to understand the difference
     
 An alternative to Promise chaining is to use Async/Await       
-
-
 
 The .then analogy:
     - A promise has 2 entities: STATE and VALUE

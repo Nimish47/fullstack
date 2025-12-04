@@ -9,7 +9,7 @@ const sleep = () => new Promise((resolve) => setTimeout(() => resolve('SLEEP'), 
 const promiseArr = [wake, brush, eat, school, sleep]
 
 const dailyRoutine = async () => {
-    for await (const fire of promiseArr) {
+    for (const fire of promiseArr) {
         const response = await fire()
         console.log(response)
     }

@@ -44,4 +44,5 @@ console.log('See you soon! Guyzz')
 
 // Order placed!
 // Food delivered, Cost was $8.6
+// See you soon! Guyzz'
 // The food is prepared!

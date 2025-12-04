@@ -1,6 +1,6 @@
-// Hell in promises
-// Like callbacks, promises too have thier fair share of hell
-// It arises when we need to trigger a series of promises in ORDER one after the other
+// promise resolution of callback hell
+// The underscore _ is just a throwaway parameter name =>
+// a convention used when the argument isn’t needed.
 
 const cleanUtensils = () => {
     return new Promise((resolve, reject) => {
@@ -50,26 +50,16 @@ const buyGroceries = () => {
 
 console.log('Food preparation started!')
 buyGroceries()
-    .then((_) => {
-        cutVegetables()
-            .then((_) => {
-            cookFood()
-                .then((_) => {
-                serveFood()
-                    .then((_) => {
-                    cleanUtensils()
-                        .then((_) => {
-                            console.log('Party Over, bye!')
-                    })
-                })
-            })
-        })
-    })
+    .then((_) => cutVegetables())
+    .then((_) => cookFood())
+    .then((_) => serveFood())
+    .then((_) => cleanUtensils())
+    .then((_) => console.log('Party Over, bye!'))
 
-    // Food preparation started!
-    // Buy groceries
-    // Cut vegetables
-    // Cook food
-    // Serve food
-    // Clean utensils
-    // Party Over, bye!  
+// Food preparation started!
+// Buy groceries
+// Cut vegetables
+// Cook food
+// Serve food
+// Clean utensils
+// Party Over, bye!  

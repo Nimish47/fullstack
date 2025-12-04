@@ -10,7 +10,7 @@
 // // one of the usecases of this            
 // Why we use 'this'? Simple use case below:
     // inside getName fn, we cannot directly reference firstname,we need to use this.firstname
-    // when an objects method needs to acces object's properties
+    // when an objects method needs to access object's properties
     // can't reference property without 'this', throws error.
 
 

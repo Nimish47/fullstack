@@ -24,4 +24,4 @@ console.log(copyArr2)   // [ { id: '786', status: 'fail' } ]
 console.log(arr2)       // [ { id: '123', status: 'pass' } ]
 
 console.log(copyArr3)   // [ { id: '786', status: 'inprogress' } ]
-console.log(arr3)       // [ { id: '123', status: 'pass' } ]
+console.log(arr3)       // [ { id: '123', status: 'inprogress' } ]

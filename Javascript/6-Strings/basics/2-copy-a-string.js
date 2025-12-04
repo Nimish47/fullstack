@@ -11,21 +11,16 @@ console.log(b)           // [String: 'hello']
 console.log(b[0])       // h
 console.log(typeof b)  // object
 
-// create copy references - copy of string variable points to copy of original reference //case B
+// a stores the primitive value "hello".
+// When you do a_copy = a, the value "hello" is copied, not referenced like objects/arrays.
+// Now both variables hold "hello", but independently (separate storage).
 let a_copy = a 
 let b_copy = b
 
-// strings are immutable
-// a_copy earlier pointing to copy of original a
-// now a new "world" string create in memory, and a_copy points to it
-// if we write:  a = "hoya"
-    // a new "hoya" creted in memory and a points to it. 
-    // "hello" which a was referencing earlier still exists in memory
-    // however now it is no longer referenced by a
 
-a_copy = "world"       // only a_copy gets updated, a remain the same
-b_copy = "world"       // only b_copy gets updated, b remain the same
+a_copy = "world"       
+b_copy = "world"       
 
 
-console.log(`a: ${a} a_copy: ${a_copy}`)        // a: hello a_copy: world
-console.log(`b: ${b} b_copy: ${b_copy}`)        // b: hello b_copy: world
+console.log(`a: ${a} a_copy: ${a_copy}`)        
+console.log(`b: ${b} b_copy: ${b_copy}`)       

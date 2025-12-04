@@ -2,8 +2,8 @@
 
 let mapper = new Map([['fName', 'Nishant'], ['age', 20]])
 
-for (const item of mapper) {
-    console.log(item)
+for (const [key,value] of mapper) {
+    console.log(key,value)
 }
 // [ 'fName', 'Nishant' ]
 // [ 'age', 20 ]

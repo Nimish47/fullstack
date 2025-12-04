@@ -2,7 +2,6 @@
  * METHOD - SET
  * WHAT
  *  - a data structure used for storing data of any length and kind.
- *  - data in set isn't ordered (as in arrays)
  *  - a good usecase of set is to use it to remove duplicates in an array
  *  - no duplicate data allowed in set
  *      - data equality is decided by:
@@ -75,19 +74,12 @@ list2.forEach((item) => { log(item) })
 // true
 // { name: 'Karan' }
 
-// loop a set - for of and values
-for (const item of list2.values()) { log(item) }
+// loop a set - for of 
+for (const item of list2) { log(item) }
 // apple
 // 2
 // true
 // { name: 'Karan' }
-
-// loop a set - for of and entries
-for (const item of list2.entries()) { log(item) }
-// [ 'apple', 'apple' ]
-// [ 2, 2 ]
-// [ true, true ]
-// [ { name: 'Karan' }, { name: 'Karan' } ]
 
 
 // add
@@ -111,15 +103,3 @@ log(list1)                      // Set(0) {}
 const arr = ['apple', 'bananas', 'oranges', 'papaya', 'apple', 'oranges']
 const list3 = new Set(arr)
 log(list3)                   // Set(4) { 'apple', 'bananas', 'oranges', 'papaya' }
-
-// a thing about duplicacy
-// equality of non-primitives is decided by if they have same reference
-// equality of non-primitives is decided by if they have same value 
-const list4 = new Set()
-list4.add(['apple', 1])     // non-prim added
-list4.add('oranges')        // prim added
-    
-list4.add(['apple', 1])     // non-prim added (will add, as different reference)
-list4.add('oranges')        // prim added ( but won't add)
-
-log(list4)                  // Set(3) { [ 'apple', 1 ], 'oranges', [ 'apple', 1 ] }
