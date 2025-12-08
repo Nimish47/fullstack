@@ -1,0 +1,65 @@
+body {
+    padding: 0;
+    margin: 0;
+    background-color: bisque;
+}
+
+.container {
+    border: 5px solid red;
+}
+
+
+/*no width and height assigned to container*/
+.container {
+    position: relative;
+}
+
+.story {
+    font-size: 3.5em; /*making container size with content*/
+    color: rgb(231, 209, 209);
+}
+
+.one,
+.two,
+.three,
+.four,
+.five {
+    width: 100px;
+    height: 100px;
+    background-color: rgb(139, 139, 13);
+    color: white;
+    border: 5px solid black;
+}
+
+.one {
+
+    position: absolute;
+    left: 0;
+    top: 0
+}
+
+.two {
+    position: absolute;
+    right: 0;
+    top: 0
+}
+
+.three {
+    position: absolute;
+    left: 0;
+    bottom: 0
+}
+
+.four {
+    position: absolute;
+    right: 0;
+    bottom: 0
+}
+
+/*center a div using relative + absolute*/
+.five {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}

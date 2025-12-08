@@ -1,0 +1,130 @@
+body {
+    padding: 0;
+    margin: 0;
+    padding-top: 58px;
+    padding-bottom: 58px;
+}
+
+.header {
+    background-color: rgb(15, 76, 161);
+    color: white;
+    padding: 20px;
+    text-align: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+}
+
+.main {
+    background-color: beige;
+}
+
+.advertisement {
+    background-color: rgb(199, 36, 36);
+    color: white;
+    padding: 20px;
+    width: 150px;
+    height: 150px;
+    position: fixed;
+    right: 0;
+    top: 0;
+}
+
+.adContainer {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.adText {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    font-weight: 500;
+}
+
+.story {
+    font-style: italic;
+    font-size: 3em;
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.footer {
+    background-color: rgb(17, 78, 163);
+    color: white;
+    padding: 20px;
+    text-align: center;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+.hoverMe {
+    background-color: rgb(62, 149, 15);
+    padding: 20px;
+    color: white;
+    text-align: center;
+    width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px;
+    position: relative;
+    font-size: 1.25em;
+    font-weight: 500;
+}
+
+.hoverMe:hover {
+    opacity: 0.8;
+    cursor: pointer;
+}
+
+.tooltip {
+    display: none;
+    position: absolute;
+    bottom: 80%;
+    right: -30%;
+    background-color: yellow;
+    color: black;
+    padding: 15px;
+    border-radius: 30px;
+    border: 5px solid black;
+}
+
+.hoverMe:hover .tooltip {
+    opacity: 1;
+    pointer-events: auto;
+    display: block;
+}
+
+
+
+.modal-backdrop {
+    display: none;  /*to change it need to add javascript*/
+    position: absolute;
+    inset: 0;
+    /* background: rgba(255, 255, 255, 0.2); */
+    backdrop-filter: blur(3px);
+}
+
+.modal {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 600px;
+    height: 300px;
+    background-color: brown;
+    color: white;
+    border: 5px solid yellow;
+    font-size: 3em;
+}
+
+.advertisement:hover {
+    border: 5px solid white;
+    cursor: pointer;
+}

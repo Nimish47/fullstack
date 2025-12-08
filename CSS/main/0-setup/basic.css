@@ -1,0 +1,27 @@
+body {
+    padding: 0;
+    margin: 0;
+}
+
+.header {
+    background-color: grey;
+    color: white;
+    padding: 20px;
+}
+
+.main {
+    background-color: beige;
+    padding: 20px;
+}
+
+.sidebar {
+    background-color: black;
+    color: white;
+    padding: 20px;
+}
+
+.footer {
+    background-color: grey;
+    color: white;
+    padding: 20px;
+}

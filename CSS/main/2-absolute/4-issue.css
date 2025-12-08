@@ -1,0 +1,47 @@
+body {
+    padding: 0;
+    margin: 0;
+}
+
+.header {
+    background-color: grey;
+    color: white;
+    padding: 20px;
+    height: 30vh;
+}
+
+.content {
+    background-color: beige;
+    height: 100vh;
+}
+
+.demo-top {
+      background-color: rgb(121, 121, 8); 
+      color: white;
+      padding: 10px;
+      text-align: center; 
+      border-radius: 20px;
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+}
+
+.demo-bottom {
+      background-color: rgb(91, 156, 216); 
+      color: white;
+      padding: 10px;
+      text-align: center; 
+      border-radius: 20px;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+}
+
+.footer {
+    background-color: rgb(231, 87, 87);
+    color: white;
+    padding: 20px;
+    height: 100vh;
+}

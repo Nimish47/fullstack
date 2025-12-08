@@ -1,0 +1,27 @@
+body {
+    padding: 0;
+    margin: 0;
+}
+
+.header {
+    background-color: grey;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    position: sticky;
+    top: 250px;
+
+}
+
+.long1 {
+    height: 50vh;
+    background-color: black;
+    color: white;
+
+}
+
+.long2 {
+    height: 200vh;
+    background-color: rgb(197, 89, 89);
+    color: white;
+}

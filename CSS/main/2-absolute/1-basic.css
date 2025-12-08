@@ -1,0 +1,43 @@
+body {
+    padding: 0;
+    margin: 0;
+}
+
+.header {
+    background-color: grey;
+    color: white;
+    padding: 20px;
+    position: absolute;
+    top: 0;
+}
+
+.content {
+    background-color: blue;
+    height: 120vh; /* make page scrollable vertically*/
+}
+
+.main {
+    background-color: rgb(238, 238, 90);
+    padding: 20px;
+    color: black;
+}
+
+.sidebar {
+    background-color: black;
+    color: white;
+    padding: 20px;
+}
+
+.footer {
+    background-color: grey;
+    color: white;
+    padding: 20px;
+    position: absolute;
+    bottom: 0;
+}
+
+.disclaimer {
+    background-color: red;
+    color: wheat;
+    padding: 20px;
+}
