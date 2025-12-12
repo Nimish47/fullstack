@@ -26,7 +26,8 @@ html {
 }
 
 .child2 {
-    background-color: #f19d9d
+    background-color: #f19d9d;
+    justify-content: flex-end;
 }
 
 .child3 {

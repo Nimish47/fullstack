@@ -1,6 +1,6 @@
 // flex-wrap
     NOTE: we have ignored other box-model properties
-    - always to applied to flex container and not flex items
+    - always to be applied to flex container and not flex items
     - values: nowrap | wrap | wrap-reverse
     - wraps flex-items to a new line if sceen-size < summation of widths (and other box-model props)
     - to understand flex-wrap move from high to low screen-sizes

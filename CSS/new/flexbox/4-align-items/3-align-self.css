@@ -1,0 +1,35 @@
+body {
+    padding: 0;
+    margin: 0;
+}
+
+.navbar {
+    border: 2px solid black;
+    height: 40vh;
+    display: flex;
+}
+
+.home {
+    background-color: rgb(96, 84, 5);
+    color: white;
+    padding: 20px;
+    align-self: flex-start;
+}
+
+.feature {
+    background-color: beige;
+    padding: 20px;
+    align-self: flex-end;
+}
+
+.about {
+    background-color: rgb(145, 245, 58);
+    color: white;
+    padding: 20px;
+}
+
+.profile {
+    background-color: rgb(202, 72, 72);
+    color: white;
+    padding: 20px;
+}

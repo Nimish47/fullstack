@@ -1,0 +1,37 @@
+body {
+    padding: 0;
+    margin: 0;
+}
+
+.navbar {
+    display: flex;
+    border: 2px solid black;
+}
+
+.navbar div {
+    width: 250px;
+    text-align: center;
+}
+
+.home {
+    background-color: grey;
+    color: white;
+    flex-shrink: 0;
+}
+
+.feature {
+    background-color: beige;
+    flex-shrink: 5;
+}
+
+.about {
+    background-color: black;
+    color: white;
+    flex-shrink: 0;
+}
+
+.profile {
+    background-color: rgb(202, 72, 72);
+    color: white;
+    flex-shrink: 1;
+}

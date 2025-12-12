@@ -30,4 +30,18 @@ flex-direction: column-reverse
     - flex items stacked on bottom side
     - order of items: Bottom to Top (1st item in flex-container appears on bottom and last on top)
 
-NOTE: Left, Right, Top Aand Bottom are relative to flex container    
+NOTE: Left, Right, Top Aand Bottom are relative to flex container 
+
+axes-diagram
+
+S1------------------S2
+|
+|
+|
+|
+|
+|
+S3
+
+S1S2 => main axis (S1 start point and S2 end point) => 500px
+S1S3 => cross axis (S1 start point and S3 end point) => 400px

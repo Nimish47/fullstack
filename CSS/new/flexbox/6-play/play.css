@@ -1,0 +1,44 @@
+body {
+    padding: 0;
+    margin: 0;
+}
+
+.container {
+    border: 2px solid black;
+    background-color: beige;
+    display: flex;
+    flex-direction: column;
+}
+
+.container div {
+    padding: 20px;
+    width: 100px;
+    height: 100px;
+}
+
+.one {
+    background-color: green;
+    color: white;
+}
+
+.two {
+    background-color: purple;
+    color: white;
+}
+
+.three {
+    background-color: rgb(28, 187, 187);
+    color: white;
+}
+
+.four {
+    background-color: orangered;
+    color: white;
+    margin-top: auto; /* won't work */
+}
+
+.five {
+    background-color: rgb(223, 82, 82);
+    color: white;
+    align-self: flex-end;
+}

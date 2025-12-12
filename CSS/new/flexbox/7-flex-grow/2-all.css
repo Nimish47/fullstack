@@ -1,0 +1,34 @@
+body {
+    padding: 0;
+    margin: 0;
+}
+
+.navbar {
+    display: flex;
+    border: 2px solid black;
+}
+
+.navbar div {
+    width: 150px;
+    text-align: center;
+    flex-grow: 1;
+}
+
+.home {
+    background-color: grey;
+    color: white;
+}
+
+.feature {
+    background-color: beige;
+}
+
+.about {
+    background-color: black;
+    color: white;
+}
+
+.profile {
+    background-color: rgb(202, 72, 72);
+    color: white;
+}

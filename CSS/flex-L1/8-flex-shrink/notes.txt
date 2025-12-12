@@ -1,5 +1,5 @@
 flex-shrink:
-    NOTE: we have ignored other box-model propertiesNOTE: we have ignored other box-model properties
+    NOTE: we have ignored other box-model properties
     - default value is -> flex-shrink: 1
     - can be applied on flex container or individual flex items
         - if applied on flex-container, all flex items shrink equally
