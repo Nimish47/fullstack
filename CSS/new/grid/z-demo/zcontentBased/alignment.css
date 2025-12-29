@@ -1,0 +1,67 @@
+html,
+body {
+    padding: 0;
+    margin: 0;
+    height: 100%;
+}
+
+.parent {
+    height: 100%;
+    background-color: beige;
+}
+
+.container {
+    height: 80%;
+    width: 80%;
+    display: grid;
+    grid-template-columns: repeat(3, 200px);
+    grid-template-rows: repeat(3, 100px);
+    font-size: 2em;
+    color: white;
+    font-weight: 900;
+    align-items: center;
+    justify-items: center;
+    background-color: greenyellow;
+    align-content: center;
+    justify-content: center;
+}
+
+.one {
+    background-color: grey;
+}
+
+.two {
+    background-color: black;
+}
+
+.three {
+    background-color: grey;
+    align-self: start;
+    justify-self: end;
+}
+
+.four {
+    background-color: black;
+    align-self: stretch;
+    justify-self: stretch;
+}
+
+.five {
+    background-color: grey;
+}
+
+.six {
+    background-color: black;
+}
+
+.seven {
+    background-color: grey;
+}
+
+.eight {
+    background-color: black;
+}
+
+.nine {
+    background-color: grey;
+}

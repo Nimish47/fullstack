@@ -1,0 +1,41 @@
+html,
+body {
+    padding: 0;
+    margin: 0;
+    height: 100%;
+}
+
+.container {
+    height: 100%;
+    font-size: 2em;
+    display: grid;
+    grid-template-columns: 350px 1fr;
+    grid-template-rows: 100px 1fr 100px;
+    grid-template-areas: 
+    "navbar navbar"
+    "sidebar content"
+    "footer footer";
+}
+
+.navbar {
+    background-color: red;
+    color: white;
+    grid-area: navbar;
+}
+
+.sidebar {
+    background-color: green;
+    color: white;
+    grid-area: sidebar;
+}
+
+.content {
+    background-color: yellow;
+    grid-area: content;
+}
+
+.footer {
+    background-color: blue;
+    color: white;
+    grid-area: footer;
+}

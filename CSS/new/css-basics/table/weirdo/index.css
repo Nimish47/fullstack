@@ -1,0 +1,28 @@
+html,
+body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+.container {
+    height: 100dvh;
+    background-color: bisque;
+}
+
+caption {
+    color: black;
+}
+
+.table-container {
+    background-color: rgb(64, 64, 212);
+    color: white;
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.table-container th, .table-container td {
+    border: 1px solid white;
+    padding: 20px;
+    text-align: center;
+}

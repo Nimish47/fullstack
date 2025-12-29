@@ -1,0 +1,13 @@
+html,
+body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+.container {
+    min-height: 100dvh;
+    background-image: url('../assets/manhattan.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+}

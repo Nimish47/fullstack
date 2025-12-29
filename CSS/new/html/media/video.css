@@ -1,0 +1,22 @@
+html,body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+.container {
+    min-height: 100dvh;
+    width: 100%;
+    background-color: rgb(213, 213, 162);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.videoItem {
+    width: 500px;
+    height: 500px;
+    border: 1px solid black;
+    border-radius: 30px;
+    background-color: white;
+}

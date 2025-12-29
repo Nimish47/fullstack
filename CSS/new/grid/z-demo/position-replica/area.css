@@ -1,0 +1,62 @@
+html,
+body {
+    padding: 0;
+    margin: 0;
+    height: 100%;
+}
+
+.parent {
+    height: 100%;
+    display: grid;
+    align-items: center;
+    justify-items: center;
+}
+
+
+.container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-areas:
+    "tl . tr"
+    ". cen ."
+    "bl . br"
+    ;
+    border: 2px solid black;
+    box-sizing: border-box;
+    height: 80%;
+    width: 80%;
+}
+
+/*to position text centrally*/
+.container div {
+    display: grid;
+    justify-items: center;
+    align-items: center;
+}
+
+/*use grid-lines for playPositionX*/
+.one {
+    background-color: grey;
+    grid-area: tl;
+}
+
+.two {
+    background-color: green;
+    grid-area: tr;
+}
+
+.three {
+    background-color: red;
+    grid-area: bl;    
+}
+
+.four {
+    background-color: purple;
+    grid-area: br;    
+}
+
+.five {
+    background-color: yellow;
+    grid-area: cen;    
+}

@@ -1,0 +1,38 @@
+html,
+body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+.container {
+    height: 100dvh;
+    background-color: rgb(196, 40, 40);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.textbox {
+    padding: 20px;
+    width: 300px;
+    background-color: beige;
+}
+
+.textbox::before {
+    content: "Before view";
+    color: black;
+    background-color: black;
+    color: wheat;
+    padding: 10px;
+    border-radius: 40px;
+}
+
+.textbox::after {
+    content: "After view";
+    color: black;
+    background-color: rgb(17, 89, 11);
+    color: wheat;
+    padding: 10px;
+    border-radius: 40px;
+}

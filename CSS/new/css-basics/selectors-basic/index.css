@@ -1,0 +1,59 @@
+* {
+    font-style: italic;
+}
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+.container {
+    height: 100dvh;
+}
+
+.animal {
+    background-color: rgb(135, 131, 131);
+    color: white;
+    padding: 20px;
+}
+
+.fruit {
+    background-color: rgb(65, 150, 49);
+    color: white;
+    padding: 20px;
+}
+
+.city {
+    background-color: rgb(185, 51, 173);
+    color: white;
+    padding: 20px;
+}
+
+.outlet {
+    background-color: rgb(50, 75, 189);
+    color: white;
+    padding: 20px;
+}
+
+.subsection {
+    padding: 20px;
+    background-color: black;
+}
+
+.container .animal {
+    color: black;
+}
+
+.container > .animal {
+    letter-spacing: 5px;
+}
+
+.city + .animal {
+    font-style: normal;
+}
+
+.animal ~ .fruit {
+    font-size: 30px;
+}

@@ -1,0 +1,24 @@
+html,body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+.container {
+    min-height: 100dvh;
+    background-color: beige;
+    color: black;
+}
+
+.image-container {
+    width: 100%;
+    height: 500px;
+}
+
+.myimage {
+    display: block;
+    max-height: 100%;
+    width: 80%;
+    margin: 0 auto 0 auto;
+    object-fit: cover;
+}

@@ -1,0 +1,47 @@
+html,
+body {
+    padding: 0;
+    margin: 0;
+    height: 100%;
+}
+
+.container {
+    height: 100%;
+    box-sizing: border-box;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    /* grid-template-rows: 100px;
+    grid-auto-rows: auto; */
+    grid-auto-rows: minmax(100px, 1fr);
+    background-color: black;
+}
+
+.one {
+    background-color: red;
+    color: white;
+}
+
+.two {
+    background-color: green;
+    color: white;
+}
+
+.three {
+    background-color: yellow;
+}
+
+.four {
+    background-color: purple;
+    color: white;
+    font-size: 25em;
+}
+
+.five {
+    background-color: grey;
+    color: white;
+}
+
+.six {
+    background-color: bisque;
+    color: black;
+}

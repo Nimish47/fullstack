@@ -1,0 +1,22 @@
+html,
+body {
+    padding: 0;
+    margin: 0;
+    height: 100%;
+}
+
+.container {
+    height: 100%;
+    box-sizing: border-box;
+    display: grid;
+    align-items: center;
+    justify-items: center;
+    background-color: rgb(218, 121, 121);
+}
+
+.item {
+    background-color: rgb(74, 70, 212);
+    color: white;
+    width: 200px;
+    height: 200px;
+}

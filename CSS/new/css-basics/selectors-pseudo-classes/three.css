@@ -1,0 +1,28 @@
+html,
+body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+.container {
+    height: 100dvh;
+    background-color: rgb(196, 40, 40);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.textboxer {
+    padding: 20px;
+    width: 200px;
+}
+
+.textboxer:hover {
+    background-color: black;
+    cursor: pointer;
+}
+
+.textboxer:focus {
+    outline: 10px solid black;
+}

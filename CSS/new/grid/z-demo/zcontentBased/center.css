@@ -1,0 +1,16 @@
+html,
+body {
+    padding: 0;
+    margin: 0;
+    height: 100%;
+}
+
+.container {
+    height: 100%;
+    display: grid;
+    background-color: beige;
+}
+
+.item {
+    background-color: red;
+}
