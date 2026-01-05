@@ -13,6 +13,8 @@
     // when an objects method needs to access object's properties
     // can't reference property without 'this', throws error.
 
+// updated    
+// explain how underneath binding happens at time of fn execution via "call" method
 
 const { log } = console;
 

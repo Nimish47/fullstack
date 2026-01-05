@@ -8,6 +8,11 @@
 
 const { log } = console;
 
+// updated
+// object has no scope
+// lexical points to global context in this case
+// it doesn't matter who or how getName is called, it's value was already calculated at definition time
+
 const obj = {
     firstname: 'Akki',
     age: 18,

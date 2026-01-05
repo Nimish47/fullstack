@@ -1,7 +1,3 @@
-What is 'this'?
-	this is a keyword whose value is "always" an object.
-	object can be - global or custom
-
 From where we can call this?
 	Anywhere 
 	

@@ -1,4 +1,4 @@
-// this AND Bind
+// this AND bind
 // a javascript method that manipulates what object 'this' refers to.
 
 const obj1 = {
@@ -16,7 +16,6 @@ const obj2 = {
 
 const res1 = obj1.makeUsername('JH', 'IN')
 console.log(res1)            // Akki-18@JH-IN
-
 
 // bind method - specify parameters instantaneously
 const func2 = obj1.makeUsername.bind(obj2, 'KA','IN')  

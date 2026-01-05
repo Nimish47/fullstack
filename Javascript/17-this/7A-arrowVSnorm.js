@@ -1,5 +1,11 @@
 // Use case when to use Arrow over Normal:
 
+// excellent example to showcase that this used in arrow fn gets locked to lexical scope of normal fn
+// compare with 2C-case3-arrow.js
+  // there objectwas there
+  // object has no scope
+  
+
 const basketA = {
     name: 'Bowl A',
     fruits: ['Apple', 'Oranges', 'Banana'],
@@ -16,6 +22,8 @@ const basketA = {
     fruits: ['Papaya', 'Grapes', 'Guava'],
   
     getFruits() {
+      // this within arrow fn locked to this of getFruits
+      // getFruits is a fn and has a scope so locked
       this.fruits.forEach(fruit => {
         console.log(`${this.name} contains ${fruit}`);
       });

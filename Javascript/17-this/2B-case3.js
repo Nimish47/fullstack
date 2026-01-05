@@ -1,6 +1,12 @@
 // Inside an object's method
     // calling one method property from another method property
 
+// updated    
+// explain how underneath binding happens at time of fn execution via "call" method
+
+// obj.drink => this = obj (via "call")
+// this.eat means => obj.eat()
+// obj.eat => this = obj (again) (via call)
 
 const obj = {
     fName: 'Alizeh',

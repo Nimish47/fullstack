@@ -1,5 +1,8 @@
 // Use case when to use normal over Arrow
 
+// updated
+//here employee 2 cannot confine this of arrow
+// because employee2 is object and has no scope
 
 const employee1 = {
     firstname: 'Nishant',

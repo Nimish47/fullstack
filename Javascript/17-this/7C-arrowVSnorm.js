@@ -22,7 +22,7 @@ const user2 = {
   name: "Nishant",
   greet() {
     setTimeout(() => {
-      console.log(this.name);
+      console.log(this.name);   // locks to greet()'s this at definition time
     }, 1000);
   },
 };
