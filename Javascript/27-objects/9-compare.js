@@ -1,0 +1,18 @@
+// best way to compare anything in entire JS
+// Object.is(any,any)
+// static method
+// better than ===
+
+
+// CASE: compare two primitives
+console.log(Object.is(2, 2))                        // true
+console.log(Object.is("apple", "apple"))            // true
+console.log(Object.is(2, "2"))                      // false
+
+// CASE: compare two non-primitives
+console.log(Object.is({}, {}))                      // false
+
+
+// CASE: compare two non-primitives
+const obj = { id: 23 }
+console.log(Object.is(obj, obj))                    // true

@@ -9,7 +9,7 @@ for (var flag2 = 0; flag2 < 5; flag2++) {
 }
 
 // GEC, block scope
-// different variable crated for each iteration but inaccessible like private variables
+// different variable crated for each iteration but inaccessible like private variables,
 // once iteration is over (important concept, visualize in mind)
 // difficult to debug right now
 for (let flag1 = 0; flag1 < 5;flag1++) {

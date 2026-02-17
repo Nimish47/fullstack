@@ -1,0 +1,21 @@
+
+this.state => we define instance properties;
+
+this.setState => from Parent.prototype
+
+event handlers => passed as callbacks => need to bind "this" so that refers to current instance 
+
+super(props) => accessible via this.props
+
+this.lifecycle methods => from Parent.prototype
+
+
+
+react instance own methods
+    this.state
+    this.props
+    this.eventHandler
+
+inherited but accessible by instance
+    this.setState
+    this.lifecycle methods

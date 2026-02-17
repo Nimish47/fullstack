@@ -7,8 +7,7 @@ const customer = () => {
     }
 
     // custDetails is accessible to these 3 fns because of closure
-    const updateName = (custName) => custDetails.name = custName
-    
+    const updateName = (custName) => custDetails.name = custName    
     const updateBalance = (amount) => custDetails.balance += amount
 
     // debug this console line in devtools

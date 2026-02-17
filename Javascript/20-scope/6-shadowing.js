@@ -6,7 +6,7 @@
   // treated as different variables (even if name as same)
 
 // if variables are in same ECs AND same SCOPEs  
-  // first defined varaible rules apply
+  // first defined variable rules apply
   // if it was let => redeclaration NO, update values YES
   // if it was const => redeclaration NO, update values NO
   // if it was var => redeclaration YES, update values YES

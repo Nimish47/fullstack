@@ -1,6 +1,6 @@
-// agenda: a basic setup to observe 
+// Agenda: a basic setup to observe 
     // call stack => which displays EC and scopes
-    // execution context => GEC and function specific execution context
+    // execution context => GEC and function specific execution contexts
     // scopes => local, closure, global
 // debug at line 5,9,13,19
 // d1 => observe GEC => local scope
