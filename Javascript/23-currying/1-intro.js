@@ -2,8 +2,7 @@
 
 // analyze closures in devtools
 
-
-// without curriying
+// without currying
 function normAdd(a, b, c) { console.log('normal add', a + b + c) }
 normAdd(10, 20, 30)       // normal add 60
 
@@ -15,6 +14,7 @@ function curryNormAdd(a) {
         }
     }
 }
+
 curryNormAdd(10)(20)(30)        // Norm curry add 60
 
 // using arrown fn

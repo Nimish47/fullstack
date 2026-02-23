@@ -12,5 +12,5 @@ const func2 = () => true;
 
 console.log(typeof arr)     //"object"
 console.log(typeof obj)     //"object"
-console.log(typeof func1)   //"function" - also called function object
-console.log(typeof func2)   //"function" -  also called function object
+console.log(typeof func1)   //"function"
+console.log(typeof func2)   //"function"

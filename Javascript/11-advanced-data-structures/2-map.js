@@ -114,3 +114,4 @@ log(list1)          // Map(1) { 'name' => 'Anshu' }
 list1.clear()
 log(list1)              // Map(0) {}
 
+// access oldest key
