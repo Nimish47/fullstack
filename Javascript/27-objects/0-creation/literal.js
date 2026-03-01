@@ -10,7 +10,7 @@ const obj = {
 }
 
 // print object
-console.log(obj)                // { id: '123', fName: 'Nishant Nimish' }
+console.log(obj)                // {id: '123', fName: 'Nishant Nimish', normFn: ƒ, arrowFn: ƒ}
 
 // normal fn
 // this decided at call time

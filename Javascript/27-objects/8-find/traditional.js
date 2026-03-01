@@ -1,4 +1,4 @@
-// validate of a property exist in an object
+// validate if a property exist in an object
 // traditional approach: dot and [] way
 
 // create an object that has a _proto_ = an object

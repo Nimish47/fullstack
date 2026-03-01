@@ -2,6 +2,7 @@
 // Object.is(any,any)
 // static method
 // better than ===
+// slower than ===
 
 
 // CASE: compare two primitives

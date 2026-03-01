@@ -7,8 +7,8 @@ const obj = { fName: 'Karan', lName: 'Ajula', category: 'Artist', age: 38 }
 
 // CASE: easiest way
 // for-in loop
-for (const key in obj) {
-    if (!Object.hasOwn(obj, key)) continue;         // check for 'own' props only, not prototypal values
+for (const key in obj) {                        
+    if (!Object.hasOwn(obj, key)) continue;         // check for 'own' props only, not prototypal values    // "in" is unrelaible
     console.log(obj[key])
 }
 // Karan

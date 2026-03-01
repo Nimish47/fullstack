@@ -20,4 +20,4 @@ check(Number.__proto__)             // true
 
 // Function
 // Function is an instance of Function ??? Yes
-check(Number.__proto__)             // true
+check(Function.__proto__)             // true

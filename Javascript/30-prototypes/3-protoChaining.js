@@ -7,7 +7,7 @@
 // via proto chaining
 function Hello(id) { this.id = id }
 const a1 = new Hello(12)
-console.log(a1)
+console.log(a1)                                                         // Hello {id: 12}
 console.log(Object.hasOwn(a1,'toLocaleString'))                         // false
 console.log(a1.__proto__.__proto__)                                     // refers Object.prototype
 console.log(a1.__proto__.__proto__.toLocaleString())                    // '[object Object]'

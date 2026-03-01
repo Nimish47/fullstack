@@ -35,6 +35,7 @@ class Employee extends Company {
     resign() {
         console.log(`${this.employeeName} has sbmitted his resignation`) 
         super.exitProcess()                         // CASE2
+        // this.exitProcess() // this will work too, think!
     }
 
     // super will refer Company static

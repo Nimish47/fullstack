@@ -27,5 +27,5 @@ console.log(str2.valueOf())         // hello
 // observe __proto__
 const str3 = new Object("hello")
 console.log(str3)                   // // String {'hello'}
-console.log(str3.__proto__)         // String {'hello'}
+console.log(str3.__proto__)         // String.prototype
 console.log(str3.valueOf())         // hello

@@ -12,7 +12,7 @@ class Bank {
     }
 
     getBalanceArr = () => { console.log(`balance: ${this.balance}`) }                       // CASE2
-    getBalanceArr = function () { console.log(`balance: ${this.balance}`) }                 
+    getBalanceNorm() { console.log(`balance: ${this.balance}`) }                 
 }
 
 // create instance
@@ -30,6 +30,6 @@ cb2()                   // Name: SBI
 
 // CASE2: What happens when arrow method defined in prototype area?
 // gets converted to instance (getBalanceArr)
-console.log(Bank.prototype)                         // {}
+console.log(Bank.prototype)                         // {getBalanceNorm: ƒ}
 console.log(sbi)                               
 // Bank {bankName: 'SBI', balance: 17654, getBalanceArr: ƒ, getBankDetailsNorm: ƒ, getBankDetailsArr: ƒ}
