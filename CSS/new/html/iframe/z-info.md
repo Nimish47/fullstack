@@ -6,7 +6,7 @@
 2. open a local html
     - basic
     - try the js popup thing
-    - elementary stuff on how to diable it
+    - elementary stuff on how to disable it
     
 3. open a youtube video
     - use config from youtube

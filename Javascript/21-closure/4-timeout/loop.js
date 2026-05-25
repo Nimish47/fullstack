@@ -15,7 +15,7 @@ for (var i = 0; i < 5; i++) {
 // fix with "let"
 // before loop execution 'j' not available
 // each iteration => value updates (block scope, GEC)
-// j not available to via closure but by lock scope 
+// j not available to fn via closure but by block scope 
 for (let j = 0; j < 5; j++) {
     setTimeout(function cb() {
         console.log('let', j)       // debug this line

@@ -1,4 +1,4 @@
-// validate of a property exist in an object
+// validate if a property exist in an object
 // static method => hasOwn way
 // best
 

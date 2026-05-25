@@ -9,4 +9,6 @@
     => a nice responsive design
 
 
-    
+## observations
+>> very powerful property
+>> media responsive property

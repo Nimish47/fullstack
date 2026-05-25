@@ -1,0 +1,65 @@
+html,
+body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+.container {
+    min-height: 100dvh;
+    background-color: bisque;
+}
+
+.table-scroll-container {
+    max-width: 100%;
+    overflow: auto;
+    margin: 0 auto 0 auto;
+}
+
+.table-container {
+    background-color: rgb(64, 64, 212);
+    color: white;
+    width: 100%;
+    border-collapse: collapse;
+    table-layout: fixed;
+}
+
+.table-container th {
+    text-align: left;
+    background-color: grey;
+}
+
+.table-container th,
+.table-container td {
+    border: 1px solid white;
+    /* padding: 20px; */
+    width: 100px;
+}
+
+.table-container tfoot td:first-child {
+    text-align: center;
+}
+
+.table-container th:nth-child(4n),
+.table-container td:nth-child(4n) {
+    width: 200px;           /*dont use percentages*/
+}
+
+.table-container th:nth-child(5n),
+.table-container td:nth-child(5n) {
+    width: 300px;
+}
+
+.content {
+    height: 1000px;
+    width: 100%;
+    background-color: black;
+}
+
+td:empty::after {
+  content: "—";
+}
+
+th,td {
+    text-align: center;
+}

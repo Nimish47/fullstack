@@ -10,9 +10,8 @@
 
 .parent div {
     width: 500px;
-    /* min-width: 100px;
-    max-width: 100px; */
-    padding: 20px;
+    min-width: 300px;
+    max-width: 400px;
     flex: 1 1 0px;
     /* flex: 1 1 500px;  */
 }
@@ -20,11 +19,9 @@
 .parent .child1 {
     color: white;
     background-color: red;
-    flex-shrink: 5;
 }
 
 .parent .child2 {
     color: white;
     background-color: blue;
-    flex-grow: 10;
 }

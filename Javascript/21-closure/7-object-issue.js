@@ -5,6 +5,7 @@
 
 // case:
 // explain lexical search flow by JS for "firstName" 
+// this is the issue
 let oldObject1 = {
   firstname: 'Akki',
   age: 18,
@@ -25,7 +26,7 @@ function random1() {
         firstname: 'Akki',
         age: 18,
         getName: function () {
-            console.log(firstname);
+            console.log(firstName);
         }
     }
     return oldObject2
@@ -56,7 +57,7 @@ function random2() {
         firstname: 'Akki',
         age: 18,
         getName: () => {
-            console.log(firstname);
+            console.log(firstName);
         }
     }
     return oldObject2

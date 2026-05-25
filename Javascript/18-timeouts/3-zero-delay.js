@@ -1,8 +1,6 @@
 // Zero delay- really!
 
-const hello = () => {
-    console.log('Hello Buddy')
-}
+const hello = () => { console.log('Hello Buddy') }
 
 console.log('Start...')
 

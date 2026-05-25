@@ -1,21 +1,19 @@
-console.log('start')
+// objects and this
+// value of this inside an object's direct and nested functions
+// object forms no scope
 
-// observe behaviour of let/const/var in loops
-// difficult to observe via devtools but keep in mind this concept
-
-
-// GEC, local scope
-// Same variable referenced for each iteration
-for (var flag2 = 0; flag2 < 5; flag2++) {
-    console.log(flag2)
+const obj = {
+    caseA: function () { console.log(this) },
+    caseB: () => { console.log(this) },
+    caseC: function () { return function () { console.log(this) } },
+    caseD: function () {
+        console.log(this)           // ?
+        return () => {      
+            console.log(this)       // ?
+        }
+    }
 }
 
-// GEC, block scope
-// different variable crated for each iteration but inaccessible like private variables
-// once iteration is over (important concept, visualize in mind)
-// difficult to debug right now
-for (let flag1 = 0; flag1 < 5;flag1++) {
-    console.log(flag1)
-}
 
-console.log('End')
+obj.caseD()()                                               // // {caseA: ƒ, caseB: ƒ, caseC: ƒ, caseD: ƒ}
+

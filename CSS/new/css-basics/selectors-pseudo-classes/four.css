@@ -1,0 +1,4 @@
+.container p:first-child {
+    background-color: black;
+    color: wheat;
+}

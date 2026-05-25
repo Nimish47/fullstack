@@ -5,6 +5,7 @@
 const obj = Object.create({country: 'Australia', city: 'Brisbane'})
 obj.name = 'Mark Waugh',
 obj.profile = 'Cricketer'
+// obj.hasOwnProperty = 'bla bla'
 
 // print object
 console.log(obj)                                            // {name: 'Mark Waugh', profile: 'Cricketer'}

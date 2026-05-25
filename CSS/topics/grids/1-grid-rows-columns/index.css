@@ -5,44 +5,13 @@
 }
 
 .container {
-    display: grid;
-    grid-template-columns: 200px 600px 200px;
-    grid-template-rows: 200px 200px;
-    gap: 10px;
-    /* column-gap: 10px;
-    row-gap: 10px; */
+    height: 100dvh;
+    display: flex;
+
 }
 
 .container div {
-    padding: 20px;
-}
-
-.one {
-    color: white;
-    background-color: red;
-}
-
-.two {
-    color: white;
     background-color: blue;
-}
-
-.three {
-    color: white;
-    background-color: green;
-}
-
-.four {
-    color: white;
-    background-color: black;
-}
-
-.five {
-    color: white;
-    background-color: rgb(243, 141, 153);
-}
-
-.six {
-    color: white;
-    background-color: rgb(42, 235, 187);
+    padding: 20px;
+    color: wheat;
 }

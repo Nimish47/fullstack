@@ -1,7 +1,6 @@
 // Agenda: Basic Closure Intro
 // Explain how printer has access to all (via devtools and scope: closure)
 // here let/const/var don't matter
-// In this example innermost function is executed immediately
 // explain via devtools debug
 // explained in 20-scope -> 5-lex
 

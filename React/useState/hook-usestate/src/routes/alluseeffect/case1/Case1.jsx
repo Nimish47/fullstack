@@ -10,12 +10,12 @@ function Case1() {
         console.log('parent: mounted')
     }, [])
 
-    useEffect(()=>{
+    useEffect(() => {
         console.log('parent: details updated', details)
-    },[details])
+    }, [details])
 
     // this runs everytime this comp re-renders
-    useEffect(()=>{
+    useEffect(() => {
         console.log('madman:parent')
         return () => { console.log('cleanup:parent') }
     })

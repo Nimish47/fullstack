@@ -9,6 +9,7 @@
     // if we have a 3D array and depth = 2, resultant array will be a 1-D array
 // original array untouched    
 
+// OPERATION OCCURS ON EACH ELEMENT
 
 const arr = [1, [2, 3], [[4], 5]]
 console.log(arr.flat())         // [ 1, 2, 3, [ 4 ], 5 ]

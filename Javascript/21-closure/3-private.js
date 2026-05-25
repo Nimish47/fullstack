@@ -1,4 +1,5 @@
 // private variable concept via closures
+// encapsulation
 
 const customer = () => {
     let custDetails = {
@@ -7,8 +8,12 @@ const customer = () => {
     }
 
     // custDetails is accessible to these 3 fns because of closure
-    const updateName = (custName) => custDetails.name = custName    
-    const updateBalance = (amount) => custDetails.balance += amount
+    const updateName = (custName) => {
+        custDetails.name = custName 
+    }    
+    const updateBalance = (amount) => {
+        custDetails.balance += amount
+    }
 
     // debug this console line in devtools
     // seperate EC formed same name : getCustomerDetails
@@ -40,4 +45,3 @@ microsoftEmployee.getCustomerDetails()  // { name: 'Prakash', balance: 80000 }
 // can't access directly, returns undefined
 // since from customer fn we did not return custInfo
 console.log('unable to access',googleEmployee.custDetails)
-

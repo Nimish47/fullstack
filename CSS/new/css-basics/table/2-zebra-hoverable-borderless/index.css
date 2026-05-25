@@ -1,0 +1,48 @@
+html,
+body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+.container {
+    height: 100dvh;
+}
+
+.table-container {
+    background-color: rgb(43, 202, 138);
+    color: white;
+    width: 80%;
+    margin: 0 auto 0 auto;
+    border-collapse: collapse;
+}
+
+.table-container th {
+    text-align: left;
+}
+
+.table-container th,
+.table-container td {
+    padding: 20px;
+}
+
+.table-container tbody tr:nth-child(even) {
+    background-color: rgb(113, 195, 20);
+    color: white;
+}
+
+.table-container tbody tr:nth-child(odd) {
+    background-color: rgb(203, 232, 98);
+    color: black;
+}
+
+tfoot tr td:nth-child(1) {
+    text-align: center;
+}
+
+.table-container thead tr:hover,
+.table-container tbody tr:hover,
+.table-container tfoot tr:hover  {
+    background-color: rgb(123, 119, 115);
+    cursor: pointer;
+}

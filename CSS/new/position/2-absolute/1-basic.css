@@ -8,7 +8,7 @@ body {
     color: white;
     padding: 20px;
     position: absolute;
-    top: 0;
+    top: 0;         /* by default width of an absolute item collapses */
 }
 
 .content {

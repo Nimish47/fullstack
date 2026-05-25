@@ -19,11 +19,14 @@ body {
 .one {
     background-color: green;
     color: white;
+
 }
 
 .two {
     background-color: purple;
     color: white;
+    align-self: flex-end;
+    /*no such thing as justify-self*/
 }
 
 .three {
@@ -34,7 +37,9 @@ body {
 .four {
     background-color: orangered;
     color: white;
-    margin-top: auto; /* won't work */
+    margin-top: auto;
+    /* won't work */
+    align-self: center;
 }
 
 .five {

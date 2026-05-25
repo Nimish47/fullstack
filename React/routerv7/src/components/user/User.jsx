@@ -14,7 +14,7 @@ const User = () => {
 
       <div>
         <p><strong>Name:</strong> {data.name}</p>
-        <p><strong>UserId:</strong> {userId} <span>(from useparams)</span></p>
+        <p><strong>UserId:</strong> {typeof userId} {userId}<span>(from useparams)</span></p>
         <p><strong>Email:</strong> {data.email}</p>
         <p><strong>Phone:</strong> {data.phone}</p>
         <p><strong>Website:</strong> {data.website}</p>

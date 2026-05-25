@@ -12,4 +12,12 @@ export default function AuthComponent() {
 
     if (navigation.state === "loading") return <SuspenseLoader />
     return <Outlet />
+
+//   return (
+//     <>
+//       {navigation.state === "loading" && <SuspenseLoader />}
+//       <Outlet />
+//     </>
+//   );    
+
 }

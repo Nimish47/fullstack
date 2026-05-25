@@ -3,6 +3,8 @@
 // copy by reference
 // even level 1 elements affected
 
+// understand diff b/w assignement and mutation
+
 // define array
 let arr = ['apple', { fName: 'arjun' }]
 

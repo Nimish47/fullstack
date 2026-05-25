@@ -9,4 +9,4 @@ function test() {
 }
 flag = 20;
 
-test()();
+test()();   // 10

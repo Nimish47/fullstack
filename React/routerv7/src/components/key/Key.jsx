@@ -7,7 +7,7 @@ export const Key = () => {
     const [key, setKey] = useState(Math.floor(Math.random() * 1000000))
     const [expiry, setExpired] = useState(false)
     const [counter, setCounter] = useState(10)
-    // const navigate = useNavigate()
+    //const navigate = useNavigate()
 
     const isValidUser = localStorage.getItem("username") === "hitman47"
 
@@ -44,8 +44,14 @@ export const Key = () => {
         }, 1000)
     }
 
-    //if (!isValidUser) navigate('/error')   Not a good idea
-    if (!isValidUser) return <Navigate to="/error"/>   // best approach
+    // Not a good idea
+    // if (!isValidUser) navigate('/error')
+
+    // Best approach
+    if (!isValidUser) return <Navigate
+        to="/error" state={{ fromRoute: '/key', error: 'Unaiuthorized Access' }}
+        replace
+    />
 
     return (
         <div className={styles.lockContainer}>

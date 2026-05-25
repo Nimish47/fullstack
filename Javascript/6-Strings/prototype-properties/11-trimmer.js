@@ -9,8 +9,8 @@
 
 const str = "   My name is Varan   "
 
-console.log(str.trimStart())        //"My name is Varan"
+console.log(str.trimStart())        //"My name is Varan   "
 
 console.log(str.trimEnd())          //"   My name is Varan"
 
-console.log(str.trim())             //"My name is Varan   "  
+console.log(str.trim())             //"My name is Varan"  

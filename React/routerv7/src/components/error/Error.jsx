@@ -16,7 +16,7 @@ export const Error = () => {
         <div className={styles.errorContainer}>
            <div className={styles.container}>
             <div>Coming from: {from}</div>
-            <div>Message: Some error occured! Debug error object to find source of issue</div>
+            <div>{error}</div>
            </div>
         </div>
     )

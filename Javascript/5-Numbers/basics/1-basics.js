@@ -12,3 +12,8 @@ const num2 = new Number(46)     // type B
 
 console.log(num1)               // 23
 console.log(num2)               // [Number: 46]
+
+console.log(typeof num1)        // 'number'
+console.log(typeof num2)        // 'object'
+
+

@@ -12,7 +12,7 @@ function Child1({ details, handleDetails }) {
         //perform async task
         mockFetch()
         return () => {
-            console.log('child: cleanup')
+            console.log('child: cleanupx')
             clearTimeout(ref.current)
             ref.current = null
         }

@@ -16,7 +16,8 @@ function test() {
 
 var flag = 20;
 
-test()(); // 10
+const cb = test()
+cb() // 10
 
 // scenario #2
 // we remove "flag" from "test2 EC"

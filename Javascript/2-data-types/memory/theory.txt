@@ -1,0 +1,9 @@
+- stack v/s heap
+- copy by value v/s copy by reference
+- mutation
+    - of prims
+    - of object (.)
+    - of array ([] and other methods)
+- reassignment
+- Immutability
+- Garbage collection and reassignment

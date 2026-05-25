@@ -2,11 +2,12 @@
 
 let mapper = new Map([['fName', 'Nishant'], ['age', 20]])
 
+// best
 for (const [key,value] of mapper) {
     console.log(key,value)
 }
-// [ 'fName', 'Nishant' ]
-// [ 'age', 20 ]
+// fName Nishant
+// age 20
 
 
 for (const item of mapper.values()) {

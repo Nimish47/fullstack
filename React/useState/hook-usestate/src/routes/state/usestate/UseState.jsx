@@ -14,6 +14,7 @@ function UseState() {
                     data.map((item) => (
                         //a very important thing about Link
                         // does not replace URL but appends
+                        // for a brand new route start with '/'
                         <Link className={styles.link} to={`${item}`} key={item}>
                             {item}
                         </Link>

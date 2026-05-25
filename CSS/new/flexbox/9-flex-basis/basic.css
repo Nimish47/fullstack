@@ -9,8 +9,10 @@ body {
 }
 
 .navbar div {
-    flex: 1;
-    width: 200px;
+    flex-basis: 100px;
+    flex-grow: 0;
+    flex-shrink: 0;
+    width: 50px;
 }
 
 .home {

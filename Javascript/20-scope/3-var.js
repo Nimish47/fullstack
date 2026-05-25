@@ -12,6 +12,11 @@
 // [EC : GEC, scope: local] 
 var appName = "Yolo App"
 
+// block cannot contain a var
+{
+    var appdID = 1234;
+}
+
 function appRun() {
     // this is only available in appRun EC
     // proves "var" fn scope if defined within fn
@@ -19,5 +24,7 @@ function appRun() {
     var appCommand = 'CTRL + S'
     console.log(appCommand)
 }
+
+appRun()
 
 console.log(appName)

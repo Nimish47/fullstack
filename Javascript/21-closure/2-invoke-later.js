@@ -16,7 +16,9 @@ function country() {
     return printCountry;
 }
 
-appID = 'gamma'
 
 let fn = country()
+
+appID = 'gamma'
+
 fn()

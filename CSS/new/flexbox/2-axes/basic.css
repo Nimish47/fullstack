@@ -7,10 +7,10 @@ body {
     border: 2px solid black;
     height: 70vh;
     display: flex;
-    /* flex-direction: row; */
-    /* flex-direction: row-reverse; */
-    /* flex-direction: column; */
-    /* flex-direction: column-reverse; */
+    /* flex-direction: row;
+    flex-direction: row-reverse;
+    flex-direction: column;
+    flex-direction: column-reverse; */
 }
 
 .home {

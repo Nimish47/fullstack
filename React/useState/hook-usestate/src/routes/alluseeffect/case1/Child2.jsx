@@ -28,6 +28,7 @@ function Child2() {
         console.log('grandchild: function')
     }, [fn])
 
+    // of no use
     useEffect(() => {
         console.log('grandchild: ref', ref)
     }, [ref])

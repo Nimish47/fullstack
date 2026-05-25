@@ -21,6 +21,7 @@
     => empty cell
     => too much data in the cell
     => play at different screen sizes to see layout
+    => this example shows true nature of responsive tables
 
 4. weird layout
     => a weird layout - see youtube example

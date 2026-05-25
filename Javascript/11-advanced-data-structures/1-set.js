@@ -5,7 +5,7 @@
  *  - a good usecase of set is to use it to remove duplicates in an array
  *  - no duplicate data allowed in set
  *      - data equality is decided by:
- *          - for non-prims: if same refrence
+ *          - for non-prims: if same reference
  *          - for prim: if same value
  * To define a set:
  *  - new Set()  

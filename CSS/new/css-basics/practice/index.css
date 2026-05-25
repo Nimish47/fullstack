@@ -1,0 +1,36 @@
+body {
+    background-color: black;
+}
+
+.item1,
+.item2,
+.item4 {
+    background-color: blanchedalmond;
+    width: 200px;
+    height: 250px;
+    padding: 10px;
+    border: 5px solid greenyellow;
+    margin: 17px;
+}
+
+.item2 {
+    box-sizing: border-box;
+}
+
+.item3,
+.item4 {
+    background-color: blanchedalmond;
+    width: 100px;
+    height: 150px;
+    padding: 10px;
+    border: 5px solid greenyellow;
+    margin: 17px;
+}
+
+.item3 {
+    display: inline;
+}
+
+.item4 {
+    display: inline-block;
+}

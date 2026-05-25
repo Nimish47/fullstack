@@ -6,11 +6,11 @@ function LazyState(props) {
 
     const [counter, setCounter] = useState(0)
 
-    // explensive computation data    
+    // expensive computation data    
     const [data] = useState(() => {
         console.log('compute expensive data')
-        const fruits = props.users.map(user => user.country)
-        return [...new Set(fruits)]
+        const arr = props.users.map(user => user.country)
+        return [...new Set(arr)]
     })
 
     const incrementer = () => setCounter(counter + 1)

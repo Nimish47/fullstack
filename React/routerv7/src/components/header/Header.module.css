@@ -10,14 +10,19 @@
     height: 100%;
 }
 
-.link {
+.link,.boldLink {
     color: white;
     letter-spacing: 2px;
     font-weight: 600;
     text-decoration: none;
 }
 
-.link:hover {
+.boldLink {
+    font-weight: 900;
+    font-style: italic;
+}
+
+.link:hover, .boldLink:hover {
     color: rgb(215, 153, 17);
 }
 

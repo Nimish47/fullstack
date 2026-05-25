@@ -8,6 +8,7 @@ function adder(a, b, c) {
 }
 adder(10, 20, 30)                                              
 
+
 // issue: arrow functions
 // arguments do not work as intended
 const adder2 = (a, b, c) => { 

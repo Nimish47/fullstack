@@ -7,15 +7,14 @@ html,body {
 .container {
     min-height: 100dvh;
     width: 100%;
-    background-color: rgb(213, 213, 162);
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
 .iframeItem {
-    width: 800px;
-    height: 600px;
-    border: 10px solid rgb(202, 124, 124);
+    width: 400px;
+    height: 300px;
+    border: 10px solid rgb(226, 213, 213);
     overflow: auto;
 }

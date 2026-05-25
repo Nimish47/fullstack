@@ -21,15 +21,14 @@
     container should have some valid height
     show the behaviour using issue2.html        
 
-
 ## sticky -> show different stages
-    initially relative to [ container ]
+    initially relative to [ container ] ??
     we scroll down -> it reaches threshold (w.r.t to [ viewport ]) -> becomes fixed
     we scroll further down and reach end of parent container
     the element scrolls away
 
 ## sticky - short
-    initially - relative to parent (calculated by offset value)
+    initially - relative to parent (calculated by offset value) ??
     threshold reached -> now relative to viewport
     parent exit - sticky element scrolls away 
 
@@ -37,3 +36,10 @@
     initially relative to viewport
     stays as long we scroll down, whether we exit current parent or not,
     the fixed element remains relative to viewport only
+
+
+## others
+>> initially sticky items appear as relative items would do
+>> once threshold reaches they behave like fixed
+>> parent exit, sticky exit
+>> sticky = relative + fixed

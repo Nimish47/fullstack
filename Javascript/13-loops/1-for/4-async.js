@@ -1,9 +1,7 @@
 // async operation in a FOR loop
 
 const fetchData = (data) => new Promise((resolve) => {
-    setTimeout(() => {
-        resolve(data.toUpperCase())
-    }, 2000)
+    setTimeout(() => resolve(data.toUpperCase()), 2000)
 })
 
 const api = async () => {

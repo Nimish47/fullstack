@@ -25,7 +25,7 @@
 // ECs are like different bathrooms
 let a = 10;
 {
-  let a = 20;
+  let a = 20;           // allowed as diff scope (same EC)
   console.log('shadow1', a);  //20
 }
 console.log('shadow 1', a); //10
@@ -34,6 +34,7 @@ console.log('shadow 1', a); //10
 // 1st x = [GEC, local]
 // 2nd x = [test,local]
 // different EC's, no issues, treated as independent
+// closure not needed here in test
 let x = 10;
 function test() {
   let x = 20;
@@ -77,19 +78,16 @@ if (true) {
 console.log('shadow 5',counter);  //10
 
 // priority
-// Inner EC has access to 2 closures => [Outer EC, GEC]
-// ClOSURE THAT HAS NEAREST LEXICAL SCOPE GETS HIGHER PREFERENCE
-
+// only needs Clousre from Outer (not needed from global one)
 let v = 1;
 
 function outer() {
   let v = 2;
-  function inner() {
+  return function inner() {
     console.log('priority',v);
   }
-  inner();
 }
 
-outer(); //2
-
+const cb1 = outer()
+const cb2 = cb1() //2
 

@@ -7,22 +7,26 @@ body {
 
 .container {
     height: 100dvh;
-    background-color: rgb(196, 40, 40);
+    background-color: rgb(226, 137, 137);
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
 .textboxer {
-    padding: 20px;
-    width: 200px;
+    padding: 40px;
+    width: 500px;
+    border: none;               /*important*/
+    border-radius: 50px;
+
 }
 
 .textboxer:hover {
-    background-color: black;
+    background-color: rgb(43, 109, 37);
     cursor: pointer;
 }
 
 .textboxer:focus {
-    outline: 10px solid black;
+    background-color: rgb(104, 218, 93);
+    outline: 2px solid black;
 }

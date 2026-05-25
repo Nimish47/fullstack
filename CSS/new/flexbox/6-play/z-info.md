@@ -19,3 +19,9 @@
 
 THIS IS WHY FLEXBOX USED FOR 2-D LAYOUTS ONLY
 
+
+## others
+>> main issues is you can move items at will on - cross axis (via align-items)
+>> but you cannot on main axis (no such thing as justify-self)
+
+>> centering only good if parent has only one child, that's it

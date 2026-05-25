@@ -11,7 +11,7 @@ export const Locker = () => {
 
     const showMatrix = () => {
         setLock(true)
-        navigate('/locker/key', { replace: true })
+        navigate('key', { replace: true })      // relative url always works
     }
 
     return (

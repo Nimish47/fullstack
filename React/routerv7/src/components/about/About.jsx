@@ -3,7 +3,7 @@ import { useEffect, useState } from 'react'
 import styles from './About.module.css'
 import { BadBubble } from './badBubble/BadBubble'
 import { WorstBubble } from './worstBubble/WorstBubble'
-import { useLocation, useNavigate } from 'react-router-dom'
+import { useLocation, useNavigate, Outlet } from 'react-router-dom'
 
 
 export const About = () => {
@@ -20,7 +20,8 @@ export const About = () => {
             console.log(data)
         } catch (error) {
             navigate('/error', {
-                state: { errorMessage: error, fromRoute: location.pathname },
+                state: { error: error.message, fromRoute: location.pathname },
+                replace: true
             })
         }
     }
@@ -44,6 +45,7 @@ export const About = () => {
                     <WorstBubble />
                 </div>
             </div>
+            <Outlet />
         </div>
     )
 }

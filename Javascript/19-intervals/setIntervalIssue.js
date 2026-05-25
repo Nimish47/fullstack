@@ -1,33 +1,41 @@
+// what we want
+// Cooking started -> Cooking in progress -> Cooking finished,pizza is ready! (in loop)
+
+// setIntervals and setTimouts overlap
+// order not guaranteed
 const irregularFn = () => {
     setInterval(async () => {
-        console.log('Cooking started')
-
-        // cause a deliberate 2s delay
-        await new Promise(resolve => {
-            console.log('Cooking in progress!')
-            setTimeout(resolve, 2000)
-        })
-
-        console.log('Cooking finished, pizza is ready!')
+    console.log('Cooking started')
+    await new Promise(resolve => setTimeout(resolve, 1000))         // cause a deliberate 1s delay    
+    
+    console.log('Cooking in progress!')
+    await new Promise(resolve => setTimeout(resolve, 1000))         // cause a deliberate 1s delay
+    
+    console.log('Cooking finished, pizza ready!')
+    await new Promise(resolve => setTimeout(resolve, 1000))         // cause a deliberate 1s delay
     }, 1000);
 }
 
 irregularFn()
 
+
+// perfect solution to guarantee order
+// order is guaranteed
+// recursion
 const regularFn = async () => {
     console.log('Cooking started')
+    await new Promise(resolve => setTimeout(resolve, 1000))         // cause a deliberate 1s delay    
     
-    // cause a deliberate 2s delay
-    await new Promise(resolve => {
-        console.log('Cooking in progress!')
-        setTimeout(resolve, 2000)
-    })
+    console.log('Cooking in progress!')
+    await new Promise(resolve => setTimeout(resolve, 1000))         // cause a deliberate 1s delay
     
     console.log('Cooking finished, pizza ready!')
-    setTimeout(regularFn, 1000)
+    await new Promise(resolve => setTimeout(resolve, 1000))         // cause a deliberate 1s delay
+
+    regularFn() // recursion
 }
 
-//regularFn()
+// regularFn()
 
 
 // meaning of below line

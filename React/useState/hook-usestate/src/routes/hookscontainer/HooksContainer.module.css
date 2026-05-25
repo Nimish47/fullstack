@@ -19,7 +19,7 @@
     display: grid;
     justify-content: center;
     gap: 20px;
-    grid-template-columns: repeat(4, 275px);
+    grid-template-columns: repeat(4, 200px);
     grid-auto-rows: 250px;
     height: 80vh;
 }

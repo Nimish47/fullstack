@@ -10,7 +10,7 @@ export default function Users() {
         <div className={styles.dynamicComponent}>
             <div className={styles.cardContainer}>
                 {data.map((user) => (
-                    <Link className={user.id !== 47 ? styles.link : styles.hitmanLink} to={`/users/${user.id}`}>
+                    <Link className={user.id !== 47 ? styles.link : styles.hitmanLink} to={`${user.id}`}>
                         <div key={user.id}>{user.name}</div>
                     </Link>
                 ))}

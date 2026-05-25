@@ -1,7 +1,7 @@
 // Primitive datatype - String
 
 
-const str1 = "1 A primitive strinG"
+const str1 = "1 A primitive string"
 const str2 = `2 Another primitive string`
 const str3 = new String("3 A string object")
 

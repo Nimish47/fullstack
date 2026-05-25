@@ -1,9 +1,11 @@
 // best way to compare anything in entire JS
 // Object.is(any,any)
 // static method
-// better than ===
-// slower than ===
+// cover more edge cases than ===
+// slower performance than ===
 
+// prims => value/type/both equality
+// non-prims => referential equality
 
 // CASE: compare two primitives
 console.log(Object.is(2, 2))                        // true

@@ -3,18 +3,20 @@ import styles from './ClearTimeout.module.css'
 
 function ClearTimeout() {
     const [message, setMessage] = useState('Loading...')
-    const clearRefs = useRef([])
+    // const clearRefs = useRef([])
     const buttonRef = useRef()
 
     useEffect(() => {
         const id = setTimeout(function partyStart() {
             setMessage('Party starts!!!')
-        }, 1000);
-        clearRefs.current.push(id)
+            //console.log('leak')
+        }, 5000);
+        // clearRefs.current.push(id)
 
         return () => {
-            clearRefs.current.forEach(timeoutId => clearTimeout(timeoutId))
-            clearRefs.current = [];
+            clearTimeout(id)
+            // clearRefs.current.forEach(timeoutId => clearTimeout(timeoutId))
+            // clearRefs.current = [];
             buttonRef.current = null
         }
     }, [])
@@ -31,6 +33,8 @@ function ClearTimeout() {
 
         buttonRef.current = id
     }
+
+    console.log('comp render')
 
     return (
         <div className={styles.container}>

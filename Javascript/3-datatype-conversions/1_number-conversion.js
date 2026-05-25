@@ -2,6 +2,7 @@
 
 
 let a = Number(2);  //returns number 2
+let aa = Number("222")  // returns 222
 let b = Number("apple"); // returns NaN
 let c = Number(true); //* returns number 1 
 let d = Number(null); //* returns number 0

@@ -4,7 +4,7 @@
 // arr.splice(startIndex:op,removeCount:op,addValue1:op,addValue2:op,...)
 
     // startIndex: from where we want to perform operation
-    // removeCount: remove elements from index = [startIndex,startIndex+removecount]
+    // removeCount: remove elements from index = [startIndex,startIndex+removecount)
     // addValue(s): add values to array at index = startIndex (after remove operation is done)
 
 // if no params specifed, empty array returned and original array untouched
@@ -21,12 +21,12 @@ const arr3 = ["Jan", "Feb", "Mar", "Apr"]
 const arr4 = ["Jan", "Feb", "Mar", "Apr"]
 
 const removedArr1 = arr1.splice()
-const removedArr2 = arr2.splice(1)
-const removedArr3 = arr3.splice(2,3)
-const removedArr4 = arr4.splice(1,2,"Nov","Oct")
+const removedArr2 = arr2.splice(1)                                      // remove [1, last]
+const removedArr3 = arr3.splice(2,3)                                    // remove [2,5)
+const removedArr4 = arr4.splice(1,2,"Nov","Oct")                        // remove [1,3)     ->    // add [1]
 
 console.log(`${arr1} | ${removedArr1}`)        // ["Jan","Feb","Mar","Apr"] | []
 console.log(`${arr2} | ${removedArr2}`)        // ["Jan"] | ["Feb","Mar","Apr"]
-console.log(`${arr3} | ${removedArr3}`)        // ["Jan","Apr"] | ["Feb","Mar"]
+console.log(`${arr3} | ${removedArr3}`)        // ['Jan', 'Feb'] | ['Mar', 'Apr']
 console.log(`${arr4} | ${removedArr4}`)        // ["Jan","Nov","Oct","Apr"] | ["Feb","Mar"]
 

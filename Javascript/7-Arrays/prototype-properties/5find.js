@@ -7,7 +7,7 @@
 // if no match occurs, undefined returned
 
 const arr = ["apple", "oranges", "bananas", "grapes", "bananas"]
-const newArr= arr.find((item) => item === "bananas")
-const newArr2= arr.find((item) => item === "kiwi")
-console.log(newArr)             // "bananas"
-console.log(newArr2)            // undefined
+const data1= arr.find((item) => item === "bananas")
+const data2= arr.find((item) => item === "kiwi")
+console.log(data1)             // "bananas"
+console.log(data2)             // undefined

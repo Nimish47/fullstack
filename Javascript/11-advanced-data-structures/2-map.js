@@ -63,7 +63,7 @@ let list3 = new Map([['employee', { name: 'Aman', age: 18 }]])
 
 log(list1)      // Map(0) {}
 log(list2)      // Map(2) { 'category' => 'Grocery', 'amount' => 999 }  
-log(list3)        // Map(1) { 'employee' => { name: 'Aman', age: 18 } }  
+log(list3)      // Map(1) { 'employee' => { name: 'Aman', age: 18 } }  
 
 // size
 log(list1.size)     // 0
@@ -115,3 +115,5 @@ list1.clear()
 log(list1)              // Map(0) {}
 
 // access oldest key
+// order is preserved
+console.log(list1.keys().next().value)

@@ -1,8 +1,6 @@
 // Basics: The clearTimeout function
 
-const hello = () => {
-    console.log('hello buddy')
-}
+const hello = () => { console.log('hello buddy')}
 
 console.log('Start...')
 

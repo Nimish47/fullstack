@@ -8,7 +8,7 @@ body {
 
 .container {
     min-height: 100%;
-    background-color: black;
+    background-color: rgb(219, 191, 191);
     color: white;
     padding-top: 20px;
     box-sizing: border-box;
@@ -18,19 +18,17 @@ body {
     width: 200px;
     height: 200px;
     margin: 0 auto 50px auto;
-    font-size: 1.25rem;
+    font-size: 1.5rem;
 }
 
 .container .one {
     background-color: rgb(227, 227, 59);
-    overflow: auto;
-    /* overflow-x: hidden; */
-    /* font-size: 0.5rem; */
+    overflow: auto; /* try different values */ 
 }
 
-.two {
+.container .two {
     background-color: green;
-    overflow: hidden;
+    margin-bottom: 200px;
 }
 
 .container .three {

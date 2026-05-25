@@ -8,5 +8,3 @@ for (let i = 0; i < arr.length; i++) {
 }
 
 // apple
-// oranges
-// banana

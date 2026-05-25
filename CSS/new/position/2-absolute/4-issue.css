@@ -23,8 +23,8 @@ body {
       border-radius: 20px;
       position: absolute;
       top: 0;
-      left: 0;
-      right: 0;
+      left: 0;  /* use this for 100% width with position: absolute */
+      right: 0; /* use this for 100% width with position: absolute */
 }
 
 .demo-bottom {

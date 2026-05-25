@@ -6,6 +6,10 @@ body {
     height: 100%;
 }
 
+a {
+    color: bisque;
+}
+
 .container {
     min-height: 200dvh;
     background-color: black;

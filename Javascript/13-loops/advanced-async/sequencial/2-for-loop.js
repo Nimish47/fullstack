@@ -6,11 +6,11 @@ const eat = () => new Promise((resolve) => setTimeout(() => resolve('EAT'), 1000
 const school = () => new Promise((resolve) => setTimeout(() => resolve('SCHOOL'), 1000));
 const sleep = () => new Promise((resolve) => setTimeout(() => resolve('SLEEP'), 1000));
 
-const promiseArr = [wake, brush, eat, school, sleep]
+const promiseFns = [wake, brush, eat, school, sleep]
 
 const dailyRoutine = async () => {
-    for (const fire of promiseArr) {
-        const response = await fire()
+    for (const fn of promiseFns) {
+        const response = await fn()
         console.log(response)
     }
 };

@@ -95,24 +95,22 @@ body {
     border: 5px solid black;
 }
 
+/*important*/
 .hoverMe:hover .tooltip {
     opacity: 1;
     pointer-events: auto;
     display: block;
 }
 
-
-
 .modal-backdrop {
-    display: none;  /*to change it need to add javascript*/
-    position: absolute;
+    display: block;  /*to change it need to add javascript*/
+    position: fixed;    /*better as per gpt*/
     inset: 0;
-    /* background: rgba(255, 255, 255, 0.2); */
     backdrop-filter: blur(3px);
 }
 
 .modal {
-    position: absolute;
+    position: fixed;
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);

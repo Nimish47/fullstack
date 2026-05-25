@@ -34,6 +34,7 @@ if (appName) {
 function appRun() {
     const appId = '123$'
     if (appId) {
+        // [EC : appRun, scope: Block]
         const key = 'alpha1234'
         console.log(key)
     }

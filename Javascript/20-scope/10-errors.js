@@ -7,6 +7,7 @@
 // no such variable named "appName" anywhere in program hence the error
 console.log(appName)       // ReferenceError: appName is not defined
 
+
 // reference error - 2 (TDZ)
 // "appID" is hoisted but since type is "let", it;s currently in TDZ and not accessible yet
 console.log(appID)

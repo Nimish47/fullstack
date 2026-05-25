@@ -22,6 +22,7 @@ ss.add('apple')
 const res = [...ss]            
 console.log(res)                                    // [ 1, 'apple' ]
 
+
 // CASE: update one property while others unchanged
 // classic React UseCase
 const obj3 = { fid: 1, fName: 'Amit', age: 18, country: 'IN' }
@@ -37,4 +38,4 @@ adder(...arr)                                        // 100
 
 
 // warning: shallow clone
-// check concatenate objects section
+// check clone section

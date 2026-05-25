@@ -13,7 +13,7 @@
    
 # conclusion:
     not possible
-    flex is good for 2-d layout only
+    flex is good for 1-d layout only
     abscence of something like justify-items hurt
     so for above scenrio, still position: relative+absolute is better!
 

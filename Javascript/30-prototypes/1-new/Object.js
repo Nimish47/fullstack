@@ -4,7 +4,7 @@
 // Instance __proto__ depends on value passed to constructor
 
 
-const {log} = console
+const { log } = console
 
 
 // CASE: Analyze Object.__proto__
@@ -23,7 +23,7 @@ log(a1.__proto__)                               // Object.prototype
 
 // CASE: new Object(obj)
 // analyze instance.__proto__
-const a2 = new Object({fName: 'Nishant'})
+const a2 = new Object({ fName: 'Nishant' })
 log(a2) // { fName: 'Nishant' }
 log(a2.__proto__)                               // Object.prototype
 // a1.toString()                                // possible
@@ -31,7 +31,7 @@ log(a2.__proto__)                               // Object.prototype
 
 // CASE: new Object(arr)
 // analyze instance.__proto__
-const a3 = new Object([5,10,15,20])
+const a3 = new Object([5, 10, 15, 20])
 log(a3)                                          // [ 5, 10, 15, 20 ]
 log(a3.__proto__)                                // Array.prototype
 // a3.map                                        // possible

@@ -35,3 +35,7 @@
 => can only position w.r.t container
 => illusions that its positioned w.r.t viewport like fixed but but can never be fixed
 
+
+## other observations
+- by default width collapses to content-size
+- for 100% width with "absolute" applied => check code

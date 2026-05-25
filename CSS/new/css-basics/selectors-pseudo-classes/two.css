@@ -15,14 +15,21 @@ body {
     padding: 10px;
 }
 
-.container div:nth-child(even) {
+/* .container div:nth-child(even) {
+    background-color: rgb(126, 119, 223);
+    color: white;
+    padding: 10px;
+} */
+
+.container div:nth-of-type(even) {
     background-color: rgb(126, 119, 223);
     color: white;
     padding: 10px;
 }
 
-.container div:first-child, .container div:last-child {
-    background-color: rgb(220, 52, 52);
+
+.container p:nth-of-type(1) {
+    background-color: green;
     color: white;
     padding: 10px;
 }

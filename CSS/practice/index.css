@@ -1,0 +1,17 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+.container {
+    min-height: 100dvh;
+    background-color: rgb(152, 40, 40);
+    display: grid;
+    grid-template-columns: repeat(3, 200px);
+    grid-auto-rows: auto;   /*content-height -> remaining space distributed among implicit rows*/
+}
+
+.container div {
+    background-color: rgb(113, 214, 74);
+    border: 1px solid black;
+}

@@ -9,5 +9,3 @@ for (const item of arr) {
 }
 
 // apple
-// oranges
-// papaya
