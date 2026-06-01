@@ -5,7 +5,6 @@ import { useEffect, useState } from 'react'
 export const RootErrorElement = () => {
 
     const error = useRouteError()
-
     const [message, setMessage] = useState("")
 
     // Handle the error and set the message based on the type of error

@@ -6,4 +6,5 @@ export const syncLoaderFn = ({ params }) => {
         // without a errorElement this will crash the app
         console.log([].map())
     }
+    return null;
 }

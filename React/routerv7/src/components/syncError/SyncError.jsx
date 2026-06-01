@@ -6,6 +6,7 @@ function SyncError() {
     const { source } = useParams()
     const navigate = useNavigate()
 
+    // errorElement can handle this error
     if (source === 'component') {
         // some gibberish to throw error
         // without a errorElement this will crash the app

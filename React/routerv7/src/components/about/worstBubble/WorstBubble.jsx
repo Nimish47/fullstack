@@ -21,10 +21,11 @@ export const WorstBubble = () => {
         try {
             const INVALID_URL = `https://jsonplaceholder.typicode`;
             const response = await fetch(INVALID_URL);
-            return response.json();
+            const res =  await response.json();
+            return res
         } catch (error) {
             navigate('/error', {
-                state: { errorMessage: error, fromRoute: location.pathname },
+                state: { error: error.message, fromRoute: location.pathname },
             })
         }
     }
