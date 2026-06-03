@@ -11,7 +11,7 @@
 }
 
 .barsLoader div {
-  background: black;
+  background: rgb(51, 177, 60);
   width: 58px; /* Make the bars wider */
   animation: bounce 1.2s infinite ease-in-out;
 }

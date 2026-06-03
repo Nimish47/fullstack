@@ -46,13 +46,13 @@ import SyncErrorHandler from './components/errorRouteHandler/syncerror/SyncError
 import { syncLoaderFn } from './components/syncError/SyncLoader.js';
 
 
-//import GoodLazy from './components/goodlazy/GoodLazy.jsx';
-const GoodLazy = lazy(() => import(/* webpackChunkName: "GoodLazy" */  './components/goodlazy/GoodLazy.jsx'))
+// import GoodLazy from './components/goodlazy/GoodLazy.jsx';
+const GoodLazy = lazy(() => import(/* webpackChunkName: "GoodLazyy" */  './components/goodlazy/GoodLazy.jsx'))
 
-const BadLazy = lazy(() => import(/* webpackChunkName: "BadLazy" */ './components/badlazy/BadLazy.jsx'))
-//import BadLazy from './components/badlazy/BadLazy.jsx';
+const BadLazy = lazy(() => import(/* webpackChunkName: "BadLazyy" */ './components/badlazy/BadLazy.jsx'))
+// import BadLazy from './components/badlazy/BadLazy.jsx';
 
-const WorstLazy = lazy(() => import(/* webpackChunkName: "WorstLazy" */ './components/worstlazy/WorstLazy.jsx'))
+const WorstLazy = lazy(() => import(/* webpackChunkName: "WorstLazyy" */ './components/worstlazy/WorstLazy.jsx'))
 //import WorstLazy from './components/worstlazy/WorstLazy.jsx';
 
 
@@ -166,7 +166,7 @@ export const router = createBrowserRouter([
           },
           {
             path: "badlazy",
-            // element: <BadLazy />
+            //element: <BadLazy />
             element:
               (
                 <Suspense fallback={<SuspenseLoader />}>
@@ -190,7 +190,7 @@ export const router = createBrowserRouter([
             children: [
               {
                 path: "",
-                // element: <GoodLazy />
+                //element: <GoodLazy />
                 element: (
                   <Suspense fallback={<SuspenseLoader />}>
                     <GoodLazy />

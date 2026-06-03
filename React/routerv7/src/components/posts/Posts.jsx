@@ -2,8 +2,7 @@ import { useLoaderData } from 'react-router-dom';
 import styles from './Posts.module.css'
 import { lazy, Suspense } from 'react';
 import SuspenseLoader from '../loadscreens/suspenseloader/SuspenseLoader';
-// import PostsChild from '../postschild/PostsChild'
-
+//import PostsChild from '../postschild/PostsChild'
 const PostsChild = lazy(() => import(/* webpackChunkName: "PostsChild" */  "../postschild/PostsChild"))
 
 function Posts() {

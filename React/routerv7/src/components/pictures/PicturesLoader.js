@@ -1,7 +1,11 @@
 export const fetchAllPictures = async () => {
     try {
+
+        const delay = (ms) => new Promise(res => setTimeout(res, ms))
+
         const url = 'https://jsonplaceholder.typicode.com/photos';
         const response = await fetch(url);
+        await delay(2000)
         return response.json();
 
     } catch (error) {

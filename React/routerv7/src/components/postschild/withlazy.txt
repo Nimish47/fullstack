@@ -1,0 +1,29 @@
+import { useEffect, useState } from 'react'
+import CustomLoader from '../loadscreens/customloader/CustomLoader';
+
+function PostsChild() {
+
+    const [count, setCount] = useState('')
+
+    useEffect(() => {
+        import(/* webpackChunkName: "axioss" */ "axios").then((module)  => {
+            
+            const axios = module.default
+            
+            axios.get('https://jsonplaceholder.typicode.com/posts')
+                .then((response) => {
+                    setCount(response.data.length)
+                })
+                .catch(function (error) {
+                    console.log(error);
+                })
+        })
+    }, [])
+    if (!count) return <CustomLoader />
+
+    return (
+        <>{count}</>
+    )
+}
+
+export default PostsChild
