@@ -3,15 +3,13 @@ import styles from './Child3A.module.css'
 
 function Child3A({ id, scenario }) {
 
-    let memoized_Value ='All alone here'
-
     // a pure function
-    const randomFn = (id) => {
-        console.log(`inside random fn scenario ${scenario}`) // pure function so omit these things
-        return `Child3A => ${id}`
+    const randomFn = (val,scen) => {
+        console.log(`inside random fn scenario ${scen}`) // pure function so omit these things
+        return `Child3A => ${val}`
     }
 
-    memoized_Value = useMemo(() => randomFn(id), [id])
+    let memoized_Value = useMemo(() => randomFn(id,scenario), [id])
     // non_memoized_Value = randomFn()
 
     console.log(`render-child-scenario ${scenario}`)

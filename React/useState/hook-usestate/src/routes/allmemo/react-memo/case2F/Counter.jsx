@@ -18,4 +18,4 @@ function Counter({ count, incrementCounter }) {
     )
 }
 
-export default Counter
+export default React.memo(Counter);

@@ -1,6 +1,7 @@
-import React, { useMemo, useState } from 'react'
+import React, { useCallback, useMemo, useState } from 'react'
 import styles from './Case1A.module.css'
 import Child1A from './Child1A'
+import Child2A from './Child2A'
 
 function Case1A() {
 
@@ -13,6 +14,10 @@ function Case1A() {
     setRandom(num)
   }
 
+  // const logger = () => {console.log('Logging anything')}
+  const logger = useCallback(() => { console.log('Logging anything') }, [])
+  // const logger = useMemo(() => { return () => { console.log('Logging anything') } },[])
+
   console.log('render parent')
   return (
     <div className={styles.container}>
@@ -23,7 +28,8 @@ function Case1A() {
         </div>
       </div>
       <div className={styles.childContainer}>
-        <Child1A id={numValue}/>
+        <Child1A id={numValue} />
+        <Child2A log={logger} />
       </div>
     </div>
   )

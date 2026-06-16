@@ -1,15 +1,17 @@
-import React, { useCallback, useMemo, useState } from 'react'
-import styles from './Case2D.module.css'
-import { Child2D } from './Child2D'
+import React, { useMemo, useState } from 'react'
+import styles from './Case3S.module.css'
+import Memo from './Memo'
+import Norm from './Norm'
 
-function Case2D() {
+// this case shows diff b/w 
+// useMemo v/s 
+// useState + useEffect
+// notice when the heavy fn executes in both cases
+
+function Case3A() {
 
   const [random, setRandom] = useState(0)
   const [numValue, setNumValue] = useState(0)
-
-  const handleSelect = useCallback(() => {
-    console.log('Inside handleSelect function')
-  }, [])
 
   const generateRandomNumber = () => {
     const num = Math.ceil(Math.random() * 10)
@@ -17,7 +19,7 @@ function Case2D() {
     setRandom(num)
   }
 
-  console.log('render parent')
+  console.log('render parent component 3S')
   return (
     <div className={styles.container}>
       <div className={styles.parentItems}>
@@ -27,13 +29,11 @@ function Case2D() {
         </div>
       </div>
       <div className={styles.childContainer}>
-        <Child2D
-          id={numValue}
-          handleSelect={handleSelect}
-        />
+        <Memo id={numValue} />
+        <Norm id={numValue} />
       </div>
     </div>
   )
 }
 
-export default Case2D
+export default Case3A

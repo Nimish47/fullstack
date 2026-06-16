@@ -8,6 +8,7 @@ function Case2E() {
 
     const [list, setList] = useState([])
     const [count, setCount] = useState(0)
+    const [pops, setPops] = useState(false)
 
     useEffect(() => {
         // faking a big array
@@ -38,10 +39,15 @@ function Case2E() {
                         count={count}
                         incrementCounter={incrementCounter}
                     />
-                  </div>  
-                    <div className={styles.animalContainer}>
-                        <Animal />
+                </div>
+                <div className={styles.animalContainer}>
+                    <Animal />
+                    <div
+                        style={{ backgroundColor: 'blue', padding: '10px', border: '2px solid white' }}
+                        onClick={() => setPops(prev => !prev)}
+                    >pops
                     </div>
+                </div>
             </div>
             <div className={styles.listContainer}>
                 {list.map((listitem, index) => (

@@ -35,6 +35,7 @@ import UseEffectContainer from './routes/alluseeffect/useeffectcontainer/UseEffe
 import Case1 from './routes/alluseeffect/case1/Case1';
 import Main from './routes/allusereducer/main';
 import RefComp from './routes/alluseref/RefComp';
+import Case3S from './routes/allmemo/react-usememo/case3S/Case3S';
 
 const users = [
   { id: 1, country: 'India' },
@@ -117,6 +118,10 @@ const router = createBrowserRouter([
         path: 'memo/usememo/case3A',
         element: <Case3A />
       },
+      {
+        path: 'memo/usememo/case3S',
+        element: <Case3S />
+      },      
       {
         path: 'memo/usememo/case3B',
         element: <Case3B />

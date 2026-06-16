@@ -8,7 +8,7 @@ import styles from './Child3B.module.css'
 function Child3B({ id }) {
 
     // a pure function
-    const memoized_Value = useMemo(() => {
+    const memoized_Value = useMemo((id) => {
         console.log(`inside random fn child3B`) // pure function so omit these things
         return id * id;
     }, [id])

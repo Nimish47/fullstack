@@ -8,7 +8,8 @@ function Case2F() {
 
     const [list, setList] = useState([])
     const [count, setCount] = useState(0)
-    
+    const [pops, setPops] = useState(false)
+
     // primitive value, no need to memoize
     const type = "MAMMALS"
 
@@ -26,7 +27,9 @@ function Case2F() {
         return () => { clearTimeout(id) }
     }, [])
 
-    const incrementCounter = () => setCount(prev => prev + 1)
+    const incrementCounter = useCallback(() => setCount(prev => prev + 1), [])
+
+    // const incrementCounter = () => setCount(prev => prev + 1)
 
     const logger = useCallback((index) => {
         console.log(`Someone clicked list id: ${index}`)
@@ -48,6 +51,11 @@ function Case2F() {
                 </div>
                 <div className={styles.animalContainer}>
                     <Animal type={type} />
+                    <div
+                        style={{ backgroundColor: 'blue', padding: '10px', border: '1px solid white' }}
+                        onClick={() => setPops(prev => !prev)}
+                    >pops
+                    </div>
                 </div>
             </div>
             <div className={styles.listContainer}>

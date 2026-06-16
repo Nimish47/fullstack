@@ -6,9 +6,9 @@ function Child3C({ id }) {
     const [value, setValue] = useState('Wait...')
 
     // a pure function
-    const randomFn = (id) => {
+    const randomFn = (val) => {
         console.log(`inside random fn child3C`) // pure function so omit these things
-        return id * id;
+        return val * val;
     }
 
     useEffect(() => {

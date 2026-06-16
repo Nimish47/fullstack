@@ -4,6 +4,7 @@ import styles from './Child2C.module.css'
 export const Child2C = React.memo(({ id, details, handleSelect, selected }) => {
 
     // a random fn
+    // good only if we don't wanna alter the memoized value, otherwise use useState
     const memoizedValue = useMemo(() => {
         console.log(`inside random fn child2C`)
         if(!id) return 'NA';
