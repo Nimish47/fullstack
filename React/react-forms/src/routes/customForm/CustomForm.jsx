@@ -13,7 +13,6 @@ import CheckboxAll from '../../components/formElements/checkboxAll/CheckBoxAll'
 import SubmitButton from '../../components/formElements/buttonElement/submitbutton/SubmitButton'
 import ResetButton from '../../components/formElements/buttonElement/clearbutton/submitbutton/ResetButton'
 
-
 const radioOptions = ['male', 'female', 'lgbtq+']
 const checkOptions = ['pizza', 'cake', 'cola']
 const dropdownOptions = ['Mumbai', 'New Delhi', 'Kolkata', 'Bangalore', 'Chennai']

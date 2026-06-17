@@ -21,16 +21,16 @@ function CustomFormTwo() {
     const validatorCustom = (name, value) => {
         // run the validator function
         if (name === 'password') {
-            if (value.length < 3) setError(prevError => ({ ...prevError, password: true }))
+            if (value.length < 6) setError(prevError => ({ ...prevError, password: true }))
             else setError(prevError => ({ ...prevError, password: false }))
         }
         if (name === 'email') {
-            if (value.length < 6) setError(prevError => ({ ...prevError, email: true }))
+            if (value.length < 9) setError(prevError => ({ ...prevError, email: true }))
             else setError(prevError => ({ ...prevError, email: false }))
         }
 
         if (name === 'age') {
-            if (value > 18) setError(prevError => ({ ...prevError, age: true }))
+            if (value > 24) setError(prevError => ({ ...prevError, age: true }))
             else setError(prevError => ({ ...prevError, age: false }))
         }
     }

@@ -19,7 +19,6 @@ function Individual() {
     age: false
   })
 
-
   const radioOptions = ['male', 'female', 'lgbtq+']
   const checkOptions = ['pizza', 'cake', 'cola']
   const dropdownOptions = ['Mumbai', 'New Delhi', 'Kolkata', 'Bangalore', 'Chennai']

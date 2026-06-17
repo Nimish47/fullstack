@@ -50,7 +50,7 @@ export function useFormReducer(options = {}) {
 
     const submitHandlerDefault = (event) => {
         event.preventDefault();
-        alert('Submitted successfully (default)')
+        alert('Submitted successfully (reducer)')
         dispatch({ type: "SUBMIT_FORM" })
         dispatchError({ type: "CLEAR_ERROR" })
     }

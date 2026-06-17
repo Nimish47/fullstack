@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useRef, useState } from 'react'
 import styles from './BasicForm.module.css'
 
 function BasicForm() {
@@ -12,6 +12,8 @@ function BasicForm() {
     const [food, setFood] = useState([])
     const [selectAll, setSelectAll] = useState(false)
     const [city, setCity] = useState('')
+
+    const nameRef = useRef()
 
     const radioOptions = ['male', 'female', 'lgbtq+']
     const checkOptions = ['pizza', 'cake', 'cola']
@@ -31,6 +33,11 @@ function BasicForm() {
         setFood([])
         setSelectAll(false)
         setGender('')
+    }
+
+    const changeHandler2 = (event) => {
+        console.log(event.target.value)
+        console.log(nameRef.current.value)
     }
 
     const changeHandler = (event) => {
@@ -72,6 +79,15 @@ function BasicForm() {
                     className={styles.input}
                     value={username}
                     onChange={changeHandler}
+                    required
+                />
+                <input
+                    type='text'
+                    placeholder='Uncontrolled input'
+                    name='lName'
+                    className={styles.input}
+                    ref={nameRef}
+                    onChange={changeHandler2}
                     required
                 />
                 <input
@@ -158,12 +174,12 @@ function BasicForm() {
                     >
                         <option value=''>Choose city</option>
                         {
-                            dropdownOptions.map((option) => (
+                            dropdownOptions.map((item) => (
                                 <option
-                                    key={option}
-                                    value={option}
+                                    key={item}
+                                    value={item}
                                 >
-                                    {option.toLocaleUpperCase()}
+                                    {item.toLocaleUpperCase()}
                                 </option>
                             ))
                         }

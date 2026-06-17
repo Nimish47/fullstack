@@ -86,13 +86,11 @@ function FormData() {
             if (value.length < 6) setError(prevError => ({ ...prevError, email: true }))
             else setError(prevError => ({ ...prevError, email: false }))
         }
-
         if (name === 'age') {
             if (value < 18) setError(prevError => ({ ...prevError, age: true }))
             else setError(prevError => ({ ...prevError, age: false }))
         }
     }
-
 
     return (
         <div className={styles.container}>
