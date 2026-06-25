@@ -37,10 +37,15 @@ const reducer = (state = initialState, action) => {
             case COMMENTS_PENDING:
                 draft.pending = true;
                 break;
+
             case COMMENT_ADD:
-                return { content: action.payload, pending: false, error: '' }
+                draft.content = action.payload;
+                draft.pending = false;
+                break;
+
             case COMMENT_ERROR:
-                draft.error = action.payload
+                draft.error = action.payload;
+                draft.pending = false;
                 break;
         }
     })

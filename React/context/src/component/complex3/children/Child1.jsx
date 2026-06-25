@@ -6,6 +6,8 @@ function Child1() {
 
     const { stopTraffic } = useTraffic()
 
+    console.log('child')
+
     return (
         <div className={styles.container}>
             <div className={styles.button} onClick={stopTraffic}>STOP</div>

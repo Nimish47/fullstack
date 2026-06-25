@@ -37,7 +37,7 @@ const fetchPostAsync = (id) => {
             const response = await axios.get(`https://jsonplaceholder.typicode.com/posts/${id}`)
             dispatch(fetchPostWithId(response.data.body))
         } catch (error) {
-            console.error('Error fetching posts:', error)
+            console.error('Error fetching posts:', error.message)
         }
     }
 }
@@ -47,6 +47,7 @@ const fetchPostAsync = (id) => {
 // sync fn
 const doSomethingSync = () => {
     return (dispatch, getState) => {
+        console.log('m thunk')
         const randomNumber = Math.floor(Math.random() * 10)
         dispatch(syncFn(randomNumber))
     }

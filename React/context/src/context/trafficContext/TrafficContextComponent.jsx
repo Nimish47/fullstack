@@ -31,6 +31,6 @@ export default TrafficContextComponent;
 // Create a custom hook (for cleaner usage)
 export const useTraffic = () => {
     const context = useContext(TrafficContext);
-    if (!context) throw new Error("useAuth must be used within AuthProvider");
+    if (!context) throw new Error("consumer is out of scope of context");
     return context;
 };

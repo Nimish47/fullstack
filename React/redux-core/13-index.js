@@ -3,31 +3,20 @@
 // action creater returns async fn
 
 const redux = require('redux')
+const { createLogger } = require('redux-logger') 
 const { thunk } = require('redux-thunk')
-const { buyCake, fetchPostAsync } = require('./actions/action-creators/actionCreators')
-const cakeReducerWithImmer = require('./reducers/cakeReducerWithImmer')
-const iceCreamReducer = require('./reducers/iceCreamReducer')
+const { fetchPostAsync } = require('./actions/action-creators/actionCreators')
 const postReducer = require('./reducers/postReducer')
+
+const logger = createLogger()
 
 const { createStore, combineReducers, applyMiddleware } = redux
 
 const rootReducer = combineReducers({
-    cake: cakeReducerWithImmer,
-    iceCream: iceCreamReducer,
     post: postReducer
 })
 
-const store = createStore(rootReducer, applyMiddleware(thunk))
+const store = createStore(rootReducer, applyMiddleware(thunk,logger))
 
 // dispatch a thunk related action
-// async fn needed as we wan't to await redux related thunk
-// and await not possible without a async fn
-const fireAllDispatch = async () => {
-    console.log('Initial state:', store.getState())
-    store.dispatch(buyCake())
-    console.log('Waiting...')
-    await store.dispatch(fetchPostAsync(10))
-    console.log('Final state:', store.getState())
-}
-
-fireAllDispatch()
+store.dispatch(fetchPostAsync(10))

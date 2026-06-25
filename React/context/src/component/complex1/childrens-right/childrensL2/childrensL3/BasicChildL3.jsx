@@ -13,4 +13,4 @@ function BasicChildL3() {
     )
 }
 
-export default BasicChildL3
+export default BasicChildL3;

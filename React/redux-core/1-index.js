@@ -36,8 +36,7 @@ const reducer = (state = initialState, action) => {
 }
 
 // creating a store - via createStore()
-// store can take one or more reducer fns as parameters 
-// for more than one reducer - later with combineReducer
+// for more than one reducer - use combineReducer
 const store = createStore(reducer)
 
 // print initial state

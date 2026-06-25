@@ -21,7 +21,7 @@ const store = createStore(rootReducer, applyMiddleware(thunk))
 
 
 console.log('Initial state:', store.getState())
-// fire dispatches
+
 store.dispatch(buyCake())
 store.dispatch(doSomethingSync())
 

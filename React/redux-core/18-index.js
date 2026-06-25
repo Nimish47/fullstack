@@ -19,11 +19,11 @@ const authMiddleware = store => next => action => {
     const id = store.getState().user.userDetails.id
     const userObj = store.getState().user.userDetails
 
-    if (Number(id) === 47) {
+    if (action.type !== 'LOGIN' && Number(id) === 47) {
         console.log('WRITE ACCESS GRANTED!', id)
         return next(action)
     }
-    else if (!Object.keys(userObj).length) {
+    else if (action.type === 'LOGIN' && !Object.keys(userObj).length) {
         console.log('New user login detected with id:', action.payload.id)
         return next(action)
     }
@@ -41,7 +41,7 @@ console.log('Updated state:', store.getState())
 
 // dispatch another set of actions
 // write access denied
-// store.dispatch(loginUser({ fName: 'Amit', lName: 'Behera', id: 233 }))
-// store.dispatch(buyCake())
-// store.dispatch(buyIceCream())
-// console.log('Updated state:', store.getState())
+store.dispatch(loginUser({ fName: 'Amit', lName: 'Behera', id: 233 }))
+store.dispatch(buyCake())
+store.dispatch(buyIceCream())
+console.log('Updated state:', store.getState())

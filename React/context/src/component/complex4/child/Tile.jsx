@@ -1,10 +1,8 @@
 import React from 'react'
 import styles from './Tile.module.css'
-import { useDocument } from '../../../context/documentContext/DocumentContextComponent'
 
-function Tile({ document }) {
+function Tile({ document, dispatch }) {
 
-    const { dispatch } = useDocument()
     const flagItem = () => dispatch({ type: "FLAG_TASK", payload: { id: document.id } })
     const deleteItem = () => dispatch({ type: "DELETE_TASK", payload: { id: document.id } })
 
@@ -20,4 +18,4 @@ function Tile({ document }) {
     )
 }
 
-export default Tile
+export default React.memo(Tile);
