@@ -4,7 +4,7 @@
 // jsut like extra reducers in rtk
 
 const { orderFoodAnyPlatform } = require('./actions/action-creators/actionCreators')
-const store = require('./store')
+const store = require('./20-store')
 
 
 store.dispatch(orderFoodAnyPlatform({ item: 'biryani', quantity: 100 }))

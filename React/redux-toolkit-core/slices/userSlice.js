@@ -1,11 +1,11 @@
 const { createSlice, createAsyncThunk } = require('@reduxjs/toolkit')
-const axios = require('axios')
 const { buyCake } = require('./CakeSlice')
 
 const initialState = { name: '', pending: false, error: '', admin: false }
 
 // try to keep thunk fn and related slice in same file
 // else need to fix a circular dependency issue!
+// sync task can be done too
 const fetchUser = createAsyncThunk('user/fetchUser', async (id, thunkAPI) => {
 
     // dispatch an action from current user slice
@@ -14,10 +14,7 @@ const fetchUser = createAsyncThunk('user/fetchUser', async (id, thunkAPI) => {
     // dispatch an action from cake slice    
     if (Number(id) === 3) thunkAPI.dispatch(buyCake(100))
 
-    console.log('Before API call', thunkAPI.getState())
-
-    const response = await axios.get(`https://jsonplaceholder.typicode.com/users/${id}`)
-    return response.data.name;
+    return 'pops';
 })
 
 

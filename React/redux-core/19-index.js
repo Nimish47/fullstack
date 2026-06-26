@@ -6,11 +6,10 @@
     // action-creators
     // all above 3 auto-generated and applied
 
+const store = require('./20-store')    
     
 const { swiggyActions } = require('./reducers/swiggyReducer')
 const { zomatoActions } = require('./reducers/zomatoReducer')
-
-const store = require('./store')
 
 const { orderFoodSwiggy, refillFoodSwiggy } = swiggyActions
 const { orderFoodZomato, refillFoodZomato } = zomatoActions

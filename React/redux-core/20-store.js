@@ -15,11 +15,6 @@ const rootReducer = combineReducers({
     swiggy: swiggyReducer
 })
 
-const pokeyMiddleware = store => next => action => {
-    console.log('Pokey Middleware')
-    return next(action)
-}
-
 const store = createStore(rootReducer, applyMiddleware(logger))
 
 module.exports = store

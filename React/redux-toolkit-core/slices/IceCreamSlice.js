@@ -1,7 +1,8 @@
 const { createSlice } = require('@reduxjs/toolkit')
 const { updateUserState, clearAllInventory } = require('./appSlice')
+const { updateTheme } = require('../globalActions')
 
-const initialState = { count: 50, category: 'desert' }
+const initialState = { count: 50, category: 'desert', theme: '' }
 
 const iceCreamSlice = createSlice({
     name: 'iceCream',
@@ -18,6 +19,7 @@ const iceCreamSlice = createSlice({
             if (action.payload === "logout") return {}
             if (action.payload === "login") return initialState
         })
+        .addCase(updateTheme, (state,action) => {state.theme = action.payload})
     }
 })
 

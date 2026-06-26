@@ -1,14 +1,15 @@
 const { createSlice } = require('@reduxjs/toolkit')
 const { updateUserState, clearAllInventory } = require('./appSlice')
+const { updateTheme } = require('../globalActions')
 
-const initialState = { count: 100, category: 'sweet' }
+const initialState = { count: 100, category: 'sweet', theme: '' }
 
 const cakeSlice = createSlice({
     name: 'cakeSlice',
     initialState,
     reducers: {
-        buyCake: (state, action) => { state.count = state.count - action.payload },
-        refillCakeStock: (state, action) => { state.count = state.count + action.payload },
+        buyCake: (state, action) => { state.count -= action.payload },
+        refillCakeStock: (state, action) => { state.count += action.payload },
         modifyCakeCategory: (state, action) => { state.category = action.payload }
     },
     extraReducers: (builder) => {
@@ -18,6 +19,7 @@ const cakeSlice = createSlice({
             if (action.payload === "logout") return {}
             if (action.payload === "login") return initialState
         })
+        .addCase(updateTheme, (state,action) => {state.theme = action.payload})
     }
 })
 
