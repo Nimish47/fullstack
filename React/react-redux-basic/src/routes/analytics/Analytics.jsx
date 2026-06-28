@@ -17,7 +17,7 @@ function Analytics() {
     fishAndChips: fishAndChipsZomato,
     beer: beerZomato } = useSelector((state) => state.zomato);
 
-  const { badHits } = useSelector((state) => state.restaurant)
+  const badHits = useSelector(state => state.restaurant.badHits)
 
   const dispatch = useDispatch()
 
@@ -44,6 +44,8 @@ function Analytics() {
       return;
     }
   }
+
+  console.log('analytics comp rendered')
 
   return (
     <div className={styles.container}>

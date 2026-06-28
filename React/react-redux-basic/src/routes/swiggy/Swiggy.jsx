@@ -1,14 +1,16 @@
 import React, { useEffect, useState } from 'react'
 import styles from './Swiggy.module.css'
 import { useDispatch, useSelector } from 'react-redux'
-import { fetchPosts, orderBeer, orderFishAndChips, updateNumOfOrders } from '../../redux/slice/swiggySlice'
+import { fetchPosts, orderBeer, orderFishAndChips, updateNumOfOrders, logHandler } from '../../redux/slice/swiggySlice'
 import Loader from '../../components/loader/Loader'
 
 function Swiggy() {
 
     const [item1, setItem1] = useState(false)
     const [item2, setItem2] = useState(false)
-    const { orders, posts } = useSelector((state) => state.swiggy);
+    const orders = useSelector(state => state.swiggy.orders)
+    const posts = useSelector(state => state.swiggy.posts)
+    // const { orders, posts } = useSelector(state => state.swiggy)
     const dispatch = useDispatch();
 
     useEffect(() => {
@@ -33,13 +35,19 @@ function Swiggy() {
         if (item1 || item2) {
             item1 && dispatch(orderFishAndChips(1))
             item2 && dispatch(orderBeer(5))
-            dispatch(updateNumOfOrders(5))
+            dispatch(updateNumOfOrders())
 
             // after dispatch, reset values
             setItem1(false)
             setItem2(false)
         }
     }
+
+    const clickReviews = () => {
+        dispatch(logHandler())
+    }
+
+    console.log('swiggy comp rendered')
 
     return (
         <div className={styles.container}>
@@ -54,7 +62,7 @@ function Swiggy() {
                     <div className={styles.box1}>
                         {posts.loading ? <Loader /> : (<div>
                             <div className={styles.count}>{posts.count}</div>
-                            <div className={styles.verbiage}>user reviews</div>
+                            <div onClick={clickReviews} className={styles.verbiage}>user reviews</div>
                         </div>)}
                     </div>
                     <div className={styles.box2}>

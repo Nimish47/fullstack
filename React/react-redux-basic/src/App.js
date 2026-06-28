@@ -4,6 +4,10 @@ import Header from './components/header/Header';
 import Footer from './components/footer/Footer';
 
 function App() {
+
+
+  console.log('app comp rendered')
+
   return (
     <div className={styles.rootContainer}>
       <div className={styles.headerContainer}>

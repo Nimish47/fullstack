@@ -10,7 +10,7 @@ function Zomato() {
     const [count, setCount] = useState(0)
     const URL = 'https://jsonplaceholder.typicode.com/users'
 
-    const { orders } = useSelector((state) => state.zomato);
+    const orders = useSelector(state => state.zomato.orders);
     const dispatch = useDispatch()
 
     useEffect(() => {
@@ -40,6 +40,8 @@ function Zomato() {
             setItem2(false)
         }
     }
+
+    console.log('zomato comp rendered')
 
     return (
         <div className={styles.container}>

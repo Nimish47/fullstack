@@ -3,6 +3,9 @@ import styles from './Home.module.css'
 import { Link } from 'react-router-dom'
 
 function Home() {
+
+    console.log('home comp rendered')
+
     return (
         <div className={styles.container}>
             <div className={styles.verbiage}>Welcome to POPEYES!!!!</div>

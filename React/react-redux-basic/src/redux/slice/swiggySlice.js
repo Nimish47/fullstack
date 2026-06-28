@@ -6,7 +6,8 @@ const initialState = {
     fishAndChips: 50,
     beer: 200,
     orders: 0,
-    posts: { loading: true, error: "", data: [], count: 0 }
+    posts: { loading: false, error: "", data: [], count: 0 },
+    log: true
 }
 
 // export directly
@@ -21,7 +22,8 @@ const swiggySlice = createSlice({
     reducers: {
         orderFishAndChips: (state, action) => { state.fishAndChips = state.fishAndChips - action.payload },
         orderBeer: (state, action) => { state.beer = state.beer - action.payload },
-        updateNumOfOrders: (state) => { state.orders = state.orders + 1 }
+        updateNumOfOrders: (state) => { state.orders = state.orders + 1 },
+        logHandler: (state) => { state.log = !state.log }
     },
     extraReducers: (builder) => {
         builder
@@ -48,5 +50,5 @@ const swiggySlice = createSlice({
     }
 })
 
-export const { orderFishAndChips, orderBeer, updateNumOfOrders } = swiggySlice.actions
+export const { orderFishAndChips, orderBeer, updateNumOfOrders, logHandler } = swiggySlice.actions
 export default swiggySlice.reducer;

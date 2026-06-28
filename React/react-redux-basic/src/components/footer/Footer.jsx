@@ -4,7 +4,7 @@ import styles from './Footer.module.css'
 function Footer() {
     return (
         <div className={styles.container}>
-            @2025 Popeyes Trademark Limited
+            @2026 Popeyes Trademark Limited
         </div>
     )
 }

@@ -6,10 +6,10 @@ const restaurantSlice = createSlice({
     name: 'restaurant',
     initialState,
     reducers: {
-        strangeOrdersDetected: (state) => { state.badHits = state.badHits + 1 },
-        refillStock: (state) => { state.numofRefills = state.numofRefills + 2 },
-        refillStockSwiggy: (state) => { state.numofRefills = state.numofRefills + 1 },
-        refillStockZomato: (state) => { state.numofRefills = state.numofRefills + 1 }
+        strangeOrdersDetected: (state) => { state.badHits++ },
+        refillStock: (state) => { state.numofRefills += 2 },
+        refillStockSwiggy: (state) => { state.numofRefills++ },
+        refillStockZomato: (state) => { state.numofRefills++ }
     }
 })
 
