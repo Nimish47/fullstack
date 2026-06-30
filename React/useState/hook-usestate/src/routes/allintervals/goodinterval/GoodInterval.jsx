@@ -43,7 +43,7 @@ function GoodInterval() {
     })
     setStatus('Cooking finished, pizza ready!')
 
-    // wait 1s before repeating again
+    // wait 3s before repeating again
     const timeoutid = setTimeout(regularFn, 3000)
     timeout.current.push(timeoutid)
   }

@@ -23,7 +23,7 @@ function LazyState(props) {
         <div className={styles.container}>
             <div>
                 {data.map(item => (
-                    <div key={Math.random()}>
+                    <div key={item}>
                         <div>{item}</div>
                     </div>
                 ))

@@ -28,6 +28,7 @@ function ClearTimeout() {
 
         if (buttonRef.current) clearTimeout(buttonRef.current)
         const id = setTimeout(function partyEnd() {
+            console.log('event handler fn')
             setMessage('GoodBye everyone!!!')
         }, 1000);
 

@@ -14,6 +14,8 @@ function SetTimeout() {
         // placing it here would cancel the something method from executing
     }, [])
 
+    console.log('render parent')
+
     return (
         <div className={styles.container}>
             <div>{message}</div>
