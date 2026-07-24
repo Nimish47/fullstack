@@ -3,7 +3,7 @@ import styles from './New.module.css'
 import userReducer, { ACTION_TYPES, INIT_STATE } from './userReducer'
 
 function New() {
-
+    // state
     const [user, dispatch] = useReducer(userReducer, INIT_STATE)
 
     return (

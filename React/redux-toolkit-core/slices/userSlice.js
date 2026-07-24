@@ -7,6 +7,7 @@ const initialState = { name: '', pending: false, error: '', admin: false }
 // else need to fix a circular dependency issue!
 // sync task can be done too
 const fetchUser = createAsyncThunk('user/fetchUser', async (id, thunkAPI) => {
+    console.log('1')
 
     // dispatch an action from current user slice
     if (Number(id) === 7) thunkAPI.dispatch(giveAdminAccess())

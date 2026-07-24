@@ -8,7 +8,7 @@ function Norm({ id }) {
     // heavy work
     const transformProps = (val) => {
         console.log('transforming props....norm')
-        for (let index = 0; index < 10000000; index++) { } // imitate heavy work
+        for (let index = 0; index < 10; index++) { } // imitate heavy work
         return val * val;
     }
 

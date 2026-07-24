@@ -4,7 +4,7 @@
 // store state remains unchanged!
 
 const redux = require('redux')
-const { buyCake, refillCakeStock, buyIceCream, refillIceCreamStock } = require('./actions/action-creators/actionCreators')
+const { buyCake, buyIceCream } = require('./actions/action-creators/actionCreators')
 const cakeReducerWithImmer = require('./reducers/cakeReducerWithImmer')
 const iceCreamReducer = require('./reducers/iceCreamReducer')
 

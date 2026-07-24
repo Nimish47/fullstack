@@ -9,13 +9,10 @@ export const INITIAL_DOCS = [
 export function documentReducer(state, action) {
 
     if (action.type === "DELETE_TASK") {
-        console.log("DELETE_TASK")
-        console.log(state.filter(doc => doc.id !== action.payload.id))
         return state.filter(doc => doc.id !== action.payload.id)
     }
 
     if (action.type === "FLAG_TASK") {
-        console.log("FLAG_TASK")
         return state.map(doc => {
             if (doc.id === action.payload.id) return { ...doc, flag: !doc.flag }
             return doc;

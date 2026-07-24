@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import styles from './Old.module.css'
 
 function Old() {
-
+    // state
     const [rollNumber] = useState('$123');
     const [fullName] = useState('Pushpendra Kulshreshtha');
     const [address] = useState({ city: 'Patna', state: 'BR' });
@@ -10,6 +10,8 @@ function Old() {
     const [general, setGeneral] = useState(true);
     const [quota, setQuota] = useState(false);
     const [backlogs, setBacklogs] = useState(0);
+
+    // event handlers with logic
     const reverseGender = () => setMale(prev => !prev)
     const reverseCategory = () => setGeneral(prev => !prev)
     const reverseQuota = () => setQuota(prev => !prev)

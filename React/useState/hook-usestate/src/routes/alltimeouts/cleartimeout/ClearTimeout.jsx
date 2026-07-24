@@ -3,20 +3,17 @@ import styles from './ClearTimeout.module.css'
 
 function ClearTimeout() {
     const [message, setMessage] = useState('Loading...')
-    // const clearRefs = useRef([])
     const buttonRef = useRef()
 
     useEffect(() => {
         const id = setTimeout(function partyStart() {
+            console.log('fcuk')
             setMessage('Party starts!!!')
-            //console.log('leak')
         }, 5000);
-        // clearRefs.current.push(id)
 
         return () => {
             clearTimeout(id)
-            // clearRefs.current.forEach(timeoutId => clearTimeout(timeoutId))
-            // clearRefs.current = [];
+            buttonRef.current && clearTimeout(buttonRef.current)
             buttonRef.current = null
         }
     }, [])
@@ -29,8 +26,9 @@ function ClearTimeout() {
         if (buttonRef.current) clearTimeout(buttonRef.current)
         const id = setTimeout(function partyEnd() {
             console.log('event handler fn')
-            setMessage('GoodBye everyone!!!')
-        }, 1000);
+            const xx = Math.ceil(Math.random() * 10)
+            alert('GoodBye everyone!!!' + xx)
+        }, 5000);
 
         buttonRef.current = id
     }

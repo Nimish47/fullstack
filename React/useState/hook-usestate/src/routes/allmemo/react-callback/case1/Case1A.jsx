@@ -14,7 +14,7 @@ function Case1A() {
     setRandom(num)
   }
 
-  // const logger = () => {console.log('Logging anything')}
+  //const logger = () => {console.log('Logging anything')}
   const logger = useCallback(() => { console.log('Logging anything') }, [])
   // const logger = useMemo(() => { return () => { console.log('Logging anything') } },[])
 

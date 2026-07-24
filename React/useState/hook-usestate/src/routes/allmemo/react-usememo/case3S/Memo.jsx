@@ -6,7 +6,7 @@ function Memo({ id }) {
     // heavy work
     const transformProps = (val) => {
         console.log('transforming props....memo')
-        for (let index = 0; index < 10000000; index++) { } // imitate heavy work
+        for (let index = 0; index < 1000; index++) { } // imitate heavy work
         return val * val;
     }
 

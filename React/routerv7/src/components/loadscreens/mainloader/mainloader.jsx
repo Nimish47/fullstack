@@ -1,5 +1,5 @@
-import { Outlet, useLoaderData, useNavigation } from "react-router-dom";
-import SuspenseLoader from "../suspenseloader/SuspenseLoader";
+import { useNavigation } from "react-router-dom";
+import GlobalLoader from "../globalLoader/GlobalLoader";
 
 export default function MainLoader() {
 
@@ -7,7 +7,7 @@ export default function MainLoader() {
 
     console.log('navigation: ', navigation.state)
 
-    if (navigation.state === "loading") return <SuspenseLoader />
+    if (navigation.state === "loading") return <GlobalLoader />
     return null   
 
 }

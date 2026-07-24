@@ -8,10 +8,10 @@ import Norm from './Norm'
 // useState + useEffect
 // notice when the heavy fn executes in both cases
 
-function Case3A() {
+function Case3S() {
 
   const [random, setRandom] = useState(0)
-  const [numValue, setNumValue] = useState(0)
+  const [numValue, setNumValue] = useState(10)
 
   const generateRandomNumber = () => {
     const num = Math.ceil(Math.random() * 10)
@@ -36,4 +36,4 @@ function Case3A() {
   )
 }
 
-export default Case3A
+export default Case3S

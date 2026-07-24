@@ -29,7 +29,7 @@ const store = configureStore({
     // middleware: (getDefaultMiddleware) => getDefaultMiddleware() // only use default ones
     // middleware: () => [customLoggerOne, customLoggerTwo] // in this way we have full control over middlewares like earlier
     // middleware: (getDefaultMiddleware) => getDefaultMiddleware().concat(customLoggerOne, customLoggerTwo)
-    // middleware: (getDefaultMiddleware) => getDefaultMiddleware().concat(logger)
+    middleware: (getDefaultMiddleware) => getDefaultMiddleware().concat(logger)
 })
 
 module.exports = store

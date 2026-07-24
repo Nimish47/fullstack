@@ -16,4 +16,4 @@ function BasicChildL2() {
     )
 }
 
-export default React.memo(BasicChildL2);
+export default BasicChildL2;

@@ -4,6 +4,7 @@ import styles from './Child1A.module.css'
 function Child1A({ id }) {
 
     // a pure function
+    // memoization of no use here since not passed down to child comps
     const memoized_Fn = useCallback((val) => {
         console.log(`inside random fn child1A`) // pure function so omit these things
         alert(val * val)

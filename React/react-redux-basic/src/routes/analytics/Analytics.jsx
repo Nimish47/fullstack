@@ -9,13 +9,17 @@ function Analytics() {
   const [flagZ, setFlagZ] = useState(false)
 
 
-  const { orders: ordersSwiggy,
+  const {
+    orders: ordersSwiggy,
     fishAndChips: fishAndChipsSwiggy,
-    beer: beerSwiggy } = useSelector((state) => state.swiggy);
+    beer: beerSwiggy
+  } = useSelector(state => state.swiggy);
 
-  const { orders: ordersZomato,
+  const { 
+    orders: ordersZomato,
     fishAndChips: fishAndChipsZomato,
-    beer: beerZomato } = useSelector((state) => state.zomato);
+    beer: beerZomato
+   } = useSelector(state => state.zomato);
 
   const badHits = useSelector(state => state.restaurant.badHits)
 

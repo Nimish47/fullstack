@@ -17,6 +17,12 @@ function Case2B() {
     setSelected(prev => !prev)
   }, [])
 
+  // const childObj = { fullName: 'Akarsh Singh', age: 29 }
+  // const handleSelect = () => {
+  //   console.log('Inside handleSelect function')
+  //   setSelected(prev => !prev)
+  // }
+
   const generateRandomNumber = () => {
     const num = Math.ceil(Math.random() * 10)
     if (num !== 0 && num % 5 === 0) setNumValue(num)

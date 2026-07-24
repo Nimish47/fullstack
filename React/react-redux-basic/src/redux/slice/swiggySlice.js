@@ -11,7 +11,7 @@ const initialState = {
 }
 
 // export directly
-export const fetchPosts = createAsyncThunk('swiggyOrder/posts', async (URL) => {
+export const fetchPosts = createAsyncThunk('swiggyOrder/posts', async (URL,thunkAPI) => {
     const resp = await axios.get(URL)
     return resp.data;
 })

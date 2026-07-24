@@ -6,6 +6,7 @@ import muscular from '../images/muscular.png'
 import shocked from '../images/shocked.png'
 import { useNavigate } from 'react-router-dom'
 
+console.log('aa')
 
 function Lazy() {
 

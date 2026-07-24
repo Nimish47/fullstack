@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react'
 import styles from './Zomato.module.css'
 import { orderBeer, orderFishAndChips, updateNumOfOrders } from '../../redux/slice/zomatoSlice'
 import { useDispatch, useSelector } from 'react-redux'
+import Test from '../../components/test/Test'
 
 function Zomato() {
 
@@ -41,7 +42,7 @@ function Zomato() {
         }
     }
 
-    console.log('zomato comp rendered')
+    console.log('zomato comp renderedx')
 
     return (
         <div className={styles.container}>
@@ -72,6 +73,9 @@ function Zomato() {
                 onClick={placeOrder}
             >
                 Place Order
+            </div>
+            <div className={styles.test}>
+                <Test />
             </div>
         </div>
     )

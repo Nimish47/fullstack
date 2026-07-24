@@ -1,6 +1,22 @@
 .container {
     height: 100%;
+}
+
+.main {
+    height: 100%;
+    position: relative
+}
+
+.test {
+    height: 20%;
     position: relative;
+    background-color: rgb(234, 111, 111);
+    box-sizing: border-box;
+    font-size: larger;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .verbiage {

@@ -1,4 +1,4 @@
-import React, { createContext, useContext, useMemo, useState } from "react";
+import React, { createContext, useContext, useMemo, useState, useCallback } from "react";
 
 // this is main context
 // it 'provides' data to child comps - context.provider
@@ -14,9 +14,15 @@ function TrafficContextComponent({ children }) {
     // setter
     // const stopTraffic = () => setStop(prev => !prev)
 
+    const stopTraffic = useCallback(() => {
+        setStop(prev => !prev);
+    }, []);
+
     const value = useMemo(() => {
-        return { stop, stopTraffic: () => setStop(prev => !prev) }
+        return { stop, stopTraffic }
     }, [stop])
+
+    console.log('traffic component context')
 
     return (
         <TrafficContext.Provider value={value}>

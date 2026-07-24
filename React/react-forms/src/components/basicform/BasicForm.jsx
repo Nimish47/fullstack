@@ -14,7 +14,6 @@ function BasicForm() {
     const [city, setCity] = useState('')
 
     const nameRef = useRef()
-
     const radioOptions = ['male', 'female', 'lgbtq+']
     const checkOptions = ['pizza', 'cake', 'cola']
     const dropdownOptions = ['Mumbai', 'New Delhi', 'Kolkata', 'Bangalore', 'Chennai']
@@ -42,6 +41,7 @@ function BasicForm() {
 
     const changeHandler = (event) => {
         const { name, value, checked } = event.target;
+        console.log(event.target.checked)
         if (name === 'username') setUserName(value);
         if (name === 'password') setPassword(value);
         if (name === 'email') setEmail(value);
@@ -53,7 +53,7 @@ function BasicForm() {
         if (name === 'food') {
             if (checked) setFood([...food, value]); // add if not exists
             else setFood(food.filter(item => item !== value)); // remove if already exists
-            
+
             setSelectAll(false)
         }
 

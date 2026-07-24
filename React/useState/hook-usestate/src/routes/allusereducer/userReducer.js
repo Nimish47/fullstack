@@ -15,7 +15,7 @@ export const INIT_STATE = {
     backlogs: 0
 }
 
-const userReducer = (state, action) => {
+const userReducer = (state=INIT_STATE, action) => {
     switch (action.type) {
         case 'REVERSE_GENDER':
             return { ...state, male: !state.male }

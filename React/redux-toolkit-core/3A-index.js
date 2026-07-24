@@ -7,8 +7,8 @@ const store = require('./store')
 
 
 
-console.log('initial store state', store.getState())
+// console.log('initial store state', store.getState())
 
 store.dispatch(updateTheme("blue"))
 
-console.log('final store state', store.getState())
+// console.log('final store state', store.getState())

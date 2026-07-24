@@ -104,7 +104,7 @@
     left: 50%;
     transform: translate(-50%, -50%);
     opacity: 1;
-    background-color: green;
+    background-color: rgb(220, 158, 51);
     color: whitesmoke;
 }
 

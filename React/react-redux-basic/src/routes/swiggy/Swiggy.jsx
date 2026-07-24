@@ -3,6 +3,7 @@ import styles from './Swiggy.module.css'
 import { useDispatch, useSelector } from 'react-redux'
 import { fetchPosts, orderBeer, orderFishAndChips, updateNumOfOrders, logHandler } from '../../redux/slice/swiggySlice'
 import Loader from '../../components/loader/Loader'
+import Test from '../../components/test/Test'
 
 function Swiggy() {
 
@@ -47,7 +48,7 @@ function Swiggy() {
         dispatch(logHandler())
     }
 
-    console.log('swiggy comp rendered')
+    console.log('swiggy comp renderedx')
 
     return (
         <div className={styles.container}>
@@ -78,6 +79,9 @@ function Swiggy() {
                 onClick={placeOrder}
             >
                 Place Order
+            </div>
+            <div>
+                <Test />
             </div>
         </div>
     )

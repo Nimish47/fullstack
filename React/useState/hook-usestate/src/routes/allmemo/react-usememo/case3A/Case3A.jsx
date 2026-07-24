@@ -8,7 +8,7 @@ function Case3A() {
   const [random, setRandom] = useState(0)
   const [numValue, setNumValue] = useState(0)
 
-  // const obj = { city: 'Ranchi', state: 'Jharkhand' }
+  const obj = { city: 'Ranchi', state: 'Jharkhand' }
   const memoizeObj = useMemo(() => { return { city: 'Ranchi', state: 'Jharkhand' } }, [])
 
   const generateRandomNumber = () => {
