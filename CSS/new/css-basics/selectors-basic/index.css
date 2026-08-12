@@ -13,6 +13,11 @@ body {
     height: 100dvh;
 }
 
+.container > p {
+    text-decoration: line-through;
+    font-size: 2em;
+}
+
 .animal {
     background-color: rgb(135, 131, 131);
     color: white;

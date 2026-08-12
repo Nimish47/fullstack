@@ -9,7 +9,7 @@ body {
 .container {
     min-height: 100%;
     background-color: rgb(219, 191, 191);
-    color: white;
+    color: rgb(227, 130, 70);
     padding-top: 20px;
     box-sizing: border-box;
 }
@@ -34,5 +34,11 @@ body {
 .container .three {
     background-color: rgb(206, 83, 83);
     overflow: scroll;
+    font-size: 0.5rem;
+}
+
+.container .four {
+    background-color: rgb(206, 83, 83);
+    overflow: auto;
     font-size: 0.5rem;
 }

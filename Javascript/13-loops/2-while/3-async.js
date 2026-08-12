@@ -1,10 +1,6 @@
 // async operation in a WHILE loop
 
-const fetchData = (data) => new Promise((resolve) => {
-    setTimeout(() => {
-        resolve(data.toUpperCase())
-    }, 2000)
-})
+const fetchData = (data) => new Promise(resolve => setTimeout(() => resolve(data.toUpperCase()), 2000))
 
 const api = async () => {
     console.log('Start!')

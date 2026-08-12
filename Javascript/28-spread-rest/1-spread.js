@@ -30,7 +30,7 @@ const updatedObj = { ...obj3, fName: 'Harsh' }
 console.log(updatedObj)                             // { fid: 1, fName: 'Harsh', age: 18, country: 'IN' }
 
 
-// CASE: function params
+// CASE: function params during function call
 function adder(a, b, c, d) { console.log(a + b + c + d) }
 const arr = [10, 20, 30, 40]
 adder(...arr)                                        // 100

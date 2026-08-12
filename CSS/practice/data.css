@@ -1,0 +1,30 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+
+.grid-container {
+    background-color: rgb(243, 120, 120);
+    width: 100%;
+    height: 100dvh;
+    display: grid;
+    grid-template-columns: 200px 400px;
+    grid-auto-rows: 200px;
+    gap: 5px;
+    /* justify-items: center;
+    align-items: center; */
+    place-items: center;
+    justify-content: center;
+    align-content: center;
+}
+
+.grid-container div {
+    background-color: rgb(72, 118, 203);
+
+}
+
+/* .four {
+    justify-self: end;
+    align-self: end;
+} */

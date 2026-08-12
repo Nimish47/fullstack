@@ -6,7 +6,7 @@
     => applied to each and every element
  
 2. Play with space
-    => explin "all" descendents concept
+    => explain "all" descendents concept
 
 3. Play with >
 

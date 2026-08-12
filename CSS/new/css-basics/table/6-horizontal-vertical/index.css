@@ -18,7 +18,7 @@ body {
 
 .table-container {
     background-color: rgb(64, 64, 212);
-    color: white;
+    color: yellow;
     width: 100%;
     border-collapse: collapse;
 }

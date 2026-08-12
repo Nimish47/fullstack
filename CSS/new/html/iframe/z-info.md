@@ -11,3 +11,4 @@
 3. open a youtube video
     - use config from youtube
     - allow fullscreen
+

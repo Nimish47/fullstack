@@ -20,10 +20,10 @@ body {
     position: relative;
 }
 
-.textbox:hover::before {
+/* .textbox:hover::before {
     content: "";
     display: none;
-}
+} */
 
 .textbox:hover::after {
     content:  attr(data-tooltip);

@@ -9,19 +9,19 @@ body {
     height: 100dvh;
 }
 
-.container div:nth-child(odd) {
+.container > div:nth-child(odd) {
     background-color: rgb(168, 139, 139);
     color: white;
     padding: 10px;
 }
 
-.container div:nth-child(even) {
+.container > div:nth-child(even) {
     background-color: rgb(126, 119, 223);
     color: white;
     padding: 10px;
 }
 
-.container div:first-child, .container div:last-child {
+.container > div:first-child, .container > div:last-child {
     background-color: rgb(220, 52, 52);
     color: white;
     padding: 10px;

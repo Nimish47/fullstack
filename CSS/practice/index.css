@@ -3,15 +3,62 @@
     margin: 0;
 }
 
-.container {
-    min-height: 100dvh;
+.grid-container {
     background-color: rgb(152, 40, 40);
     display: grid;
-    grid-template-columns: repeat(3, 200px);
-    grid-auto-rows: auto;   /*content-height -> remaining space distributed among implicit rows*/
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: repeat(12, 1fr);
+    grid-template-areas: 
+    "nav nav nav nav nav nav nav nav nav nav nav nav"
+    "sid sid man man man man man man man man man man"
+    "sid sid man man man man man man man man man man"
+    "sid sid man man man man man man man man man man"
+    "sid sid man man man man man man man man man man"
+    "sid sid man man man man man man man man man man"
+    "sid sid man man man man man man man man man man"
+    "sid sid man man man man man man man man man man"
+    "sid sid man man man man man man man man man man"
+    "sid sid man man man man man man man man man man"
+    "sid sid man man man man man man man man man man"
+    "fot fot fot fot fot fot fot fot fot fot fot fot";
+    height: 100dvh;
 }
 
-.container div {
-    background-color: rgb(113, 214, 74);
-    border: 1px solid black;
+.grid-container div {
+    display: grid;
+    place-items: center;
+}
+
+.navbar {
+    /* grid-column: 1/-1;
+    grid-row: 1/2; */
+    color: pink;
+    grid-area: nav
+}
+
+.sidebar {
+    /* grid-column: 1/span 2;
+    grid-row: 2/12; */
+    background-color: blue;
+    grid-area: sid
+}
+
+.main {
+    /* grid-column: 3/-1;
+    grid-row: 2/12; */
+    background-color: grey;
+    grid-area: man
+}
+
+.ad {
+    grid-column: -3/-1;
+    grid-row: 2/span 3;
+    background-color: red;
+}
+
+.footer {
+    /* grid-column: 1/-1;
+    grid-row: -2/-1; */
+    background-color: rgb(10, 140, 97);
+    grid-area: fot
 }
