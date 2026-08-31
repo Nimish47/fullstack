@@ -1,0 +1,27 @@
+.container {
+    height: 100dvh;
+    background-color: rgb(242, 234, 234);
+}
+
+.outer {
+  padding: 30px;
+  background: #acbfe7;
+}
+
+.middle {
+  padding: 30px;
+  background: #91e780;
+}
+
+.inner {
+  padding: 30px;
+  background: #d37dc3;
+}
+
+li {
+  padding: 10px;
+  margin: 8px;
+  background: white;
+  cursor: pointer;
+  list-style: none;
+}

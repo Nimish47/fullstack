@@ -1,0 +1,68 @@
+.headerContainer {
+    display: flex;
+    align-items: center;
+    background-color: rgb(8, 8, 114);
+    color: white;
+    letter-spacing: 2px;
+    font-weight: 600;
+    position: sticky;
+    top: 0;
+    height: 100%;
+}
+
+.link,.boldLink {
+    color: white;
+    letter-spacing: 2px;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.boldLink {
+    font-weight: 900;
+    font-style: italic;
+}
+
+.link:hover, .boldLink:hover {
+    color: rgb(215, 153, 17);
+}
+
+.company {
+    font-weight: 900;
+    letter-spacing: 7px;
+    margin-left: 20px;
+    cursor: pointer;
+    color: rgb(215, 153, 17);
+    text-decoration: none;
+    font-size: 1.2em;
+    font-style: italic;
+}
+
+.company:hover {
+    color: white;
+}
+
+.contact {
+    margin-right: 20px;
+}
+
+.about {
+    margin-left: auto;
+    cursor: pointer;  
+}
+
+.contact,.logout,.locker {
+    margin-left: 25px;
+    cursor: pointer;
+}
+
+.logout {
+    color: white;
+    letter-spacing: 2px;
+    font-weight: 600;
+    text-decoration: none;
+    margin-right: 10px;
+}
+
+.logout:hover {
+    color: rgb(215, 153, 17);
+}

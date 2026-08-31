@@ -1,0 +1,110 @@
+.app {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition:
+    background-color 0.3s ease,
+    color 0.3s ease;
+  font-family: Arial, sans-serif;
+}
+
+.light {
+  background: #f4f4f5;
+  color: #18181b;
+}
+
+.dark {
+  background: #18181b;
+  color: #f4f4f5;
+}
+
+.card {
+  width: 100%;
+  max-width: 450px;
+  padding: 30px;
+  border-radius: 12px;
+  background: white;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+}
+
+.dark .card {
+  background: #27272a;
+}
+
+.card h1 {
+  margin-top: 0;
+}
+
+.description {
+  margin-bottom: 30px;
+  opacity: 0.7;
+}
+
+.section {
+  padding: 20px 0;
+  border-top: 1px solid #d4d4d8;
+}
+
+.section h2 {
+  margin-top: 0;
+  font-size: 18px;
+}
+
+/* -----------------------------
+   Theme toggle
+----------------------------- */
+
+.toggle {
+  position: relative;
+  width: 64px;
+  height: 34px;
+  padding: 0;
+  border: none;
+  border-radius: 20px;
+  background: #d4d4d8;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.toggleDark {
+  background: #52525b;
+}
+
+.circle {
+  position: absolute;
+  top: 4px;
+  left: 4px;
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  background: white;
+
+  transition: transform 0.3s ease;
+}
+
+.toggleDark .circle {
+  transform: translateX(30px);
+}
+
+/* -----------------------------
+   Form
+----------------------------- */
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+input {
+  padding: 10px;
+  border: 1px solid #a1a1aa;
+  border-radius: 6px;
+  font-size: 15px;
+}
+
+.storageInfo {
+  font-size: 13px;
+  opacity: 0.6;
+}
