@@ -1,0 +1,14 @@
+.dropdownButtons {
+    display: flex;
+    margin-bottom: 20px;
+    padding: 10px;
+    margin-left: 75px;
+}
+.inputDropdown {
+    width: 30%;
+    padding: 10px;
+    background-color: white;
+    border: none;
+    color: black;
+    font-size: 1em;
+}

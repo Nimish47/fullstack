@@ -102,4 +102,4 @@ getLastItem([1,3,4])
 getLastItem("apple", "banana")
 getLastItem([{id: 23, name:"karan"}, {..}])
 
-=> getLastItem<User>(mohan)     // explicit while calling
+=> getLastItem<User>([mohan, karan])     // explicit while calling

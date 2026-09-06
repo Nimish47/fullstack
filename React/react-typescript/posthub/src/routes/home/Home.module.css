@@ -1,0 +1,41 @@
+.homeContainer {
+    background-color: rgb(39, 88, 36);
+    color: black;
+    font-size: large;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.logo {
+    position: absolute;
+    left: 0;
+    top: 0;
+    background-color: black;
+    color: white;
+    border: 10px solid gold;
+    padding: 20px;
+    font-weight: 900;
+    letter-spacing: 2.5px;
+}
+
+
+a {
+    text-decoration: none;
+}
+
+.flexContainer div {
+    background-color: black;
+    color: white;
+    padding: 25px;
+    width: 400px;
+    margin-top: 5px;
+    text-align: center;
+}
+
+.flexContainer div:hover {
+    opacity: 0.5;
+    cursor: pointer;
+    font-weight: 900;
+}

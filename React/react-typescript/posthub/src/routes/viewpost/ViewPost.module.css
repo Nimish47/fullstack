@@ -1,0 +1,28 @@
+.viewpostlight, .viewpostpale, .viewpostdark {
+    background-color: grey;
+    color: white;
+    font-weight: 900;
+    font-size: large;
+    height: 100vh;
+}
+
+.display {
+    background-color: rgb(230, 96, 96);
+    color: white;
+    margin-top: 100px;
+    width: 500px;
+    height: 200px;
+    padding: 25px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.viewpostlight {
+    background-color: white;
+    color: black;
+}
+
+.viewpostdark {
+    background-color: black;
+    color: wheat;
+}

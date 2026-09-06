@@ -1,0 +1,18 @@
+.checkButtons {
+    display: flex;
+    margin-bottom: 20px;
+    padding: 10px;
+    margin-left: 75px;
+}
+
+.inputCheck {
+    margin-right: 4px;
+    width: 18px;
+    height: 18px;
+}
+
+.inputCheckLabel {
+    font-size: 1.2em;
+    color: black;
+    margin-right: 30px;
+}

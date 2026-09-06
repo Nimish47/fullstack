@@ -1,0 +1,22 @@
+.submit,
+.submitError {
+    display: block;
+    background-color: green;
+    color: white;
+    border: none;
+    font-size: 1.2em;
+    width: 100%;
+    padding: 15px;
+}
+
+.submit:hover,
+.submitError:hover {
+    opacity: 0.8;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.submitError {
+    background-color: red;
+    cursor: not-allowed;
+}

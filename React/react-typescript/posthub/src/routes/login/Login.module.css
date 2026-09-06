@@ -1,0 +1,16 @@
+.form {
+    background-color: black;
+    height: 100vh;
+}
+
+input {
+    padding: 10px;
+    width: 400px;
+    display: block;
+}
+
+button {
+    padding: 10px;
+    background-color: rgb(73, 114, 11);
+    width: 300px;
+}
