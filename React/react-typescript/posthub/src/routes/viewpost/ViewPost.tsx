@@ -39,7 +39,11 @@ function ViewPost() {
       "id" in post &&
       "userId" in post &&
       "title" in post &&
-      "body" in post
+      "body" in post &&
+      typeof post.id === "number" &&
+      typeof post.userId === "number" &&
+      typeof post.title === "string" &&
+      typeof post.body === "string"
     )
   }
 

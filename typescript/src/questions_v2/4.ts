@@ -24,7 +24,7 @@ function isValidUser(user: unknown): user is User {
 }
 
 // sanitizeUsers()
-function sanitizeUsers(users: unknown[]): User[] {
+function sanitizeUsers(users: unknown[]) {
     return users
         .filter(user => isValidUser(user))
         .map(user => ({

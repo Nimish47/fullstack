@@ -1,25 +1,29 @@
-import React, { useState, type ChangeEvent } from "react"
+import React, { useEffect, useRef, useState, type ChangeEvent } from "react"
 import styles from './Login.module.css'
 import { useDispatch } from "react-redux"
 import { addUser } from "../../redux/slice/UserSlice"
 import { useNavigate } from "react-router-dom"
 
+type User = {
+    username: string,
+    password: string
+}
+
+const initState: User = {
+    username: '',
+    password: ''
+}
+
 function Login() {
-
-    type User = {
-        username: string,
-        password: string
-    }
-
-    const initState: User = {
-        username: '',
-        password: ''
-    }
 
     const [formData, setFormData] = useState<User>(initState)
     const dispatch = useDispatch();
-    const navigate = useNavigate()
+    const navigate = useNavigate();
+    const ref = useRef<HTMLInputElement | null>(null)
 
+    useEffect(()=>{
+        console.log(ref.current?.focus())
+    },[])
 
     // add to redux
     // redirect to /
@@ -41,6 +45,7 @@ function Login() {
     return (
         <form className={styles.form} onSubmit={handleSubmit}>
             <input
+                ref={ref}
                 type='username'
                 placeholder='Enter username'
                 name='username'
