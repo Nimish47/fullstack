@@ -9,7 +9,7 @@ function Home() {
   return (
     <div className={styles.parent}>
       <div>Global: {appName} {appBirth}</div>
-      <div>{env} {appLocation}</div>
+      <div>{env} {appLocation} kukizo</div>
     </div>
   )
 }

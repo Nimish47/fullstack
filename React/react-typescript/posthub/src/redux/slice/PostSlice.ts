@@ -8,13 +8,14 @@ type Post = {
     body: string
 }
 
-type PostState<T> = {
+// discriminated unions are more suitable here
+type PostState = {
     status: 'idle' | 'pending' | 'success' | 'failure',
-    data: T[],
+    data: Post[],
     errorMessage: string
 }
 
-const initialState: PostState<Post> = { status: 'idle', data: [], errorMessage: '' };
+const initialState: PostState = { status: 'idle', data: [], errorMessage: '' };
 
 export const fetchPosts = createAsyncThunk('Posts/getPosts', async (URL: string, _) => {
     const resp = await axios.get(URL)
