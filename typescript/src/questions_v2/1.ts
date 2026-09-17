@@ -21,12 +21,10 @@ function filterNotification(arr: Notifications[]) {
 
 // notification object examples
 const notificationArr = [
-    { id: 1, message: "New comment", createdAt: "...", read: false },
+    { id: 1, message: "New comment", createdAt: "...", read: true },
     { id: 2, message: "Payment received", createdAt: "...", read: true },
-    { id: 3, message: "New follower", createdAt: "...", read: false }
+    { id: 3, message: "New follower", createdAt: "...", read: true }
 ]
-
-
 
 // consume print
 const result = filterNotification(notificationArr)

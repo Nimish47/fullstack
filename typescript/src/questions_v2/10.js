@@ -13,7 +13,9 @@ function isValidPost(post) {
         typeof post.body === "string");
 }
 function sanitizeData(arr) {
-    return arr.filter(item => isValidPost(item)).map(item => ({ id: item.id, title: item.title }));
+    return arr
+        .filter(item => isValidPost(item))
+        .map(item => ({ id: item.id, title: item.title }));
 }
 function logger(arr) {
     arr.forEach(item => console.log(item));

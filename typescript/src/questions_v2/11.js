@@ -31,6 +31,6 @@ const store = [
     { productId: 205, quantity: 1 },
     { productId: 905, quantity: 0 }
 ];
-const rep1 = checkout({ productId: 905, quantity: 1 });
+const rep1 = checkout({ productId: 107, quantity: 1 });
 console.log(rep1);
 console.log(store);

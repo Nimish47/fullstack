@@ -27,7 +27,9 @@ function isValidPost(post: unknown): post is Post {
 }
 
 function sanitizeData(arr: unknown[]) {
-    return arr.filter(item => isValidPost(item)).map(item => ({ id: item.id, title: item.title }))
+    return arr
+        .filter(item => isValidPost(item))
+        .map(item => ({ id: item.id, title: item.title }))
 }
 
 function logger(arr: Pick<Post, "id" | "title">[]) {
