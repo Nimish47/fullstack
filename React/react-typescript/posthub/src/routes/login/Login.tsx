@@ -3,6 +3,7 @@ import styles from './Login.module.css'
 import { useDispatch } from "react-redux"
 import { addUser } from "../../redux/slice/UserSlice"
 import { useNavigate } from "react-router-dom"
+import type { AppDispatch } from "../../redux/store"
 
 type User = {
     username: string,
@@ -17,7 +18,7 @@ const initState: User = {
 function Login() {
 
     const [formData, setFormData] = useState<User>(initState)
-    const dispatch = useDispatch();
+    const dispatch = useDispatch<AppDispatch>();
     const navigate = useNavigate();
     const ref = useRef<HTMLInputElement | null>(null)
 

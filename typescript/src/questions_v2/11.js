@@ -1,5 +1,4 @@
 "use strict";
-// problem 11
 function checkout(cart) {
     // check cart items in store    
     const item = store.find(item => item.productId === cart.productId);
@@ -13,7 +12,7 @@ function checkout(cart) {
     if (item.quantity === 0)
         return {
             status: "outOfStock",
-            productIds: [205]
+            productIds: [cart.productId]
         };
     // if item exists in store AND quantity > 0
     // update store

@@ -32,8 +32,10 @@ const apiResponse2 = {
     totalPages: 3
 }
 
-// consume
-const resp = filterResponse(apiResponse)
+type Response1 = {id: number, amount: number}
 
+// consume
+// const resp = filterResponse(apiResponse)
+const resp = filterResponse<Response1>(apiResponse)
 // print
 if (resp.length > 0) resp.forEach(item => console.log(item));

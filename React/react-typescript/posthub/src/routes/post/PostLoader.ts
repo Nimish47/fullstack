@@ -1,11 +1,10 @@
 import { redirect } from "react-router-dom";
 
-type Params = {
-    id?: string
-}
 
 type CustomProps = {
-    params: Params
+    params: {
+        id?: string
+    }
 }
 
 export const fetchPost = async ({ params }: CustomProps) => {

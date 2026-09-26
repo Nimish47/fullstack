@@ -24,8 +24,7 @@ export const router = createBrowserRouter([
             },
             {
                 path: "viewpost",
-                element: <ViewPost />
-                
+                element: <ViewPost />                
             },
             {
                 path: "posts",

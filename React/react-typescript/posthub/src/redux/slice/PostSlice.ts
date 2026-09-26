@@ -1,4 +1,4 @@
-import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
+import { createSlice, createAsyncThunk, type PayloadAction } from '@reduxjs/toolkit';
 import axios from 'axios'
 
 type Post = {
@@ -8,7 +8,6 @@ type Post = {
     body: string
 }
 
-// discriminated unions are more suitable here
 type PostState = {
     status: 'idle' | 'pending' | 'success' | 'failure',
     data: Post[],
@@ -17,8 +16,9 @@ type PostState = {
 
 const initialState: PostState = { status: 'idle', data: [], errorMessage: '' };
 
-export const fetchPosts = createAsyncThunk('Posts/getPosts', async (URL: string, _) => {
+export const fetchPosts = createAsyncThunk<Post[], string>('Posts/getPosts', async (URL: string, _) => {
     const resp = await axios.get(URL)
+    // sanitize and verify properly that it is Post[] - add runtime validations
     return resp.data;
 })
 
@@ -26,8 +26,8 @@ const PostSlice = createSlice({
     name: 'Posts',
     initialState,
     reducers: {
-        addPost: (state, action) => { state.status = "idle", state.data.push(action.payload) },
-        deletePost: (state, action) => { state.data = state.data.filter(item => Number(item.id) !== Number(action.payload)) }
+        addPost: (state, action: PayloadAction<Post>) => { state.status = "idle", state.data.push(action.payload) },
+        deletePost: (state, action: PayloadAction<string>) => { state.data = state.data.filter(item => Number(item.id) !== Number(action.payload)) }
     },
     extraReducers: (builder) => {
         builder

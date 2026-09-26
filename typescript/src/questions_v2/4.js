@@ -16,19 +16,21 @@ function isValidUser(user) {
 }
 // sanitizeUsers()
 function sanitizeUsers(users) {
-    return users
-        .filter(user => isValidUser(user))
-        .map(user => ({
+    if (!Array.isArray(users))
+        return [];
+    const filteredUsers = users.filter(user => isValidUser(user));
+    const modifiedUsers = filteredUsers.map(user => ({
         id: user.id,
         username: user.username,
         email: user.email,
         phone: user.phone
     }));
+    return modifiedUsers;
 }
 // array of users - hardcode
 const users = [
+    { id: 2, username: "priya", email: "priya@gmail.com", phone: "9999999999", kamada: 'japan' },
     { id: 1, username: "rahul", email: "rahul@gmail.com" },
-    { id: 2, username: "priya", email: "priya@gmail.com", phone: 9999999999 },
     { id: "wrong", username: "amit", email: "amit@gmail.com" },
     null,
     "garbage"

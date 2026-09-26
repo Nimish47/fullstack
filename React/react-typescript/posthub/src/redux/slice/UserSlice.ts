@@ -1,4 +1,4 @@
-import { createSlice } from '@reduxjs/toolkit';
+import { createSlice, type PayloadAction } from '@reduxjs/toolkit';
 
 type User = {
     username: string,
@@ -7,12 +7,13 @@ type User = {
 
 const initialState: User = { username: '', password: '' }
 
+
 const userSlice = createSlice({
     name: 'User',
     initialState,
     reducers: {
-        addUser: (_, action) => { return action.payload },
-        updatePassword: (state, action) => { state.password = action.payload },
+        addUser: (_, action: PayloadAction<User>) => { return action.payload },
+        updatePassword: (state, action: PayloadAction<string>) => { state.password = action.payload },
         resetUser: () => { return initialState }
     }
 })

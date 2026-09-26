@@ -1,4 +1,6 @@
-.userlight, .userdark, .userpale {
+.userlight,
+.userdark,
+.userpale {
     background-color: rgb(112, 103, 103);
     height: 100vh;
     color: white;
@@ -39,7 +41,15 @@ button {
     gap: 5px;
 }
 
-.themetogglers div {
+.feedbackbuttons {
+    display: flex;
+    position: absolute;
+    bottom: 10px;
+    gap: 5px;
+}
+
+.themetogglers div,
+.feedbackbuttons div {
     padding: 25px;
     background-color: rgb(80, 92, 5);
     color: white;
@@ -47,7 +57,13 @@ button {
     border-radius: 30px;
 }
 
-.themetogglers div:hover {
+.feedbackbuttons div {
+    background-color: blue;
+    width: 200px
+}
+
+.themetogglers div:hover,
+.feedbackbuttons div:hover {
     opacity: 0.7;
     cursor: pointer;
 }

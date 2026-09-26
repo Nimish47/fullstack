@@ -24,27 +24,30 @@ function isValidUser(user: unknown): user is User {
 }
 
 // sanitizeUsers()
-function sanitizeUsers(users: unknown[]) {
-    return users
-        .filter(user => isValidUser(user))
-        .map(user => ({
-            id: user.id,
-            username: user.username,
-            email: user.email,
-            phone: user.phone
-        })
-        )
+function sanitizeUsers(users: unknown) {
+
+    if (!Array.isArray(users)) return []
+    
+    const filteredUsers = users.filter(user => isValidUser(user))
+
+    const modifiedUsers = filteredUsers.map(user => ({
+        id: user.id,
+        username: user.username,
+        email: user.email,
+        phone: user.phone
+    }))
+    return modifiedUsers
 }
 
 
 // array of users - hardcode
 const users = [
+    { id: 2, username: "priya", email: "priya@gmail.com", phone: "9999999999", kamada: 'japan' },
     { id: 1, username: "rahul", email: "rahul@gmail.com" },
-    { id: 2, username: "priya", email: "priya@gmail.com", phone: 9999999999 },
     { id: "wrong", username: "amit", email: "amit@gmail.com" },
     null,
     "garbage"
-]
+];
 
 // consume
 const data = sanitizeUsers(users)

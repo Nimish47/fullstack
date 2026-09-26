@@ -2,10 +2,9 @@ import { configureStore, isAnyOf, type Middleware } from '@reduxjs/toolkit'
 import UserReducer, { updatePassword } from './slice/UserSlice'
 import PostReducer, { deletePost } from './slice/PostSlice'
 
-
 const beerRiskTracker: Middleware = store => next => action => {
     if (isAnyOf(updatePassword, deletePost)(action)) {
-        console.log(store.getState())
+        console.log(store.getState(), action.payload)
         alert(`User: ${store.getState().userdetails.username} - tried to perform a update password/delete post operation`)
     }
     return next(action)

@@ -14,13 +14,10 @@ type Post = {
 };
 
 function ViewPost() {
-
-
   const [value, setValue] = useState<string | null>()
   const navigate = useNavigate()
   const [params] = useSearchParams();
   const { theme } = useTheme()
-
 
   const id = params.get("id")
   const posts = useSelector((state: RootState) => state.posts.data)

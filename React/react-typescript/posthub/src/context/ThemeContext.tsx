@@ -7,11 +7,9 @@ type Theme = {
     changeTheme: (newtheme: ThemeTypes) => void
 }
 
-type CustomProps = { children: ReactNode };
-
 const ThemeContext = createContext<Theme | null>(null);
 
-function ThemeContextComponent({ children }: CustomProps) {
+function ThemeContextComponent({ children }: { children: ReactNode }) {
 
     const [theme, setTheme] = useState<ThemeTypes>('dark')
 
@@ -23,7 +21,7 @@ function ThemeContextComponent({ children }: CustomProps) {
         return { theme, changeTheme }
     }, [theme])
 
-    console.log('traffic component context')
+    console.log('theme component context')
 
     return (
         <ThemeContext.Provider value={contextValue}>

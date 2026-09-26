@@ -22,6 +22,7 @@ const apiResponse2 = {
     totalPages: 3
 };
 // consume
+// const resp = filterResponse(apiResponse)
 const resp = filterResponse(apiResponse);
 // print
 if (resp.length > 0)

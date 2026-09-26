@@ -1,4 +1,5 @@
-// problem 11
+
+
 
 type Product = {
     productId: number,
@@ -23,7 +24,7 @@ function checkout(cart: Product): CartState {
     // if product is out of stock
     if (item.quantity === 0) return {
         status: "outOfStock",
-        productIds: [205]
+        productIds: [cart.productId]
     }
 
     // if item exists in store AND quantity > 0

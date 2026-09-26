@@ -26,10 +26,10 @@ type ErrorInfo = {
 }
 
 const INIT_STATE = {
-        username: '',
-        password: '',
-        food: []
-    }
+    username: '',
+    password: '',
+    food: []
+}
 
 export function useForm(options: Options = {}) {
 
@@ -54,7 +54,7 @@ export function useForm(options: Options = {}) {
     }
 
     const changeHandlerDefault = (
-        event: FormInputs,allCheckValues: string[] = []
+        event: FormInputs, allCheckValues: string[] = []
     ) => {
         const { name, value, type } = event.target;
         let checked: boolean;
@@ -70,7 +70,7 @@ export function useForm(options: Options = {}) {
 
         // except for checkbox, set the form data for all other kind of feilds
         if (type !== 'checkbox') setFormData(prevData => ({ ...prevData, [name]: value }))
-        
+
         const fieldName = name as "food";
         if (type === 'checkbox') {
 

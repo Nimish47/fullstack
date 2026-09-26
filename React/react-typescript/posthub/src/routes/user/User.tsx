@@ -1,16 +1,19 @@
 import { useDispatch, useSelector } from "react-redux"
-import type { RootState } from "../../redux/store"
+import { type AppDispatch, type RootState } from "../../redux/store"
 import styles from './User.module.css'
 import { updatePassword } from "../../redux/slice/UserSlice"
-import React, { useState, type ChangeEvent } from "react"
+import React, { useReducer, useState, type ChangeEvent } from "react"
 import { useTheme } from "../../context/ThemeContext"
+import { FEEDBACK_INIT_STATE, FeedbackReducer } from "./FeedbackReducer"
 
 function User() {
 
   const [password, setPassword] = useState('')
   const username = useSelector((state: RootState) => state.userdetails.username)
-  const dispatch = useDispatch()
+  const dispatch = useDispatch<AppDispatch>()
   const { theme, changeTheme } = useTheme()
+
+const [feedback, dispatchFeedback] = useReducer(FeedbackReducer, FEEDBACK_INIT_STATE)
 
   const handleSubmit = (e: React.SubmitEvent<HTMLFormElement>) => {
     e.preventDefault();
@@ -48,6 +51,11 @@ function User() {
           Submit
         </button>
       </form>
+      <div className={styles.feedbackbuttons}>
+        {feedback && <div>{feedback.feedback}</div>}
+        <div onClick={() => dispatchFeedback({type: "good", appreciation: "like the app"})} >I like your app</div>
+        <div onClick={() => dispatchFeedback({type: "bad", escalation: "shitty app"})}>The App is terrible!</div>      
+      </div>
     </div>
   )
 }
